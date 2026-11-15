@@ -6,7 +6,7 @@
     "timezone": "Asia/Kathmandu",
     "utc_offset": "+05:45"
   },
-  "updated_at": "2026-11-14T15:02:26Z",
+  "updated_at": "2026-11-15T07:05:30Z",
   "source": {
     "name": "nplt20league.com",
     "url": "https://nplt20league.com/"
@@ -983,8 +983,8 @@
       "id": "b544dc2b-d54a-426f-a2b3-24aa5d771bdb",
       "start_utc": "2026-11-15T06:45:00Z",
       "venue": "Tribhuvan University Cricket Ground, Kirtipur",
-      "status": "scheduled",
-      "status_raw": "start_in",
+      "status": "other",
+      "status_raw": "live",
       "teams": [
         {
           "slug": "chitwan-rhinos",
@@ -999,14 +999,14 @@
           "name": "Karnali Yaks",
           "short": "KAY",
           "placeholder": false,
-          "score": null,
-          "overs": null
+          "score": "28/1",
+          "overs": "3.2"
         }
       ],
       "result": null,
       "outcome": null,
       "winner": null,
-      "updated_at": "2026-11-14T14:57:22Z"
+      "updated_at": "2026-11-15T07:05:30Z"
     },
     {
       "number": 28,
