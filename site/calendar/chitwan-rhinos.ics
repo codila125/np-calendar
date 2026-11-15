@@ -108,4 +108,18 @@ URL:https://codila125.github.io/npl/
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 END:VEVENT
+BEGIN:VEVENT
+UID:npl-2026-m30@codila125.github.io
+DTSTAMP:20261115T191229Z
+LAST-MODIFIED:20261115T191229Z
+DTSTART:20261118T111500Z
+DTEND:20261118T144500Z
+SUMMARY:Kathmandu Gurkhas vs Chitwan Rhinos (NPL Eliminator)
+LOCATION:Tribhuvan University Cricket Ground\, Kirtipur
+DESCRIPTION:NPL 2026 · Eliminator\nKick-off 5:00 PM NPT\nhttps://codila125
+ .github.io/npl/
+URL:https://codila125.github.io/npl/
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
 END:VCALENDAR

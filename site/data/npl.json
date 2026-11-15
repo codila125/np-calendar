@@ -6,7 +6,7 @@
     "timezone": "Asia/Kathmandu",
     "utc_offset": "+05:45"
   },
-  "updated_at": "2026-11-15T14:41:16Z",
+  "updated_at": "2026-11-15T19:12:29Z",
   "source": {
     "name": "nplt20league.com",
     "url": "https://nplt20league.com/"
@@ -79,13 +79,13 @@
     {
       "position": 3,
       "team": "kathmandu-gurkhas",
-      "played": 6,
+      "played": 7,
       "won": 4,
-      "lost": 2,
+      "lost": 3,
       "tied": 0,
       "no_result": 0,
       "points": 8,
-      "nrr": 0.882
+      "nrr": 0.36
     },
     {
       "position": 4,
@@ -122,6 +122,17 @@
     },
     {
       "position": 7,
+      "team": "pokhara-avengers",
+      "played": 7,
+      "won": 2,
+      "lost": 5,
+      "tied": 0,
+      "no_result": 0,
+      "points": 4,
+      "nrr": -0.175
+    },
+    {
+      "position": 8,
       "team": "janakpur-bolts",
       "played": 7,
       "won": 2,
@@ -130,17 +141,6 @@
       "no_result": 0,
       "points": 4,
       "nrr": -0.422
-    },
-    {
-      "position": 8,
-      "team": "pokhara-avengers",
-      "played": 6,
-      "won": 1,
-      "lost": 5,
-      "tied": 0,
-      "no_result": 0,
-      "points": 2,
-      "nrr": -0.651
     }
   ],
   "matches": [
@@ -1015,8 +1015,8 @@
       "id": "40e83cb5-ff02-4ebd-895a-9f22627e0126",
       "start_utc": "2026-11-15T11:15:00Z",
       "venue": "Tribhuvan University Cricket Ground, Kirtipur",
-      "status": "other",
-      "status_raw": "live",
+      "status": "completed",
+      "status_raw": "completed",
       "teams": [
         {
           "slug": "pokhara-avengers",
@@ -1031,14 +1031,14 @@
           "name": "Kathmandu Gurkhas",
           "short": "KAG",
           "placeholder": false,
-          "score": "145/8",
-          "overs": "17.5"
+          "score": "169/10",
+          "overs": "19.5"
         }
       ],
-      "result": null,
-      "outcome": null,
-      "winner": null,
-      "updated_at": "2026-11-15T14:41:16Z"
+      "result": "Pokhara Avengers won by 55 runs",
+      "outcome": "result",
+      "winner": "pokhara-avengers",
+      "updated_at": "2026-11-15T14:58:06Z"
     },
     {
       "number": 29,
@@ -1048,21 +1048,21 @@
       "start_utc": "2026-11-17T11:15:00Z",
       "venue": "Tribhuvan University Cricket Ground, Kirtipur",
       "status": "scheduled",
-      "status_raw": "scheduled",
+      "status_raw": "start_in",
       "teams": [
         {
-          "slug": null,
-          "name": "1st place",
-          "short": null,
-          "placeholder": true,
+          "slug": "lumbini-lions",
+          "name": "Lumbini Lions",
+          "short": "LUL",
+          "placeholder": false,
           "score": null,
           "overs": null
         },
         {
-          "slug": null,
-          "name": "2nd place",
-          "short": null,
-          "placeholder": true,
+          "slug": "sudurpaschim-royals",
+          "name": "Sudurpaschim Royals",
+          "short": "SPR",
+          "placeholder": false,
           "score": null,
           "overs": null
         }
@@ -1070,7 +1070,7 @@
       "result": null,
       "outcome": null,
       "winner": null,
-      "updated_at": "2026-10-26T18:45:16Z"
+      "updated_at": "2026-11-15T19:10:41Z"
     },
     {
       "number": 30,
@@ -1083,18 +1083,18 @@
       "status_raw": "scheduled",
       "teams": [
         {
-          "slug": null,
-          "name": "3rd place",
-          "short": null,
-          "placeholder": true,
+          "slug": "kathmandu-gurkhas",
+          "name": "Kathmandu Gurkhas",
+          "short": "KAG",
+          "placeholder": false,
           "score": null,
           "overs": null
         },
         {
-          "slug": null,
-          "name": "4th place",
-          "short": null,
-          "placeholder": true,
+          "slug": "chitwan-rhinos",
+          "name": "Chitwan Rhinos",
+          "short": "CHR",
+          "placeholder": false,
           "score": null,
           "overs": null
         }
@@ -1102,7 +1102,7 @@
       "result": null,
       "outcome": null,
       "winner": null,
-      "updated_at": "2026-10-26T18:45:17Z"
+      "updated_at": "2026-11-15T19:12:29Z"
     },
     {
       "number": 31,
@@ -1173,6 +1173,17 @@
     "top_run_scorer": [
       {
         "rank": 1,
+        "player": "Yuvraj Samra",
+        "team": "pokhara-avengers",
+        "innings": 4,
+        "runs": 294,
+        "wickets": 1,
+        "average": "73.50",
+        "strike_rate": "179.27",
+        "economy": "28.80"
+      },
+      {
+        "rank": 2,
         "player": "Lokesh Bam",
         "team": "biratnagar-kings",
         "innings": 7,
@@ -1183,18 +1194,18 @@
         "economy": null
       },
       {
-        "rank": 2,
-        "player": "Yuvraj Samra",
+        "rank": 3,
+        "player": "Kushal Bhurtel",
         "team": "pokhara-avengers",
-        "innings": 3,
-        "runs": 205,
-        "wickets": 0,
-        "average": "68.33",
-        "strike_rate": "188.07",
-        "economy": null
+        "innings": 7,
+        "runs": 235,
+        "wickets": 6,
+        "average": "33.57",
+        "strike_rate": "148.73",
+        "economy": "8.06"
       },
       {
-        "rank": 3,
+        "rank": 4,
         "player": "Ravi Bopara",
         "team": "chitwan-rhinos",
         "innings": 5,
@@ -1205,7 +1216,7 @@
         "economy": "13.00"
       },
       {
-        "rank": 4,
+        "rank": 5,
         "player": "Pawan Sarraf",
         "team": "karnali-yaks",
         "innings": 7,
@@ -1214,17 +1225,6 @@
         "average": "27.83",
         "strike_rate": "93.82",
         "economy": "7.35"
-      },
-      {
-        "rank": 5,
-        "player": "Dipendra Singh Airee",
-        "team": "sudurpaschim-royals",
-        "innings": 7,
-        "runs": 150,
-        "wickets": 5,
-        "average": "25.00",
-        "strike_rate": "109.49",
-        "economy": "5.26"
       }
     ],
     "top_wicket_taker": [
@@ -1298,6 +1298,17 @@
       },
       {
         "rank": 2,
+        "player": "Sonu Devkota",
+        "team": "kathmandu-gurkhas",
+        "innings": 1,
+        "runs": 29,
+        "wickets": 0,
+        "average": "29.00",
+        "strike_rate": "207.14",
+        "economy": null
+      },
+      {
+        "rank": 3,
         "player": "Isuru Udana",
         "team": "biratnagar-kings",
         "innings": 2,
@@ -1308,7 +1319,7 @@
         "economy": "9.00"
       },
       {
-        "rank": 3,
+        "rank": 4,
         "player": "Ariful Islam",
         "team": "karnali-yaks",
         "innings": 1,
@@ -1319,7 +1330,7 @@
         "economy": null
       },
       {
-        "rank": 4,
+        "rank": 5,
         "player": "Kamil mishara",
         "team": "chitwan-rhinos",
         "innings": 3,
@@ -1328,22 +1339,22 @@
         "average": "21.67",
         "strike_rate": "191.18",
         "economy": "6.00"
-      },
-      {
-        "rank": 5,
-        "player": "Andre Russell",
-        "team": "biratnagar-kings",
-        "innings": 5,
-        "runs": 144,
-        "wickets": 6,
-        "average": "48.00",
-        "strike_rate": "189.47",
-        "economy": "10.00"
       }
     ],
     "bowling_economy": [
       {
         "rank": 1,
+        "player": "Sunny BK",
+        "team": "pokhara-avengers",
+        "innings": 2,
+        "runs": 5,
+        "wickets": 1,
+        "average": "5.00",
+        "strike_rate": "88.24",
+        "economy": "2.50"
+      },
+      {
+        "rank": 2,
         "player": "Harry Tector",
         "team": "janakpur-bolts",
         "innings": 2,
@@ -1354,18 +1365,18 @@
         "economy": "3.63"
       },
       {
-        "rank": 2,
+        "rank": 3,
         "player": "Sumit Maharjan",
         "team": "kathmandu-gurkhas",
         "innings": 1,
         "runs": 4,
         "wickets": 0,
         "average": null,
-        "strike_rate": "111.11",
+        "strike_rate": "86.67",
         "economy": "4.00"
       },
       {
-        "rank": 3,
+        "rank": 4,
         "player": "Bishal Shusling",
         "team": "janakpur-bolts",
         "innings": 2,
@@ -1376,7 +1387,7 @@
         "economy": "4.33"
       },
       {
-        "rank": 4,
+        "rank": 5,
         "player": "Abhishesh Gautam",
         "team": "lumbini-lions",
         "innings": 4,
@@ -1385,17 +1396,6 @@
         "average": "11.00",
         "strike_rate": "94.12",
         "economy": "4.40"
-      },
-      {
-        "rank": 5,
-        "player": "Shakib AL Hasan",
-        "team": "pokhara-avengers",
-        "innings": 3,
-        "runs": 45,
-        "wickets": 4,
-        "average": "11.25",
-        "strike_rate": "63.41",
-        "economy": "4.50"
       }
     ]
   }

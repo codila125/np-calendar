@@ -100,14 +100,29 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:npl-2026-m28@codila125.github.io
-DTSTAMP:20261115T144116Z
-LAST-MODIFIED:20261115T144116Z
+DTSTAMP:20261115T145806Z
+LAST-MODIFIED:20261115T145806Z
 DTSTART:20261115T111500Z
 DTEND:20261115T144500Z
 SUMMARY:Pokhara Avengers vs Kathmandu Gurkhas (NPL Match 28)
 LOCATION:Tribhuvan University Cricket Ground\, Kirtipur
-DESCRIPTION:NPL 2026 · Match 28\nKick-off 5:00 PM NPT\nhttps://codila125.g
- ithub.io/npl/
+DESCRIPTION:Result: Pokhara Avengers won by 55 runs\nPokhara Avengers 224/3
+  (20.0 ov)\nKathmandu Gurkhas 169/10 (19.5 ov)\nhttps://codila125.github.i
+ o/npl/
+URL:https://codila125.github.io/npl/
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:npl-2026-m30@codila125.github.io
+DTSTAMP:20261115T191229Z
+LAST-MODIFIED:20261115T191229Z
+DTSTART:20261118T111500Z
+DTEND:20261118T144500Z
+SUMMARY:Kathmandu Gurkhas vs Chitwan Rhinos (NPL Eliminator)
+LOCATION:Tribhuvan University Cricket Ground\, Kirtipur
+DESCRIPTION:NPL 2026 · Eliminator\nKick-off 5:00 PM NPT\nhttps://codila125
+ .github.io/npl/
 URL:https://codila125.github.io/npl/
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
