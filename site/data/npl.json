@@ -6,7 +6,7 @@
     "timezone": "Asia/Kathmandu",
     "utc_offset": "+05:45"
   },
-  "updated_at": "2026-11-15T19:12:29Z",
+  "updated_at": "2026-11-17T14:34:23Z",
   "source": {
     "name": "nplt20league.com",
     "url": "https://nplt20league.com/"
@@ -1047,30 +1047,30 @@
       "id": "c7ee0a2c-08dc-4678-b74d-e6bbdc6b9184",
       "start_utc": "2026-11-17T11:15:00Z",
       "venue": "Tribhuvan University Cricket Ground, Kirtipur",
-      "status": "scheduled",
-      "status_raw": "start_in",
+      "status": "completed",
+      "status_raw": "completed",
       "teams": [
         {
           "slug": "lumbini-lions",
           "name": "Lumbini Lions",
           "short": "LUL",
           "placeholder": false,
-          "score": null,
-          "overs": null
+          "score": "108/4",
+          "overs": "16.4"
         },
         {
           "slug": "sudurpaschim-royals",
           "name": "Sudurpaschim Royals",
           "short": "SPR",
           "placeholder": false,
-          "score": null,
-          "overs": null
+          "score": "105/8",
+          "overs": "20.0"
         }
       ],
-      "result": null,
-      "outcome": null,
-      "winner": null,
-      "updated_at": "2026-11-15T19:10:41Z"
+      "result": "Lumbini Lions won by 6 wickets",
+      "outcome": "result",
+      "winner": "lumbini-lions",
+      "updated_at": "2026-11-17T14:33:51Z"
     },
     {
       "number": 30,
@@ -1080,7 +1080,7 @@
       "start_utc": "2026-11-18T11:15:00Z",
       "venue": "Tribhuvan University Cricket Ground, Kirtipur",
       "status": "scheduled",
-      "status_raw": "scheduled",
+      "status_raw": "start_in",
       "teams": [
         {
           "slug": "kathmandu-gurkhas",
@@ -1102,7 +1102,7 @@
       "result": null,
       "outcome": null,
       "winner": null,
-      "updated_at": "2026-11-15T19:12:29Z"
+      "updated_at": "2026-11-17T14:33:51Z"
     },
     {
       "number": 31,
@@ -1206,6 +1206,17 @@
       },
       {
         "rank": 4,
+        "player": "Dipendra Singh Airee",
+        "team": "sudurpaschim-royals",
+        "innings": 8,
+        "runs": 202,
+        "wickets": 5,
+        "average": "28.86",
+        "strike_rate": "107.45",
+        "economy": "5.34"
+      },
+      {
+        "rank": 5,
         "player": "Ravi Bopara",
         "team": "chitwan-rhinos",
         "innings": 5,
@@ -1214,17 +1225,6 @@
         "average": "45.75",
         "strike_rate": "126.21",
         "economy": "13.00"
-      },
-      {
-        "rank": 5,
-        "player": "Pawan Sarraf",
-        "team": "karnali-yaks",
-        "innings": 7,
-        "runs": 167,
-        "wickets": 3,
-        "average": "27.83",
-        "strike_rate": "93.82",
-        "economy": "7.35"
       }
     ],
     "top_wicket_taker": [
@@ -1263,6 +1263,17 @@
       },
       {
         "rank": 4,
+        "player": "Sher Malla",
+        "team": "lumbini-lions",
+        "innings": 7,
+        "runs": 147,
+        "wickets": 11,
+        "average": "13.36",
+        "strike_rate": "80.00",
+        "economy": "5.65"
+      },
+      {
+        "rank": 5,
         "player": "Harmeet Singh",
         "team": "janakpur-bolts",
         "innings": 7,
@@ -1271,17 +1282,6 @@
         "average": "13.64",
         "strike_rate": "120.00",
         "economy": "5.66"
-      },
-      {
-        "rank": 5,
-        "player": "Mark Watt",
-        "team": "karnali-yaks",
-        "innings": 7,
-        "runs": 161,
-        "wickets": 11,
-        "average": "14.64",
-        "strike_rate": "51.32",
-        "economy": "6.19"
       }
     ],
     "batting_strike_rate": [
@@ -1289,12 +1289,12 @@
         "rank": 1,
         "player": "Scott Kuggeleijn",
         "team": "sudurpaschim-royals",
-        "innings": 5,
-        "runs": 53,
-        "wickets": 9,
-        "average": "17.67",
-        "strike_rate": "252.38",
-        "economy": "8.26"
+        "innings": 6,
+        "runs": 60,
+        "wickets": 10,
+        "average": "15.00",
+        "strike_rate": "230.77",
+        "economy": "8.48"
       },
       {
         "rank": 2,
@@ -1377,6 +1377,17 @@
       },
       {
         "rank": 4,
+        "player": "Abhishesh Gautam",
+        "team": "lumbini-lions",
+        "innings": 5,
+        "runs": 77,
+        "wickets": 7,
+        "average": "11.00",
+        "strike_rate": "94.12",
+        "economy": "4.05"
+      },
+      {
+        "rank": 5,
         "player": "Bishal Shusling",
         "team": "janakpur-bolts",
         "innings": 2,
@@ -1385,17 +1396,6 @@
         "average": "8.67",
         "strike_rate": "120.75",
         "economy": "4.33"
-      },
-      {
-        "rank": 5,
-        "player": "Abhishesh Gautam",
-        "team": "lumbini-lions",
-        "innings": 4,
-        "runs": 66,
-        "wickets": 6,
-        "average": "11.00",
-        "strike_rate": "94.12",
-        "economy": "4.40"
       }
     ]
   }
