@@ -128,4 +128,33 @@ URL:https://codila125.github.io/npl/
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 END:VEVENT
+BEGIN:VEVENT
+UID:npl-2026-m31@codila125.github.io
+DTSTAMP:20261119T151555Z
+LAST-MODIFIED:20261119T151555Z
+DTSTART:20261119T111500Z
+DTEND:20261119T144500Z
+SUMMARY:Sudurpaschim Royals vs Chitwan Rhinos (NPL Qualifier 2)
+LOCATION:Tribhuvan University Cricket Ground\, Kirtipur
+DESCRIPTION:Result: Sudurpaschim Royals won by 3 wickets\nSudurpaschim Roya
+ ls 136/7 (19.5 ov)\nChitwan Rhinos 133/9 (20.0 ov)\nhttps://codila125.gith
+ ub.io/npl/
+URL:https://codila125.github.io/npl/
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:npl-2026-m32@codila125.github.io
+DTSTAMP:20261119T150406Z
+LAST-MODIFIED:20261119T150406Z
+DTSTART:20261121T111500Z
+DTEND:20261121T144500Z
+SUMMARY:Lumbini Lions vs Sudurpaschim Royals (NPL NPL Season 3 Final)
+LOCATION:Tribhuvan University Cricket Ground\, Kirtipur
+DESCRIPTION:NPL 2026 · NPL Season 3 Final\nKick-off 5:00 PM NPT\nhttps://c
+ odila125.github.io/npl/
+URL:https://codila125.github.io/npl/
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
 END:VCALENDAR

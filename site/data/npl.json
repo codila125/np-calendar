@@ -6,7 +6,7 @@
     "timezone": "Asia/Kathmandu",
     "utc_offset": "+05:45"
   },
-  "updated_at": "2026-11-18T15:20:15Z",
+  "updated_at": "2026-11-19T15:16:26Z",
   "source": {
     "name": "nplt20league.com",
     "url": "https://nplt20league.com/"
@@ -1111,54 +1111,54 @@
       "id": "583556a3-4045-4ef8-bafe-ef34db9b6308",
       "start_utc": "2026-11-19T11:15:00Z",
       "venue": "Tribhuvan University Cricket Ground, Kirtipur",
-      "status": "scheduled",
-      "status_raw": "start_in",
+      "status": "completed",
+      "status_raw": "completed",
       "teams": [
         {
-          "slug": null,
-          "name": "Loser of Qualifier 1",
-          "short": null,
-          "placeholder": true,
-          "score": null,
-          "overs": null
+          "slug": "sudurpaschim-royals",
+          "name": "Sudurpaschim Royals",
+          "short": "SPR",
+          "placeholder": false,
+          "score": "136/7",
+          "overs": "19.5"
         },
         {
-          "slug": null,
-          "name": "Winner of Eliminator",
-          "short": null,
-          "placeholder": true,
-          "score": null,
-          "overs": null
+          "slug": "chitwan-rhinos",
+          "name": "Chitwan Rhinos",
+          "short": "CHR",
+          "placeholder": false,
+          "score": "133/9",
+          "overs": "20.0"
         }
       ],
-      "result": null,
-      "outcome": null,
-      "winner": null,
-      "updated_at": "2026-11-18T14:59:11Z"
+      "result": "Sudurpaschim Royals won by 3 wickets",
+      "outcome": "result",
+      "winner": "sudurpaschim-royals",
+      "updated_at": "2026-11-19T15:15:55Z"
     },
     {
       "number": 32,
-      "label": "Final",
+      "label": "NPL Season 3 Final",
       "stage": "final",
       "id": "a97f9321-b9d1-4d84-858f-bfce001c35fe",
       "start_utc": "2026-11-21T11:15:00Z",
       "venue": "Tribhuvan University Cricket Ground, Kirtipur",
       "status": "scheduled",
-      "status_raw": "scheduled",
+      "status_raw": "start_in",
       "teams": [
         {
-          "slug": null,
-          "name": "Winner of Qualifier 1",
-          "short": null,
-          "placeholder": true,
+          "slug": "lumbini-lions",
+          "name": "Lumbini Lions",
+          "short": "LUL",
+          "placeholder": false,
           "score": null,
           "overs": null
         },
         {
-          "slug": null,
-          "name": "Winner of Qualifier 2",
-          "short": null,
-          "placeholder": true,
+          "slug": "sudurpaschim-royals",
+          "name": "Sudurpaschim Royals",
+          "short": "SPR",
+          "placeholder": false,
           "score": null,
           "overs": null
         }
@@ -1166,7 +1166,7 @@
       "result": null,
       "outcome": null,
       "winner": null,
-      "updated_at": "2026-10-26T18:45:18Z"
+      "updated_at": "2026-11-19T15:04:06Z"
     }
   ],
   "stats": {
@@ -1197,11 +1197,11 @@
         "rank": 3,
         "player": "Ravi Bopara",
         "team": "chitwan-rhinos",
-        "innings": 6,
-        "runs": 236,
+        "innings": 7,
+        "runs": 237,
         "wickets": 0,
-        "average": "47.20",
-        "strike_rate": "126.20",
+        "average": "39.50",
+        "strike_rate": "121.54",
         "economy": "13.00"
       },
       {
@@ -1217,14 +1217,14 @@
       },
       {
         "rank": 5,
-        "player": "Dipendra Singh Airee",
-        "team": "sudurpaschim-royals",
-        "innings": 8,
-        "runs": 202,
-        "wickets": 5,
-        "average": "28.86",
-        "strike_rate": "107.45",
-        "economy": "5.34"
+        "player": "Dawid Malan",
+        "team": "chitwan-rhinos",
+        "innings": 6,
+        "runs": 220,
+        "wickets": 0,
+        "average": "55.00",
+        "strike_rate": "118.28",
+        "economy": null
       }
     ],
     "top_wicket_taker": [
@@ -1232,26 +1232,37 @@
         "rank": 1,
         "player": "Rijan Dhakal",
         "team": "chitwan-rhinos",
-        "innings": 7,
-        "runs": 142,
-        "wickets": 16,
-        "average": "8.88",
-        "strike_rate": "66.67",
-        "economy": "6.17"
+        "innings": 8,
+        "runs": 168,
+        "wickets": 17,
+        "average": "9.88",
+        "strike_rate": "71.43",
+        "economy": "6.22"
       },
       {
         "rank": 2,
         "player": "Kamal Singh Airee",
         "team": "chitwan-rhinos",
-        "innings": 6,
-        "runs": 119,
-        "wickets": 12,
-        "average": "9.92",
-        "strike_rate": "80.95",
-        "economy": "5.41"
+        "innings": 7,
+        "runs": 145,
+        "wickets": 13,
+        "average": "11.15",
+        "strike_rate": "93.10",
+        "economy": "5.58"
       },
       {
         "rank": 3,
+        "player": "Scott Kuggeleijn",
+        "team": "sudurpaschim-royals",
+        "innings": 9,
+        "runs": 239,
+        "wickets": 13,
+        "average": "18.38",
+        "strike_rate": "200.00",
+        "economy": "8.24"
+      },
+      {
+        "rank": 4,
         "player": "Rahul Yadav",
         "team": "janakpur-bolts",
         "innings": 7,
@@ -1262,7 +1273,7 @@
         "economy": "6.87"
       },
       {
-        "rank": 4,
+        "rank": 5,
         "player": "Sher Malla",
         "team": "lumbini-lions",
         "innings": 7,
@@ -1271,33 +1282,11 @@
         "average": "13.36",
         "strike_rate": "80.00",
         "economy": "5.65"
-      },
-      {
-        "rank": 5,
-        "player": "Harmeet Singh",
-        "team": "janakpur-bolts",
-        "innings": 7,
-        "runs": 150,
-        "wickets": 11,
-        "average": "13.64",
-        "strike_rate": "120.00",
-        "economy": "5.66"
       }
     ],
     "batting_strike_rate": [
       {
         "rank": 1,
-        "player": "Scott Kuggeleijn",
-        "team": "sudurpaschim-royals",
-        "innings": 6,
-        "runs": 60,
-        "wickets": 10,
-        "average": "15.00",
-        "strike_rate": "230.77",
-        "economy": "8.48"
-      },
-      {
-        "rank": 2,
         "player": "Isuru Udana",
         "team": "biratnagar-kings",
         "innings": 2,
@@ -1306,6 +1295,17 @@
         "average": "31.00",
         "strike_rate": "206.67",
         "economy": "9.00"
+      },
+      {
+        "rank": 2,
+        "player": "Scott Kuggeleijn",
+        "team": "sudurpaschim-royals",
+        "innings": 7,
+        "runs": 62,
+        "wickets": 13,
+        "average": "12.40",
+        "strike_rate": "200.00",
+        "economy": "8.24"
       },
       {
         "rank": 3,
@@ -1322,11 +1322,11 @@
         "rank": 4,
         "player": "Kamil mishara",
         "team": "chitwan-rhinos",
-        "innings": 4,
-        "runs": 185,
+        "innings": 5,
+        "runs": 189,
         "wickets": 2,
-        "average": "61.67",
-        "strike_rate": "198.92",
+        "average": "47.25",
+        "strike_rate": "196.88",
         "economy": "6.00"
       },
       {
