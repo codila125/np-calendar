@@ -99,17 +99,37 @@ def test_from_dir_with_issues_writes_issues_json(tmp_path, capsys):
     assert (site / "data" / "issues.json").read_text().endswith("}\n")
 
 
-def test_issues_violation_exits_1_and_writes_nothing(tmp_path, capsys):
+def test_undated_listed_not_in_feeds_and_reversed_dates_write_nothing(tmp_path, capsys):
     src = _from_dir_src(tmp_path)
+    stats = (src / "stats.json").read_bytes()
+    (src / "stats.json").unlink()  # first run publishes NPL without stats
+    site = tmp_path / "site"
+    assert cli.main(["--from-dir", str(src), "--site-dir", str(site)]) == 0
+    data = json.loads((site / "data" / "issues.json").read_text())
+    undated = [i for i in data["issues"] if not i["dates_announced"]]
+    assert len(undated) == 5
+    assert sum(1 for i in undated if i["category"] == "ipo") == 3
+    assert sum(1 for i in undated if i["category"] == "right-share") == 2
+    for name in config.ISSUE_FEEDS:
+        text = (site / "calendar" / f"{name}.ics").read_text()
+        assert not any(f"UID:issue-{i['id']}@" in text for i in undated)
+
+    rels = ["data/issues.json", *(f"calendar/{n}.ics" for n in config.ISSUE_FEEDS)]
+    before = {rel: (site / rel).read_bytes() for rel in rels}
+    npl_before = (site / "data" / "npl.json").read_bytes()
     path = src / "issues" / "ipo.json"
     body = json.loads(path.read_text())
     row = next(r for r in body["data"] if r["opening_date"] and r["closing_date"])
     row["closing_date"], row["opening_date"] = "2020-01-01", "2020-02-01"
     path.write_text(json.dumps(body))
-    site = tmp_path / "site"
-    assert cli.main(["--from-dir", str(src), "--site-dir", str(site)]) == 1
+    (src / "stats.json").write_bytes(stats)  # NPL changes too, so we can see it still publishes
+    capsys.readouterr()
+
+    assert cli.main(["--from-dir", str(src), "--site-dir", str(site)]) == 3
+
     assert "error: [I4]" in capsys.readouterr().err
-    assert not site.exists()
+    assert {rel: (site / rel).read_bytes() for rel in rels} == before
+    assert (site / "data" / "npl.json").read_bytes() != npl_before
 
 
 def _row(**kw):

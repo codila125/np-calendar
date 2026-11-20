@@ -1,6 +1,7 @@
 # ADR-3 — Git is the last-good store: validate fully in memory, then write
 
 - Status: accepted
+- Amended by ADR-5 (sources are isolated; exit 3 means partial)
 - Date: 2026 (build time)
 
 ## Context
