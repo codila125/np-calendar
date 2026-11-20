@@ -277,12 +277,31 @@ class El {
   get textContent() { return this._text + this.children.map((c) => c.textContent).join(""); }
   set textContent(v) { this._text = String(v); this.children = []; }
   walk() { return [this].concat(...this.children.map((c) => c.walk())); }
+  removeAttribute(k) { delete this.attrs[k]; }
   querySelectorAll(sel) {
-    return sel === "[id]" ? this.walk().slice(1).filter((e) => e.id) : [];
+    if (sel === "[id]") { return this.walk().slice(1).filter((e) => e.id); }
+    if (sel === "nav a") {
+      return [].concat(...this.walk().filter((e) => e.tag === "nav").map(
+        (n) => n.walk().filter((e) => e.tag === "a")));
+    }
+    return [];
   }
 }
 
-function boot(hash, fetchImpl) {
+const NAVS = {
+  "panel-stocks": ["stocks-calendar", "stocks-issues", "stocks-subscribe"],
+  "panel-npl": ["standings", "stats", "schedule", "calendar"],
+};
+
+function boot(hash, fetchImpl, withIO) {
+  const observers = [];
+  if (withIO === false) { delete global.IntersectionObserver; }
+  else {
+    global.IntersectionObserver = function (cb) {
+      this.cb = cb; this.observed = []; observers.push(this);
+      this.observe = (t) => { this.observed.push(t.id); };
+    };
+  }
   const mk = (tag, id) => { const e = new El(tag); e.id = id || ""; return e; };
   const tabs = [mk("button", "tab-stocks"), mk("button", "tab-npl")];
   tabs[0].setAttribute("aria-selected", "true");
@@ -292,14 +311,22 @@ function boot(hash, fetchImpl) {
   ["panel-stocks", "panel-npl", "issues-status", "issues-month", "issues-legend",
    "issues-list"].forEach((id) => { els[id] = mk("div", id); });
   els["panel-npl"].hidden = true;
-  ["standings", "schedule"].forEach((id) => els["panel-npl"].appendChild(mk("section", id)));
+  Object.keys(NAVS).forEach((panel) => {
+    const nav = mk("nav");
+    NAVS[panel].forEach((id) => {
+      const a = mk("a"); a.setAttribute("href", "#" + id); nav.appendChild(a);
+    });
+    els[panel].appendChild(nav);
+    NAVS[panel].forEach((id) => els[panel].appendChild(mk("section", id)));
+  });
   const win = new El("window");
   const doc = new El("document");
   Object.assign(doc, {
     baseURI: "https://example.test/np-calendar/", visibilityState: "visible",
     activeElement: null, scrolled: null,
     querySelectorAll: (sel) => (sel === '[role="tab"]' ? tabs : []),
-    getElementById: (id) => els[id] || els["panel-npl"].walk().find((e) => e.id === id) || null,
+    getElementById: (id) => els[id] ||
+      els["panel-npl"].walk().concat(els["panel-stocks"].walk()).find((e) => e.id === id) || null,
     createElement: (tag) => new El(tag),
     createTextNode: (t) => { const e = new El("#text"); e._text = t; return e; },
   });
@@ -317,7 +344,7 @@ function boot(hash, fetchImpl) {
     focused: doc.activeElement && doc.activeElement.id,
     hash: loc.hash, writes: global.history.writes.slice(),
   });
-  return { tabs, els, win, doc, loc, state };
+  return { tabs, els, win, doc, loc, state, observers };
 }
 
 const okFetch = (data) => () => Promise.resolve({ ok: true, json: () => Promise.resolve(data) });
@@ -407,6 +434,36 @@ const out = {};
   out.chipsNov = p.els["issues-month"].walk().filter((e) => /chip /.test(e.className)).length;
   nav("Next").fire("click");
   out.chipsDec = p.els["issues-month"].walk().filter((e) => /chip /.test(e.className)).length;
+
+  // scrollspy
+  p = boot("", okFetch(sampleData));
+  await flush();
+  out.spy = { count: p.observers.length };
+  if (p.observers.length === 2) {
+  const [oS, oN] = p.observers;
+  const current = (panel) => p.els[panel].walk().filter(
+    (e) => e.tag === "a" && e.attrs["aria-current"] === "true").map((e) => e.attrs.href);
+  const fire = (o, m) => o.cb(
+    Object.keys(m).map((id) => ({ target: { id }, isIntersecting: m[id] })));
+  Object.assign(out.spy, { observedS: oS.observed, observedN: oN.observed });
+  out.spy.initial = [current("panel-stocks"), current("panel-npl")];
+  fire(oS, { "stocks-issues": true });
+  out.spy.one = current("panel-stocks");
+  fire(oS, { "stocks-issues": false, "stocks-subscribe": true });
+  out.spy.moved = current("panel-stocks");
+  fire(oS, { "stocks-calendar": true, "stocks-subscribe": true });
+  out.spy.navOrder = current("panel-stocks");
+  fire(oS, { "stocks-calendar": false, "stocks-subscribe": false });
+  out.spy.allFalse = current("panel-stocks");
+  fire(oN, { schedule: true });
+  out.spy.npl = current("panel-npl");
+  out.spy.stocksKept = current("panel-stocks");
+  }
+  p = boot("", okFetch(sampleData), false);
+  await flush();
+  out.spy.noIO = [p.els["issues-status"].textContent,
+    p.els["panel-stocks"].walk().concat(p.els["panel-npl"].walk()).filter(
+      (e) => e.attrs["aria-current"]).length];
   console.log(JSON.stringify(out));
 })();
 """
@@ -482,3 +539,62 @@ def test_month_navigation_prev_next_today(dom):
     assert dom["nav"] == ["November 2026", "December 2026", "January 2027",
                           "October 2026", "November 2026"]
     assert dom["chipsNov"] > 0 and dom["chipsDec"] > 0
+
+
+def _media_block(css, query):
+    start = css.index(query)
+    i = css.index("{", start)
+    depth, j = 0, i
+    while True:
+        depth += css[j] == "{"
+        depth -= css[j] == "}"
+        j += 1
+        if depth == 0:
+            return css[i + 1:j - 1], css[:start] + css[j:]
+
+
+def _rule(css, selector):
+    m = re.search(r"(?:^|\n)\s*" + re.escape(selector) + r"\s*\{([^}]*)\}", css)
+    assert m, selector
+    return m.group(1)
+
+
+def test_section_navs_become_a_sticky_left_toc_on_wide_screens():
+    css = (SITE / "style.css").read_text()
+    wide, outside = _media_block(css, "@media (min-width: 64rem)")
+    panel = _rule(wide, '[role="tabpanel"]')
+    assert "display: grid" in panel
+    assert re.search(r"grid-template-columns:\s*\S+\s+\S+", panel)
+    nav = _rule(wide, '[role="tabpanel"] > nav')
+    assert "grid-column: 1" in nav and "align-self: start" in nav and re.search(r"top:\s*\S", nav)
+    assert "flex-direction: column" in _rule(wide, '[role="tabpanel"] > nav ul')
+    assert "grid-column: 2" in _rule(wide, '[role="tabpanel"] > :not(nav)')
+    base = _rule(outside, "nav")
+    assert "position: sticky" in base and "top: 0" in base
+    assert "flex-direction: column" not in _rule(outside, "nav ul")
+    assert "background-size: 100% 2px" in _rule(css, 'nav a[aria-current="true"]')
+
+    nodes, by_id = _dom()
+    assert sorted(n.attrs.get("src") for n in nodes if n.tag == "script" and "src" in n.attrs) \
+        == ["app.js", "issues.js"]
+    assert sorted(n.attrs["href"] for n in nodes if n.tag == "link") == ["data:,", "style.css"]
+    for pid in ("panel-stocks", "panel-npl"):
+        kids = by_id[pid].children
+        assert kids[0].tag == "nav"
+        sections = {c.attrs.get("id") for c in kids if c.tag == "section"}
+        links = [a.attrs["href"][1:] for a in kids[0].walk() if a.tag == "a"]
+        assert links and set(links) <= sections
+
+
+def test_scrollspy_marks_the_section_in_view(dom):
+    spy = dom["spy"]
+    assert spy["count"] == 2
+    assert spy["observedS"] == ["stocks-calendar", "stocks-issues", "stocks-subscribe"]
+    assert spy["observedN"] == ["standings", "stats", "schedule", "calendar"]
+    assert spy["initial"] == [[], []]
+    assert spy["one"] == ["#stocks-issues"]
+    assert spy["moved"] == ["#stocks-subscribe"]
+    assert spy["navOrder"] == ["#stocks-calendar"]
+    assert spy["allFalse"] == ["#stocks-calendar"]
+    assert spy["npl"] == ["#schedule"] and spy["stocksKept"] == ["#stocks-calendar"]
+    assert spy["noIO"][0].endswith("stock issues listed.") and spy["noIO"][1] == 0
