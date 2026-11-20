@@ -79,6 +79,71 @@ def _vevent(issue: dict, label: str) -> str:
     return "\r\n".join(fold(line) for line in lines)
 
 
+def _listing_vevent(issue: dict, label: str) -> str:
+    listing = _compact(issue["listing_date"])
+    end = date.fromisoformat(issue["listing_date"]) + timedelta(days=1)
+    who = f"{issue['company']} ({issue['symbol']})"
+    title = f"Lists today: {who}"
+    desc = [f"{label} · {issue['symbol']}", f"Listing date: {_human(issue['listing_date'])}"]
+    if issue.get("opening_date"):
+        opened, closed = _human(issue["opening_date"]), _human(issue["closing_date"])
+        desc.append(f"Application was open {opened} to {closed}")
+    lines = [
+        "BEGIN:VEVENT",
+        f"UID:issue-{issue['id']}-listing@{config.UID_DOMAIN}",
+        f"DTSTAMP:{listing}T000000Z",
+        f"DTSTART;VALUE=DATE:{listing}",
+        f"DTEND;VALUE=DATE:{end.strftime('%Y%m%d')}",
+        f"SUMMARY:{escape_text(title)}",
+        f"DESCRIPTION:{escape_text(chr(10).join(desc))}",
+        "STATUS:CONFIRMED",
+        "TRANSP:TRANSPARENT",
+        "BEGIN:VALARM",
+        "ACTION:DISPLAY",
+        f"DESCRIPTION:{escape_text(title)}",
+        f"TRIGGER;VALUE=DATE-TIME:{listing}T{config.ALARM_UTC_TIME}Z",
+        "END:VALARM",
+        "END:VEVENT",
+    ]
+    return "\r\n".join(fold(line) for line in lines)
+
+
+def _bookclosure_vevent(issue: dict) -> str:
+    iso = issue["book_closure_date"]
+    closure = _compact(iso)
+    day = date.fromisoformat(iso)
+    end = day + timedelta(days=1)
+    alarm = _compact((day - timedelta(days=3)).isoformat())
+    who = f"{issue['company']} ({issue['symbol']})"
+    sym = issue["symbol"]
+    desc = [
+        f"Right share · {sym}",
+        f"Book closure: {_human(iso)}",
+        f"Shareholders must hold {sym} by this date to be eligible for the right share.",
+        "Buy at least 3 trading days before it: settlement is T+2.",
+    ]
+    if issue.get("ratio"):
+        desc.append(f"Ratio: {issue['ratio']}")
+    lines = [
+        "BEGIN:VEVENT",
+        f"UID:issue-{issue['id']}-bookclosure@{config.UID_DOMAIN}",
+        f"DTSTAMP:{closure}T000000Z",
+        f"DTSTART;VALUE=DATE:{closure}",
+        f"DTEND;VALUE=DATE:{end.strftime('%Y%m%d')}",
+        f"SUMMARY:{escape_text(f'Book closure: {who}')}",
+        f"DESCRIPTION:{escape_text(chr(10).join(desc))}",
+        "STATUS:CONFIRMED",
+        "TRANSP:TRANSPARENT",
+        "BEGIN:VALARM",
+        "ACTION:DISPLAY",
+        f"DESCRIPTION:{escape_text(f'Book closure in 3 days: {who}')}",
+        f"TRIGGER;VALUE=DATE-TIME:{alarm}T{config.ALARM_UTC_TIME}Z",
+        "END:VALARM",
+        "END:VEVENT",
+    ]
+    return "\r\n".join(fold(line) for line in lines)
+
+
 def _calendar(name: str, events: list[str]) -> bytes:
     lines = [
         fold("BEGIN:VCALENDAR"),
@@ -97,14 +162,28 @@ def _calendar(name: str, events: list[str]) -> bytes:
 
 
 def build_issue_calendars(data: dict) -> dict[str, bytes]:
-    """Return the six issue feeds as ``{relpath: bytes}``; undated issues are left out."""
+    """Return the eight issue feeds as ``{relpath: bytes}``; undated issues are left out."""
     order = {c.slug: n for n, c in enumerate(config.ISSUE_CATEGORIES)}
     labels = {c.slug: c.label for c in config.ISSUE_CATEGORIES}
-    dated = sorted(
-        (i for i in data["issues"] if i.get("dates_announced")),
-        key=lambda i: (i["opening_date"], i["closing_date"], order[i["category"]], i["id"]),
-    )
-    events = [(i["category"], _vevent(i, labels[i["category"]])) for i in dated]
+    # (start, kind_rank, end, category order, uid, category, text); kind 0 application,
+    # 1 listing, 2 book closure
+    rows = []
+    for i in data["issues"]:
+        cat, rank = i["category"], order[i["category"]]
+        uid = i["id"]
+        if i.get("dates_announced"):
+            end = date.fromisoformat(i["closing_date"]) + timedelta(days=1)
+            rows.append((i["opening_date"], 0, end.isoformat(), rank, uid, cat,
+                         _vevent(i, labels[cat])))  # fmt: skip
+        if i.get("listing_date") and i.get("dates_announced"):
+            end = date.fromisoformat(i["listing_date"]) + timedelta(days=1)
+            rows.append((i["listing_date"], 1, end.isoformat(), rank, uid, cat,
+                         _listing_vevent(i, labels[cat])))  # fmt: skip
+        if cat == "right-share" and i.get("book_closure_date"):
+            end = date.fromisoformat(i["book_closure_date"]) + timedelta(days=1)
+            rows.append((i["book_closure_date"], 2, end.isoformat(), rank, uid, cat,
+                         _bookclosure_vevent(i)))  # fmt: skip
+    events = [(r[5], r[6]) for r in sorted(rows, key=lambda r: r[:5])]
     outputs = {"calendar/issues.ics": _calendar(ALL_NAME, [e for _, e in events])}
     for cat in config.ISSUE_CATEGORIES:
         outputs[f"calendar/{cat.slug}.ics"] = _calendar(
