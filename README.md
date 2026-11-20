@@ -1,18 +1,28 @@
-# npl
+# np-calendar
 
-Standings, match schedule and calendar feeds for the **Nepal Premier League 2026 (Season 3)**,
-26 Oct – 21 Nov 2026 at TU Ground, Kirtipur.
+Month calendar and `.ics` feeds for Nepali **share issues** (IPO, FPO, right share, IPO for
+locals, IPO for migrant workers), plus standings, match schedule and feeds for the **Nepal Premier
+League 2026 (Season 3)**, 26 Oct – 21 Nov 2026 at TU Ground, Kirtipur.
 
-- Site: <https://codila125.github.io/npl/>
-- All matches calendar feed: <https://codila125.github.io/npl/calendar/npl.ics>
-- Per-team feeds: `https://codila125.github.io/npl/calendar/<team-slug>.ics` (one per franchise,
-  e.g. [`lumbini-lions.ics`](https://codila125.github.io/npl/calendar/lumbini-lions.ics))
+- Site: <https://codila125.github.io/np-calendar/> (tabs: "Share issues" by default, and "NPL")
+- All share issues feed: <https://codila125.github.io/np-calendar/calendar/issues.ics>
+- Per-category issue feeds: `https://codila125.github.io/np-calendar/calendar/<name>.ics` with
+  `<name>` one of `ipo`, `fpo`, `right-share`, `ipo-local`, `ipo-migrant`
+- NPL all matches feed: <https://codila125.github.io/np-calendar/calendar/npl.ics>
+- NPL per-team feeds: `https://codila125.github.io/np-calendar/calendar/<team-slug>.ics` (one per
+  franchise, e.g.
+  [`lumbini-lions.ics`](https://codila125.github.io/np-calendar/calendar/lumbini-lions.ics))
 
-A scheduled GitHub Action scrapes the official source every 30 minutes, rebuilds
-`site/data/npl.json` and the `.ics` feeds, commits them only when they changed, and deploys the
+Each dated issue is one all-day event from its opening to its closing date (inclusive) with a
+09:00 NPT reminder on the opening day. Issues whose dates are not announced yet appear on the page
+but are left out of the feeds.
+
+A scheduled GitHub Action scrapes both sources every 30 minutes, rebuilds `site/data/npl.json`,
+`site/data/issues.json` and the `.ics` feeds, commits them only when they changed, and deploys the
 `site/` folder to GitHub Pages. Nobody has to run anything.
 
-Unofficial fan project. Data from [nplt20league.com](https://nplt20league.com/).
+Unofficial fan project. Data from [nplt20league.com](https://nplt20league.com/) and
+[ShareSansar](https://www.sharesansar.com/).
 
 ## How it works
 
@@ -22,12 +32,16 @@ scraper/            Python 3.12 scraper + generator (stdlib + requests)
   normalize.py      raw source dicts -> normalized Season dict (pure)
   validate.py       V1..V16 rules; any violation fails the run (pure)
   ics.py            Season dict -> calendar/npl.ics + one feed per team (pure, no clock)
-  publish.py        render npl.json, write-only-if-changed, orphan cleanup
+  issues.py         ShareSansar existing-issues JSON -> normalized issues dict (pure)
+  issues_ics.py     issues dict -> issues.ics + one feed per category (pure, no clock)
+  publish.py        render JSON, write-only-if-changed, orphan cleanup
   cli.py            `python -m scraper` orchestration, exit codes
 site/               exactly what GitHub Pages serves (the artifact)
   index.html style.css app.js
-  data/npl.json     normalized data the page reads (committed by the bot)
-  calendar/*.ics    all-matches + per-team feeds (committed by the bot)
+  issues.js         share-issues tab: month grid, open/upcoming list, feed rows
+  data/npl.json     normalized NPL data the page reads (committed by the bot)
+  data/issues.json  normalized share-issue data the page reads (committed by the bot)
+  calendar/*.ics    NPL + team feeds and six issue feeds (committed by the bot)
 worker/live.js      Cloudflare Worker: CORS proxy for live scores (see "Live scores")
 tests/              offline tests (fixtures copied from saved source responses)
 docs/adr/           decisions: ICS UID, determinism, git-as-last-good-store
@@ -44,7 +58,9 @@ python3 -m venv .venv && .venv/bin/pip install -r requirements-dev.txt
 # scrape the live source, rewrite site/ only where bytes differ
 .venv/bin/python -m scraper
 
-# rebuild from saved source files instead of the network (dev / tests / seed)
+# rebuild from saved source files instead of the network (dev / tests / seed);
+# DIR holds teams/matches/points JSON and, optionally, DIR/issues/ with the ShareSansar
+# responses (ipo.json, fpo.json, right-share.json, ipo-local.json, ipo-migrant.json, robots.txt)
 .venv/bin/python -m scraper --from-dir tests/fixtures/season2026
 
 # see what would change without writing anything
@@ -74,8 +90,18 @@ snapshots under `tests/fixtures/`.
 
 ## Data source
 
+### Share issues
+
+ShareSansar's `existing-issues` JSON for types IPO (1), FPO (2), right share (3), IPO for locals
+(5) and IPO for migrant workers (8), newest 50 per category, paged, with its `robots.txt` checked
+first. Mutual funds, debentures and IPOs for QIIs are not covered. Issues without an opening or
+closing date are kept in `issues.json` as dates-not-announced and left out of the feeds; an issue
+that closes before it opens fails validation and nothing is written for issues.
+
+### NPL
+
 Official NPL API, four requests per run, sequential, identified with
-`npl-calendar-bot/1.0 (+https://github.com/codila125/npl)`:
+`np-calendar-bot/1.0 (+https://github.com/codila125/np-calendar)`:
 
 - `GET https://nplt20league.com/robots.txt` (checked; a disallow fails the run)
 - `GET https://nplt20league.com/api/v1/teams`
@@ -119,7 +145,12 @@ Then set `LIVE_URL` at the top of `site/app.js` to the printed URL plus `/live`
 
 ## Failure behaviour
 
-The scraper validates everything in memory first (HTTP status, JSON shape, season/year, 8 teams,
+The two sources are isolated. If one fails, the other is still refreshed and written, the failed
+source keeps its last committed data and feeds, and the run exits `3` (partial). The workflow
+commits and deploys whatever was written, then its `report` job turns the run red so the failure
+is visible. Exit `1` means nothing was written.
+
+For each source the scraper validates everything in memory first (HTTP status, JSON shape, season/year, 8 teams,
 32 matches with the expected stage counts, labels, participants, start times, venues, winners,
 standings, regression against the committed data). Any violation prints
 `error: [V<n>] <message>` (plus `::error::` annotations on GitHub Actions), exits `1`, and touches
@@ -145,5 +176,5 @@ redeploy.
 
 ## License
 
-Data © Nepal Premier League / its provider. This repository's code is provided as-is for the fan
+Data © Nepal Premier League and ShareSansar / their providers. This repository's code is provided as-is for the fan
 site above.

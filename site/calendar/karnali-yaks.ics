@@ -1,6 +1,6 @@
 BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//codila125//NPL calendar feed//EN
+PRODID:-//codila125//np-calendar//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:NPL 2026 — Karnali Yaks
@@ -17,8 +17,9 @@ DTEND:20261027T144500Z
 SUMMARY:Karnali Yaks vs Janakpur Bolts (NPL Match 3)
 LOCATION:Tribhuvan University Cricket Ground\, Kirtipur
 DESCRIPTION:Result: Karnali Yaks won by 19 runs\nKarnali Yaks 132/9 (20.0 o
- v)\nJanakpur Bolts 113/10 (19.3 ov)\nhttps://codila125.github.io/npl/
-URL:https://codila125.github.io/npl/
+ v)\nJanakpur Bolts 113/10 (19.3 ov)\nhttps://codila125.github.io/np-calend
+ ar/
+URL:https://codila125.github.io/np-calendar/
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 END:VEVENT
@@ -31,8 +32,9 @@ DTEND:20261029T144500Z
 SUMMARY:Karnali Yaks vs Biratnagar Kings (NPL Match 6)
 LOCATION:Tribhuvan University Cricket Ground\, Kirtipur
 DESCRIPTION:Result: Karnali Yaks won by 4 wickets\nKarnali Yaks 187/6 (19.5
-  ov)\nBiratnagar Kings 186/7 (20.0 ov)\nhttps://codila125.github.io/npl/
-URL:https://codila125.github.io/npl/
+  ov)\nBiratnagar Kings 186/7 (20.0 ov)\nhttps://codila125.github.io/np-cal
+ endar/
+URL:https://codila125.github.io/np-calendar/
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 END:VEVENT
@@ -46,8 +48,8 @@ SUMMARY:Kathmandu Gurkhas vs Karnali Yaks (NPL Match 10)
 LOCATION:Tribhuvan University Cricket Ground\, Kirtipur
 DESCRIPTION:Result: Kathmandu Gorkhas won by 4 wickets\nKathmandu Gurkhas 1
  83/6 (19.5 ov)\nKarnali Yaks 180/6 (20.0 ov)\nhttps://codila125.github.io/
- npl/
-URL:https://codila125.github.io/npl/
+ np-calendar/
+URL:https://codila125.github.io/np-calendar/
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 END:VEVENT
@@ -61,8 +63,8 @@ SUMMARY:Sudurpaschim Royals vs Karnali Yaks (NPL Match 16)
 LOCATION:Tribhuvan University Cricket Ground\, Kirtipur
 DESCRIPTION:Result: Sudurpaschim Royals won by 39 runs\nSudurpaschim Royals
   176/6 (20.0 ov)\nKarnali Yaks 137/7 (20.0 ov)\nhttps://codila125.github.i
- o/npl/
-URL:https://codila125.github.io/npl/
+ o/np-calendar/
+URL:https://codila125.github.io/np-calendar/
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 END:VEVENT
@@ -75,9 +77,9 @@ DTEND:20261109T101500Z
 SUMMARY:Pokhara Avengers vs Karnali Yaks (NPL Match 19)
 LOCATION:Tribhuvan University Cricket Ground\, Kirtipur
 DESCRIPTION:Result: Pokhara Avengers won by 63 runs\nPokhara Avengers 217/3
-  (20.0 ov)\nKarnali Yaks 154/10 (18.3 ov)\nhttps://codila125.github.io/npl
- /
-URL:https://codila125.github.io/npl/
+  (20.0 ov)\nKarnali Yaks 154/10 (18.3 ov)\nhttps://codila125.github.io/np-
+ calendar/
+URL:https://codila125.github.io/np-calendar/
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 END:VEVENT
@@ -90,8 +92,9 @@ DTEND:20261112T144500Z
 SUMMARY:Karnali Yaks vs Lumbini Lions (NPL Match 23)
 LOCATION:Tribhuvan University Cricket Ground\, Kirtipur
 DESCRIPTION:Result: Lumbini Lions won by 4 wickets\nKarnali Yaks 105/10 (19
- .2 ov)\nLumbini Lions 107/6 (16.4 ov)\nhttps://codila125.github.io/npl/
-URL:https://codila125.github.io/npl/
+ .2 ov)\nLumbini Lions 107/6 (16.4 ov)\nhttps://codila125.github.io/np-cale
+ ndar/
+URL:https://codila125.github.io/np-calendar/
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 END:VEVENT
@@ -104,8 +107,9 @@ DTEND:20261115T101500Z
 SUMMARY:Chitwan Rhinos vs Karnali Yaks (NPL Match 27)
 LOCATION:Tribhuvan University Cricket Ground\, Kirtipur
 DESCRIPTION:Result: Karnali Yaks won by 24 runs\nChitwan Rhinos 129/10 (19.
- 1 ov)\nKarnali Yaks 153/8 (20.0 ov)\nhttps://codila125.github.io/npl/
-URL:https://codila125.github.io/npl/
+ 1 ov)\nKarnali Yaks 153/8 (20.0 ov)\nhttps://codila125.github.io/np-calend
+ ar/
+URL:https://codila125.github.io/np-calendar/
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 END:VEVENT

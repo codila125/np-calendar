@@ -174,7 +174,7 @@ def test_description_before_result_day_match(season_2026):
     assert desc == (
         "NPL 2026 · Match 7\n"
         "Kick-off 12:30 PM NPT\n"
-        "https://codila125.github.io/npl/"
+        + config.SITE_URL
     )
 
 
@@ -184,7 +184,7 @@ def test_description_before_result_evening_match(season_2026):
     assert desc == (
         "NPL 2026 · Final\n"
         "Kick-off 5:00 PM NPT\n"
-        "https://codila125.github.io/npl/"
+        + config.SITE_URL
     )
 
 
@@ -195,7 +195,7 @@ def test_description_completed_with_result_and_scores(season_2026):
         "Result: Lumbini Lions won by 7 wickets\n"
         "Lumbini Lions 88/3 (9.5 ov)\n"
         "Sudurpaschim Royals 87/10 (17.2 ov)\n"
-        "https://codila125.github.io/npl/"
+        + config.SITE_URL
     )
 
 
@@ -211,7 +211,7 @@ def test_description_blank_result_with_winner_names_the_winner(season_2026):
         "Result: Lumbini Lions won\n"
         "Lumbini Lions 88/3 (9.5 ov)\n"
         "Sudurpaschim Royals 87/10 (17.2 ov)\n"
-        "https://codila125.github.io/npl/"
+        + config.SITE_URL
     )
 
 
@@ -226,7 +226,7 @@ def test_description_blank_result_without_winner_omits_result_line(season_2026):
     assert desc == (
         "Lumbini Lions 88/3 (9.5 ov)\n"
         "Sudurpaschim Royals 87/10 (17.2 ov)\n"
-        "https://codila125.github.io/npl/"
+        + config.SITE_URL
     )
 
 
@@ -242,7 +242,7 @@ def test_description_no_result_with_text_and_scores(season_2026):
         "Result: Match abandoned due to rain\n"
         "Lumbini Lions 88/3 (9.5 ov)\n"
         "Sudurpaschim Royals 87/10 (17.2 ov)\n"
-        "https://codila125.github.io/npl/"
+        + config.SITE_URL
     )
 
 
@@ -257,7 +257,7 @@ def test_description_no_result_blank_and_missing_scores(season_2026):
         side["overs"] = None
     cal = Calendar.from_ical(build_calendars(season)["calendar/npl.ics"])
     desc = str(find_event(cal, ALL_UID)["DESCRIPTION"])
-    assert desc == "Result: No result\nhttps://codila125.github.io/npl/"
+    assert desc == f"Result: No result\n{config.SITE_URL}"
 
 
 def test_completed_match_omits_score_line_when_score_missing(season_2026):
@@ -270,7 +270,7 @@ def test_completed_match_omits_score_line_when_score_missing(season_2026):
     assert desc == (
         "Result: Lumbini Lions won by 7 wickets\n"
         "Lumbini Lions 88/3 (9.5 ov)\n"
-        "https://codila125.github.io/npl/"
+        + config.SITE_URL
     )
 
 
@@ -284,7 +284,7 @@ def test_completed_match_score_without_overs_omits_the_overs(season_2026):
         "Result: Lumbini Lions won by 7 wickets\n"
         "Lumbini Lions 88/3\n"
         "Sudurpaschim Royals 87/10 (17.2 ov)\n"
-        "https://codila125.github.io/npl/"
+        + config.SITE_URL
     )
 
 
@@ -329,7 +329,7 @@ def test_header_order(season_2026):
     assert text.startswith(
         "BEGIN:VCALENDAR\r\n"
         "VERSION:2.0\r\n"
-        "PRODID:-//codila125//NPL calendar feed//EN\r\n"
+        f"PRODID:{config.PRODID}\r\n"
         "CALSCALE:GREGORIAN\r\n"
         "METHOD:PUBLISH\r\n"
     )
