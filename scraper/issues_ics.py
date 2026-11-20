@@ -85,7 +85,7 @@ def _listing_vevent(issue: dict, label: str) -> str:
     who = f"{issue['company']} ({issue['symbol']})"
     title = f"Lists today: {who}"
     desc = [f"{label} · {issue['symbol']}", f"Listing date: {_human(issue['listing_date'])}"]
-    if issue.get("opening_date"):
+    if issue.get("opening_date") and issue.get("closing_date"):
         opened, closed = _human(issue["opening_date"]), _human(issue["closing_date"])
         desc.append(f"Application was open {opened} to {closed}")
     lines = [
@@ -175,7 +175,7 @@ def build_issue_calendars(data: dict) -> dict[str, bytes]:
             end = date.fromisoformat(i["closing_date"]) + timedelta(days=1)
             rows.append((i["opening_date"], 0, end.isoformat(), rank, uid, cat,
                          _vevent(i, labels[cat])))  # fmt: skip
-        if i.get("listing_date") and i.get("dates_announced"):
+        if i.get("listing_date"):
             end = date.fromisoformat(i["listing_date"]) + timedelta(days=1)
             rows.append((i["listing_date"], 1, end.isoformat(), rank, uid, cat,
                          _listing_vevent(i, labels[cat])))  # fmt: skip

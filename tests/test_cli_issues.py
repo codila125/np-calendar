@@ -45,9 +45,7 @@ def _issue_routes():
         )
     }
     for cat in config.ISSUE_CATEGORIES:
-        url = (
-            f"{config.ISSUES_BASE}/existing-issues?draw=1&start=0&length=50&type={cat.type_id}"
-        )
+        url = f"{config.ISSUES_BASE}/existing-issues?draw=1&start=0&length=50&type={cat.type_id}"
         routes[url] = FakeResponse(200, (ISSUE_FIXTURES / f"{cat.slug}.json").read_text())
     return routes
 
@@ -285,9 +283,7 @@ def test_issue_feeds_are_all_day_alarmed_stable_and_reproducible(tmp_path, capsy
         94, 46, 141, 97, 97, 87, 82,
     ]  # fmt: skip
     for slug in (c.slug for c in config.ISSUE_CATEGORIES):
-        assert {str(e["UID"]) for e in _events(feeds[slug])} <= {
-            str(e["UID"]) for e in all_events
-        }
+        assert {str(e["UID"]) for e in _events(feeds[slug])} <= {str(e["UID"]) for e in all_events}
 
     for event in events:
         uid = str(event["UID"])
@@ -364,6 +360,8 @@ def test_listing_day_events_in_own_feed_and_issues_ics(tmp_path, capsys):
     before_opening = date.fromisoformat(dated[0]["opening_date"]) - timedelta(days=1)
     dated[0]["listing_date"] = before_opening.isoformat()
     dated[1]["listing_date"] = ""
+    dated[2]["listing_date"] = dated[2]["opening_date"]  # boundary: kept
+    dated[3]["closing_date"] = ""  # opening known, closing not: still lists
     path.write_text(json.dumps(body))
     site = tmp_path / "site"
 
@@ -376,7 +374,20 @@ def test_listing_day_events_in_own_feed_and_issues_ics(tmp_path, capsys):
     assert {u for u in all_events if "-listing@" not in u and "-bookclosure@" not in u} == app_uids
 
     listed = [i for i in data["issues"] if i["listing_date"]]
+    raw: dict[tuple, set] = {}
+    for f in (src / "issues").glob("*.json"):
+        for r in json.loads(f.read_text())["data"]:
+            key = (f.stem, r["companyid"], issues._units_key(r["total_units"]))
+            raw.setdefault(key, set()).add(r["listing_date"] or None)
     for issue in listed:
+        prefixes = [
+            k for k in raw
+            if issue["id"] == f"{k[0]}-{k[1]}-{k[2]}"
+            or issue["id"].startswith(f"{k[0]}-{k[1]}-{k[2]}-")
+        ]  # fmt: skip
+        assert prefixes
+        assert any(issue["listing_date"] in raw[k] for k in prefixes)  # equals the source value
+
         uid = f"issue-{issue['id']}-listing@{DOMAIN}"
         assert uid != f"issue-{issue['id']}@{DOMAIN}"
         listing = date.fromisoformat(issue["listing_date"])
@@ -397,6 +408,18 @@ def test_listing_day_events_in_own_feed_and_issues_ics(tmp_path, capsys):
         ids = [i for i in data["issues"] if i["id"].startswith(f"ipo-{cid}-")]
         assert ids and all(i["listing_date"] is None for i in ids)
         assert not any(f"issue-ipo-{cid}-" in u and "-listing@" in u for u in all_events)
+    for row in (dated[2], dated[3]):
+        ids = [
+            i for i in data["issues"]
+            if i["id"].startswith(f"ipo-{row['companyid']}-")
+            and i["opening_date"] == row["opening_date"]
+        ]  # fmt: skip
+        assert ids
+        for issue in ids:
+            assert issue["listing_date"] == row["listing_date"]
+            uid = f"issue-{issue['id']}-listing@{DOMAIN}"
+            assert uid in _by_uid(feeds["issues"]) and uid in _by_uid(feeds["ipo"])
+    assert dated[3]["closing_date"] == ""
     counts = [
         sum(1 for u in _by_uid(feeds[c.slug]) if u.endswith(f"-listing@{DOMAIN}"))
         for c in config.ISSUE_CATEGORIES
