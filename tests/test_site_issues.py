@@ -10,6 +10,7 @@ from pathlib import Path
 import pytest
 
 from scraper.issues import normalize_issues
+from scraper.issues_ics import format_amount
 from tests.test_site_contrast import _contrast
 
 SITE = Path(__file__).resolve().parent.parent / "site"
@@ -230,6 +231,20 @@ def test_issue_logic_in_node(tmp_path):
     assert len(out["undated20"]) == 5
     assert out["open27"] == ["ipo-local:KPL", "ipo-migrant:KPL"]
     assert out["upcoming27"] == ["ipo-local:AELTD", "ipo-migrant:AELTD"]
+
+
+@pytest.mark.skipif(shutil.which("node") is None, reason="node is not installed")
+def test_page_formats_amounts_like_the_feeds():
+    data = json.loads((SITE / "data" / "issues.json").read_text())
+    values = sorted({v for i in data["issues"] for v in (i.get("units"), i.get("price")) if v})
+    values += ["600000.00", "24851236.18", "1000.50", "100", "0.00"]
+    script = ("const h = require(process.argv[1]);"
+              "console.log(JSON.stringify(JSON.parse(process.argv[2]).map(h.formatAmount)));")
+    result = subprocess.run(
+        [shutil.which("node"), "-e", script, str(SITE / "issues.js"), json.dumps(values)],
+        capture_output=True, text=True, check=True)
+    assert json.loads(result.stdout) == [format_amount(v) for v in values]
+    assert "600,000" in json.loads(result.stdout)
 
 
 DOM_SCRIPT = r"""
@@ -453,6 +468,7 @@ def test_loading_error_retry_and_empty_states(dom):
     assert dom["busyWhileLoading"] == "true" and dom["busyAfter"] == "false"
     assert dom["loaded"].startswith("223 stock issues listed")
     assert "Upcoming" in dom["listText"] and "Dates not announced yet" in dom["listText"]
+    assert "Price Rs 100 · Units 90,000" in dom["listText"]
     assert dom["error"].startswith("Couldn't load stock issues.")
     assert dom["errorHasRetry"] is True
     assert dom["callsAfterRetry"] == dom["callsBeforeRetry"] + 1
