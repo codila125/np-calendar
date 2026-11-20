@@ -158,7 +158,7 @@
     }
     var name = parseHash(location.hash, nplIds());
     activate(name, false);
-    if (name === "npl" && id && id !== "npl") {
+    if (id && id !== name) {
       var target = document.getElementById(id);
       if (target) {
         target.scrollIntoView();
@@ -389,6 +389,22 @@
     }
     renderList(data);
     setStatus(data.issues.length + " stock issues listed.");
+    rescrollToHash();
+  }
+
+  // A deep link such as #stocks-subscribe is scrolled to before the calendar and
+  // list exist; once they have rendered, scroll to it again (first render only).
+  var rescrolled = false;
+  function rescrollToHash() {
+    if (rescrolled) {
+      return;
+    }
+    rescrolled = true;
+    var id = location.hash.replace(/^#/, "");
+    var target = id && id !== "stocks" ? document.getElementById(id) : null;
+    if (target && panels.stocks.contains(target) && target.scrollIntoView) {
+      target.scrollIntoView();
+    }
   }
 
   function load() {

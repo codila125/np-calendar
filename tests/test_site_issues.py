@@ -95,10 +95,20 @@ def test_tabs_markup_panels_feeds_and_states():
     # Panels are plain containers, never <section>: the numbered section grid in
     # style.css would otherwise indent the whole panel and shift the numbering.
     assert issues_panel.tag == npl_panel.tag == "div"
-    stocks = by_id["stocks"]
-    assert stocks.tag == "section" and stocks.parent is issues_panel
-    assert not [n for n in stocks.walk() if n is not stocks and n.tag == "section"]
-    assert by_id["stocks-heading"].all_text().strip() == "Stocks"
+    # Stocks mirrors the NPL tab: a numbered section nav, then one section per entry.
+    stocks_nav = [n for n in nodes if n.tag == "nav"
+                  and n.attrs.get("aria-label") == "Stocks sections"]
+    assert len(stocks_nav) == 1 and stocks_nav[0].parent is issues_panel
+    links = [n.attrs["href"] for n in stocks_nav[0].walk() if n.tag == "a"]
+    assert links == ["#stocks-calendar", "#stocks-issues", "#stocks-subscribe"]
+    for href, heading in zip(links, ("Calendar", "Issues", "Subscribe"), strict=True):
+        sec = by_id[href[1:]]
+        assert sec.tag == "section" and sec.parent is issues_panel, href
+        assert not [n for n in sec.walk() if n is not sec and n.tag == "section"], href
+        assert by_id[f"{href[1:]}-heading"].all_text().strip() == heading
+    assert by_id["issues-month"].inside("stocks-calendar")
+    assert by_id["issues-list"].inside("stocks-issues")
+    assert by_id["issues-feed-list"].inside("stocks-subscribe")
 
     assert any(n.tag == "nav" and n.attrs.get("aria-label") == "Sections"
                and n.inside("panel-npl") for n in nodes)
@@ -175,7 +185,8 @@ const ids = (list) => list.map((i) => i.category + ":" + i.symbol).sort();
 const g = h.groupIssues(data, "2026-11-20");
 const mid = h.groupIssues(data, "2026-11-27");
 console.log(JSON.stringify({
-  hash: [h.parseHash("#npl"), h.parseHash("#standings"), h.parseHash(""), h.parseHash("#x")],
+  hash: [h.parseHash("#npl"), h.parseHash("#standings"), h.parseHash(""), h.parseHash("#x"),
+    h.parseHash("#stocks-calendar")],
   weeks: h.monthWeeks(2026, 10),
   nov30: ids(h.issuesOn(data, "2026-11-30")),
   nov25: ids(h.issuesOn(data, "2026-11-25")),
@@ -201,7 +212,7 @@ def test_issue_logic_in_node(tmp_path):
         capture_output=True, text=True, check=True)
     out = json.loads(result.stdout)
 
-    assert out["hash"] == ["npl", "npl", "stocks", "stocks"]
+    assert out["hash"] == ["npl", "npl", "stocks", "stocks", "stocks"]
     weeks = out["weeks"]
     assert len(weeks) == 5 and all(len(w) == 7 for w in weeks)
     assert weeks[0][0] == "2026-11-01"  # November 2026 starts on a Sunday
