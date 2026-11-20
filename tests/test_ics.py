@@ -381,15 +381,14 @@ def test_issue_event_property_order_and_formats():
         "BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//codila125//np-calendar//EN",
         "CALSCALE:GREGORIAN", "METHOD:PUBLISH",
         "X-WR-CALNAME:np-calendar — IPO for locals",
-        "X-WR-CALDESC:Opening and closing dates of share issues in Nepal "
-        "(source: ShareSansar).",
+        "X-WR-CALDESC:Opening and closing dates of stock issues in Nepal.",
         "REFRESH-INTERVAL;VALUE=DURATION:PT1H", "X-PUBLISHED-TTL:PT1H",
     ]  # fmt: skip
     start = lines.index("BEGIN:VEVENT")
     event = lines[start : lines.index("END:VEVENT") + 1]
     assert [ln.split(":")[0] for ln in event] == [
         "BEGIN", "UID", "DTSTAMP", "DTSTART;VALUE=DATE", "DTEND;VALUE=DATE", "SUMMARY",
-        "DESCRIPTION", "URL", "STATUS", "TRANSP", "BEGIN", "ACTION",
+        "DESCRIPTION", "STATUS", "TRANSP", "BEGIN", "ACTION",
         "DESCRIPTION", "TRIGGER;VALUE=DATE-TIME", "END", "END",
     ]  # fmt: skip
     assert "UID:issue-ipo-local-1363-600000@codila125.github.io" in event
@@ -403,7 +402,7 @@ def test_issue_event_property_order_and_formats():
     assert desc.split("\\n") == [
         "DESCRIPTION:IPO for locals · AELTD", "Price: Rs 100", "Units: 600\\,000",
         "Opens 30 Nov 2026\\, closes 14 Dec 2026", "May stay open until 29 Dec 2026",
-        "Issue manager: NMB Capital Limited", "https://www.sharesansar.com/announcementdetail/a",
+        "Issue manager: NMB Capital Limited",
     ]  # fmt: skip
 
 
@@ -413,7 +412,7 @@ def test_right_share_description_has_ratio_and_book_closure_not_extension():
         book_closure_date="2026-11-27", last_closing_date="2026-12-29",
     )  # fmt: skip
     text = build_issue_calendars(_issues_data(issue))["calendar/right-share.ics"].decode()
-    desc = "".join(logical_lines(text.split("DESCRIPTION:Right share ·")[1].split("URL:")[0]))
+    desc = "".join(logical_lines(text.split("DESCRIPTION:Right share ·")[1].split("STATUS:")[0]))
     assert "Ratio: 1:0.50" in desc and "Book closure: 27 Nov 2026" in desc
     assert "May stay open" not in desc
 
@@ -425,7 +424,7 @@ def test_empty_category_feed_is_a_valid_calendar():
     assert list(cal.walk("VEVENT")) == []
     assert cal["X-WR-CALNAME"] == "np-calendar — FPO"
     assert Calendar.from_ical(cals["calendar/issues.ics"])["X-WR-CALNAME"].endswith(
-        "All share issues"
+        "All stock issues"
     )
 
 

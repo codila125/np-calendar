@@ -78,34 +78,41 @@ def test_tabs_markup_panels_feeds_and_states():
     tablists = [n for n in nodes if n.attrs.get("role") == "tablist"]
     assert len(tablists) == 1 and tablists[0].attrs.get("aria-label")
     tabs = [n for n in nodes if n.attrs.get("role") == "tab"]
-    assert [t.all_text().strip() for t in tabs] == ["Share issues", "NPL"]
+    assert [t.all_text().strip() for t in tabs] == ["Stocks", "NPL"]
     for tab in tabs:
         assert tab.parent is tablists[0]
-    issues_tab, npl_tab = by_id["tab-issues"], by_id["tab-npl"]
-    issues_panel, npl_panel = by_id["panel-issues"], by_id["panel-npl"]
-    assert issues_tab.attrs["aria-controls"] == "panel-issues"
+    issues_tab, npl_tab = by_id["tab-stocks"], by_id["tab-npl"]
+    issues_panel, npl_panel = by_id["panel-stocks"], by_id["panel-npl"]
+    assert issues_tab.attrs["aria-controls"] == "panel-stocks"
     assert npl_tab.attrs["aria-controls"] == "panel-npl"
-    assert issues_panel.attrs["aria-labelledby"] == "tab-issues"
+    assert issues_panel.attrs["aria-labelledby"] == "tab-stocks"
     assert npl_panel.attrs["aria-labelledby"] == "tab-npl"
     assert issues_panel.attrs["role"] == npl_panel.attrs["role"] == "tabpanel"
     assert issues_tab.attrs["aria-selected"] == "true"
     assert npl_tab.attrs["aria-selected"] == "false"
     assert npl_tab.attrs["tabindex"] == "-1"
     assert "hidden" in npl_panel.attrs and "hidden" not in issues_panel.attrs
+    # Panels are plain containers, never <section>: the numbered section grid in
+    # style.css would otherwise indent the whole panel and shift the numbering.
+    assert issues_panel.tag == npl_panel.tag == "div"
+    stocks = by_id["stocks"]
+    assert stocks.tag == "section" and stocks.parent is issues_panel
+    assert not [n for n in stocks.walk() if n is not stocks and n.tag == "section"]
+    assert by_id["stocks-heading"].all_text().strip() == "Stocks"
 
     assert any(n.tag == "nav" and n.attrs.get("aria-label") == "Sections"
                and n.inside("panel-npl") for n in nodes)
     for ident in ("standings", "stats", "schedule", "calendar", "live"):
         assert by_id[ident].inside("panel-npl"), ident
     assert by_id["issues-status"].attrs["role"] == "status"
-    assert "Loading share issues…" in by_id["issues-status"].all_text()
+    assert "Loading stock issues…" in by_id["issues-status"].all_text()
 
     assert "<title>np-calendar" in html
     assert "<h1>np-calendar</h1>" in html
     assert '<script src="issues.js" defer></script>' in html
     assert html.index("Skip to content") < html.index("<header")
 
-    rows = [n for n in by_id["panel-issues"].walk()
+    rows = [n for n in by_id["panel-stocks"].walk()
             if n.tag == "li" and "calendar-row" in n.attrs.get("class", "")]
     assert len(rows) == 6
     for row, feed in zip(rows, FEEDS, strict=True):
@@ -120,9 +127,9 @@ def test_tabs_markup_panels_feeds_and_states():
 
     js = (SITE / "issues.js").read_text()
     for needle in ("ArrowLeft", "ArrowRight", "Home", "End", "hashchange",
-                   "replaceState", "Loading share issues…",
-                   "Couldn't load share issues.", "Retry",
-                   "No share issues published yet."):
+                   "replaceState", "Loading stock issues…",
+                   "Couldn't load stock issues.", "Retry",
+                   "No stock issues published yet."):
         assert needle in js, needle
 
     css = (SITE / "style.css").read_text()
@@ -143,6 +150,22 @@ def test_tabs_markup_panels_feeds_and_states():
         assert _contrast(light[c].group(1), bg_light) >= 4.5, c
         assert _contrast(dark[c].group(1), bg_dark) >= 4.5, c
         assert pdark[c].group(1) == dark[c].group(1), c
+
+    # The tab bar spans the full width: every tab grows to an equal share.
+    tab_rule = css[css.index('.tabs [role="tab"] {'):]
+    tab_rule = tab_rule[:tab_rule.index("}")]
+    assert re.search(r"flex:\s*1 1 0", tab_rule) and "text-align: center" in tab_rule
+    panel_rule = css[css.index('[role="tabpanel"] {'):]
+    assert "counter-reset: section" in panel_rule[:panel_rule.index("}")]
+
+
+def test_no_data_source_branding_on_the_page_or_in_issue_feeds():
+    texts = {"index.html": (SITE / "index.html").read_text(),
+             "issues.js": (SITE / "issues.js").read_text()}
+    for feed in FEEDS:
+        texts[feed] = (SITE / "calendar" / f"{feed}.ics").read_text()
+    for name, text in texts.items():
+        assert "sharesansar" not in text.lower(), name
 
 
 NODE_SCRIPT = """
@@ -178,7 +201,7 @@ def test_issue_logic_in_node(tmp_path):
         capture_output=True, text=True, check=True)
     out = json.loads(result.stdout)
 
-    assert out["hash"] == ["npl", "npl", "issues", "issues"]
+    assert out["hash"] == ["npl", "npl", "stocks", "stocks"]
     weeks = out["weeks"]
     assert len(weeks) == 5 and all(len(w) == 7 for w in weeks)
     assert weeks[0][0] == "2026-11-01"  # November 2026 starts on a Sunday
@@ -235,12 +258,12 @@ class El {
 
 function boot(hash, fetchImpl) {
   const mk = (tag, id) => { const e = new El(tag); e.id = id || ""; return e; };
-  const tabs = [mk("button", "tab-issues"), mk("button", "tab-npl")];
+  const tabs = [mk("button", "tab-stocks"), mk("button", "tab-npl")];
   tabs[0].setAttribute("aria-selected", "true");
   tabs[1].setAttribute("aria-selected", "false");
   tabs[1].tabIndex = -1;
   const els = {};
-  ["panel-issues", "panel-npl", "issues-status", "issues-month", "issues-legend",
+  ["panel-stocks", "panel-npl", "issues-status", "issues-month", "issues-legend",
    "issues-list"].forEach((id) => { els[id] = mk("div", id); });
   els["panel-npl"].hidden = true;
   ["standings", "schedule"].forEach((id) => els["panel-npl"].appendChild(mk("section", id)));
@@ -264,7 +287,7 @@ function boot(hash, fetchImpl) {
   const state = () => ({
     selected: tabs.map((t) => t.getAttribute("aria-selected")),
     tabindex: tabs.map((t) => t.tabIndex),
-    hidden: [els["panel-issues"].hidden, els["panel-npl"].hidden],
+    hidden: [els["panel-stocks"].hidden, els["panel-npl"].hidden],
     focused: doc.activeElement && doc.activeElement.id,
     hash: loc.hash, writes: global.history.writes.slice(),
   });
@@ -306,10 +329,10 @@ const out = {};
   // loading -> loaded
   p = boot("", okFetch(sampleData));
   out.loading = p.els["issues-status"].textContent;
-  out.busyWhileLoading = p.els["panel-issues"].getAttribute("aria-busy");
+  out.busyWhileLoading = p.els["panel-stocks"].getAttribute("aria-busy");
   await flush();
   out.loaded = p.els["issues-status"].textContent;
-  out.busyAfter = p.els["panel-issues"].getAttribute("aria-busy");
+  out.busyAfter = p.els["panel-stocks"].getAttribute("aria-busy");
   out.listText = p.els["issues-list"].textContent;
 
   // error with retry wired to refetch
@@ -394,11 +417,11 @@ def test_tab_keyboard_pattern_and_state_sync(dom):
     _tab(dom["initial"], 0)
     assert dom["initial"]["writes"] == []
     _tab(dom["right"], 1, "tab-npl", "#npl")
-    _tab(dom["rightWrap"], 0, "tab-issues", "#issues")
+    _tab(dom["rightWrap"], 0, "tab-stocks", "#stocks")
     _tab(dom["leftWrap"], 1, "tab-npl", "#npl")
-    _tab(dom["left"], 0, "tab-issues", "#issues")
+    _tab(dom["left"], 0, "tab-stocks", "#stocks")
     _tab(dom["end"], 1, "tab-npl", "#npl")
-    _tab(dom["home"], 0, "tab-issues", "#issues")
+    _tab(dom["home"], 0, "tab-stocks", "#stocks")
     assert dom["otherKeyPrevented"] is False
     assert dom["afterOther"]["writes"] == dom["home"]["writes"]
     _tab(dom["click"], 1, hash_="#npl")
@@ -415,17 +438,17 @@ def test_hash_restored_on_load_and_hashchange(dom):
 
 
 def test_loading_error_retry_and_empty_states(dom):
-    assert dom["loading"] == "Loading share issues…"
+    assert dom["loading"] == "Loading stock issues…"
     assert dom["busyWhileLoading"] == "true" and dom["busyAfter"] == "false"
-    assert dom["loaded"].startswith("223 share issues listed")
+    assert dom["loaded"].startswith("223 stock issues listed")
     assert "Upcoming" in dom["listText"] and "Dates not announced yet" in dom["listText"]
-    assert dom["error"].startswith("Couldn't load share issues.")
+    assert dom["error"].startswith("Couldn't load stock issues.")
     assert dom["errorHasRetry"] is True
     assert dom["callsAfterRetry"] == dom["callsBeforeRetry"] + 1
-    assert dom["afterRetry"].startswith("223 share issues listed") and dom["retryGone"]
-    assert dom["http500"].startswith("Couldn't load share issues.")
-    assert dom["badSchema"].startswith("Couldn't load share issues.")
-    assert dom["empty"] == "No share issues published yet."
+    assert dom["afterRetry"].startswith("223 stock issues listed") and dom["retryGone"]
+    assert dom["http500"].startswith("Couldn't load stock issues.")
+    assert dom["badSchema"].startswith("Couldn't load stock issues.")
+    assert dom["empty"] == "No stock issues published yet."
 
 
 def test_month_navigation_prev_next_today(dom):

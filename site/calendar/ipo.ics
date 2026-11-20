@@ -4,8 +4,7 @@ PRODID:-//codila125//np-calendar//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:np-calendar — IPO
-X-WR-CALDESC:Opening and closing dates of share issues in Nepal (source: Sh
- areSansar).
+X-WR-CALDESC:Opening and closing dates of stock issues in Nepal.
 REFRESH-INTERVAL;VALUE=DURATION:PT1H
 X-PUBLISHED-TTL:PT1H
 BEGIN:VEVENT
@@ -16,13 +15,7 @@ DTEND;VALUE=DATE:20231006
 SUMMARY:IPO: Sonapur Minerals and Oil Limited (SONA)
 DESCRIPTION:IPO · SONA\nPrice: Rs 237.58\nUnits: 9\,732\,544\nOpens 1 Oct 
  2023\, closes 5 Oct 2023\nMay stay open until 15 Oct 2023\nIssue manager: 
- NIMB Ace Capital Limited\nhttps://www.sharesansar.com/announcementdetail/s
- onapur-minerals-and-oil-limited-has-published-an-offer-letter-to-issue-973
- 2544-units-ipo-shares-to-the-general-public-from-14th-ashwin-to-17th-ashwi
- n-2080-2023-09-22
-URL:https://www.sharesansar.com/announcementdetail/sonapur-minerals-and-oil
- -limited-has-published-an-offer-letter-to-issue-9732544-units-ipo-shares-t
- o-the-general-public-from-14th-ashwin-to-17th-ashwin-2080-2023-09-22
+ NIMB Ace Capital Limited
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -39,13 +32,7 @@ DTEND;VALUE=DATE:20231014
 SUMMARY:IPO: Chirkhwa Hydro Power Limited (CKHL)
 DESCRIPTION:IPO · CKHL\nPrice: Rs 100\nUnits: 859\,300\nOpens 10 Oct 2023\
  , closes 13 Oct 2023\nMay stay open until 20 Oct 2023\nIssue manager: RBB 
- Merchant Banking Ltd.\nhttps://www.sharesansar.com/announcementdetail/chir
- khwa-hydro-power-limited-has-published-an-offer-letter-to-issue-859300-uni
- ts-ipo-shares-to-the-general-public-from-23rd-ashwin-to-26th-ashwin-2080-2
- 023-09-29
-URL:https://www.sharesansar.com/announcementdetail/chirkhwa-hydro-power-lim
- ited-has-published-an-offer-letter-to-issue-859300-units-ipo-shares-to-the
- -general-public-from-23rd-ashwin-to-26th-ashwin-2080-2023-09-29
+ Merchant Banking Ltd.
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -62,13 +49,7 @@ DTEND;VALUE=DATE:20231107
 SUMMARY:IPO: Vision Lumbini Urja Company Limited (VLUCL)
 DESCRIPTION:IPO · VLUCL\nPrice: Rs 100\nUnits: 2\,075\,285\nOpens 2 Nov 20
  23\, closes 6 Nov 2023\nMay stay open until 17 Nov 2023\nIssue manager: Mu
- ktinath Capital Ltd.\nhttps://www.sharesansar.com/announcementdetail/visio
- n-lumbini-urja-company-limited-has-published-an-offer-letter-to-issue-2075
- 285-units-ipo-shares-to-the-general-public-from-16th-kartik-to-20th-kartik
- -2080-2023-10-19
-URL:https://www.sharesansar.com/announcementdetail/vision-lumbini-urja-comp
- any-limited-has-published-an-offer-letter-to-issue-2075285-units-ipo-share
- s-to-the-general-public-from-16th-kartik-to-20th-kartik-2080-2023-10-19
+ ktinath Capital Ltd.
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -85,13 +66,7 @@ DTEND;VALUE=DATE:20231129
 SUMMARY:IPO: Muktinath Krishi Company Limited (MKCL)
 DESCRIPTION:IPO · MKCL\nPrice: Rs 100\nUnits: 1\,148\,000\nOpens 24 Nov 20
  23\, closes 28 Nov 2023\nMay stay open until 8 Dec 2023\nIssue manager: NI
- MB Ace Capital Limited\nhttps://www.sharesansar.com/announcementdetail/muk
- tinath-krishi-company-limited-has-published-an-offer-letter-to-issue-11480
- 00-units-ipo-shares-to-the-general-public-from-8th-mangsir-to-12th-mangsir
- -2080-2023-11-21
-URL:https://www.sharesansar.com/announcementdetail/muktinath-krishi-company
- -limited-has-published-an-offer-letter-to-issue-1148000-units-ipo-shares-t
- o-the-general-public-from-8th-mangsir-to-12th-mangsir-2080-2023-11-21
+ MB Ace Capital Limited
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -108,13 +83,7 @@ DTEND;VALUE=DATE:20231130
 SUMMARY:IPO: Nepal Warehousing Company Limited (NWCL)
 DESCRIPTION:IPO · NWCL\nPrice: Rs 100\nUnits: 1\,141\,250\nOpens 26 Nov 20
  23\, closes 29 Nov 2023\nMay stay open until 10 Dec 2023\nIssue manager: H
- imalayan Capital Ltd\nhttps://www.sharesansar.com/announcementdetail/nepal
- -warehousing-company-limited-has-published-an-offer-letter-to-issue-114125
- 0-units-ipo-shares-to-the-general-public-from-10th-mangsir-to-13th-mangsir
- -2080-2023-11-17
-URL:https://www.sharesansar.com/announcementdetail/nepal-warehousing-compan
- y-limited-has-published-an-offer-letter-to-issue-1141250-units-ipo-shares-
- to-the-general-public-from-10th-mangsir-to-13th-mangsir-2080-2023-11-17
+ imalayan Capital Ltd
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -131,13 +100,7 @@ DTEND;VALUE=DATE:20231219
 SUMMARY:IPO: Himalayan Reinsurance Limited (HRL)
 DESCRIPTION:IPO · HRL\nPrice: Rs 206\nUnits: 24\,900\,000\nOpens 13 Dec 20
  23\, closes 18 Dec 2023\nMay stay open until 27 Dec 2023\nIssue manager: N
- MB Capital Limited\nhttps://www.sharesansar.com/announcementdetail/himalay
- an-reinsurance-limited-has-published-an-offer-letter-to-issue-24900000-uni
- ts-ipo-shares-to-the-general-public-from-27th-mangsir-to-1st-poush-2080-20
- 23-12-07
-URL:https://www.sharesansar.com/announcementdetail/himalayan-reinsurance-li
- mited-has-published-an-offer-letter-to-issue-24900000-units-ipo-shares-to-
- the-general-public-from-27th-mangsir-to-1st-poush-2080-2023-12-07
+ MB Capital Limited
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -154,13 +117,7 @@ DTEND;VALUE=DATE:20240229
 SUMMARY:IPO: Sarbottam Cement Limited (SARBTM)
 DESCRIPTION:IPO · SARBTM\nPrice: Rs 360.9\nUnits: 2\,776\,076\nOpens 25 Fe
  b 2024\, closes 28 Feb 2024\nMay stay open until 10 Mar 2024\nIssue manage
- r: Global IME Capital Ltd\nhttps://www.sharesansar.com/announcementdetail/
- sarbottam-cement-limited-has-published-an-offer-letter-to-issue-2776076-un
- its-ipo-shares-to-the-general-public-from-13th-falgun-to-16th-falgun-2080-
- 2024-02-15
-URL:https://www.sharesansar.com/announcementdetail/sarbottam-cement-limited
- -has-published-an-offer-letter-to-issue-2776076-units-ipo-shares-to-the-ge
- neral-public-from-13th-falgun-to-16th-falgun-2080-2024-02-15
+ r: Global IME Capital Ltd
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -177,13 +134,7 @@ DTEND;VALUE=DATE:20250109
 SUMMARY:IPO: Guardian Micro Life Insurance Limited (GMLI)
 DESCRIPTION:IPO · GMLI\nPrice: Rs 100\nUnits: 1\,845\,000\nOpens 5 Jan 202
  5\, closes 8 Jan 2025\nMay stay open until 19 Jan 2025\nIssue manager: Kum
- ari Capital Ltd\nhttps://www.sharesansar.com/announcementdetail/guardian-m
- icro-life-insurance-limited-has-published-an-offer-letter-to-issue-1845000
- -units-ipo-shares-to-the-general-public-from-21st-poush-to-24th-poush-2081
- -2024-12-26
-URL:https://www.sharesansar.com/announcementdetail/guardian-micro-life-insu
- rance-limited-has-published-an-offer-letter-to-issue-1845000-units-ipo-sha
- res-to-the-general-public-from-21st-poush-to-24th-poush-2081-2024-12-26
+ ari Capital Ltd
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -200,13 +151,7 @@ DTEND;VALUE=DATE:20250228
 SUMMARY:IPO: Nepal Micro Insurance Company Limited (NMIC)
 DESCRIPTION:IPO · NMIC\nPrice: Rs 100\nUnits: 1\,845\,000\nOpens 23 Feb 20
  25\, closes 27 Feb 2025\nMay stay open until 9 Mar 2025\nIssue manager: NI
- MB Ace Capital Ltd\nhttps://www.sharesansar.com/announcementdetail/nepal-m
- icro-insurance-company-limited-has-published-an-offer-letter-to-issue-1845
- 000-units-ipo-shares-to-the-general-public-from-11th-falgun-to-15th-falgun
- -2081-2025-02-12
-URL:https://www.sharesansar.com/announcementdetail/nepal-micro-insurance-co
- mpany-limited-has-published-an-offer-letter-to-issue-1845000-units-ipo-sha
- res-to-the-general-public-from-11th-falgun-to-15th-falgun-2081-2025-02-12
+ MB Ace Capital Ltd
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -223,13 +168,7 @@ DTEND;VALUE=DATE:20250311
 SUMMARY:IPO: Crest Micro Life Insurance Limited (CREST)
 DESCRIPTION:IPO · CREST\nPrice: Rs 100\nUnits: 1\,845\,000\nOpens 6 Mar 20
  25\, closes 10 Mar 2025\nMay stay open until 20 Mar 2025\nIssue manager: N
- IMB Ace Capital Ltd.\nhttps://www.sharesansar.com/announcementdetail/crest
- -micro-life-insurance-limited-has-published-an-offer-letter-to-issue-18450
- 00-units-ipo-shares-to-the-general-public-from-22nd-falgun-to-26th-falgun-
- 2081-2025-02-20
-URL:https://www.sharesansar.com/announcementdetail/crest-micro-life-insuran
- ce-limited-has-published-an-offer-letter-to-issue-1845000-units-ipo-shares
- -to-the-general-public-from-22nd-falgun-to-26th-falgun-2081-2025-02-20
+ IMB Ace Capital Ltd.
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -246,13 +185,7 @@ DTEND;VALUE=DATE:20250317
 SUMMARY:IPO: Om Megashree Pharmaceuticals Limited (OMPL)
 DESCRIPTION:IPO · OMPL\nPrice: Rs 100\nUnits: 1\,476\,000\nOpens 11 Mar 20
  25\, closes 16 Mar 2025\nMay stay open until 25 Mar 2025\nIssue manager: P
- rabhu Capital Limited\nhttps://www.sharesansar.com/announcementdetail/om-m
- egashree-pharmaceuticals-limited-has-published-an-offer-letter-to-issue-14
- 76000-units-ipo-shares-to-the-general-public-from-27th-falgun-to-3rd-chait
- ra-2081-2025-03-04
-URL:https://www.sharesansar.com/announcementdetail/om-megashree-pharmaceuti
- cals-limited-has-published-an-offer-letter-to-issue-1476000-units-ipo-shar
- es-to-the-general-public-from-27th-falgun-to-3rd-chaitra-2081-2025-03-04
+ rabhu Capital Limited
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -269,13 +202,7 @@ DTEND;VALUE=DATE:20250416
 SUMMARY:IPO: Pure Energy Limited (PURE)
 DESCRIPTION:IPO · PURE\nPrice: Rs 100\nUnits: 1\,195\,200\nOpens 10 Apr 20
  25\, closes 15 Apr 2025\nMay stay open until 24 Apr 2025\nIssue manager: N
- abil Investment Banking Limited\nhttps://www.sharesansar.com/announcementd
- etail/pure-energy-limited-has-published-an-offer-letter-to-issue-1195200-u
- nits-ipo-shares-to-the-general-public-from-28th-chaitra-2081-to-2nd-baisak
- h-2082-2025-03-31
-URL:https://www.sharesansar.com/announcementdetail/pure-energy-limited-has-
- published-an-offer-letter-to-issue-1195200-units-ipo-shares-to-the-general
- -public-from-28th-chaitra-2081-to-2nd-baisakh-2082-2025-03-31
+ abil Investment Banking Limited
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -292,13 +219,7 @@ DTEND;VALUE=DATE:20250528
 SUMMARY:IPO: Sanvi Energy Limited (SANVI)
 DESCRIPTION:IPO · SANVI\nPrice: Rs 100\nUnits: 2\,415\,300\nOpens 23 May 2
  025\, closes 27 May 2025\nMay stay open until 6 Jun 2025\nIssue manager: N
- epal SBI Merchant Banking Limited\nhttps://www.sharesansar.com/announcemen
- tdetail/sanvi-energy-limited-has-published-an-offer-letter-to-issue-241530
- 0-units-ipo-shares-to-the-general-public-from-9th-jestha-to-13th-jestha-20
- 82-2025-05-15
-URL:https://www.sharesansar.com/announcementdetail/sanvi-energy-limited-has
- -published-an-offer-letter-to-issue-2415300-units-ipo-shares-to-the-genera
- l-public-from-9th-jestha-to-13th-jestha-2082-2025-05-15
+ epal SBI Merchant Banking Limited
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -315,12 +236,7 @@ DTEND;VALUE=DATE:20250604
 SUMMARY:IPO: Trade Tower Limited (TTL)
 DESCRIPTION:IPO · TTL\nPrice: Rs 100\nUnits: 3\,296\,505.19\nOpens 28 May 
  2025\, closes 3 Jun 2025\nMay stay open until 11 Jun 2025\nIssue manager: 
- LS Capital Limited\nhttps://www.sharesansar.com/announcementdetail/trade-t
- ower-limited-has-published-an-offer-letter-to-issue-329650519-units-ipo-sh
- ares-to-the-general-public-from-14th-jestha-to-19th-jestha-2082-2025-05-19
-URL:https://www.sharesansar.com/announcementdetail/trade-tower-limited-has-
- published-an-offer-letter-to-issue-329650519-units-ipo-shares-to-the-gener
- al-public-from-14th-jestha-to-19th-jestha-2082-2025-05-19
+ LS Capital Limited
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -337,13 +253,7 @@ DTEND;VALUE=DATE:20250707
 SUMMARY:IPO: Bikash Hydropower Company Limited (BHCL)
 DESCRIPTION:IPO · BHCL\nPrice: Rs 100\nUnits: 2\,942\,760\nOpens 2 Jul 202
  5\, closes 6 Jul 2025\nMay stay open until 16 Jul 2025\nIssue manager: Pra
- bhu Capital Ltd.\nhttps://www.sharesansar.com/announcementdetail/bikash-hy
- dropower-company-limited-has-published-an-offer-letter-to-issue-2942760-un
- its-ipo-shares-to-the-the-general-public-from-18th-ashad-to-22nd-ashad-208
- 2-2025-06-24
-URL:https://www.sharesansar.com/announcementdetail/bikash-hydropower-compan
- y-limited-has-published-an-offer-letter-to-issue-2942760-units-ipo-shares-
- to-the-the-general-public-from-18th-ashad-to-22nd-ashad-2082-2025-06-24
+ bhu Capital Ltd.
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -360,13 +270,7 @@ DTEND;VALUE=DATE:20250712
 SUMMARY:IPO: Him Star Urja Company Limited (HIMSTAR)
 DESCRIPTION:IPO · HIMSTAR\nPrice: Rs 100\nUnits: 773\,975\nOpens 8 Jul 202
  5\, closes 11 Jul 2025\nMay stay open until 22 Jul 2025\nIssue manager: NI
- C Asia Capital Limited\nhttps://www.sharesansar.com/announcementdetail/him
- -star-urja-company-limited-has-published-an-offer-letter-to-issue-773975-u
- nits-ipo-shares-to-the-the-general-public-from-24th-ashad-to-27th-ashad-20
- 82-2025-07-01
-URL:https://www.sharesansar.com/announcementdetail/him-star-urja-company-li
- mited-has-published-an-offer-letter-to-issue-773975-units-ipo-shares-to-th
- e-the-general-public-from-24th-ashad-to-27th-ashad-2082-2025-07-01
+ C Asia Capital Limited
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -383,13 +287,7 @@ DTEND;VALUE=DATE:20250805
 SUMMARY:IPO: Daramkhola Hydro Energy Limited (DHEL)
 DESCRIPTION:IPO · DHEL\nPrice: Rs 100\nUnits: 2\,423\,185\nOpens 31 Jul 20
  25\, closes 4 Aug 2025\nMay stay open until 14 Aug 2025\nIssue manager: La
- xmi Sunrise Capital Limited\nhttps://www.sharesansar.com/announcementdetai
- l/daramkhola-hydro-energy-limited-has-published-an-offer-letter-to-issue-2
- 423185-units-ipo-shares-to-the-the-general-public-from-15th-shrawan-to-19t
- h-shrawan-2082-2025-07-24
-URL:https://www.sharesansar.com/announcementdetail/daramkhola-hydro-energy-
- limited-has-published-an-offer-letter-to-issue-2423185-units-ipo-shares-to
- -the-the-general-public-from-15th-shrawan-to-19th-shrawan-2082-2025-07-24
+ xmi Sunrise Capital Limited
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -406,13 +304,7 @@ DTEND;VALUE=DATE:20250815
 SUMMARY:IPO: Mabilung Energy Limited (MABEL)
 DESCRIPTION:IPO · MABEL\nPrice: Rs 100\nUnits: 1\,248\,904\nOpens 11 Aug 2
  025\, closes 14 Aug 2025\nMay stay open until 25 Aug 2025\nIssue manager: 
- LS Capital Limited\nhttps://www.sharesansar.com/announcementdetail/mabilun
- g-energy-limited-has-published-an-offer-letter-to-issue-1248904-units-ipo-
- shares-to-the-the-general-public-from-26th-shrawan-to-29th-shrawan-2082-20
- 25-08-04
-URL:https://www.sharesansar.com/announcementdetail/mabilung-energy-limited-
- has-published-an-offer-letter-to-issue-1248904-units-ipo-shares-to-the-the
- -general-public-from-26th-shrawan-to-29th-shrawan-2082-2025-08-04
+ LS Capital Limited
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -429,14 +321,7 @@ DTEND;VALUE=DATE:20250820
 SUMMARY:IPO: Swastik Laghubitta Bittiya Sanstha Limited (SWASTIK)
 DESCRIPTION:IPO · SWASTIK\nPrice: Rs 100\nUnits: 195\,195\nOpens 15 Aug 20
  25\, closes 19 Aug 2025\nMay stay open until 29 Aug 2025\nIssue manager: N
- abil Investment Banking Limited\nhttps://www.sharesansar.com/announcementd
- etail/swastik-laghubitta-bittiya-sanstha-limited-has-published-an-offer-le
- tter-to-issue-195195-units-ipo-shares-to-the-the-general-public-from-30th-
- shrawan-to-3rd-bhadra-2082-2025-08-06
-URL:https://www.sharesansar.com/announcementdetail/swastik-laghubitta-bitti
- ya-sanstha-limited-has-published-an-offer-letter-to-issue-195195-units-ipo
- -shares-to-the-the-general-public-from-30th-shrawan-to-3rd-bhadra-2082-202
- 5-08-06
+ abil Investment Banking Limited
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -454,14 +339,7 @@ DTEND;VALUE=DATE:20250901
 SUMMARY:IPO: Bandipur Cable Car and Tourism Limited (BANDIPUR)
 DESCRIPTION:IPO · BANDIPUR\nPrice: Rs 100\nUnits: 4\,341\,080\nOpens 27 Au
  g 2025\, closes 31 Aug 2025\nMay stay open until 10 Sep 2025\nIssue manage
- r: Nepal SBI Merchant Banking Limited\nhttps://www.sharesansar.com/announc
- ementdetail/bandipur-cable-car-and-tourism-limited-has-published-an-offer-
- letter-to-issue-4341080-units-ipo-shares-to-the-the-general-public-from-11
- th-bhadra-to-15th-bhadra-2082-2025-08-19
-URL:https://www.sharesansar.com/announcementdetail/bandipur-cable-car-and-t
- ourism-limited-has-published-an-offer-letter-to-issue-4341080-units-ipo-sh
- ares-to-the-the-general-public-from-11th-bhadra-to-15th-bhadra-2082-2025-0
- 8-19
+ r: Nepal SBI Merchant Banking Limited
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -479,13 +357,7 @@ DTEND;VALUE=DATE:20250905
 SUMMARY:IPO: Bungal Hydro Limited (BUNGAL)
 DESCRIPTION:IPO · BUNGAL\nPrice: Rs 100\nUnits: 1\,701\,500\nOpens 1 Sep 2
  025\, closes 4 Sep 2025\nMay stay open until 15 Sep 2025\nIssue manager: H
- imalayan Capital Limited\nhttps://www.sharesansar.com/announcementdetail/b
- ungal-hydro-limited-has-published-an-offer-letter-to-issue-1701500-units-i
- po-shares-to-the-the-general-public-from-16th-bhadra-to-19th-bhadra-2082-2
- 025-08-24
-URL:https://www.sharesansar.com/announcementdetail/bungal-hydro-limited-has
- -published-an-offer-letter-to-issue-1701500-units-ipo-shares-to-the-the-ge
- neral-public-from-16th-bhadra-to-19th-bhadra-2082-2025-08-24
+ imalayan Capital Limited
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -502,12 +374,7 @@ DTEND;VALUE=DATE:20250916
 SUMMARY:IPO: Jhapa Energy Limited (JHAPA)
 DESCRIPTION:IPO · JHAPA\nPrice: Rs 100\nUnits: 473\,336\nOpens 5 Sep 2025\
  , closes 15 Sep 2025\nMay stay open until 19 Sep 2025\nIssue manager: Hima
- layan Capital Limited\nhttps://www.sharesansar.com/announcementdetail/jhap
- a-energy-limited-has-extended-its-473336-units-ipo-shares-to-the-the-gener
- al-public-till-today-30th-bhadra-2082-2025-09-15
-URL:https://www.sharesansar.com/announcementdetail/jhapa-energy-limited-has
- -extended-its-473336-units-ipo-shares-to-the-the-general-public-till-today
- -30th-bhadra-2082-2025-09-15
+ layan Capital Limited
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -524,12 +391,7 @@ DTEND;VALUE=DATE:20250922
 SUMMARY:IPO: Sagar Distillery Limited (SAGAR)
 DESCRIPTION:IPO · SAGAR\nPrice: Rs 100\nUnits: 1\,190\,640\nOpens 15 Sep 2
  025\, closes 21 Sep 2025\nMay stay open until 29 Sep 2025\nIssue manager: 
- Muktinath Capital Limited\nhttps://www.sharesansar.com/announcementdetail/
- sagar-distillery-limited-has-extended-its-1190640-units-ipo-shares-to-the-
- the-general-public-till-5th-ashwin-2082-2025-09-18
-URL:https://www.sharesansar.com/announcementdetail/sagar-distillery-limited
- -has-extended-its-1190640-units-ipo-shares-to-the-the-general-public-till-
- 5th-ashwin-2082-2025-09-18
+ Muktinath Capital Limited
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -546,14 +408,7 @@ DTEND;VALUE=DATE:20251016
 SUMMARY:IPO: Shreenagar Agritech Industries Limited (SAIL)
 DESCRIPTION:IPO · SAIL\nPrice: Rs 100\nUnits: 2\,510\,493\nOpens 12 Oct 20
  25\, closes 15 Oct 2025\nMay stay open until 26 Oct 2025\nIssue manager: N
- abil Investment Banking Limited\nhttps://www.sharesansar.com/announcementd
- etail/shreenagar-agritech-industries-limited-has-published-an-offer-letter
- -to-issue-2510493-units-ipo-shares-to-the-the-general-public-from-26th-ash
- win-to-29th-ashwin-2082-2025-09-28
-URL:https://www.sharesansar.com/announcementdetail/shreenagar-agritech-indu
- stries-limited-has-published-an-offer-letter-to-issue-2510493-units-ipo-sh
- ares-to-the-the-general-public-from-26th-ashwin-to-29th-ashwin-2082-2025-0
- 9-28
+ abil Investment Banking Limited
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -570,13 +425,7 @@ DTEND;VALUE=DATE:20251110
 SUMMARY:IPO: SY Panel Nepal Limited (SYPNL)
 DESCRIPTION:IPO · SYPNL\nPrice: Rs 100\nUnits: 4\,076\,156\nOpens 5 Nov 20
  25\, closes 9 Nov 2025\nMay stay open until 19 Nov 2025\nIssue manager: Pr
- abhu Capital Limited\nhttps://www.sharesansar.com/announcementdetail/sy-pa
- nel-nepal-limited-has-published-an-offer-letter-to-issue-4076156-units-ipo
- -shares-to-the-general-public-from-19th-kartik-to-23rd-kartik-2082-2025-10
- -28
-URL:https://www.sharesansar.com/announcementdetail/sy-panel-nepal-limited-h
- as-published-an-offer-letter-to-issue-4076156-units-ipo-shares-to-the-gene
- ral-public-from-19th-kartik-to-23rd-kartik-2082-2025-10-28
+ abhu Capital Limited
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -593,13 +442,7 @@ DTEND;VALUE=DATE:20251227
 SUMMARY:IPO: Reliance Spinning Mills Limited (RSML)
 DESCRIPTION:IPO · RSML\nPrice: Rs 820.8\nUnits: 924\,768\nOpens 22 Dec 202
  5\, closes 26 Dec 2025\nMay stay open until 5 Jan 2026\nIssue manager: Glo
- bal IME Capital Limited\nhttps://www.sharesansar.com/announcementdetail/re
- liance-spinning-mills-limited-has-published-an-offer-letter-to-issue-92476
- 8-units-ipo-shares-to-the-general-public-from-7th-poush-to-11th-poush-2082
- -2025-12-14
-URL:https://www.sharesansar.com/announcementdetail/reliance-spinning-mills-
- limited-has-published-an-offer-letter-to-issue-924768-units-ipo-shares-to-
- the-general-public-from-7th-poush-to-11th-poush-2082-2025-12-14
+ bal IME Capital Limited
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -616,13 +459,7 @@ DTEND;VALUE=DATE:20260105
 SUMMARY:IPO: Salapa Bikas Bank Limited (SABBL)
 DESCRIPTION:IPO · SABBL\nPrice: Rs 100\nUnits: 1\,439\,179\nOpens 31 Dec 2
  025\, closes 4 Jan 2026\nMay stay open until 14 Jan 2026\nIssue manager: M
- uktinath Capital Limited\nhttps://www.sharesansar.com/announcementdetail/s
- alapa-bikas-bank-limited-has-published-an-offer-letter-to-issue-1439179-un
- its-ipo-shares-to-the-general-public-from-16th-poush-to-20th-poush-2082-20
- 25-12-21
-URL:https://www.sharesansar.com/announcementdetail/salapa-bikas-bank-limite
- d-has-published-an-offer-letter-to-issue-1439179-units-ipo-shares-to-the-g
- eneral-public-from-16th-poush-to-20th-poush-2082-2025-12-21
+ uktinath Capital Limited
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -639,13 +476,7 @@ DTEND;VALUE=DATE:20260119
 SUMMARY:IPO: Solu Hydropower Limited (SOHL)
 DESCRIPTION:IPO · SOHL\nPrice: Rs 100\nUnits: 8\,200\,000\nOpens 13 Jan 20
  26\, closes 18 Jan 2026\nMay stay open until 28 Jan 2026\nIssue manager: N
- abil Investment Banking Limited\nhttps://www.sharesansar.com/announcementd
- etail/solu-hydropower-limited-has-published-an-offer-letter-to-issue-82000
- 00-units-ipo-shares-to-the-general-public-from-29th-poush-to-4th-magh-2082
- -2026-01-04
-URL:https://www.sharesansar.com/announcementdetail/solu-hydropower-limited-
- has-published-an-offer-letter-to-issue-8200000-units-ipo-shares-to-the-gen
- eral-public-from-29th-poush-to-4th-magh-2082-2026-01-04
+ abil Investment Banking Limited
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -662,12 +493,7 @@ DTEND;VALUE=DATE:20260130
 SUMMARY:IPO: Bhujung Hydropower Limited (BJHL)
 DESCRIPTION:IPO · BJHL\nPrice: Rs 100\nUnits: 830\,000\nOpens 26 Jan 2026\
  , closes 29 Jan 2026\nMay stay open until 9 Feb 2026\nIssue manager: Kumar
- i Capital Limited\nhttps://www.sharesansar.com/announcementdetail/bhujung-
- hydropower-limited-has-published-an-offer-letter-to-issue-830000-units-ipo
- -shares-to-the-general-public-from-12th-magh-to-15th-magh-2082-2026-01-16
-URL:https://www.sharesansar.com/announcementdetail/bhujung-hydropower-limit
- ed-has-published-an-offer-letter-to-issue-830000-units-ipo-shares-to-the-g
- eneral-public-from-12th-magh-to-15th-magh-2082-2026-01-16
+ i Capital Limited
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -684,13 +510,7 @@ DTEND;VALUE=DATE:20260205
 SUMMARY:IPO: Suryakunda Hydro Electric Limited (SKHEL)
 DESCRIPTION:IPO · SKHEL\nPrice: Rs 100\nUnits: 572\,431\nOpens 1 Feb 2026\
  , closes 4 Feb 2026\nMay stay open until 15 Feb 2026\nIssue manager: Kumar
- i Capital Limited\nhttps://www.sharesansar.com/announcementdetail/suryakun
- da-hydro-electric-limited-has-published-an-offer-letter-to-issue-572431-un
- its-ipo-shares-to-the-general-public-from-18th-magh-to-21st-magh-2082-2026
- -01-22
-URL:https://www.sharesansar.com/announcementdetail/suryakunda-hydro-electri
- c-limited-has-published-an-offer-letter-to-issue-572431-units-ipo-shares-t
- o-the-general-public-from-18th-magh-to-21st-magh-2082-2026-01-22
+ i Capital Limited
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -707,13 +527,7 @@ DTEND;VALUE=DATE:20260210
 SUMMARY:IPO: Hotel Forest Inn Limited (HFIN)
 DESCRIPTION:IPO · HFIN\nPrice: Rs 100\nUnits: 3\,320\,000\nOpens 5 Feb 202
  6\, closes 9 Feb 2026\nMay stay open until 20 Feb 2026\nIssue manager: NIC
-  Asia Capital Limited\nhttps://www.sharesansar.com/announcementdetail/hote
- l-forest-inn-limited-has-published-an-offer-letter-to-issue-3320000-units-
- ipo-shares-to-the-general-public-from-22nd-magh-to-26th-magh-2082-2026-01-
- 28
-URL:https://www.sharesansar.com/announcementdetail/hotel-forest-inn-limited
- -has-published-an-offer-letter-to-issue-3320000-units-ipo-shares-to-the-ge
- neral-public-from-22nd-magh-to-26th-magh-2082-2026-01-28
+  Asia Capital Limited
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -730,13 +544,7 @@ DTEND;VALUE=DATE:20260217
 SUMMARY:IPO: Ridge Line Energy Limited (RLEL)
 DESCRIPTION:IPO · RLEL\nPrice: Rs 100\nUnits: 1\,180\,260\nOpens 11 Feb 20
  26\, closes 16 Feb 2026\nMay stay open until 25 Feb 2026\nIssue manager: P
- rabhu Capital Limited\nhttps://www.sharesansar.com/announcementdetail/ridg
- e-line-energy-limited-has-published-an-offer-letter-to-issue-1180260-units
- -ipo-shares-to-the-general-public-from-28th-magh-to-4th-falgun-2082-2026-0
- 1-29
-URL:https://www.sharesansar.com/announcementdetail/ridge-line-energy-limite
- d-has-published-an-offer-letter-to-issue-1180260-units-ipo-shares-to-the-g
- eneral-public-from-28th-magh-to-4th-falgun-2082-2026-01-29
+ rabhu Capital Limited
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -753,11 +561,7 @@ DTEND;VALUE=DATE:20260224
 SUMMARY:IPO: Super Khudi Hydropower Limited (SKHL)
 DESCRIPTION:IPO · SKHL\nPrice: Rs 100\nUnits: 1\,286\,500\nOpens 17 Feb 20
  26\, closes 23 Feb 2026\nMay stay open until 3 Mar 2026\nIssue manager: Gl
- obal IME Capital Ltd\nhttps://www.sharesansar.com/announcementdetail/super
- -khudi-hydropower-limited-has-changed-its-ipo-opening-date-to-5th-falgun-2
- 082-2026-02-13
-URL:https://www.sharesansar.com/announcementdetail/super-khudi-hydropower-l
- imited-has-changed-its-ipo-opening-date-to-5th-falgun-2082-2026-02-13
+ obal IME Capital Ltd
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -774,13 +578,7 @@ DTEND;VALUE=DATE:20260228
 SUMMARY:IPO: Palpa Cements Industries Limited (PCIL)
 DESCRIPTION:IPO · PCIL\nPrice: Rs 100\nUnits: 4\,500\,000\nOpens 24 Feb 20
  26\, closes 27 Feb 2026\nMay stay open until 10 Mar 2026\nIssue manager: N
- abil Investment Banking Ltd.\nhttps://www.sharesansar.com/announcementdeta
- il/palpa-cements-industries-limited-has-published-an-offer-letter-to-issue
- -4500000-units-ipo-shares-to-the-general-public-from-12th-falgun-to-15th-f
- algun-2082-2026-02-11
-URL:https://www.sharesansar.com/announcementdetail/palpa-cements-industries
- -limited-has-published-an-offer-letter-to-issue-4500000-units-ipo-shares-t
- o-the-general-public-from-12th-falgun-to-15th-falgun-2082-2026-02-11
+ abil Investment Banking Ltd.
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -797,12 +595,7 @@ DTEND;VALUE=DATE:20260311
 SUMMARY:IPO: Shikhar Power Development Limited (SIPD)
 DESCRIPTION:IPO · SIPD\nPrice: Rs 100\nUnits: 1\,842\,600\nOpens 1 Mar 202
  6\, closes 10 Mar 2026\nMay stay open until 15 Mar 2026\nIssue manager: Gl
- obal IME Capital Ltd\nhttps://www.sharesansar.com/announcementdetail/shikh
- ar-power-development-limited-has-amended-its-ongoing-ipo-closing-date-to-f
- algun-26-due-to-a-public-holiday-declared-by-the-government-2026-03-01
-URL:https://www.sharesansar.com/announcementdetail/shikhar-power-developmen
- t-limited-has-amended-its-ongoing-ipo-closing-date-to-falgun-26-due-to-a-p
- ublic-holiday-declared-by-the-government-2026-03-01
+ obal IME Capital Ltd
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -819,13 +612,7 @@ DTEND;VALUE=DATE:20260409
 SUMMARY:IPO: Kalinchowk Hydropower Limited (KHPL)
 DESCRIPTION:IPO · KHPL\nPrice: Rs 100\nUnits: 684\,750\nOpens 5 Apr 2026\,
   closes 8 Apr 2026\nMay stay open until 19 Apr 2026\nIssue manager: RBB Me
- rchant Banking Ltd\nhttps://www.sharesansar.com/announcementdetail/kalinch
- owk-hydropower-limited-has-published-an-offer-letter-to-issue-684750-units
- -ipo-shares-to-the-general-public-from-22nd-chaitra-to-25th-chaitra-2082-2
- 026-03-26
-URL:https://www.sharesansar.com/announcementdetail/kalinchowk-hydropower-li
- mited-has-published-an-offer-letter-to-issue-684750-units-ipo-shares-to-th
- e-general-public-from-22nd-chaitra-to-25th-chaitra-2082-2026-03-26
+ rchant Banking Ltd
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -842,12 +629,7 @@ DTEND;VALUE=DATE:20260416
 SUMMARY:IPO: Appolo Hydropower Limited (APHL)
 DESCRIPTION:IPO · APHL\nPrice: Rs 100\nUnits: 780\,200\nOpens 9 Apr 2026\,
   closes 15 Apr 2026\nMay stay open until 23 Apr 2026\nIssue manager: Himal
- ayan Capital Limited\nhttps://www.sharesansar.com/announcementdetail/appol
- o-hydropower-limited-has-extended-its-780200-units-ipo-shares-to-the-gener
- al-public-till-2nd-baisakh-2083-2026-04-13
-URL:https://www.sharesansar.com/announcementdetail/appolo-hydropower-limite
- d-has-extended-its-780200-units-ipo-shares-to-the-general-public-till-2nd-
- baisakh-2083-2026-04-13
+ ayan Capital Limited
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -864,13 +646,7 @@ DTEND;VALUE=DATE:20260422
 SUMMARY:IPO: Sopan Pharmaceuticals Limited (SOPL)
 DESCRIPTION:IPO · SOPL\nPrice: Rs 100\nUnits: 3\,474\,900\nOpens 16 Apr 20
  26\, closes 21 Apr 2026\nMay stay open until 30 Apr 2026\nIssue manager: N
- MB Capital Limited\nhttps://www.sharesansar.com/announcementdetail/sopan-p
- harmaceuticals-limited-has-changed-its-opening-and-closing-date-of-3474900
- -units-ipo-shares-to-the-general-public-from-3rd-baisakh-to-8th-baisakh-20
- 83-2026-04-08
-URL:https://www.sharesansar.com/announcementdetail/sopan-pharmaceuticals-li
- mited-has-changed-its-opening-and-closing-date-of-3474900-units-ipo-shares
- -to-the-general-public-from-3rd-baisakh-to-8th-baisakh-2083-2026-04-08
+ MB Capital Limited
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -887,13 +663,7 @@ DTEND;VALUE=DATE:20260506
 SUMMARY:IPO: Yambaling Hydropower Limited (YMHL)
 DESCRIPTION:IPO · YMHL\nPrice: Rs 100\nUnits: 1\,743\,000\nOpens 29 Apr 20
  26\, closes 5 May 2026\nMay stay open until 13 May 2026\nIssue manager: Mu
- ktinath Capital Limited\nhttps://www.sharesansar.com/announcementdetail/ya
- mbaling-hydropower-limited-has-published-an-offer-letter-to-issue-1743000-
- units-ipo-shares-to-the-general-public-from-16th-baisakh-to-22nd-baisakh-2
- 083-2026-04-20
-URL:https://www.sharesansar.com/announcementdetail/yambaling-hydropower-lim
- ited-has-published-an-offer-letter-to-issue-1743000-units-ipo-shares-to-th
- e-general-public-from-16th-baisakh-to-22nd-baisakh-2083-2026-04-20
+ ktinath Capital Limited
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -910,14 +680,7 @@ DTEND;VALUE=DATE:20260512
 SUMMARY:IPO: Taksar Pikhuwa Khola Hydropower Limited (TPKHL)
 DESCRIPTION:IPO · TPKHL\nPrice: Rs 100\nUnits: 2\,515\,455\nOpens 6 May 20
  26\, closes 11 May 2026\nMay stay open until 20 May 2026\nIssue manager: P
- rabhu Capital Limited\nhttps://www.sharesansar.com/announcementdetail/taks
- ar-pikhuwa-khola-hydropower-limited-has-published-an-offer-letter-to-issue
- -2515455-units-ipo-shares-to-the-general-public-from-23rd-baisakh-to-28th-
- baisakh-2083-2026-04-24
-URL:https://www.sharesansar.com/announcementdetail/taksar-pikhuwa-khola-hyd
- ropower-limited-has-published-an-offer-letter-to-issue-2515455-units-ipo-s
- hares-to-the-general-public-from-23rd-baisakh-to-28th-baisakh-2083-2026-04
- -24
+ rabhu Capital Limited
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -935,12 +698,7 @@ DTEND;VALUE=DATE:20260516
 SUMMARY:IPO: Snow Rivers Limited (SNORL)
 DESCRIPTION:IPO · SNORL\nPrice: Rs 100\nUnits: 778\,125\nOpens 12 May 2026
  \, closes 15 May 2026\nMay stay open until 26 May 2026\nIssue manager: San
- ima Capital Limited\nhttps://www.sharesansar.com/announcementdetail/snow-r
- ivers-limited-has-published-an-offer-letter-to-issue-778125-units-ipo-shar
- es-to-the-general-public-from-29th-baisakh-to-1st-jestha-2083-2026-04-27
-URL:https://www.sharesansar.com/announcementdetail/snow-rivers-limited-has-
- published-an-offer-letter-to-issue-778125-units-ipo-shares-to-the-general-
- public-from-29th-baisakh-to-1st-jestha-2083-2026-04-27
+ ima Capital Limited
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -957,13 +715,7 @@ DTEND;VALUE=DATE:20260528
 SUMMARY:IPO: Kalanga Hydro Limited (KAHL)
 DESCRIPTION:IPO · KAHL\nPrice: Rs 100\nUnits: 2\,870\,000\nOpens 22 May 20
  26\, closes 27 May 2026\nMay stay open until 5 Jun 2026\nIssue manager: Sa
- nima Capital Limited\nhttps://www.sharesansar.com/announcementdetail/kalan
- ga-hydro-limited-has-published-an-offer-letter-to-issue-2870000-units-ipo-
- shares-to-the-general-public-from-8th-jestha-to-13th-jestha-2083-2026-05-0
- 5
-URL:https://www.sharesansar.com/announcementdetail/kalanga-hydro-limited-ha
- s-published-an-offer-letter-to-issue-2870000-units-ipo-shares-to-the-gener
- al-public-from-8th-jestha-to-13th-jestha-2083-2026-05-05
+ nima Capital Limited
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -980,13 +732,7 @@ DTEND;VALUE=DATE:20260605
 SUMMARY:IPO: Sanigad Hydro Limited (SGHL)
 DESCRIPTION:IPO · SGHL\nPrice: Rs 100\nUnits: 4\,674\,000\nOpens 1 Jun 202
  6\, closes 4 Jun 2026\nMay stay open until 15 Jun 2026\nIssue manager: LS 
- Capital Limited\nhttps://www.sharesansar.com/announcementdetail/sanigad-hy
- dro-limited-has-changed-its-opening-and-closing-date-of-4674000-units-ipo-
- shares-to-the-general-public-from-18th-jestha-to-21st-jestha-2083-2026-05-
- 26
-URL:https://www.sharesansar.com/announcementdetail/sanigad-hydro-limited-ha
- s-changed-its-opening-and-closing-date-of-4674000-units-ipo-shares-to-the-
- general-public-from-18th-jestha-to-21st-jestha-2083-2026-05-26
+ Capital Limited
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -1003,13 +749,7 @@ DTEND;VALUE=DATE:20260611
 SUMMARY:IPO: Everest Colour Limited (ECL)
 DESCRIPTION:IPO · ECL\nPrice: Rs 100\nUnits: 655\,700\nOpens 5 Jun 2026\, 
  closes 10 Jun 2026\nMay stay open until 19 Jun 2026\nIssue manager: Muktin
- ath Capital Limited\nhttps://www.sharesansar.com/announcementdetail/everes
- t-colour-limited-has-published-an-offer-letter-to-issue-655700-units-ipo-s
- hares-to-the-general-public-from-22nd-jestha-to-27th-jestha-2083-2026-05-2
- 4
-URL:https://www.sharesansar.com/announcementdetail/everest-colour-limited-h
- as-published-an-offer-letter-to-issue-655700-units-ipo-shares-to-the-gener
- al-public-from-22nd-jestha-to-27th-jestha-2083-2026-05-24
+ ath Capital Limited
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -1026,13 +766,7 @@ DTEND;VALUE=DATE:20260617
 SUMMARY:IPO: Sarvottam Paints Industries Limited (SAPIL)
 DESCRIPTION:IPO · SAPIL\nPrice: Rs 100\nUnits: 705\,500\nOpens 11 Jun 2026
  \, closes 16 Jun 2026\nMay stay open until 25 Jun 2026\nIssue manager: Glo
- bal IME Capital Ltd\nhttps://www.sharesansar.com/announcementdetail/sarvot
- tam-paints-industries-limited-has-published-an-offer-letter-to-issue-70550
- 0-units-ipo-shares-to-the-general-public-from-28th-jestha-to-2nd-ashad-208
- 3-2026-06-02
-URL:https://www.sharesansar.com/announcementdetail/sarvottam-paints-industr
- ies-limited-has-published-an-offer-letter-to-issue-705500-units-ipo-shares
- -to-the-general-public-from-28th-jestha-to-2nd-ashad-2083-2026-06-02
+ bal IME Capital Ltd
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -1049,13 +783,7 @@ DTEND;VALUE=DATE:20260623
 SUMMARY:IPO: Mount Everest Power Development Limited (MEPDL)
 DESCRIPTION:IPO · MEPDL\nPrice: Rs 100\nUnits: 1\,427\,600\nOpens 17 Jun 2
  026\, closes 22 Jun 2026\nMay stay open until 1 Jul 2026\nIssue manager: N
- IMB Ace Capital Limited\nhttps://www.sharesansar.com/announcementdetail/mo
- unt-everest-power-development-limited-has-published-an-offer-letter-to-iss
- ue-1427600-units-ipo-shares-to-the-general-public-from-3rd-ashad-to-8th-as
- had-2083-2026-06-04
-URL:https://www.sharesansar.com/announcementdetail/mount-everest-power-deve
- lopment-limited-has-published-an-offer-letter-to-issue-1427600-units-ipo-s
- hares-to-the-general-public-from-3rd-ashad-to-8th-ashad-2083-2026-06-04
+ IMB Ace Capital Limited
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -1073,13 +801,7 @@ DTEND;VALUE=DATE:20260912
 SUMMARY:IPO: Beni Hydropower Project Limited (BENH)
 DESCRIPTION:IPO · BENH\nPrice: Rs 100\nUnits: 863\,200\nOpens 7 Sep 2026\,
   closes 11 Sep 2026\nMay stay open until 21 Sep 2026\nIssue manager: NMB C
- apital Limited\nhttps://www.sharesansar.com/announcementdetail/beni-hydrop
- ower-project-limited-has-published-an-offer-letter-to-issue-863200-units-i
- po-shares-to-the-general-public-from-22nd-bhadra-to-25th-bhadra-2083-2026-
- 08-25
-URL:https://www.sharesansar.com/announcementdetail/beni-hydropower-project-
- limited-has-published-an-offer-letter-to-issue-863200-units-ipo-shares-to-
- the-general-public-from-22nd-bhadra-to-25th-bhadra-2083-2026-08-25
+ apital Limited
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM

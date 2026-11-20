@@ -16,7 +16,7 @@
   <meta name="color-scheme" content="light dark">
   <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
-  <title>np-calendar — Nepal share issues and NPL</title>
+  <title>np-calendar — Nepal stocks and NPL</title>
   <link rel="icon" href="data:,">
   <link rel="stylesheet" href="style.css">
   <script src="app.js" defer></script>
@@ -30,28 +30,29 @@
   </header>
   <main id="main">
     <div role="tablist" aria-label="Site sections" class="tabs">
-      <button type="button" role="tab" id="tab-issues" aria-selected="true" aria-controls="panel-issues">Share issues</button>
+      <button type="button" role="tab" id="tab-stocks" aria-selected="true" aria-controls="panel-stocks">Stocks</button>
       <button type="button" role="tab" id="tab-npl" aria-selected="false" tabindex="-1" aria-controls="panel-npl">NPL</button>
     </div>
 
-    <section role="tabpanel" id="panel-issues" aria-labelledby="tab-issues" tabindex="0">
-      <h2>Share issues</h2>
-      <p class="section-intro">IPOs, FPOs, right shares and IPOs for locals and migrant workers in Nepal, from ShareSansar. Subscribe to a feed to get opening dates in your calendar.</p>
-      <p id="issues-status" role="status">Loading share issues…</p>
+    <div role="tabpanel" id="panel-stocks" aria-labelledby="tab-stocks" tabindex="0">
+    <section id="stocks" aria-labelledby="stocks-heading">
+      <h2 id="stocks-heading">Stocks</h2>
+      <p class="section-intro">IPOs, FPOs, right shares and IPOs for locals and migrant workers in Nepal. Subscribe to a feed to get opening dates in your calendar.</p>
+      <p id="issues-status" role="status">Loading stock issues…</p>
       <div id="issues-month"></div>
       <ul id="issues-legend" class="issues-legend"></ul>
       <div id="issues-list"></div>
-      <section id="issues-feeds" aria-labelledby="issues-feeds-heading">
+      <div id="issues-feeds" role="region" aria-labelledby="issues-feeds-heading">
         <h3 id="issues-feeds-heading">Subscribe</h3>
         <ul id="issues-feed-list">
           <li class="calendar-row issue-feed-row">
-            <span class="calendar-name">All share issues</span>
+            <span class="calendar-name">All stock issues</span>
             <span class="calendar-actions">
-              <a class="btn subscribe" aria-label="Subscribe to All share issues calendar"
+              <a class="btn subscribe" aria-label="Subscribe to All stock issues calendar"
                  href="webcal://codila125.github.io/np-calendar/calendar/issues.ics">Subscribe</a>
-              <a class="btn google" target="_blank" rel="noopener" aria-label="Add All share issues to Google Calendar"
+              <a class="btn google" target="_blank" rel="noopener" aria-label="Add All stock issues to Google Calendar"
                  href="https://calendar.google.com/calendar/r?cid=webcal%3A%2F%2Fcodila125.github.io%2Fnp-calendar%2Fcalendar%2Fissues.ics">Google Calendar</a>
-              <button type="button" class="copy" aria-label="Copy All share issues calendar URL"
+              <button type="button" class="copy" aria-label="Copy All stock issues calendar URL"
                       data-url="https://codila125.github.io/np-calendar/calendar/issues.ics">Copy URL</button>
             </span>
           </li>
@@ -111,10 +112,11 @@
             </span>
           </li>
         </ul>
-      </section>
+      </div>
     </section>
+    </div>
 
-    <section role="tabpanel" id="panel-npl" aria-labelledby="tab-npl" tabindex="0" aria-busy="true" hidden>
+    <div role="tabpanel" id="panel-npl" aria-labelledby="tab-npl" tabindex="0" aria-busy="true" hidden>
     <nav aria-label="Sections">
       <ul>
         <li><a href="#standings">Standings</a></li>
@@ -164,7 +166,7 @@
           </li>
         </ul>
       </section>
-    </section>
+    </div>
   </main>
 </body>
 </html>

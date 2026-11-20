@@ -4,8 +4,7 @@ PRODID:-//codila125//np-calendar//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:np-calendar — IPO for locals
-X-WR-CALDESC:Opening and closing dates of share issues in Nepal (source: Sh
- areSansar).
+X-WR-CALDESC:Opening and closing dates of stock issues in Nepal.
 REFRESH-INTERVAL;VALUE=DURATION:PT1H
 X-PUBLISHED-TTL:PT1H
 BEGIN:VEVENT
@@ -16,17 +15,7 @@ DTEND;VALUE=DATE:20230228
 SUMMARY:IPO for locals: Makar Jitumaya Suri Hydropower Company Limited (MAK
  AR)
 DESCRIPTION:IPO for locals · MAKAR\nPrice: Rs 100\nUnits: 760\,000\nOpens 
- 29 Jan 2023\, closes 27 Feb 2023\nIssue manager: Prabhu Capital Ltd.\nhttp
- s://www.sharesansar.com/announcementdetail/makar-jitumaya-suri-hydropower-
- limited-has-published-an-offer-letter-to-issue-760000-units-ipo-shares-to-
- the-project-affected-locals-of-dolakha-district-and-152000-units-ipo-share
- s-to-foreign-nepalese-employees-from-15th-magh-to-29th-magh-2079-2023-01-1
- 9
-URL:https://www.sharesansar.com/announcementdetail/makar-jitumaya-suri-hydr
- opower-limited-has-published-an-offer-letter-to-issue-760000-units-ipo-sha
- res-to-the-project-affected-locals-of-dolakha-district-and-152000-units-ip
- o-shares-to-foreign-nepalese-employees-from-15th-magh-to-29th-magh-2079-20
- 23-01-19
+ 29 Jan 2023\, closes 27 Feb 2023\nIssue manager: Prabhu Capital Ltd.
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -43,15 +32,7 @@ DTSTART;VALUE=DATE:20230220
 DTEND;VALUE=DATE:20230322
 SUMMARY:IPO for locals: Dolti Power Company Ltd (DOLTI)
 DESCRIPTION:IPO for locals · DOLTI\nPrice: Rs 100\nUnits: 536\,486\nOpens 
- 20 Feb 2023\, closes 21 Mar 2023\nIssue manager: NIC Asia Capital Ltd\nhtt
- ps://www.sharesansar.com/announcementdetail/dolti-power-company-limited-ha
- s-published-an-offer-letter-to-issue-536486-units-ipo-shares-to-the-projec
- t-affected-locals-of-dailekh-district-and-107298-units-ipo-shares-to-forei
- gn-nepalese-employees-from-8th-falgun-to-25th-falgun-2079-2023-02-12
-URL:https://www.sharesansar.com/announcementdetail/dolti-power-company-limi
- ted-has-published-an-offer-letter-to-issue-536486-units-ipo-shares-to-the-
- project-affected-locals-of-dailekh-district-and-107298-units-ipo-shares-to
- -foreign-nepalese-employees-from-8th-falgun-to-25th-falgun-2079-2023-02-12
+ 20 Feb 2023\, closes 21 Mar 2023\nIssue manager: NIC Asia Capital Ltd
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -67,17 +48,7 @@ DTSTART;VALUE=DATE:20230220
 DTEND;VALUE=DATE:20230322
 SUMMARY:IPO for locals: Bhugol Energy Development Company Limited (BEDC)
 DESCRIPTION:IPO for locals · BEDC\nPrice: Rs 100\nUnits: 544\,053\nOpens 2
- 0 Feb 2023\, closes 21 Mar 2023\nIssue manager: NIC Asia Capital Ltd.\nhtt
- ps://www.sharesansar.com/announcementdetail/bhugol-energy-development-comp
- any-limited-has-published-an-offer-letter-to-issue-544053-units-ipo-shares
- -to-the-project-affected-locals-of-dailekh-district-and-108811-units-ipo-s
- hares-to-foreign-nepalese-employees-from-8th-falgun-to-25th-falgun-2079-20
- 23-02-13
-URL:https://www.sharesansar.com/announcementdetail/bhugol-energy-developmen
- t-company-limited-has-published-an-offer-letter-to-issue-544053-units-ipo-
- shares-to-the-project-affected-locals-of-dailekh-district-and-108811-units
- -ipo-shares-to-foreign-nepalese-employees-from-8th-falgun-to-25th-falgun-2
- 079-2023-02-13
+ 0 Feb 2023\, closes 21 Mar 2023\nIssue manager: NIC Asia Capital Ltd.
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -95,15 +66,7 @@ DTEND;VALUE=DATE:20230404
 SUMMARY:IPO for locals: Ingwa Hydropower Ltd (IHL)
 DESCRIPTION:IPO for locals · IHL\nPrice: Rs 100\nUnits: 600\,000\nOpens 5 
  Mar 2023\, closes 3 Apr 2023\nIssue manager: Nepal SBI Merchant Banking Lt
- d.\nhttps://www.sharesansar.com/announcementdetail/ingwa-hydropower-limite
- d-has-published-an-offer-letter-to-issue-600000-units-ipo-shares-to-the-pr
- oject-affected-locals-of-taplejung-district-and-120000-units-ipo-shares-to
- -foreign-nepalese-employees-from-21st-falgun-to-5th-chaitra-2079-2023-02-2
- 6
-URL:https://www.sharesansar.com/announcementdetail/ingwa-hydropower-limited
- -has-published-an-offer-letter-to-issue-600000-units-ipo-shares-to-the-pro
- ject-affected-locals-of-taplejung-district-and-120000-units-ipo-shares-to-
- foreign-nepalese-employees-from-21st-falgun-to-5th-chaitra-2079-2023-02-26
+ d.
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -120,15 +83,7 @@ DTEND;VALUE=DATE:20230331
 SUMMARY:IPO for locals: Modi Energy Limited (MEL)
 DESCRIPTION:IPO for locals · MEL\nPrice: Rs 100\nUnits: 2\,900\,000\nOpens
   9 Mar 2023\, closes 30 Mar 2023\nMay stay open until 7 Apr 2023\nIssue ma
- nager: Sunrise Capital Ltd\nhttps://www.sharesansar.com/announcementdetail
- /modi-energy-limited-has-published-an-offer-letter-to-issue-2900000-units-
- ipo-shares-to-the-project-affected-locals-of-parbat-district-and-435000-un
- its-ipo-shares-to-foreign-nepalese-employees-from-25th-falgun-to-9th-chait
- ra-2079-2023-02-28
-URL:https://www.sharesansar.com/announcementdetail/modi-energy-limited-has-
- published-an-offer-letter-to-issue-2900000-units-ipo-shares-to-the-project
- -affected-locals-of-parbat-district-and-435000-units-ipo-shares-to-foreign
- -nepalese-employees-from-25th-falgun-to-9th-chaitra-2079-2023-02-28
+ nager: Sunrise Capital Ltd
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -144,16 +99,7 @@ DTSTART;VALUE=DATE:20230406
 DTEND;VALUE=DATE:20230508
 SUMMARY:IPO for locals: Rawa Energy Development Ltd. (RAWA)
 DESCRIPTION:IPO for locals · RAWA\nPrice: Rs 100\nUnits: 280\,000\nOpens 6
-  Apr 2023\, closes 7 May 2023\nIssue manager: Prabhu Capital Ltd.\nhttps:/
- /www.sharesansar.com/announcementdetail/rawa-energy-development-limited-ha
- s-published-an-offer-letter-to-issue-280000-units-ipo-shares-to-the-projec
- t-affected-locals-of-khotang-district-and-56000-units-ipo-shares-to-foreig
- n-nepalese-employees-from-23rd-chaitra-2079-to-7th-baisakh-2080-2023-03-29
-URL:https://www.sharesansar.com/announcementdetail/rawa-energy-development-
- limited-has-published-an-offer-letter-to-issue-280000-units-ipo-shares-to-
- the-project-affected-locals-of-khotang-district-and-56000-units-ipo-shares
- -to-foreign-nepalese-employees-from-23rd-chaitra-2079-to-7th-baisakh-2080-
- 2023-03-29
+  Apr 2023\, closes 7 May 2023\nIssue manager: Prabhu Capital Ltd.
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -169,16 +115,7 @@ DTSTART;VALUE=DATE:20230424
 DTEND;VALUE=DATE:20230524
 SUMMARY:IPO for locals: Three Star Hydropower Limited (TSHL)
 DESCRIPTION:IPO for locals · TSHL\nPrice: Rs 100\nUnits: 492\,500\nOpens 2
- 4 Apr 2023\, closes 23 May 2023\nIssue manager: Himalayan Capital Ltd\nhtt
- ps://www.sharesansar.com/announcementdetail/three-star-hydropower-limited-
- has-published-an-offer-letter-to-issue-492500-units-ipo-shares-to-the-proj
- ect-affected-locals-of-khotang-district-and-73875-units-ipo-shares-to-fore
- ign-nepalese-employees-from-11th-baisakh-to-25th-baisakh-2080-2023-04-17
-URL:https://www.sharesansar.com/announcementdetail/three-star-hydropower-li
- mited-has-published-an-offer-letter-to-issue-492500-units-ipo-shares-to-th
- e-project-affected-locals-of-khotang-district-and-73875-units-ipo-shares-t
- o-foreign-nepalese-employees-from-11th-baisakh-to-25th-baisakh-2080-2023-0
- 4-17
+ 4 Apr 2023\, closes 23 May 2023\nIssue manager: Himalayan Capital Ltd
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -195,16 +132,7 @@ DTSTART;VALUE=DATE:20230502
 DTEND;VALUE=DATE:20230601
 SUMMARY:IPO for locals: Ghorahi Cement Industry Limited (GCIL)
 DESCRIPTION:IPO for locals · GCIL\nPrice: Rs 400\nUnits: 397\,190\nOpens 2
-  May 2023\, closes 31 May 2023\nIssue manager: Himalayan Capital Ltd.\nhtt
- ps://www.sharesansar.com/announcementdetail/ghorahi-cement-industry-limite
- d-has-published-an-offer-letter-to-issue-397190-units-ipo-shares-to-the-pr
- oject-affected-locals-of-dang-district-and-754661-units-ipo-shares-to-fore
- ign-nepalese-employees-from-19th-baisakh-to-2nd-jestha-2080-2023-04-24
-URL:https://www.sharesansar.com/announcementdetail/ghorahi-cement-industry-
- limited-has-published-an-offer-letter-to-issue-397190-units-ipo-shares-to-
- the-project-affected-locals-of-dang-district-and-754661-units-ipo-shares-t
- o-foreign-nepalese-employees-from-19th-baisakh-to-2nd-jestha-2080-2023-04-
- 24
+  May 2023\, closes 31 May 2023\nIssue manager: Himalayan Capital Ltd.
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -222,16 +150,7 @@ DTEND;VALUE=DATE:20230603
 SUMMARY:IPO for locals: Upper Syange Hydropower Limited (USHL)
 DESCRIPTION:IPO for locals · USHL\nPrice: Rs 100\nUnits: 220\,000\nOpens 1
  5 May 2023\, closes 2 Jun 2023\nMay stay open until 13 Jun 2023\nIssue man
- ager: Siddhartha Capital Ltd.\nhttps://www.sharesansar.com/announcementdet
- ail/upper-syange-hydropower-limited-has-published-an-offer-letter-to-issue
- -220000-units-ipo-shares-to-the-project-affected-locals-of-lamjung-distric
- t-and-65000-units-ipo-shares-to-foreign-nepalese-employees-from-1st-jestha
- -to-16th-jestha-2080-2023-05-07
-URL:https://www.sharesansar.com/announcementdetail/upper-syange-hydropower-
- limited-has-published-an-offer-letter-to-issue-220000-units-ipo-shares-to-
- the-project-affected-locals-of-lamjung-district-and-65000-units-ipo-shares
- -to-foreign-nepalese-employees-from-1st-jestha-to-16th-jestha-2080-2023-05
- -07
+ ager: Siddhartha Capital Ltd.
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -249,16 +168,7 @@ DTEND;VALUE=DATE:20230621
 SUMMARY:IPO for locals: Kutheli Bukhari Small Hydropower Limited (KBSH)
 DESCRIPTION:IPO for locals · KBSH\nPrice: Rs 100\nUnits: 121\,868\nOpens 2
   Jun 2023\, closes 20 Jun 2023\nMay stay open until 2 Jul 2023\nIssue mana
- ger: NMB Capital Limited\nhttps://www.sharesansar.com/announcementdetail/k
- utheli-bukhari-small-hydropower-limited-has-published-an-offer-letter-to-i
- ssue-121868-units-at-rs100-per-unit-to-the-project-affected-locals-of-dola
- kha-districts-and-12168-units-at-rs100-per-unit-to-the-foreign-nepalese-em
- ployees-from-19th-jestha-to-1st-ashad-2080-2023-05-23
-URL:https://www.sharesansar.com/announcementdetail/kutheli-bukhari-small-hy
- dropower-limited-has-published-an-offer-letter-to-issue-121868-units-at-rs
- 100-per-unit-to-the-project-affected-locals-of-dolakha-districts-and-12168
- -units-at-rs100-per-unit-to-the-foreign-nepalese-employees-from-19th-jesth
- a-to-1st-ashad-2080-2023-05-23
+ ger: NMB Capital Limited
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -276,17 +186,7 @@ DTEND;VALUE=DATE:20230722
 SUMMARY:IPO for locals: Upper Lohore Khola Hydropower Company Limited (ULHC
  )
 DESCRIPTION:IPO for locals · ULHC\nPrice: Rs 100\nUnits: 509\,804\nOpens 2
- 2 Jun 2023\, closes 21 Jul 2023\nIssue manager: NIC Asia Capital Limited\n
- https://www.sharesansar.com/announcementdetail/upper-lohore-khola-hydropow
- er-company-limited-has-published-an-offer-letter-to-issue-509804-units-ipo
- -shares-to-the-project-affected-locals-of-dailekh-district-and-198824-unit
- s-ipo-shares-to-foreign-nepalese-employees-from-7th-ashad-to-21st-ashad-20
- 80-2023-06-15
-URL:https://www.sharesansar.com/announcementdetail/upper-lohore-khola-hydro
- power-company-limited-has-published-an-offer-letter-to-issue-509804-units-
- ipo-shares-to-the-project-affected-locals-of-dailekh-district-and-198824-u
- nits-ipo-shares-to-foreign-nepalese-employees-from-7th-ashad-to-21st-ashad
- -2080-2023-06-15
+ 2 Jun 2023\, closes 21 Jul 2023\nIssue manager: NIC Asia Capital Limited
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -304,16 +204,7 @@ DTEND;VALUE=DATE:20230726
 SUMMARY:IPO for locals: Manakamana Engineering Hydropower Limited (MEHL)
 DESCRIPTION:IPO for locals · MEHL\nPrice: Rs 100\nUnits: 800\,000\nOpens 4
   Jul 2023\, closes 25 Jul 2023\nMay stay open until 2 Aug 2023\nIssue mana
- ger: B.O.K Capital Market Limited\nhttps://www.sharesansar.com/announcemen
- tdetail/manakamana-engineering-hydropower-limited-has-published-an-offer-l
- etter-to-issue-800000-units-ipo-shares-to-the-project-affected-locals-of-d
- olakha-district-and-200000-units-ipo-shares-to-foreign-nepalese-employees-
- from-19th-ashad-to-2nd-shrawan-2080-2023-06-26
-URL:https://www.sharesansar.com/announcementdetail/manakamana-engineering-h
- ydropower-limited-has-published-an-offer-letter-to-issue-800000-units-ipo-
- shares-to-the-project-affected-locals-of-dolakha-district-and-200000-units
- -ipo-shares-to-foreign-nepalese-employees-from-19th-ashad-to-2nd-shrawan-2
- 080-2023-06-26
+ ger: B.O.K Capital Market Limited
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -332,14 +223,7 @@ SUMMARY:IPO for locals: Bhagawati Hydropower Development Company Limited (B
  GWT)
 DESCRIPTION:IPO for locals · BGWT\nPrice: Rs 116\nUnits: 572\,065\nOpens 9
   Jul 2023\, closes 30 Jul 2023\nMay stay open until 7 Aug 2023\nIssue mana
- ger: Siddhartha Capital Limited\nhttps://www.sharesansar.com/announcementd
- etail/bhagawati-hydropower-development-company-limited-has-extended-its-57
- 2065-units-ipo-shares-to-the-project-affected-locals-of-kaski-districts-ti
- ll-14th-shrawan-2080-2023-07-23
-URL:https://www.sharesansar.com/announcementdetail/bhagawati-hydropower-dev
- elopment-company-limited-has-extended-its-572065-units-ipo-shares-to-the-p
- roject-affected-locals-of-kaski-districts-till-14th-shrawan-2080-2023-07-2
- 3
+ ger: Siddhartha Capital Limited
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -356,19 +240,7 @@ DTSTART;VALUE=DATE:20230713
 DTEND;VALUE=DATE:20230812
 SUMMARY:IPO for locals: Mandu Hydropower Limited (MANDU)
 DESCRIPTION:IPO for locals · MANDU\nPrice: Rs 206\nUnits: 272\,730\nOpens 
- 13 Jul 2023\, closes 11 Aug 2023\nIssue manager: Prabhu Capital Limited\nh
- ttps://www.sharesansar.com/announcementdetail/mandu-hydropower-limited-has
- -published-an-offer-letter-to-issue-272730-units-ipo-shares-to-the-project
- -affected-locals-of-lalitpur-district-bagmati-vdcs-ward-no-1-and-2-makawan
- pur-district-bhimphedi-vdcs-ward-no-567-and-8-and-indra-sarowar-vdcs-ward-
- no-3-and-136364-units-ipo-shares-to-foreign-nepalese-employees-from-28th-a
- shad-to-11th-shrawan-2080-2023-07-06
-URL:https://www.sharesansar.com/announcementdetail/mandu-hydropower-limited
- -has-published-an-offer-letter-to-issue-272730-units-ipo-shares-to-the-pro
- ject-affected-locals-of-lalitpur-district-bagmati-vdcs-ward-no-1-and-2-mak
- awanpur-district-bhimphedi-vdcs-ward-no-567-and-8-and-indra-sarowar-vdcs-w
- ard-no-3-and-136364-units-ipo-shares-to-foreign-nepalese-employees-from-28
- th-ashad-to-11th-shrawan-2080-2023-07-06
+ 13 Jul 2023\, closes 11 Aug 2023\nIssue manager: Prabhu Capital Limited
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -384,17 +256,7 @@ DTSTART;VALUE=DATE:20230720
 DTEND;VALUE=DATE:20230904
 SUMMARY:IPO for locals: Mathillo Mailun Khola Jalvidhyut Limited (MMKJL)
 DESCRIPTION:IPO for locals · MMKJL\nPrice: Rs 100\nUnits: 1\,000\,000\nOpe
- ns 20 Jul 2023\, closes 3 Sep 2023\nIssue manager: Sanima Capital Limited\
- nhttps://www.sharesansar.com/announcementdetail/mathillo-mailung-khola-jal
- bidhyut-limited-has-published-an-offer-letter-to-issue-1000000-units-ipo-s
- hares-to-the-project-affected-locals-of-rasuwa-and-nuwakot-districts-and-1
- 50000-units-ipo-shares-to-foreign-nepalese-employees-from-4th-shrawan-to-1
- 8th-shrawan-2080-2023-07-11
-URL:https://www.sharesansar.com/announcementdetail/mathillo-mailung-khola-j
- albidhyut-limited-has-published-an-offer-letter-to-issue-1000000-units-ipo
- -shares-to-the-project-affected-locals-of-rasuwa-and-nuwakot-districts-and
- -150000-units-ipo-shares-to-foreign-nepalese-employees-from-4th-shrawan-to
- -18th-shrawan-2080-2023-07-11
+ ns 20 Jul 2023\, closes 3 Sep 2023\nIssue manager: Sanima Capital Limited
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -412,16 +274,7 @@ DTEND;VALUE=DATE:20230816
 SUMMARY:IPO for locals: Mid Solu Hydropower Company Limited (MSHL)
 DESCRIPTION:IPO for locals · MSHL\nPrice: Rs 100\nUnits: 748\,400\nOpens 3
  0 Jul 2023\, closes 15 Aug 2023\nMay stay open until 28 Aug 2023\nIssue ma
- nager: NIC Asia Capital Limited\nhttps://www.sharesansar.com/announcementd
- etail/mid-solu-hydropower-company-limited-has-published-an-offer-letter-to
- -issue-748400-units-ipo-shares-to-the-project-affected-locals-of-solukhumb
- u-district-and-74840-units-ipo-shares-to-foreign-nepalese-employees-from-1
- 4th-shrawan-to-28th-shrawan-2080-2023-07-21
-URL:https://www.sharesansar.com/announcementdetail/mid-solu-hydropower-comp
- any-limited-has-published-an-offer-letter-to-issue-748400-units-ipo-shares
- -to-the-project-affected-locals-of-solukhumbu-district-and-74840-units-ipo
- -shares-to-foreign-nepalese-employees-from-14th-shrawan-to-28th-shrawan-20
- 80-2023-07-21
+ nager: NIC Asia Capital Limited
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -439,16 +292,7 @@ DTEND;VALUE=DATE:20230912
 SUMMARY:IPO for locals: Chirkhwa Hydro Power Limited (CKHL)
 DESCRIPTION:IPO for locals · CKHL\nPrice: Rs 100\nUnits: 400\,000\nOpens 1
  3 Aug 2023\, closes 11 Sep 2023\nIssue manager: RBB Merchant Banking Limit
- ed\nhttps://www.sharesansar.com/announcementdetail/chirkhwa-hydro-power-li
- mited-has-published-an-offer-letter-to-issue-400000-units-ipo-shares-to-th
- e-project-affected-locals-of-bhojpur-district-and-80000-units-ipo-shares-t
- o-foreign-nepalese-immigrants-from-28th-shrawan-to-10th-bhadra-2080-2023-0
- 8-06
-URL:https://www.sharesansar.com/announcementdetail/chirkhwa-hydro-power-lim
- ited-has-published-an-offer-letter-to-issue-400000-units-ipo-shares-to-the
- -project-affected-locals-of-bhojpur-district-and-80000-units-ipo-shares-to
- -foreign-nepalese-immigrants-from-28th-shrawan-to-10th-bhadra-2080-2023-08
- -06
+ ed
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -465,16 +309,7 @@ DTEND;VALUE=DATE:20230913
 SUMMARY:IPO for locals: Sonapur Minerals and Oil Limited (SONA)
 DESCRIPTION:IPO for locals · SONA\nPrice: Rs 225\nUnits: 1\,537\,525\nOpen
  s 14 Aug 2023\, closes 12 Sep 2023\nIssue manager: NIMB Ace Capital Limite
- d\nhttps://www.sharesansar.com/announcementdetail/sonapur-minerals-and-oil
- -limited-has-published-an-offer-letter-to-issue-1537525-units-ipo-shares-t
- o-the-project-affected-locals-of-dang-and-rolpa-district-and-1076268-units
- -ipo-shares-to-foreign-nepalese-immigrants-from-29th-shrawan-to-11th-bhadr
- a-2080-2023-08-06
-URL:https://www.sharesansar.com/announcementdetail/sonapur-minerals-and-oil
- -limited-has-published-an-offer-letter-to-issue-1537525-units-ipo-shares-t
- o-the-project-affected-locals-of-dang-and-rolpa-district-and-1076268-units
- -ipo-shares-to-foreign-nepalese-immigrants-from-29th-shrawan-to-11th-bhadr
- a-2080-2023-08-06
+ d
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -492,16 +327,7 @@ DTEND;VALUE=DATE:20231005
 SUMMARY:IPO for locals: Vision Lumbini Urja Company Limited (VLUCL)
 DESCRIPTION:IPO for locals · VLUCL\nPrice: Rs 100\nUnits: 1\,912\,500\nOpe
  ns 5 Sep 2023\, closes 4 Oct 2023\nIssue manager: Muktinath Capital Limite
- d\nhttps://www.sharesansar.com/announcementdetail/vision-lumbini-urja-comp
- any-limited-has-published-an-offer-letter-to-issue-1912500-units-ipo-share
- s-to-the-project-affected-locals-of-kaski-district-and-191250-units-ipo-sh
- ares-to-foreign-nepalese-immigrants-from-19th-bhadra-to-2nd-ashwin-2080-20
- 23-08-27
-URL:https://www.sharesansar.com/announcementdetail/vision-lumbini-urja-comp
- any-limited-has-published-an-offer-letter-to-issue-1912500-units-ipo-share
- s-to-the-project-affected-locals-of-kaski-district-and-191250-units-ipo-sh
- ares-to-foreign-nepalese-immigrants-from-19th-bhadra-to-2nd-ashwin-2080-20
- 23-08-27
+ d
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -518,17 +344,7 @@ DTSTART;VALUE=DATE:20240110
 DTEND;VALUE=DATE:20240209
 SUMMARY:IPO for locals: Sarbottam Cement Limited (SARBTM)
 DESCRIPTION:IPO for locals · SARBTM\nPrice: Rs 360.9\nUnits: 930\,000\nOpe
- ns 10 Jan 2024\, closes 8 Feb 2024\nIssue manager: Global IME Capital Ltd\
- nhttps://www.sharesansar.com/announcementdetail/sarbottam-cement-limited-h
- as-extended-its-930000-units-ipo-shares-to-the-industry-affected-locals-of
- -nawalparasi-districtmine-excavation-affected-locals-of-palpa-district-til
- l-25th-magh-2080-and-is-closing-its-267000-units-ipo-shares-to-foreign-nep
- alese-immigrants-from-today-10th-magh-2080-2024-01-24
-URL:https://www.sharesansar.com/announcementdetail/sarbottam-cement-limited
- -has-extended-its-930000-units-ipo-shares-to-the-industry-affected-locals-
- of-nawalparasi-districtmine-excavation-affected-locals-of-palpa-district-t
- ill-25th-magh-2080-and-is-closing-its-267000-units-ipo-shares-to-foreign-n
- epalese-immigrants-from-today-10th-magh-2080-2024-01-24
+ ns 10 Jan 2024\, closes 8 Feb 2024\nIssue manager: Global IME Capital Ltd
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -545,15 +361,7 @@ DTEND;VALUE=DATE:20250319
 SUMMARY:IPO for locals: Pure Energy Limited (PURE)
 DESCRIPTION:IPO for locals · PURE\nPrice: Rs 100\nUnits: 160\,000\nOpens 4
   Mar 2025\, closes 18 Mar 2025\nMay stay open until 2 Apr 2025\nIssue mana
- ger: Nabil Investment Banking Limited\nhttps://www.sharesansar.com/announc
- ementdetail/pure-energy-limited-has-published-an-offer-letter-to-issue-160
- 000-units-ipo-shares-to-the-project-affected-locals-of-banke-district-and-
- 144000-units-ipo-shares-to-foreign-nepalese-immigrants-from-20th-falgun-to
- -5th-chaitra-2081-2025-02-23
-URL:https://www.sharesansar.com/announcementdetail/pure-energy-limited-has-
- published-an-offer-letter-to-issue-160000-units-ipo-shares-to-the-project-
- affected-locals-of-banke-district-and-144000-units-ipo-shares-to-foreign-n
- epalese-immigrants-from-20th-falgun-to-5th-chaitra-2081-2025-02-23
+ ger: Nabil Investment Banking Limited
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -570,15 +378,7 @@ DTEND;VALUE=DATE:20250503
 SUMMARY:IPO for locals: Sanvi Energy Limited (SANVI)
 DESCRIPTION:IPO for locals · SANVI\nPrice: Rs 100\nUnits: 880\,000\nOpens 
  18 Apr 2025\, closes 2 May 2025\nMay stay open until 17 May 2025\nIssue ma
- nager: Nepal SBI Merchant Banking Limited\nhttps://www.sharesansar.com/ann
- ouncementdetail/sanvi-energy-limited-has-published-an-offer-letter-to-issu
- e-880000-units-ipo-shares-to-the-project-affected-locals-of-illam-district
- -and-291000-units-ipo-shares-to-foreign-nepalese-immigrants-from-5th-baisa
- kh-to-19th-baisakh-2082-2025-04-09
-URL:https://www.sharesansar.com/announcementdetail/sanvi-energy-limited-has
- -published-an-offer-letter-to-issue-880000-units-ipo-shares-to-the-project
- -affected-locals-of-illam-district-and-291000-units-ipo-shares-to-foreign-
- nepalese-immigrants-from-5th-baisakh-to-19th-baisakh-2082-2025-04-09
+ nager: Nepal SBI Merchant Banking Limited
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -595,16 +395,7 @@ DTEND;VALUE=DATE:20250604
 SUMMARY:IPO for locals: Bikash Hydropower Company Limited (BHCL)
 DESCRIPTION:IPO for locals · BHCL\nPrice: Rs 100\nUnits: 909\,101\nOpens 2
  0 May 2025\, closes 3 Jun 2025\nMay stay open until 18 Jun 2025\nIssue man
- ager: Prabhu Capital Ltd.\nhttps://www.sharesansar.com/announcementdetail/
- bikash-hydropower-company-limited-has-published-an-offer-letter-to-issue-9
- 09101-units-ipo-shares-to-the-project-affected-locals-of-gorkha-district-a
- nd-354550-units-ipo-shares-to-foreign-nepalese-immigrants-from-6th-jestha-
- to-20th-jestha-2082-2025-05-10
-URL:https://www.sharesansar.com/announcementdetail/bikash-hydropower-compan
- y-limited-has-published-an-offer-letter-to-issue-909101-units-ipo-shares-t
- o-the-project-affected-locals-of-gorkha-district-and-354550-units-ipo-shar
- es-to-foreign-nepalese-immigrants-from-6th-jestha-to-20th-jestha-2082-2025
- -05-10
+ ager: Prabhu Capital Ltd.
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -622,16 +413,7 @@ DTEND;VALUE=DATE:20250628
 SUMMARY:IPO for locals: Him Star Urja Company Limited (HIMSTAR)
 DESCRIPTION:IPO for locals · HIMSTAR\nPrice: Rs 100\nUnits: 186\,500\nOpen
  s 13 Jun 2025\, closes 27 Jun 2025\nMay stay open until 13 Jul 2025\nIssue
-  manager: NIC Asia Capital Limited\nhttps://www.sharesansar.com/announceme
- ntdetail/him-star-urja-company-limited-has-published-an-offer-letter-to-is
- sue-186500-units-ipo-shares-to-the-project-affected-locals-of-okhaldhunga-
- and-solukhumbhu-district-and-93250-units-ipo-shares-to-foreign-nepalese-im
- migrants-from-30th-jestha-to-13th-ashad-2082-2025-06-06
-URL:https://www.sharesansar.com/announcementdetail/him-star-urja-company-li
- mited-has-published-an-offer-letter-to-issue-186500-units-ipo-shares-to-th
- e-project-affected-locals-of-okhaldhunga-and-solukhumbhu-district-and-9325
- 0-units-ipo-shares-to-foreign-nepalese-immigrants-from-30th-jestha-to-13th
- -ashad-2082-2025-06-06
+  manager: NIC Asia Capital Limited
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -649,16 +431,7 @@ DTEND;VALUE=DATE:20250708
 SUMMARY:IPO for locals: Daramkhola Hydro Energy Limited (DHEL)
 DESCRIPTION:IPO for locals · DHEL\nPrice: Rs 100\nUnits: 1\,030\,500\nOpen
  s 23 Jun 2025\, closes 7 Jul 2025\nMay stay open until 22 Jul 2025\nIssue 
- manager: Laxmi Sunrise Capital Limited\nhttps://www.sharesansar.com/announ
- cementdetail/daramkhola-hydro-energy-limited-has-published-an-offer-letter
- -to-issue-1030500-units-ipo-shares-to-the-project-affected-locals-of-gulmi
- -and-baglung-district-and-291950-units-ipo-shares-to-foreign-nepalese-immi
- grants-from-9th-ashad-to-23rd-ashad-2082-2025-06-15
-URL:https://www.sharesansar.com/announcementdetail/daramkhola-hydro-energy-
- limited-has-published-an-offer-letter-to-issue-1030500-units-ipo-shares-to
- -the-project-affected-locals-of-gulmi-and-baglung-district-and-291950-unit
- s-ipo-shares-to-foreign-nepalese-immigrants-from-9th-ashad-to-23rd-ashad-2
- 082-2025-06-15
+ manager: Laxmi Sunrise Capital Limited
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -676,16 +449,7 @@ DTEND;VALUE=DATE:20250721
 SUMMARY:IPO for locals: Mabilung Energy Limited (MABEL)
 DESCRIPTION:IPO for locals · MABEL\nPrice: Rs 100\nUnits: 385\,824\nOpens 
  6 Jul 2025\, closes 20 Jul 2025\nMay stay open until 4 Aug 2025\nIssue man
- ager: LS Capital Limited\nhttps://www.sharesansar.com/announcementdetail/m
- abilung-energy-limited-has-published-an-offer-letter-to-issue-385824-units
- -ipo-shares-to-the-project-affected-locals-of-sankhuwasabha-district-and-1
- 50471-units-ipo-shares-to-foreign-nepalese-immigrants-from-22nd-ashad-to-4
- th-shrawan-2082-2025-06-29
-URL:https://www.sharesansar.com/announcementdetail/mabilung-energy-limited-
- has-published-an-offer-letter-to-issue-385824-units-ipo-shares-to-the-proj
- ect-affected-locals-of-sankhuwasabha-district-and-150471-units-ipo-shares-
- to-foreign-nepalese-immigrants-from-22nd-ashad-to-4th-shrawan-2082-2025-06
- -29
+ ager: LS Capital Limited
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -702,12 +466,7 @@ DTEND;VALUE=DATE:20250812
 SUMMARY:IPO for locals: Bungal Hydro Limited (BUNGAL)
 DESCRIPTION:IPO for locals · BUNGAL\nPrice: Rs 100\nUnits: 830\,000\nOpens
   13 Jul 2025\, closes 11 Aug 2025\nIssue manager: Himalayan Capital Limite
- d\nhttps://www.sharesansar.com/announcementdetail/bungal-hydro-limited-has
- -extended-830000-units-ipo-shares-to-the-project-affected-locals-of-bajhan
- g-district-till-26th-shrawan-2082-2025-07-27
-URL:https://www.sharesansar.com/announcementdetail/bungal-hydro-limited-has
- -extended-830000-units-ipo-shares-to-the-project-affected-locals-of-bajhan
- g-district-till-26th-shrawan-2082-2025-07-27
+ d
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -724,15 +483,7 @@ DTEND;VALUE=DATE:20250806
 SUMMARY:IPO for locals: Bandipur Cable Car and Tourism Limited (BANDIPUR)
 DESCRIPTION:IPO for locals · BANDIPUR\nPrice: Rs 100\nUnits: 566\,000\nOpe
  ns 22 Jul 2025\, closes 5 Aug 2025\nMay stay open until 20 Aug 2025\nIssue
-  manager: Nepal SBI Merchant Banking Limited\nhttps://www.sharesansar.com/
- announcementdetail/bandipur-cable-car-and-tourism-limited-has-published-an
- -offer-letter-to-issue-566000-units-ipo-shares-to-the-project-affected-loc
- als-of-tanahu-and-gorkha-district-from-6th-shrawan-to-20th-shrawan-2082-20
- 25-07-14
-URL:https://www.sharesansar.com/announcementdetail/bandipur-cable-car-and-t
- ourism-limited-has-published-an-offer-letter-to-issue-566000-units-ipo-sha
- res-to-the-project-affected-locals-of-tanahu-and-gorkha-district-from-6th-
- shrawan-to-20th-shrawan-2082-2025-07-14
+  manager: Nepal SBI Merchant Banking Limited
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -750,14 +501,7 @@ DTEND;VALUE=DATE:20250814
 SUMMARY:IPO for locals: Jhapa Energy Limited (JHAPA)
 DESCRIPTION:IPO for locals · JHAPA\nPrice: Rs 100\nUnits: 380\,190\nOpens 
  30 Jul 2025\, closes 13 Aug 2025\nMay stay open until 28 Aug 2025\nIssue m
- anager: Himalayan Capital Limited\nhttps://www.sharesansar.com/announcemen
- tdetail/jhapa-energy-limited-has-published-an-offer-letter-to-issue-380190
- -units-ipo-shares-to-the-project-affected-locals-of-jhapa-district-from-14
- th-shrawan-to-28th-shrawan-2082-2025-07-23
-URL:https://www.sharesansar.com/announcementdetail/jhapa-energy-limited-has
- -published-an-offer-letter-to-issue-380190-units-ipo-shares-to-the-project
- -affected-locals-of-jhapa-district-from-14th-shrawan-to-28th-shrawan-2082-
- 2025-07-23
+ anager: Himalayan Capital Limited
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -774,14 +518,7 @@ DTEND;VALUE=DATE:20250917
 SUMMARY:IPO for locals: Shreenagar Agritech Industries Limited (SAIL)
 DESCRIPTION:IPO for locals · SAIL\nPrice: Rs 100\nUnits: 163\,125\nOpens 2
  7 Aug 2025\, closes 16 Sep 2025\nMay stay open until 25 Sep 2025\nIssue ma
- nager: Nabil Investment Banking Limited\nhttps://www.sharesansar.com/annou
- ncementdetail/shreenagar-agritech-industries-limited-has-extended-its-1631
- 25-units-ipo-shares-to-the-project-affected-locals-of-rupandehi-and-palpa-
- district-till-31st-bhadra-2082-2025-09-15
-URL:https://www.sharesansar.com/announcementdetail/shreenagar-agritech-indu
- stries-limited-has-extended-its-163125-units-ipo-shares-to-the-project-aff
- ected-locals-of-rupandehi-and-palpa-district-till-31st-bhadra-2082-2025-09
- -15
+ nager: Nabil Investment Banking Limited
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -799,14 +536,7 @@ DTEND;VALUE=DATE:20251008
 SUMMARY:IPO for locals: SY Panel Nepal Limited (SYPNL)
 DESCRIPTION:IPO for locals · SYPNL\nPrice: Rs 100\nUnits: 261\,627\nOpens 
  23 Sep 2025\, closes 7 Oct 2025\nMay stay open until 26 Oct 2025\nIssue ma
- nager: Prabhu Capital Limited\nhttps://www.sharesansar.com/announcementdet
- ail/sy-panel-nepal-limited-is-opening-its-261627-units-ipo-shares-to-the-p
- roject-affected-locals-of-chitwan-district-and-497092-units-ipo-shares-to-
- foreign-nepalese-employees-from-today-7th-ashwin-2082-2025-09-23
-URL:https://www.sharesansar.com/announcementdetail/sy-panel-nepal-limited-i
- s-opening-its-261627-units-ipo-shares-to-the-project-affected-locals-of-ch
- itwan-district-and-497092-units-ipo-shares-to-foreign-nepalese-employees-f
- rom-today-7th-ashwin-2082-2025-09-23
+ nager: Prabhu Capital Limited
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -823,14 +553,7 @@ DTEND;VALUE=DATE:20251208
 SUMMARY:IPO for locals: Solu Hydropower Limited (SOHL)
 DESCRIPTION:IPO for locals · SOHL\nPrice: Rs 100\nUnits: 10\,000\,000\nOpe
  ns 23 Nov 2025\, closes 7 Dec 2025\nMay stay open until 22 Dec 2025\nIssue
-  manager: Nabil Investment Banking Limited\nhttps://www.sharesansar.com/an
- nouncementdetail/solu-hydropower-limited-has-published-an-offer-letter-to-
- issue-10000000-units-ipo-shares-to-the-project-affected-locals-of-solukhum
- bu-district-from-7th-mangsir-to-21st-mangsir-2082-2025-11-14
-URL:https://www.sharesansar.com/announcementdetail/solu-hydropower-limited-
- has-published-an-offer-letter-to-issue-10000000-units-ipo-shares-to-the-pr
- oject-affected-locals-of-solukhumbu-district-from-7th-mangsir-to-21st-mang
- sir-2082-2025-11-14
+  manager: Nabil Investment Banking Limited
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -847,14 +570,7 @@ DTEND;VALUE=DATE:20260102
 SUMMARY:IPO for locals: Bhujung Hydropower Limited (BJHL)
 DESCRIPTION:IPO for locals · BJHL\nPrice: Rs 100\nUnits: 1\,000\,000\nOpen
  s 18 Dec 2025\, closes 1 Jan 2026\nMay stay open until 16 Jan 2026\nIssue 
- manager: Kumari Capital Limited\nhttps://www.sharesansar.com/announcementd
- etail/bhujung-hydropower-limited-has-published-an-offer-letter-to-issue-10
- 00000-units-ipo-shares-to-the-project-affected-locals-of-lamjung-district-
- from-3rd-poush-to-17th-poush-2082-2025-12-09
-URL:https://www.sharesansar.com/announcementdetail/bhujung-hydropower-limit
- ed-has-published-an-offer-letter-to-issue-1000000-units-ipo-shares-to-the-
- project-affected-locals-of-lamjung-district-from-3rd-poush-to-17th-poush-2
- 082-2025-12-09
+ manager: Kumari Capital Limited
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -871,14 +587,7 @@ DTEND;VALUE=DATE:20260108
 SUMMARY:IPO for locals: Suryakunda Hydro Electric Limited (SKHEL)
 DESCRIPTION:IPO for locals · SKHEL\nPrice: Rs 100\nUnits: 689\,675\nOpens 
  24 Dec 2025\, closes 7 Jan 2026\nMay stay open until 22 Jan 2026\nIssue ma
- nager: Kumari Capital Limited\nhttps://www.sharesansar.com/announcementdet
- ail/suryakunda-hydro-electric-limited-has-published-an-offer-letter-to-iss
- ue-689675-units-ipo-shares-to-the-project-affected-locals-of-nuwakot-distr
- ict-from-9th-poush-to-23rd-poush-2082-2025-12-16
-URL:https://www.sharesansar.com/announcementdetail/suryakunda-hydro-electri
- c-limited-has-published-an-offer-letter-to-issue-689675-units-ipo-shares-t
- o-the-project-affected-locals-of-nuwakot-district-from-9th-poush-to-23rd-p
- oush-2082-2025-12-16
+ nager: Kumari Capital Limited
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -896,14 +605,7 @@ DTEND;VALUE=DATE:20260113
 SUMMARY:IPO for locals: Ridge Line Energy Limited (RLEL)
 DESCRIPTION:IPO for locals · RLEL\nPrice: Rs 100\nUnits: 1\,185\,000\nOpen
  s 28 Dec 2025\, closes 12 Jan 2026\nMay stay open until 26 Jan 2026\nIssue
-  manager: Prabhu Capital Limited\nhttps://www.sharesansar.com/announcement
- detail/ridge-line-energy-limited-has-published-an-offer-letter-to-issue-11
- 85000-units-ipo-shares-to-the-project-affected-locals-of-gorkha-and-lamjun
- g-district-from-13th-poush-to-28th-poush-2082-2025-12-18
-URL:https://www.sharesansar.com/announcementdetail/ridge-line-energy-limite
- d-has-published-an-offer-letter-to-issue-1185000-units-ipo-shares-to-the-p
- roject-affected-locals-of-gorkha-and-lamjung-district-from-13th-poush-to-2
- 8th-poush-2082-2025-12-18
+  manager: Prabhu Capital Limited
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -920,13 +622,7 @@ DTEND;VALUE=DATE:20260123
 SUMMARY:IPO for locals: Super Khudi Hydropower Limited (SKHL)
 DESCRIPTION:IPO for locals · SKHL\nPrice: Rs 100\nUnits: 1\,550\,000\nOpen
  s 6 Jan 2026\, closes 22 Jan 2026\nMay stay open until 4 Feb 2026\nIssue m
- anager: Global IME Capital Ltd\nhttps://www.sharesansar.com/announcementde
- tail/super-khudi-hydropower-limited-is-closing-its-1550000-units-ipo-share
- s-to-the-project-affected-locals-of-lamjung-district-from-today-8th-magh-2
- 082-2026-01-22
-URL:https://www.sharesansar.com/announcementdetail/super-khudi-hydropower-l
- imited-is-closing-its-1550000-units-ipo-shares-to-the-project-affected-loc
- als-of-lamjung-district-from-today-8th-magh-2082-2026-01-22
+ anager: Global IME Capital Ltd
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -944,14 +640,7 @@ DTEND;VALUE=DATE:20260126
 SUMMARY:IPO for locals: Palpa Cements Industries Limited (PCIL)
 DESCRIPTION:IPO for locals · PCIL\nPrice: Rs 100\nUnits: 1\,875\,000\nOpen
  s 9 Jan 2026\, closes 25 Jan 2026\nMay stay open until 8 Feb 2026\nIssue m
- anager: Nabil Investment Banking Ltd.\nhttps://www.sharesansar.com/announc
- ementdetail/palpa-cements-industries-limited-has-extended-its-1875000-unit
- s-ipo-shares-to-the-industry-affected-locals-of-west-nawalparasi-former-na
- walparasi-district-till-11th-magh-2082-2026-01-23
-URL:https://www.sharesansar.com/announcementdetail/palpa-cements-industries
- -limited-has-extended-its-1875000-units-ipo-shares-to-the-industry-affecte
- d-locals-of-west-nawalparasi-former-nawalparasi-district-till-11th-magh-20
- 82-2026-01-23
+ anager: Nabil Investment Banking Ltd.
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -969,13 +658,7 @@ DTEND;VALUE=DATE:20260205
 SUMMARY:IPO for locals: Shikhar Power Development Limited (SIPD)
 DESCRIPTION:IPO for locals · SIPD\nPrice: Rs 100\nUnits: 980\,000\nOpens 2
  0 Jan 2026\, closes 4 Feb 2026\nMay stay open until 20 Feb 2026\nIssue man
- ager: Global IME Capital Ltd\nhttps://www.sharesansar.com/announcementdeta
- il/shikhar-power-development-limited-is-closing-its-980000-units-ipo-share
- s-to-the-project-affected-locals-of-baglung-district-from-today-21st-magh-
- 2082-2026-02-04
-URL:https://www.sharesansar.com/announcementdetail/shikhar-power-developmen
- t-limited-is-closing-its-980000-units-ipo-shares-to-the-project-affected-l
- ocals-of-baglung-district-from-today-21st-magh-2082-2026-02-04
+ ager: Global IME Capital Ltd
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -993,14 +676,7 @@ DTEND;VALUE=DATE:20260316
 SUMMARY:IPO for locals: Appolo Hydropower Limited (APHL)
 DESCRIPTION:IPO for locals · APHL\nPrice: Rs 100\nUnits: 470\,000\nOpens 2
  3 Feb 2026\, closes 15 Mar 2026\nMay stay open until 24 Mar 2026\nIssue ma
- nager: Himalayan Capital Limited\nhttps://www.sharesansar.com/announcement
- detail/appolo-hydropower-limited-is-closing-its-470000-units-ipo-shares-to
- -the-project-affected-locals-of-okhaldhunga-solukhumbhu-and-ramechhap-dist
- rict-from-today-1st-chaitra-2082-2026-03-15
-URL:https://www.sharesansar.com/announcementdetail/appolo-hydropower-limite
- d-is-closing-its-470000-units-ipo-shares-to-the-project-affected-locals-of
- -okhaldhunga-solukhumbhu-and-ramechhap-district-from-today-1st-chaitra-208
- 2-2026-03-15
+ nager: Himalayan Capital Limited
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -1017,13 +693,7 @@ DTEND;VALUE=DATE:20260316
 SUMMARY:IPO for locals: Kalinchowk Hydropower Limited (KHPL)
 DESCRIPTION:IPO for locals · KHPL\nPrice: Rs 100\nUnits: 550\,000\nOpens 2
  5 Feb 2026\, closes 15 Mar 2026\nMay stay open until 26 Mar 2026\nIssue ma
- nager: RBB Merchant Banking Ltd\nhttps://www.sharesansar.com/announcementd
- etail/kalinchowk-hydropower-limited-is-closing-its-550000-units-ipo-shares
- -to-the-project-affected-locals-of-dolakha-district-from-today-1st-chaitra
- -2082-2026-03-15
-URL:https://www.sharesansar.com/announcementdetail/kalinchowk-hydropower-li
- mited-is-closing-its-550000-units-ipo-shares-to-the-project-affected-local
- s-of-dolakha-district-from-today-1st-chaitra-2082-2026-03-15
+ nager: RBB Merchant Banking Ltd
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -1041,14 +711,7 @@ DTEND;VALUE=DATE:20260326
 SUMMARY:IPO for locals: Taksar Pikhuwa Khola Hydropower Limited (TPKHL)
 DESCRIPTION:IPO for locals · TPKHL\nPrice: Rs 100\nUnits: 1\,200\,000\nOpe
  ns 11 Mar 2026\, closes 25 Mar 2026\nMay stay open until 9 Apr 2026\nIssue
-  manager: Prabhu Capital Limited\nhttps://www.sharesansar.com/announcement
- detail/taksar-pikhuwa-khola-hydropower-limited-has-published-an-offer-lett
- er-to-issue-1200000-units-ipo-shares-to-the-project-affected-locals-of-bho
- jpur-district-from-27th-falgun-to-11th-chaitra-2082-2026-02-25
-URL:https://www.sharesansar.com/announcementdetail/taksar-pikhuwa-khola-hyd
- ropower-limited-has-published-an-offer-letter-to-issue-1200000-units-ipo-s
- hares-to-the-project-affected-locals-of-bhojpur-district-from-27th-falgun-
- to-11th-chaitra-2082-2026-02-25
+  manager: Prabhu Capital Limited
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -1066,14 +729,7 @@ DTEND;VALUE=DATE:20260330
 SUMMARY:IPO for locals: Beni Hydropower Project Limited (BENH)
 DESCRIPTION:IPO for locals · BENH\nPrice: Rs 100\nUnits: 1\,040\,000\nOpen
  s 15 Mar 2026\, closes 29 Mar 2026\nMay stay open until 13 Apr 2026\nIssue
-  manager: NMB Capital Limited\nhttps://www.sharesansar.com/announcementdet
- ail/beni-hydropower-project-limited-has-published-an-offer-letter-to-issue
- -1040000-units-ipo-shares-to-the-project-affected-locals-of-solukhumbhu-di
- strict-from-1st-chaitra-to-15th-chaitra-2082-2026-02-27
-URL:https://www.sharesansar.com/announcementdetail/beni-hydropower-project-
- limited-has-published-an-offer-letter-to-issue-1040000-units-ipo-shares-to
- -the-project-affected-locals-of-solukhumbhu-district-from-1st-chaitra-to-1
- 5th-chaitra-2082-2026-02-27
+  manager: NMB Capital Limited
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -1091,13 +747,7 @@ DTEND;VALUE=DATE:20260407
 SUMMARY:IPO for locals: Yambaling Hydropower Limited (YMHL)
 DESCRIPTION:IPO for locals · YMHL\nPrice: Rs 100\nUnits: 700\,000\nOpens 2
  2 Mar 2026\, closes 6 Apr 2026\nMay stay open until 20 Apr 2026\nIssue man
- ager: Muktinath Capital Limited\nhttps://www.sharesansar.com/announcementd
- etail/yambaling-hydropower-limited-is-closing-its-700000-units-ipo-shares-
- to-the-project-affected-locals-of-sindhupalchowk-district-from-today-23rd-
- chaitra-2082-2026-04-06
-URL:https://www.sharesansar.com/announcementdetail/yambaling-hydropower-lim
- ited-is-closing-its-700000-units-ipo-shares-to-the-project-affected-locals
- -of-sindhupalchowk-district-from-today-23rd-chaitra-2082-2026-04-06
+ ager: Muktinath Capital Limited
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -1114,13 +764,7 @@ DTEND;VALUE=DATE:20260409
 SUMMARY:IPO for locals: Sanigad Hydro Limited (SGHL)
 DESCRIPTION:IPO for locals · SGHL\nPrice: Rs 100\nUnits: 2\,850\,000\nOpen
  s 22 Mar 2026\, closes 8 Apr 2026\nMay stay open until 20 Apr 2026\nIssue 
- manager: LS Capital Limited\nhttps://www.sharesansar.com/announcementdetai
- l/sanigad-hydro-limited-is-closing-its-2850000-units-ipo-shares-to-the-pro
- ject-affected-locals-of-bajhang-district-from-today-25th-chaitra-2082-2026
- -04-08
-URL:https://www.sharesansar.com/announcementdetail/sanigad-hydro-limited-is
- -closing-its-2850000-units-ipo-shares-to-the-project-affected-locals-of-ba
- jhang-district-from-today-25th-chaitra-2082-2026-04-08
+ manager: LS Capital Limited
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -1137,14 +781,7 @@ DTEND;VALUE=DATE:20260407
 SUMMARY:IPO for locals: Snow Rivers Limited (SNORL)
 DESCRIPTION:IPO for locals · SNORL\nPrice: Rs 100\nUnits: 937\,500\nOpens 
  23 Mar 2026\, closes 6 Apr 2026\nMay stay open until 21 Apr 2026\nIssue ma
- nager: Sanima Capital Limited\nhttps://www.sharesansar.com/announcementdet
- ail/snow-rivers-limited-has-published-an-offer-letter-to-issue-937500-unit
- s-ipo-shares-to-the-project-affected-locals-of-taplejung-and-panchthar-dis
- trict-from-9th-chaitra-to-23rd-chaitra-2082-2026-03-12
-URL:https://www.sharesansar.com/announcementdetail/snow-rivers-limited-has-
- published-an-offer-letter-to-issue-937500-units-ipo-shares-to-the-project-
- affected-locals-of-taplejung-and-panchthar-district-from-9th-chaitra-to-23
- rd-chaitra-2082-2026-03-12
+ nager: Sanima Capital Limited
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -1161,14 +798,7 @@ DTEND;VALUE=DATE:20260408
 SUMMARY:IPO for locals: Kalanga Hydro Limited (KAHL)
 DESCRIPTION:IPO for locals · KAHL\nPrice: Rs 100\nUnits: 1\,400\,000\nOpen
  s 24 Mar 2026\, closes 7 Apr 2026\nMay stay open until 22 Apr 2026\nIssue 
- manager: Sanima Capital Limited\nhttps://www.sharesansar.com/announcementd
- etail/kalanga-hydro-limited-has-published-an-offer-letter-to-issue-1400000
- -units-ipo-shares-to-the-project-affected-locals-of-bajhang-district-from-
- 10th-chaitra-to-24th-chaitra-2082-2026-03-16
-URL:https://www.sharesansar.com/announcementdetail/kalanga-hydro-limited-ha
- s-published-an-offer-letter-to-issue-1400000-units-ipo-shares-to-the-proje
- ct-affected-locals-of-bajhang-district-from-10th-chaitra-to-24th-chaitra-2
- 082-2026-03-16
+ manager: Sanima Capital Limited
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -1185,14 +815,7 @@ DTEND;VALUE=DATE:20260515
 SUMMARY:IPO for locals: Mount Everest Power Development Limited (MEPDL)
 DESCRIPTION:IPO for locals · MEPDL\nPrice: Rs 100\nUnits: 860\,000\nOpens 
  30 Apr 2026\, closes 14 May 2026\nMay stay open until 1 Jun 2026\nIssue ma
- nager: NIMB Ace Capital Limited\nhttps://www.sharesansar.com/announcementd
- etail/mount-everest-power-development-limited-has-published-an-offer-lette
- r-to-issue-860000-units-ipo-shares-to-the-project-affected-locals-of-soluk
- humbu-district-from-17th-baisakh-to-31st-baisakh-2083-2026-04-21
-URL:https://www.sharesansar.com/announcementdetail/mount-everest-power-deve
- lopment-limited-has-published-an-offer-letter-to-issue-860000-units-ipo-sh
- ares-to-the-project-affected-locals-of-solukhumbu-district-from-17th-baisa
- kh-to-31st-baisakh-2083-2026-04-21
+ nager: NIMB Ace Capital Limited
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -1210,13 +833,7 @@ DTEND;VALUE=DATE:20261118
 SUMMARY:IPO for locals: Him Parbat Hydropower Limited (HPHL)
 DESCRIPTION:IPO for locals · HPHL\nPrice: Rs 100\nUnits: 1\,690\,000\nOpen
  s 28 Oct 2026\, closes 17 Nov 2026\nMay stay open until 26 Nov 2026\nIssue
-  manager: Citizens Capital Limited\nhttps://www.sharesansar.com/announceme
- ntdetail/him-parbat-hydropower-limited-is-closing-its-1690000-units-ipo-sh
- ares-to-the-project-affected-locals-of-dolakha-district-from-today-1st-man
- gsir-2083-2026-11-17
-URL:https://www.sharesansar.com/announcementdetail/him-parbat-hydropower-li
- mited-is-closing-its-1690000-units-ipo-shares-to-the-project-affected-loca
- ls-of-dolakha-district-from-today-1st-mangsir-2083-2026-11-17
+  manager: Citizens Capital Limited
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -1234,14 +851,7 @@ DTEND;VALUE=DATE:20261211
 SUMMARY:IPO for locals: Kantipur Pharmaceuticals Lab Limited (KPL)
 DESCRIPTION:IPO for locals · KPL\nPrice: Rs 100\nUnits: 800\,000\nOpens 26
   Nov 2026\, closes 10 Dec 2026\nMay stay open until 28 Dec 2026\nIssue man
- ager: Muktinath Capital Limited\nhttps://www.sharesansar.com/announcementd
- etail/kantipur-pharmaceuticals-lab-limited-has-published-an-offer-letter-t
- o-issue-800000-units-ipo-shares-to-the-project-affected-locals-of-kavrepal
- anchowk-district-from-10th-mangsir-to-24th-mangsir-2083-2026-11-16
-URL:https://www.sharesansar.com/announcementdetail/kantipur-pharmaceuticals
- -lab-limited-has-published-an-offer-letter-to-issue-800000-units-ipo-share
- s-to-the-project-affected-locals-of-kavrepalanchowk-district-from-10th-man
- gsir-to-24th-mangsir-2083-2026-11-16
+ ager: Muktinath Capital Limited
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -1259,14 +869,7 @@ DTEND;VALUE=DATE:20261215
 SUMMARY:IPO for locals: Aashutosh Energy Limited (AELTD)
 DESCRIPTION:IPO for locals · AELTD\nPrice: Rs 100\nUnits: 600\,000\nOpens 
  30 Nov 2026\, closes 14 Dec 2026\nMay stay open until 29 Dec 2026\nIssue m
- anager: NMB Capital Limited\nhttps://www.sharesansar.com/announcementdetai
- l/aashutosh-energy-limited-has-published-an-offer-letter-to-issue-600000-u
- nits-ipo-shares-to-the-project-affected-locals-of-lamjung-district-from-14
- th-mangsir-to-28th-mangsir-2083-2026-11-19
-URL:https://www.sharesansar.com/announcementdetail/aashutosh-energy-limited
- -has-published-an-offer-letter-to-issue-600000-units-ipo-shares-to-the-pro
- ject-affected-locals-of-lamjung-district-from-14th-mangsir-to-28th-mangsir
- -2083-2026-11-19
+ anager: NMB Capital Limited
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM

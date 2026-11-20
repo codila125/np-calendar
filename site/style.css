@@ -1118,19 +1118,29 @@ tr.next-match td:first-child {
 /* Tabs */
 .tabs {
   display: flex;
-  gap: 1.5rem;
   border-bottom: 1px solid var(--line);
   margin-bottom: 2rem;
 }
 
+/* Each tab takes an equal share of the full width. */
 .tabs [role="tab"] {
+  flex: 1 1 0;
+  min-width: 0;
   font: inherit;
   color: var(--fg);
   background: none;
   border: 0;
   border-bottom: 4px solid transparent;
-  padding: 0.75rem 0;
+  padding: 0.75rem 0.5rem;
+  text-align: center;
   cursor: pointer;
+}
+
+/* Panels are plain containers: the numbered section grid applies to the
+   sections inside them, and numbering restarts in each panel. */
+[role="tabpanel"] {
+  display: block;
+  counter-reset: section;
 }
 
 .tabs [role="tab"][aria-selected="true"] {
