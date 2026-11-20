@@ -23,7 +23,7 @@ def test_site_feeds_and_bot_use_np_calendar_name():
     assert (ROOT / "README.md").read_text().splitlines()[0] == "# np-calendar"
 
     feeds = sorted((SITE / "calendar").glob("*.ics"))
-    assert len(feeds) == 9 + 6
+    assert len(feeds) == 9 + 8
     for feed in feeds:
         assert f"PRODID:{config.PRODID}\r\n".encode() in feed.read_bytes(), feed.name
 

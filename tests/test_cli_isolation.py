@@ -113,6 +113,9 @@ def _malform(routes, field, value):
         ("issue_price", 100),
         ("closing_date", "9999-12-31"),
         ("symbol", ""),
+        ("listing_date", "2026-13-01"),
+        ("listing_date", "17/11/2026"),
+        ("listing_date", "1999-12-31"),
     ],
 )
 def test_malformed_issue_row_fails_issues_alone(tmp_path, capsys, field, value):
@@ -130,6 +133,26 @@ def test_malformed_issue_row_fails_issues_alone(tmp_path, capsys, field, value):
     err = capsys.readouterr().err
     assert "[I3]" in err
     assert "error: issues source failed; kept the published issues data and feeds" in err
+
+
+def test_malformed_book_closure_fails_issues_alone(tmp_path, capsys):
+    site = _seed(tmp_path, stale="npl")
+    before = _snapshot(site)
+    routes = {**_npl_routes(), **_issue_routes()}
+    url = _issue_url(3)
+    body = json.loads(routes[url].text)
+    body["data"][0]["final_date"] = "2026-11-31"
+    routes[url] = FakeResponse(200, json.dumps(body))
+    capsys.readouterr()
+
+    assert cli.main(["--site-dir", str(site)], session=FakeSession(routes)) == 3
+
+    after = _snapshot(site)
+    assert _issue_part(after) == _issue_part(before)
+    assert _npl_part(after) != _npl_part(before)
+    err = capsys.readouterr().err
+    assert "[I3]" in err
+    assert "issues source failed; kept" in err
 
 
 def test_npl_failure_keeps_npl_files_and_issues_refresh(tmp_path, capsys):
