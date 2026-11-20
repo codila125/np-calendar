@@ -6,10 +6,11 @@ from pathlib import Path
 import pytest
 import requests
 
-from scraper import config
+from scraper import config, fetch
 from scraper.errors import ScrapeError
 from scraper.fetch import load_from_dir, load_remote
 from scraper.normalize import RawSource
+from tests.fakes import FakeResponse, FakeSession
 
 FIXTURES = Path(__file__).parent / "fixtures"
 
@@ -23,40 +24,6 @@ STATS_URL = f"{BASE}/api/v1/stats?season={config.SEASON_YEAR}"
 ALLOW_ALL_ROBOTS = "User-Agent: *\nAllow: /\n"
 DISALLOW_API_ROBOTS = "User-Agent: *\nDisallow: /api/\n"
 DISALLOW_STATS_ROBOTS = "User-Agent: *\nDisallow: /api/v1/stats\n"
-
-
-class FakeResponse:
-    def __init__(self, status_code=200, text=""):
-        self.status_code = status_code
-        self.text = text
-
-    def json(self):
-        return json.loads(self.text)
-
-
-class FakeSession:
-    """A requests-like session that serves canned responses and records every call.
-
-    A route may be a single response (served forever) or a list consumed in order,
-    which lets tests drive the retry loop (e.g. ``[500, 200]``). An exception in a
-    route is raised by ``get`` to simulate a connection error.
-    """
-
-    def __init__(self, routes):
-        self._remaining = {
-            url: (list(v) if isinstance(v, list) else [v]) for url, v in routes.items()
-        }
-        self.calls = []
-
-    def get(self, url, headers=None, timeout=None, **kwargs):
-        self.calls.append({"url": url, "headers": headers, "timeout": timeout})
-        seq = self._remaining[url]
-        item = seq[0]
-        if len(seq) > 1:
-            seq.pop(0)
-        if isinstance(item, BaseException):
-            raise item
-        return item
 
 
 def _fixture_text(name):
@@ -224,3 +191,91 @@ def test_load_from_dir_without_stats_file(tmp_path):
     for name in ("teams", "matches", "points"):
         (tmp_path / f"{name}.json").write_text(_fixture_text(name))
     assert load_from_dir(tmp_path).stats is None
+
+
+# --- share issues source (I1, I2) -------------------------------------------
+
+ISSUES_FIXTURES = FIXTURES / "issues"
+ISSUES_ROBOTS = f"{config.ISSUES_BASE}/robots.txt"
+
+
+def _issue_url(type_id):
+    return fetch.issues_url(type_id)
+
+
+def _issue_routes(overrides=None):
+    routes = {ISSUES_ROBOTS: FakeResponse(200, "User-agent: *\nDisallow:\n")}
+    for cat in config.ISSUE_CATEGORIES:
+        text = (ISSUES_FIXTURES / f"{cat.slug}.json").read_text()
+        routes[_issue_url(cat.type_id)] = FakeResponse(200, text)
+    routes.update(overrides or {})
+    return routes
+
+
+def test_issues_robots_disallow_is_i1():
+    session = FakeSession(
+        _issue_routes({ISSUES_ROBOTS: FakeResponse(200, "User-agent: *\nDisallow: /\n")})
+    )
+    with pytest.raises(ScrapeError) as exc:
+        fetch.load_issues_remote(session)
+    assert exc.value.rule_id == "I1"
+
+
+def test_issues_html_body_is_i2():
+    url = _issue_url(1)
+    session = FakeSession(_issue_routes({url: FakeResponse(200, "<html>page</html>")}))
+    with pytest.raises(ScrapeError) as exc:
+        fetch.load_issues_remote(session)
+    assert exc.value.rule_id == "I2"
+
+
+def test_issues_empty_data_is_i2():
+    url = _issue_url(2)
+    session = FakeSession(_issue_routes({url: FakeResponse(200, '{"data": []}')}))
+    with pytest.raises(ScrapeError) as exc:
+        fetch.load_issues_remote(session)
+    assert exc.value.rule_id == "I2"
+
+
+def test_issues_retry_on_5xx_then_succeed():
+    url = _issue_url(1)
+    good = (ISSUES_FIXTURES / "ipo.json").read_text()
+    session = FakeSession(_issue_routes({url: [FakeResponse(503), FakeResponse(200, good)]}))
+    raw = fetch.load_issues_remote(session)
+    assert len(raw["ipo"]) == 50
+    assert [c["url"] for c in session.calls].count(url) == 2
+
+
+def test_issues_requests_send_xhr_header_and_only_the_five_types():
+    session = FakeSession(_issue_routes())
+    fetch.load_issues_remote(session)
+    data_calls = [c for c in session.calls if "existing-issues" in c["url"]]
+    assert [c["url"] for c in data_calls] == [_issue_url(t) for t in (1, 2, 3, 5, 8)]
+    for call in data_calls:
+        assert call["headers"]["X-Requested-With"] == "XMLHttpRequest"
+        assert call["headers"]["User-Agent"] == config.USER_AGENT
+
+
+def test_issues_keeps_at_most_fifty_rows_per_category():
+    rows = [{"n": n} for n in range(80)]
+    url = _issue_url(1)
+    session = FakeSession(_issue_routes({url: FakeResponse(200, json.dumps({"data": rows}))}))
+    assert len(fetch.load_issues_remote(session)["ipo"]) == 50
+
+
+def test_load_issues_from_dir_is_none_without_issues_subdir(tmp_path):
+    assert fetch.load_issues_from_dir(tmp_path) is None
+
+
+def test_load_issues_from_dir_missing_file_is_i2(tmp_path):
+    (tmp_path / "issues").mkdir()
+    with pytest.raises(ScrapeError) as exc:
+        fetch.load_issues_from_dir(tmp_path)
+    assert exc.value.rule_id == "I2"
+
+
+def test_load_issues_from_dir_reads_every_category():
+    raw = fetch.load_issues_from_dir(FIXTURES)
+    assert {k: len(v) for k, v in raw.items()} == {
+        "ipo": 50, "fpo": 23, "right-share": 50, "ipo-local": 50, "ipo-migrant": 50,
+    }  # fmt: skip

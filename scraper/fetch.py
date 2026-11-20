@@ -5,6 +5,7 @@ Implements the fetch-layer rules:
 - V1 — robots.txt: 200 → parsed and every fetched URL must be ``can_fetch``;
   404/410 → allowed; 401/403/5xx/network error → the run fails (cannot
   establish permission).
+- I1/I2 — the same two checks for the ShareSansar share-issues source.
 - V2 — every API request returns HTTP 200 after retries; the body parses as
   JSON; the top level is an object with a non-empty list under ``data``.
 
@@ -23,6 +24,7 @@ sleeps between attempts only for the real session.
 import json
 import sys
 import time
+from collections.abc import Iterable
 from pathlib import Path
 from urllib import robotparser
 
@@ -43,6 +45,18 @@ _FETCH_URLS = (TEAMS_URL, MATCHES_URL, POINTS_URL)
 HEADERS = {"User-Agent": config.USER_AGENT, "Accept": "application/json"}
 TIMEOUT = (5, 20)
 
+ISSUES_ROBOTS_URL = f"{config.ISSUES_BASE}/robots.txt"
+# Without X-Requested-With the endpoint returns the full HTML page, not JSON.
+ISSUES_HEADERS = {**HEADERS, "X-Requested-With": "XMLHttpRequest"}
+
+
+def issues_url(type_id: int) -> str:
+    return (
+        f"{config.ISSUES_BASE}/existing-issues?draw=1&start=0"
+        f"&length={config.ISSUES_PER_CATEGORY}&type={type_id}"
+    )
+
+
 RETRY = Retry(
     total=3,
     backoff_factor=2,
@@ -57,55 +71,57 @@ def _build_session() -> requests.Session:
     return requests.Session()
 
 
-def _check_robots(session):
+def _check_robots(
+    session, robots_url: str = ROBOTS_URL, urls: Iterable[str] = _FETCH_URLS, rule_id: str = "V1"
+):
     """Fail unless the required URLs are allowed; return the parser (None = allow all)."""
     try:
-        resp = session.get(ROBOTS_URL, headers=HEADERS, timeout=TIMEOUT)
+        resp = session.get(robots_url, headers=HEADERS, timeout=TIMEOUT)
     except requests.RequestException as exc:
-        raise ScrapeError("V1", f"robots.txt unreachable: {exc}") from exc
+        raise ScrapeError(rule_id, f"robots.txt unreachable: {exc}") from exc
     if resp.status_code in (404, 410):
         return None  # no robots.txt → everything allowed
     if resp.status_code != 200:
-        raise ScrapeError("V1", f"robots.txt returned HTTP {resp.status_code}")
+        raise ScrapeError(rule_id, f"robots.txt returned HTTP {resp.status_code}")
     parser = robotparser.RobotFileParser()
     parser.parse(resp.text.splitlines())
-    for url in _FETCH_URLS:
+    for url in urls:
         if not parser.can_fetch(config.USER_AGENT, url):
-            raise ScrapeError("V1", f"robots.txt disallows {url}")
+            raise ScrapeError(rule_id, f"robots.txt disallows {url}")
     return parser
 
 
-def _parse_json(resp, url: str) -> list:
+def _parse_json(resp, url: str, rule_id: str = "V2") -> list:
     try:
         body = resp.json()
     except ValueError as exc:
-        raise ScrapeError("V2", f"{url} returned a non-JSON body") from exc
+        raise ScrapeError(rule_id, f"{url} returned a non-JSON body") from exc
     if not isinstance(body, dict) or not isinstance(body.get("data"), list) or not body["data"]:
-        raise ScrapeError("V2", f"{url} returned no non-empty `data` list")
+        raise ScrapeError(rule_id, f"{url} returned no non-empty `data` list")
     return body["data"]
 
 
-def _get_json(session, url: str, sleep=None) -> list:
+def _get_json(session, url: str, sleep=None, headers=HEADERS, rule_id: str = "V2") -> list:
     attempts = RETRY.total + 1
     for attempt in range(attempts):
         try:
-            resp = session.get(url, headers=HEADERS, timeout=TIMEOUT)
+            resp = session.get(url, headers=headers, timeout=TIMEOUT)
         except requests.RequestException as exc:
             if attempt < RETRY.total:
                 if sleep is not None:
                     sleep(RETRY.backoff_factor * (2**attempt))
                 continue
-            raise ScrapeError("V2", f"{url} unreachable: {exc}") from exc
+            raise ScrapeError(rule_id, f"{url} unreachable: {exc}") from exc
         if resp.status_code in RETRY.status_forcelist:
             if attempt < RETRY.total:
                 if sleep is not None:
                     sleep(RETRY.backoff_factor * (2**attempt))
                 continue
-            raise ScrapeError("V2", f"{url} returned HTTP {resp.status_code}")
+            raise ScrapeError(rule_id, f"{url} returned HTTP {resp.status_code}")
         if resp.status_code != 200:
-            raise ScrapeError("V2", f"{url} returned HTTP {resp.status_code}")
-        return _parse_json(resp, url)
-    raise ScrapeError("V2", f"{url} unreachable after retries")
+            raise ScrapeError(rule_id, f"{url} returned HTTP {resp.status_code}")
+        return _parse_json(resp, url, rule_id)
+    raise ScrapeError(rule_id, f"{url} unreachable after retries")
 
 
 def load_remote(session=None) -> RawSource:
@@ -126,14 +142,41 @@ def load_remote(session=None) -> RawSource:
     return RawSource(teams=teams, matches=matches, points=points, stats=stats)
 
 
-def _read_data_file(path: Path) -> list:
+def load_issues_remote(session=None) -> dict[str, list]:
+    """slug -> the newest ``ISSUES_PER_CATEGORY`` raw rows; ScrapeError I1/I2 on failure."""
+    own_session = session is None
+    if own_session:
+        session = _build_session()
+    sleep = time.sleep if own_session else None
+    urls = {c.slug: issues_url(c.type_id) for c in config.ISSUE_CATEGORIES}
+    _check_robots(session, ISSUES_ROBOTS_URL, urls.values(), "I1")
+    return {
+        slug: _get_json(session, url, sleep=sleep, headers=ISSUES_HEADERS, rule_id="I2")[
+            : config.ISSUES_PER_CATEGORY
+        ]
+        for slug, url in urls.items()
+    }
+
+
+def _read_data_file(path: Path, rule_id: str = "V2") -> list:
     try:
         body = json.loads(path.read_text())
     except (OSError, ValueError) as exc:
-        raise ScrapeError("V2", f"{path} is not readable JSON: {exc}") from exc
+        raise ScrapeError(rule_id, f"{path} is not readable JSON: {exc}") from exc
     if not isinstance(body, dict) or not isinstance(body.get("data"), list):
-        raise ScrapeError("V2", f"{path} has no `data` list")
+        raise ScrapeError(rule_id, f"{path} has no `data` list")
     return body["data"]
+
+
+def load_issues_from_dir(path) -> dict[str, list] | None:
+    """Raw issue rows from ``DIR/issues/<slug>.json``; None when ``DIR/issues/`` is missing."""
+    d = Path(path) / "issues"
+    if not d.is_dir():
+        return None
+    return {
+        c.slug: _read_data_file(d / f"{c.slug}.json", "I2")[: config.ISSUES_PER_CATEGORY]
+        for c in config.ISSUE_CATEGORIES
+    }
 
 
 def load_from_dir(path) -> RawSource:

@@ -1,6 +1,6 @@
 BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//codila125//NPL calendar feed//EN
+PRODID:-//codila125//np-calendar//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:NPL 2026 — Chitwan Rhinos
@@ -17,8 +17,9 @@ DTEND:20261027T101500Z
 SUMMARY:Biratnagar Kings vs Chitwan Rhinos (NPL Match 2)
 LOCATION:Tribhuvan University Cricket Ground\, Kirtipur
 DESCRIPTION:Result: Chitwan Rhinos won by 8 runs\nBiratnagar Kings 149/10 (
- 19.3 ov)\nChitwan Rhinos 157/3 (20.0 ov)\nhttps://codila125.github.io/npl/
-URL:https://codila125.github.io/npl/
+ 19.3 ov)\nChitwan Rhinos 157/3 (20.0 ov)\nhttps://codila125.github.io/np-c
+ alendar/
+URL:https://codila125.github.io/np-calendar/
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 END:VEVENT
@@ -30,8 +31,9 @@ DTSTART:20261031T064500Z
 DTEND:20261031T101500Z
 SUMMARY:Lumbini Lions vs Chitwan Rhinos (NPL Match 7)
 LOCATION:Tribhuvan University Cricket Ground\, Kirtipur
-DESCRIPTION:Result: Match Abandoned\nhttps://codila125.github.io/npl/
-URL:https://codila125.github.io/npl/
+DESCRIPTION:Result: Match Abandoned\nhttps://codila125.github.io/np-calenda
+ r/
+URL:https://codila125.github.io/np-calendar/
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 END:VEVENT
@@ -45,8 +47,8 @@ SUMMARY:Sudurpaschim Royals vs Chitwan Rhinos (NPL Match 11)
 LOCATION:Tribhuvan University Cricket Ground\, Kirtipur
 DESCRIPTION:Result: Sudurpaschim Royals won by 5 wickets\nSudurpaschim Roya
  ls 131/5 (16.4 ov)\nChitwan Rhinos 129/6 (20.0 ov)\nhttps://codila125.gith
- ub.io/npl/
-URL:https://codila125.github.io/npl/
+ ub.io/np-calendar/
+URL:https://codila125.github.io/np-calendar/
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 END:VEVENT
@@ -59,9 +61,9 @@ DTEND:20261106T144500Z
 SUMMARY:Chitwan Rhinos vs Pokhara Avengers (NPL Match 17)
 LOCATION:Tribhuvan University Cricket Ground\, Kirtipur
 DESCRIPTION:Result: Chitwan Rhinos won by 30 runs\nChitwan Rhinos 151/6 (20
- .0 ov)\nPokhara Avengers 121/10 (19.0 ov)\nhttps://codila125.github.io/npl
- /
-URL:https://codila125.github.io/npl/
+ .0 ov)\nPokhara Avengers 121/10 (19.0 ov)\nhttps://codila125.github.io/np-
+ calendar/
+URL:https://codila125.github.io/np-calendar/
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 END:VEVENT
@@ -75,8 +77,8 @@ SUMMARY:Chitwan Rhinos vs Kathmandu Gurkhas (NPL Match 20)
 LOCATION:Tribhuvan University Cricket Ground\, Kirtipur
 DESCRIPTION:Result: Kathmandu Gorkhas won by 10 runs\nChitwan Rhinos 170/7 
  (20.0 ov)\nKathmandu Gurkhas 180/8 (20.0 ov)\nhttps://codila125.github.io/
- npl/
-URL:https://codila125.github.io/npl/
+ np-calendar/
+URL:https://codila125.github.io/np-calendar/
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 END:VEVENT
@@ -89,8 +91,9 @@ DTEND:20261113T144500Z
 SUMMARY:Janakpur Bolts vs Chitwan Rhinos (NPL Match 25)
 LOCATION:Tribhuvan University Cricket Ground\, Kirtipur
 DESCRIPTION:Result: Chitwan Rhinos won by 4 wickets\nJanakpur Bolts 88/9 (2
- 0.0 ov)\nChitwan Rhinos 92/6 (17.2 ov)\nhttps://codila125.github.io/npl/
-URL:https://codila125.github.io/npl/
+ 0.0 ov)\nChitwan Rhinos 92/6 (17.2 ov)\nhttps://codila125.github.io/np-cal
+ endar/
+URL:https://codila125.github.io/np-calendar/
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 END:VEVENT
@@ -103,8 +106,9 @@ DTEND:20261115T101500Z
 SUMMARY:Chitwan Rhinos vs Karnali Yaks (NPL Match 27)
 LOCATION:Tribhuvan University Cricket Ground\, Kirtipur
 DESCRIPTION:Result: Karnali Yaks won by 24 runs\nChitwan Rhinos 129/10 (19.
- 1 ov)\nKarnali Yaks 153/8 (20.0 ov)\nhttps://codila125.github.io/npl/
-URL:https://codila125.github.io/npl/
+ 1 ov)\nKarnali Yaks 153/8 (20.0 ov)\nhttps://codila125.github.io/np-calend
+ ar/
+URL:https://codila125.github.io/np-calendar/
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 END:VEVENT
@@ -117,9 +121,9 @@ DTEND:20261118T144500Z
 SUMMARY:Kathmandu Gurkhas vs Chitwan Rhinos (NPL Eliminator)
 LOCATION:Tribhuvan University Cricket Ground\, Kirtipur
 DESCRIPTION:Result: Chitwan Rhinos won by 61 runs\nKathmandu Gurkhas 143/9 
- (20.0 ov)\nChitwan Rhinos 204/4 (20.0 ov)\nhttps://codila125.github.io/npl
- /
-URL:https://codila125.github.io/npl/
+ (20.0 ov)\nChitwan Rhinos 204/4 (20.0 ov)\nhttps://codila125.github.io/np-
+ calendar/
+URL:https://codila125.github.io/np-calendar/
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 END:VEVENT
@@ -133,8 +137,8 @@ SUMMARY:Sudurpaschim Royals vs Chitwan Rhinos (NPL Qualifier 2)
 LOCATION:Tribhuvan University Cricket Ground\, Kirtipur
 DESCRIPTION:Result: Sudurpaschim Royals won by 3 wickets\nSudurpaschim Roya
  ls 136/7 (19.5 ov)\nChitwan Rhinos 133/9 (20.0 ov)\nhttps://codila125.gith
- ub.io/npl/
-URL:https://codila125.github.io/npl/
+ ub.io/np-calendar/
+URL:https://codila125.github.io/np-calendar/
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 END:VEVENT

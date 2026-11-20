@@ -1,0 +1,1149 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//codila125//np-calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:np-calendar — Right share
+X-WR-CALDESC:Opening and closing dates of share issues in Nepal (source: Sh
+ areSansar).
+REFRESH-INTERVAL;VALUE=DURATION:PT1H
+X-PUBLISHED-TTL:PT1H
+BEGIN:VEVENT
+UID:issue-right-share-628-893025@codila125.github.io
+DTSTAMP:20220125T000000Z
+DTSTART;VALUE=DATE:20220125
+DTEND;VALUE=DATE:20220215
+SUMMARY:Right share: Chhyangdi Hydropower Company Limited (CHL)
+DESCRIPTION:Right share · CHL\nPrice: Rs 100\nUnits: 893\,025\nRatio: 10:3
+ \nBook closure: 5 Jan 2022\nOpens 25 Jan 2022\, closes 14 Feb 2022\nIssue 
+ manager: Global IME Capital Ltd.\nhttps://www.sharesansar.com/announcement
+ detail/chhyangdi-hydropower-limited-is-issuing-its-103-ratio-893025-units-
+ right-share-to-its-shareholders-from-11th-magh-to-2nd-falgun-2078-2022-01-
+ 07
+URL:https://www.sharesansar.com/announcementdetail/chhyangdi-hydropower-lim
+ ited-is-issuing-its-103-ratio-893025-units-right-share-to-its-shareholders
+ -from-11th-magh-to-2nd-falgun-2078-2022-01-07
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Right share opens today: Chhyangdi Hydropower Company Limited (
+ CHL)
+TRIGGER;VALUE=DATE-TIME:20220125T031500Z
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:issue-right-share-136-4630344@codila125.github.io
+DTSTAMP:20220306T000000Z
+DTSTART;VALUE=DATE:20220306
+DTEND;VALUE=DATE:20220328
+SUMMARY:Right share: IME General Insurance Limited (IGIL)
+DESCRIPTION:Right share · IGIL\nPrice: Rs 100\nUnits: 4\,630\,344\nRatio: 
+ 10:4\nBook closure: 13 Feb 2022\nOpens 6 Mar 2022\, closes 27 Mar 2022\nIs
+ sue manager: Global IME Capital Ltd.\nhttps://www.sharesansar.com/announce
+ mentdetail/ime-general-insurance-limited-is-issuing-its-10-4-ratio-4630444
+ -units-right-share-to-its-shareholders-from-22nd-falgun-to-13th-chaitra-20
+ 78-2022-02-17
+URL:https://www.sharesansar.com/announcementdetail/ime-general-insurance-li
+ mited-is-issuing-its-10-4-ratio-4630444-units-right-share-to-its-sharehold
+ ers-from-22nd-falgun-to-13th-chaitra-2078-2022-02-17
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Right share opens today: IME General Insurance Limited (IGIL)
+TRIGGER;VALUE=DATE-TIME:20220306T031500Z
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:issue-right-share-141-5275572@codila125.github.io
+DTSTAMP:20220315T000000Z
+DTSTART;VALUE=DATE:20220315
+DTEND;VALUE=DATE:20220405
+SUMMARY:Right share: Shikhar Insurance Company Limited (SICL)
+DESCRIPTION:Right share · SICL\nPrice: Rs 100\nUnits: 5\,275\,572\nRatio: 
+ 10:3\nBook closure: 4 Feb 2022\nOpens 15 Mar 2022\, closes 4 Apr 2022\nIss
+ ue manager: NIBL Ace Capital Ltd\nhttps://www.sharesansar.com/announcement
+ detail/shikhar-insurance-company-limited-is-issuing-its-1-03-ratio-5275572
+ -units-right-share-to-its-shareholders-from-1st-chaitra-to-21st-chaitra-20
+ 78-2022-02-25
+URL:https://www.sharesansar.com/announcementdetail/shikhar-insurance-compan
+ y-limited-is-issuing-its-1-03-ratio-5275572-units-right-share-to-its-share
+ holders-from-1st-chaitra-to-21st-chaitra-2078-2022-02-25
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Right share opens today: Shikhar Insurance Company Limited (SIC
+ L)
+TRIGGER;VALUE=DATE-TIME:20220315T031500Z
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:issue-right-share-527-10860000@codila125.github.io
+DTSTAMP:20220408T000000Z
+DTSTART;VALUE=DATE:20220408
+DTEND;VALUE=DATE:20220429
+SUMMARY:Right share: Api Power Company Limited (API)
+DESCRIPTION:Right share · API\nPrice: Rs 100\nUnits: 10\,860\,000\nRatio: 
+ 1: 0.3936\nBook closure: 28 Mar 2022\nOpens 8 Apr 2022\, closes 28 Apr 202
+ 2\nIssue manager: Muktinath Capital Ltd.\nhttps://www.sharesansar.com/anno
+ uncementdetail/api-power-company-limited-has-published-an-offer-letter-to-
+ issue-a-1-0393632-ratio-10860000-units-right-share-to-its-shareholders-fro
+ m-25th-chaitra-to-15th-baisakh-2079-2022-03-23
+URL:https://www.sharesansar.com/announcementdetail/api-power-company-limite
+ d-has-published-an-offer-letter-to-issue-a-1-0393632-ratio-10860000-units-
+ right-share-to-its-shareholders-from-25th-chaitra-to-15th-baisakh-2079-202
+ 2-03-23
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Right share opens today: Api Power Company Limited (API)
+TRIGGER;VALUE=DATE-TIME:20220408T031500Z
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:issue-right-share-25-3454474.28@codila125.github.io
+DTSTAMP:20220520T000000Z
+DTSTART;VALUE=DATE:20220520
+DTEND;VALUE=DATE:20220610
+SUMMARY:Right share: Nepal Finance Limited (NFS)
+DESCRIPTION:Right share · NFS\nPrice: Rs 100\nUnits: 3\,454\,474.28\nRatio
+ : 1:0.70\nBook closure: 4 May 2022\nOpens 20 May 2022\, closes 9 Jun 2022\
+ nIssue manager: Prabhu Capital Ltd.\nhttps://www.sharesansar.com/announcem
+ entdetail/nepal-finance-limited-has-published-an-offer-letter-to-issue-a-1
+ -070-ratio-3454474275-units-right-share-to-its-shareholders-from-6th-jesth
+ a-to-26th-jestha-2079-2022-05-08
+URL:https://www.sharesansar.com/announcementdetail/nepal-finance-limited-ha
+ s-published-an-offer-letter-to-issue-a-1-070-ratio-3454474275-units-right-
+ share-to-its-shareholders-from-6th-jestha-to-26th-jestha-2079-2022-05-08
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Right share opens today: Nepal Finance Limited (NFS)
+TRIGGER;VALUE=DATE-TIME:20220520T031500Z
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:issue-right-share-570-10603986@codila125.github.io
+DTSTAMP:20220803T000000Z
+DTSTART;VALUE=DATE:20220803
+DTEND;VALUE=DATE:20220824
+SUMMARY:Right share: Ngadi Group Power Limited (NGPL)
+DESCRIPTION:Right share · NGPL\nPrice: Rs 100\nUnits: 10\,603\,986\nRatio:
+  1:1.5\nBook closure: 4 Jul 2022\nOpens 3 Aug 2022\, closes 23 Aug 2022\nI
+ ssue manager: Siddhartha Capital Ltd\nhttps://www.sharesansar.com/announce
+ mentdetail/ngadi-group-power-limited-has-published-an-offer-letter-to-issu
+ e-a-1-15-ratio-10603986-units-right-share-to-its-shareholders-from-18th-sh
+ rawan-to-7th-bhadra-2079-2022-07-17
+URL:https://www.sharesansar.com/announcementdetail/ngadi-group-power-limite
+ d-has-published-an-offer-letter-to-issue-a-1-15-ratio-10603986-units-right
+ -share-to-its-shareholders-from-18th-shrawan-to-7th-bhadra-2079-2022-07-17
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Right share opens today: Ngadi Group Power Limited (NGPL)
+TRIGGER;VALUE=DATE-TIME:20220803T031500Z
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:issue-right-share-493-2679075@codila125.github.io
+DTSTAMP:20220822T000000Z
+DTSTART;VALUE=DATE:20220822
+DTEND;VALUE=DATE:20220917
+SUMMARY:Right share: Barun Hydropower Company Limited (BARUN)
+DESCRIPTION:Right share · BARUN\nPrice: Rs 100\nUnits: 2\,679\,075\nRatio:
+  1:1\nBook closure: 18 Jul 2022\nOpens 22 Aug 2022\, closes 16 Sep 2022\nI
+ ssue manager: RBB Merchant Banking Limited\nhttps://www.sharesansar.com/an
+ nouncementdetail/barun-hydropower-company-limited-has-published-an-offer-l
+ etter-to-issue-a-1-1-ratio-2679075-units-right-share-to-its-shareholders-f
+ rom-6th-bhadra-to-26th-bhadra-2079-2022-08-03
+URL:https://www.sharesansar.com/announcementdetail/barun-hydropower-company
+ -limited-has-published-an-offer-letter-to-issue-a-1-1-ratio-2679075-units-
+ right-share-to-its-shareholders-from-6th-bhadra-to-26th-bhadra-2079-2022-0
+ 8-03
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Right share opens today: Barun Hydropower Company Limited (BARU
+ N)
+TRIGGER;VALUE=DATE-TIME:20220822T031500Z
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:issue-right-share-574-9535760.99@codila125.github.io
+DTSTAMP:20220921T000000Z
+DTSTART;VALUE=DATE:20220921
+DTEND;VALUE=DATE:20221012
+SUMMARY:Right share: Radhi Bidyut Company Limited (RADHI)
+DESCRIPTION:Right share · RADHI\nPrice: Rs 100\nUnits: 9\,535\,760.99\nRat
+ io: 1:1.4752\nBook closure: 28 Aug 2022\nOpens 21 Sep 2022\, closes 11 Oct
+  2022\nIssue manager: Muktinath Capital Limited\nhttps://www.sharesansar.c
+ om/announcementdetail/radhi-bidyut-company-limited-has-published-an-offer-
+ letter-to-issue-a-1-14752-ratio-953576099-units-right-share-to-its-shareho
+ lders-from-5th-ashwin-to-25th-ashwin-2079-2022-09-01
+URL:https://www.sharesansar.com/announcementdetail/radhi-bidyut-company-lim
+ ited-has-published-an-offer-letter-to-issue-a-1-14752-ratio-953576099-unit
+ s-right-share-to-its-shareholders-from-5th-ashwin-to-25th-ashwin-2079-2022
+ -09-01
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Right share opens today: Radhi Bidyut Company Limited (RADHI)
+TRIGGER;VALUE=DATE-TIME:20220921T031500Z
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:issue-right-share-722-12000000@codila125.github.io
+DTSTAMP:20230605T000000Z
+DTSTART;VALUE=DATE:20230605
+DTEND;VALUE=DATE:20230711
+SUMMARY:Right share: Himal Dolakha Hydropower Company Limited (HDHPC)
+DESCRIPTION:Right share · HDHPC\nPrice: Rs 100\nUnits: 12\,000\,000\nRatio
+ : 1: 0.75\nBook closure: 10 May 2023\nOpens 5 Jun 2023\, closes 10 Jul 202
+ 3\nIssue manager: Laxmi Capital Market Limited\nhttps://www.sharesansar.co
+ m/announcementdetail/himal-dolakha-hydropower-company-limited-has-publishe
+ d-an-offer-letter-to-issue-a-1-075-ratio-12000000-units-right-share-to-its
+ -shareholders-from-22nd-jestha-to-10th-ashar-2080-2023-05-19
+URL:https://www.sharesansar.com/announcementdetail/himal-dolakha-hydropower
+ -company-limited-has-published-an-offer-letter-to-issue-a-1-075-ratio-1200
+ 0000-units-right-share-to-its-shareholders-from-22nd-jestha-to-10th-ashar-
+ 2080-2023-05-19
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Right share opens today: Himal Dolakha Hydropower Company Limit
+ ed (HDHPC)
+TRIGGER;VALUE=DATE-TIME:20230605T031500Z
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:issue-right-share-118-8221459.72@codila125.github.io
+DTSTAMP:20230714T000000Z
+DTSTART;VALUE=DATE:20230714
+DTEND;VALUE=DATE:20230804
+SUMMARY:Right share: National Hydro Power Company Limited (NHPC)
+DESCRIPTION:Right share · NHPC\nPrice: Rs 100\nUnits: 8\,221\,459.72\nRati
+ o: 10:5\nBook closure: 16 Jun 2023\nOpens 14 Jul 2023\, closes 3 Aug 2023\
+ nIssue manager: Muktinath Capital Limited\nhttps://www.sharesansar.com/ann
+ ouncementdetail/national-hydro-power-company-limited-has-published-an-offe
+ r-letter-to-issue-a-105-ratio-82214597178-units-right-share-to-its-shareho
+ lders-from-29th-ashad-to-18th-shrawan-2080-2023-06-26
+URL:https://www.sharesansar.com/announcementdetail/national-hydro-power-com
+ pany-limited-has-published-an-offer-letter-to-issue-a-105-ratio-8221459717
+ 8-units-right-share-to-its-shareholders-from-29th-ashad-to-18th-shrawan-20
+ 80-2023-06-26
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Right share opens today: National Hydro Power Company Limited (
+ NHPC)
+TRIGGER;VALUE=DATE-TIME:20230714T031500Z
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:issue-right-share-527-16533137@codila125.github.io
+DTSTAMP:20230816T000000Z
+DTSTART;VALUE=DATE:20230816
+DTEND;VALUE=DATE:20230906
+SUMMARY:Right share: Api Power Company Limited (API)
+DESCRIPTION:Right share · API\nPrice: Rs 100\nUnits: 16\,533\,137\nRatio: 
+ 1: 0.40\nBook closure: 7 Jul 2023\nOpens 16 Aug 2023\, closes 5 Sep 2023\n
+ Issue manager: Muktinath Capital Limited\nhttps://www.sharesansar.com/anno
+ uncementdetail/api-power-company-limited-has-published-an-offer-letter-to-
+ issue-a-1040-ratio-16533137-units-right-share-to-its-shareholders-from-31s
+ t-shrawan-to-19th-bhadra-2080-2023-07-30
+URL:https://www.sharesansar.com/announcementdetail/api-power-company-limite
+ d-has-published-an-offer-letter-to-issue-a-1040-ratio-16533137-units-right
+ -share-to-its-shareholders-from-31st-shrawan-to-19th-bhadra-2080-2023-07-3
+ 0
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Right share opens today: Api Power Company Limited (API)
+TRIGGER;VALUE=DATE-TIME:20230816T031500Z
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:issue-right-share-617-4032875@codila125.github.io
+DTSTAMP:20230820T000000Z
+DTSTART;VALUE=DATE:20230820
+DTEND;VALUE=DATE:20230918
+SUMMARY:Right share: Synergy Power Development Limited (SPDL)
+DESCRIPTION:Right share · SPDL\nPrice: Rs 100\nUnits: 4\,032\,875\nRatio: 
+ 2: 1\nBook closure: 28 Jul 2023\nOpens 20 Aug 2023\, closes 17 Sep 2023\nI
+ ssue manager: Sanima Capital Limited\nhttps://www.sharesansar.com/announce
+ mentdetail/synergy-power-development-limited-has-published-an-offer-letter
+ -to-issue-a-21-ratio-4032875-units-right-share-to-its-shareholders-from-25
+ th-shrawan-to-13th-bhadra-2080-2023-08-02
+URL:https://www.sharesansar.com/announcementdetail/synergy-power-developmen
+ t-limited-has-published-an-offer-letter-to-issue-a-21-ratio-4032875-units-
+ right-share-to-its-shareholders-from-25th-shrawan-to-13th-bhadra-2080-2023
+ -08-02
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Right share opens today: Synergy Power Development Limited (SPD
+ L)
+TRIGGER;VALUE=DATE-TIME:20230820T031500Z
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:issue-right-share-318-1582000@codila125.github.io
+DTSTAMP:20230827T000000Z
+DTSTART;VALUE=DATE:20230827
+DTEND;VALUE=DATE:20230918
+SUMMARY:Right share: Multipurpose Finance Company Limited (MPFL)
+DESCRIPTION:Right share · MPFL\nPrice: Rs 100\nUnits: 1\,582\,000\nRatio: 
+ 1: 0.35\nBook closure: 28 Jul 2023\nOpens 27 Aug 2023\, closes 17 Sep 2023
+ \nIssue manager: Muktinath Capital Limited\nhttps://www.sharesansar.com/an
+ nouncementdetail/multipurpose-finance-limited-has-published-an-offer-lette
+ r-to-issue-a-1035-ratio-1582000-units-right-share-to-its-shareholders-from
+ -10th-bhadra-to-31st-bhadra-2080-2023-08-10
+URL:https://www.sharesansar.com/announcementdetail/multipurpose-finance-lim
+ ited-has-published-an-offer-letter-to-issue-a-1035-ratio-1582000-units-rig
+ ht-share-to-its-shareholders-from-10th-bhadra-to-31st-bhadra-2080-2023-08-
+ 10
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Right share opens today: Multipurpose Finance Company Limited (
+ MPFL)
+TRIGGER;VALUE=DATE-TIME:20230827T031500Z
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:issue-right-share-514-18552105@codila125.github.io
+DTSTAMP:20230828T000000Z
+DTSTART;VALUE=DATE:20230828
+DTEND;VALUE=DATE:20230918
+SUMMARY:Right share: Arun Kabeli Power Limited (AKPL)
+DESCRIPTION:Right share · AKPL\nPrice: Rs 100\nUnits: 18\,552\,105\nRatio:
+  1: 1\nBook closure: 10 Jul 2023\nOpens 28 Aug 2023\, closes 17 Sep 2023\n
+ Issue manager: Nabil Investment Banking Ltd\nhttps://www.sharesansar.com/a
+ nnouncementdetail/arun-kabeli-power-limited-has-published-a-notice-regardi
+ ng-correction-on-its-opening-and-closing-date-of-11-ratio-right-shares-202
+ 3-08-11
+URL:https://www.sharesansar.com/announcementdetail/arun-kabeli-power-limite
+ d-has-published-a-notice-regarding-correction-on-its-opening-and-closing-d
+ ate-of-11-ratio-right-shares-2023-08-11
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Right share opens today: Arun Kabeli Power Limited (AKPL)
+TRIGGER;VALUE=DATE-TIME:20230828T031500Z
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:issue-right-share-498-105900000@codila125.github.io
+DTSTAMP:20230904T000000Z
+DTSTART;VALUE=DATE:20230904
+DTEND;VALUE=DATE:20231010
+SUMMARY:Right share: Upper Tamakoshi Hydropower Limited (UPPER)
+DESCRIPTION:Right share · UPPER\nPrice: Rs 100\nUnits: 105\,900\,000\nRati
+ o: 1: 1\nBook closure: 11 Aug 2023\nOpens 4 Sep 2023\, closes 9 Oct 2023\n
+ Issue manager: Sunrise Capital Limited\nhttps://www.sharesansar.com/announ
+ cementdetail/upper-tamakoshi-hydropower-limited-has-published-an-offer-let
+ ter-to-issue-a-11-ratio-105900000-units-right-share-to-its-shareholders-fr
+ om-18th-bhadra-to-7th-ashwin-2080-2023-08-17
+URL:https://www.sharesansar.com/announcementdetail/upper-tamakoshi-hydropow
+ er-limited-has-published-an-offer-letter-to-issue-a-11-ratio-105900000-uni
+ ts-right-share-to-its-shareholders-from-18th-bhadra-to-7th-ashwin-2080-202
+ 3-08-17
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Right share opens today: Upper Tamakoshi Hydropower Limited (UP
+ PER)
+TRIGGER;VALUE=DATE-TIME:20230904T031500Z
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:issue-right-share-579-11000000@codila125.github.io
+DTSTAMP:20231126T000000Z
+DTSTART;VALUE=DATE:20231126
+DTEND;VALUE=DATE:20240102
+SUMMARY:Right share: Ghalemdi Hydro Limited (GHL)
+DESCRIPTION:Right share · GHL\nPrice: Rs 100\nUnits: 11\,000\,000\nRatio: 
+ 1:2\nBook closure: 20 Oct 2023\nOpens 26 Nov 2023\, closes 1 Jan 2024\nIss
+ ue manager: Muktinath Capital Limited\nhttps://www.sharesansar.com/announc
+ ementdetail/ghalemdi-hydro-limited-has-published-an-offer-letter-to-issue-
+ a-12-ratio-11000000-units-right-share-to-its-shareholders-from-10th-mangsi
+ r-to-1st-poush-2080-2023-11-08
+URL:https://www.sharesansar.com/announcementdetail/ghalemdi-hydro-limited-h
+ as-published-an-offer-letter-to-issue-a-12-ratio-11000000-units-right-shar
+ e-to-its-shareholders-from-10th-mangsir-to-1st-poush-2080-2023-11-08
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Right share opens today: Ghalemdi Hydro Limited (GHL)
+TRIGGER;VALUE=DATE-TIME:20231126T031500Z
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:issue-right-share-724-245037@codila125.github.io
+DTSTAMP:20240123T000000Z
+DTSTART;VALUE=DATE:20240123
+DTEND;VALUE=DATE:20240320
+SUMMARY:Right share: Linch Stock Market Limited (LSML)
+DESCRIPTION:Right share · LSML\nPrice: Rs 100\nUnits: 245\,037\nRatio: 1:0
+ .20\nBook closure: 26 Feb 2024\nOpens 23 Jan 2024\, closes 19 Mar 2024\nIs
+ sue manager: Linch Stock Market Limited\nhttps://www.sharesansar.com/annou
+ ncementdetail/linch-stock-market-limited-has-published-right-share-notice-
+ to-its-shareholders-from-9th-magh-to-14th-fagun-2080-2023-12-28
+URL:https://www.sharesansar.com/announcementdetail/linch-stock-market-limit
+ ed-has-published-right-share-notice-to-its-shareholders-from-9th-magh-to-1
+ 4th-fagun-2080-2023-12-28
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Right share opens today: Linch Stock Market Limited (LSML)
+TRIGGER;VALUE=DATE-TIME:20240123T031500Z
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:issue-right-share-832-14500000@codila125.github.io
+DTSTAMP:20240214T000000Z
+DTSTART;VALUE=DATE:20240214
+DTEND;VALUE=DATE:20240306
+SUMMARY:Right share: Singati Hydro Energy Limited (SHEL)
+DESCRIPTION:Right share · SHEL\nPrice: Rs 100\nUnits: 14\,500\,000\nRatio:
+  1:1\nBook closure: 7 Jan 2024\nOpens 14 Feb 2024\, closes 5 Mar 2024\nIss
+ ue manager: Kumari Capital Limited\nhttps://www.sharesansar.com/announceme
+ ntdetail/singati-hydro-energy-limited-has-published-an-offer-letter-to-iss
+ ue-a-11-ratio-14500000-units-share-to-its-shareholders-from-2nd-falgun-to-
+ 22nd-falgun-2080-2024-01-25
+URL:https://www.sharesansar.com/announcementdetail/singati-hydro-energy-lim
+ ited-has-published-an-offer-letter-to-issue-a-11-ratio-14500000-units-shar
+ e-to-its-shareholders-from-2nd-falgun-to-22nd-falgun-2080-2024-01-25
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Right share opens today: Singati Hydro Energy Limited (SHEL)
+TRIGGER;VALUE=DATE-TIME:20240214T031500Z
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:issue-right-share-121-18679626@codila125.github.io
+DTSTAMP:20240229T000000Z
+DTSTART;VALUE=DATE:20240229
+DTEND;VALUE=DATE:20240321
+SUMMARY:Right share: Arun Valley Hydropower Development Company Limited (AH
+ PC)
+DESCRIPTION:Right share · AHPC\nPrice: Rs 100\nUnits: 18\,679\,626\nRatio:
+  1:1\nBook closure: 29 Jan 2024\nOpens 29 Feb 2024\, closes 20 Mar 2024\nI
+ ssue manager: Muktinath Capital Limited\nhttps://www.sharesansar.com/annou
+ ncementdetail/arun-valley-hydropower-development-company-limited-has-publi
+ shed-an-offer-letter-to-issue-a-11-ratio-18679626-units-share-to-its-share
+ holders-from-17th-falgun-to-7th-chaitra-2080-2024-02-12
+URL:https://www.sharesansar.com/announcementdetail/arun-valley-hydropower-d
+ evelopment-company-limited-has-published-an-offer-letter-to-issue-a-11-rat
+ io-18679626-units-share-to-its-shareholders-from-17th-falgun-to-7th-chaitr
+ a-2080-2024-02-12
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Right share opens today: Arun Valley Hydropower Development Com
+ pany Limited (AHPC)
+TRIGGER;VALUE=DATE-TIME:20240229T031500Z
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:issue-right-share-1208-7744506@codila125.github.io
+DTSTAMP:20240301T000000Z
+DTSTART;VALUE=DATE:20240301
+DTEND;VALUE=DATE:20240322
+SUMMARY:Right share: Ridi Power Company Limited (RIDI)
+DESCRIPTION:Right share · RIDI\nPrice: Rs 100\nUnits: 7\,744\,506\nRatio: 
+ 1:0.5\nBook closure: 5 Feb 2024\nOpens 1 Mar 2024\, closes 21 Mar 2024\nIs
+ sue manager: Muktinath Capital Limited\nhttps://www.sharesansar.com/announ
+ cementdetail/ridi-power-company-limited-has-published-an-offer-letter-to-i
+ ssue-a-1050-ratio-7744506-units-right-share-to-its-shareholders-from-18th-
+ falgun-to-8th-chaitra-2080-2024-02-13
+URL:https://www.sharesansar.com/announcementdetail/ridi-power-company-limit
+ ed-has-published-an-offer-letter-to-issue-a-1050-ratio-7744506-units-right
+ -share-to-its-shareholders-from-18th-falgun-to-8th-chaitra-2080-2024-02-13
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Right share opens today: Ridi Power Company Limited (RIDI)
+TRIGGER;VALUE=DATE-TIME:20240301T031500Z
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:issue-right-share-593-1499518@codila125.github.io
+DTSTAMP:20240625T000000Z
+DTSTART;VALUE=DATE:20240625
+DTEND;VALUE=DATE:20240710
+SUMMARY:Right share: Nepal Life Capital Limited (Former National Merchant B
+ anker Limited) (NLCL)
+DESCRIPTION:Right share · NLCL\nPrice: Rs 100\nUnits: 1\,499\,518\nRatio: 
+ 1:0.50\nBook closure: 9 Jul 2024\nOpens 25 Jun 2024\, closes 9 Jul 2024\nh
+ ttps://www.sharesansar.com/announcementdetail/nepal-life-capital-limited-i
+ s-going-to-sell-its-105-ratio-right-share-to-its-promoter-shareholders-fro
+ m-11th-ashad-to-25th-ashad-2081-and-has-also-listed-its-application-collec
+ tion-and-deposit-centers-2024-06-07
+URL:https://www.sharesansar.com/announcementdetail/nepal-life-capital-limit
+ ed-is-going-to-sell-its-105-ratio-right-share-to-its-promoter-shareholders
+ -from-11th-ashad-to-25th-ashad-2081-and-has-also-listed-its-application-co
+ llection-and-deposit-centers-2024-06-07
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Right share opens today: Nepal Life Capital Limited (Former Nat
+ ional Merchant Banker Limited) (NLCL)
+TRIGGER;VALUE=DATE-TIME:20240625T031500Z
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:issue-right-share-1439-4879719@codila125.github.io
+DTSTAMP:20240709T000000Z
+DTSTART;VALUE=DATE:20240709
+DTEND;VALUE=DATE:20240729
+SUMMARY:Right share: Middle Modi Hydropower Limited (MMHPL)
+DESCRIPTION:Right share · MMHPL\nPrice: Rs 100\nUnits: 4\,879\,719\nRatio:
+  1:0.6024\nOpens 9 Jul 2024\, closes 28 Jul 2024\nhttps://www.sharesansar.
+ com/announcementdetail/middle-modi-hydropower-limited-is-going-to-sell-106
+ 024-ratio-right-share-to-its-shareholders-from-25th-ashad-to-13th-shrawan-
+ 2081-2024-06-24
+URL:https://www.sharesansar.com/announcementdetail/middle-modi-hydropower-l
+ imited-is-going-to-sell-106024-ratio-right-share-to-its-shareholders-from-
+ 25th-ashad-to-13th-shrawan-2081-2024-06-24
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Right share opens today: Middle Modi Hydropower Limited (MMHPL)
+TRIGGER;VALUE=DATE-TIME:20240709T031500Z
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:issue-right-share-584-9900000@codila125.github.io
+DTSTAMP:20240808T000000Z
+DTSTART;VALUE=DATE:20240808
+DTEND;VALUE=DATE:20240829
+SUMMARY:Right share: Himalaya Urja Bikas Company Limited (HURJA)
+DESCRIPTION:Right share · HURJA\nPrice: Rs 100\nUnits: 9\,900\,000\nRatio:
+  1:1\nBook closure: 4 Jul 2024\nOpens 8 Aug 2024\, closes 28 Aug 2024\nIss
+ ue manager: Nabil Investment Banking Limited\nhttps://www.sharesansar.com/
+ announcementdetail/himalayan-urja-bikas-company-limited-has-published-an-o
+ ffer-letter-to-issue-a-11-ratio-9900000-units-right-share-to-its-sharehold
+ ers-from-24th-shrawan-to-12th-bhadra-2081-2024-07-21
+URL:https://www.sharesansar.com/announcementdetail/himalayan-urja-bikas-com
+ pany-limited-has-published-an-offer-letter-to-issue-a-11-ratio-9900000-uni
+ ts-right-share-to-its-shareholders-from-24th-shrawan-to-12th-bhadra-2081-2
+ 024-07-21
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Right share opens today: Himalaya Urja Bikas Company Limited (H
+ URJA)
+TRIGGER;VALUE=DATE-TIME:20240808T031500Z
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:issue-right-share-590-12000000@codila125.github.io
+DTSTAMP:20240811T000000Z
+DTSTART;VALUE=DATE:20240811
+DTEND;VALUE=DATE:20240902
+SUMMARY:Right share: Ankhukhola Hydropower Company Limited (AKJCL)
+DESCRIPTION:Right share · AKJCL\nPrice: Rs 100\nUnits: 12\,000\,000\nRatio
+ : 1:1.5\nBook closure: 16 Jul 2024\nOpens 11 Aug 2024\, closes 1 Sep 2024\
+ nIssue manager: Nabil Investment Banking Limited\nhttps://www.sharesansar.
+ com/announcementdetail/ankhukhola-hydropower-company-limited-has-published
+ -an-offer-letter-to-issue-a-115-ratio-12000000-units-right-share-to-its-sh
+ areholders-from-27th-shrawan-to-16th-bhadra-2081-2024-07-24
+URL:https://www.sharesansar.com/announcementdetail/ankhukhola-hydropower-co
+ mpany-limited-has-published-an-offer-letter-to-issue-a-115-ratio-12000000-
+ units-right-share-to-its-shareholders-from-27th-shrawan-to-16th-bhadra-208
+ 1-2024-07-24
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Right share opens today: Ankhukhola Hydropower Company Limited 
+ (AKJCL)
+TRIGGER;VALUE=DATE-TIME:20240811T031500Z
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:issue-right-share-364-9631220.22@codila125.github.io
+DTSTAMP:20241126T000000Z
+DTSTART;VALUE=DATE:20241126
+DTEND;VALUE=DATE:20250101
+SUMMARY:Right share: NLG Insurance Company Limited (NLG)
+DESCRIPTION:Right share · NLG\nPrice: Rs 100\nUnits: 9\,631\,220.22\nRatio
+ : 10:6.256\nBook closure: 12 Nov 2024\nOpens 26 Nov 2024\, closes 31 Dec 2
+ 024\nIssue manager: LS Capital Limited\nhttps://www.sharesansar.com/announ
+ cementdetail/nlg-insurance-company-limited-has-published-an-offer-letter-t
+ o-issue-a-106256-ratio-963122022-units-right-share-to-its-shareholders-fro
+ m-11th-mangsir-to-1st-poush-2081-2024-11-06
+URL:https://www.sharesansar.com/announcementdetail/nlg-insurance-company-li
+ mited-has-published-an-offer-letter-to-issue-a-106256-ratio-963122022-unit
+ s-right-share-to-its-shareholders-from-11th-mangsir-to-1st-poush-2081-2024
+ -11-06
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Right share opens today: NLG Insurance Company Limited (NLG)
+TRIGGER;VALUE=DATE-TIME:20241126T031500Z
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:issue-right-share-138-23468000@codila125.github.io
+DTSTAMP:20241127T000000Z
+DTSTART;VALUE=DATE:20241127
+DTEND;VALUE=DATE:20250102
+SUMMARY:Right share: Life Insurance Corporation Nepal Limited (LICN)
+DESCRIPTION:Right share · LICN\nPrice: Rs 100\nUnits: 23\,468\,000\nRatio:
+  1:0.8845168\nBook closure: 25 Oct 2024\nOpens 27 Nov 2024\, closes 1 Jan 
+ 2025\nIssue manager: Nepal SBI Merchant Banking Limited\nhttps://www.share
+ sansar.com/announcementdetail/life-insurance-corporation-nepal-limited-has
+ -extended-108845168-ratio-23468000-units-right-share-to-its-shareholders-t
+ ill-17th-poush-2081-2024-12-17
+URL:https://www.sharesansar.com/announcementdetail/life-insurance-corporati
+ on-nepal-limited-has-extended-108845168-ratio-23468000-units-right-share-t
+ o-its-shareholders-till-17th-poush-2081-2024-12-17
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Right share opens today: Life Insurance Corporation Nepal Limit
+ ed (LICN)
+TRIGGER;VALUE=DATE-TIME:20241127T031500Z
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:issue-right-share-874-7500000@codila125.github.io
+DTSTAMP:20241201T000000Z
+DTSTART;VALUE=DATE:20241201
+DTEND;VALUE=DATE:20241223
+SUMMARY:Right share: Liberty Energy Company Limited (LEC)
+DESCRIPTION:Right share · LEC\nPrice: Rs 100\nUnits: 7\,500\,000\nRatio: 1
+ :0.5\nBook closure: 6 Nov 2024\nOpens 1 Dec 2024\, closes 22 Dec 2024\nIss
+ ue manager: Prabhu Capital Limited\nhttps://www.sharesansar.com/announceme
+ ntdetail/liberty-energy-company-limited-has-published-an-offer-letter-to-i
+ ssue-a-1050-ratio-7500000-units-right-share-to-its-shareholders-from-16th-
+ mangsir-to-7th-poush-2081-2024-11-22
+URL:https://www.sharesansar.com/announcementdetail/liberty-energy-company-l
+ imited-has-published-an-offer-letter-to-issue-a-1050-ratio-7500000-units-r
+ ight-share-to-its-shareholders-from-16th-mangsir-to-7th-poush-2081-2024-11
+ -22
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Right share opens today: Liberty Energy Company Limited (LEC)
+TRIGGER;VALUE=DATE-TIME:20241201T031500Z
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:issue-right-share-969-18279700@codila125.github.io
+DTSTAMP:20241212T000000Z
+DTSTART;VALUE=DATE:20241212
+DTEND;VALUE=DATE:20250102
+SUMMARY:Right share: Balephi Hydropower Limited (BHL)
+DESCRIPTION:Right share · BHL\nPrice: Rs 100\nUnits: 18\,279\,700\nRatio: 
+ 1:1\nBook closure: 6 Nov 2024\nOpens 12 Dec 2024\, closes 1 Jan 2025\nIssu
+ e manager: NIMB Ace Capital Limited\nhttps://www.sharesansar.com/announcem
+ entdetail/balephi-hydropower-limited-has-published-an-offer-letter-to-issu
+ e-a-11-ratio-18279700-units-right-share-to-its-shareholders-from-27th-mang
+ sir-to-17th-poush-2081-2024-12-03
+URL:https://www.sharesansar.com/announcementdetail/balephi-hydropower-limit
+ ed-has-published-an-offer-letter-to-issue-a-11-ratio-18279700-units-right-
+ share-to-its-shareholders-from-27th-mangsir-to-17th-poush-2081-2024-12-03
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Right share opens today: Balephi Hydropower Limited (BHL)
+TRIGGER;VALUE=DATE-TIME:20241212T031500Z
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:issue-right-share-570-18512792.23@codila125.github.io
+DTSTAMP:20250107T000000Z
+DTSTART;VALUE=DATE:20250107
+DTEND;VALUE=DATE:20250212
+SUMMARY:Right share: Ngadi Group Power Limited (NGPL)
+DESCRIPTION:Right share · NGPL\nPrice: Rs 100\nUnits: 18\,512\,792.23\nRat
+ io: 1:1\nBook closure: 3 Dec 2024\nOpens 7 Jan 2025\, closes 11 Feb 2025\n
+ Issue manager: Siddhartha Capital Limited\nhttps://www.sharesansar.com/ann
+ ouncementdetail/ngadi-group-power-limited-has-published-an-offer-letter-to
+ -issue-a-11-ratio-18512792225-units-right-share-to-its-shareholders-from-2
+ 3rd-poush-to-14th-magh-2081-2024-12-20
+URL:https://www.sharesansar.com/announcementdetail/ngadi-group-power-limite
+ d-has-published-an-offer-letter-to-issue-a-11-ratio-18512792225-units-righ
+ t-share-to-its-shareholders-from-23rd-poush-to-14th-magh-2081-2024-12-20
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Right share opens today: Ngadi Group Power Limited (NGPL)
+TRIGGER;VALUE=DATE-TIME:20250107T031500Z
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:issue-right-share-133-5030901.55@codila125.github.io
+DTSTAMP:20250220T000000Z
+DTSTART;VALUE=DATE:20250220
+DTEND;VALUE=DATE:20250328
+SUMMARY:Right share: Neco Insurance Limited (NIL)
+DESCRIPTION:Right share · NIL\nPrice: Rs 100\nUnits: 5\,030\,901.55\nRatio
+ : 1:0.25\nBook closure: 31 Jan 2025\nOpens 20 Feb 2025\, closes 27 Mar 202
+ 5\nIssue manager: Sanima Capital Limited\nhttps://www.sharesansar.com/anno
+ uncementdetail/neco-insurance-limited-has-extended-1025-ratio-503090155-un
+ its-right-share-to-its-shareholders-till-14th-chaitra-2081-2025-03-12
+URL:https://www.sharesansar.com/announcementdetail/neco-insurance-limited-h
+ as-extended-1025-ratio-503090155-units-right-share-to-its-shareholders-til
+ l-14th-chaitra-2081-2025-03-12
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Right share opens today: Neco Insurance Limited (NIL)
+TRIGGER;VALUE=DATE-TIME:20250220T031500Z
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:issue-right-share-537-10542604@codila125.github.io
+DTSTAMP:20250401T000000Z
+DTSTART;VALUE=DATE:20250401
+DTEND;VALUE=DATE:20250428
+SUMMARY:Right share: Dordi Khola Hydropower Company Limited (DORDI)
+DESCRIPTION:Right share · DORDI\nPrice: Rs 100\nUnits: 10\,542\,604\nRatio
+ : 1:1\nBook closure: 27 Feb 2025\nOpens 1 Apr 2025\, closes 27 Apr 2025\nI
+ ssue manager: Sanima Capital Limited\nhttps://www.sharesansar.com/announce
+ mentdetail/dordi-khola-hydropower-company-limited-has-published-an-offer-l
+ etter-to-issue-a-11-ratio-10542604-units-right-share-to-its-shareholders-f
+ rom-19th-chaitra-2081-to-8th-baisakh-2082-2025-03-09
+URL:https://www.sharesansar.com/announcementdetail/dordi-khola-hydropower-c
+ ompany-limited-has-published-an-offer-letter-to-issue-a-11-ratio-10542604-
+ units-right-share-to-its-shareholders-from-19th-chaitra-2081-to-8th-baisak
+ h-2082-2025-03-09
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Right share opens today: Dordi Khola Hydropower Company Limited
+  (DORDI)
+TRIGGER;VALUE=DATE-TIME:20250401T031500Z
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:issue-right-share-760-10696320@codila125.github.io
+DTSTAMP:20250513T000000Z
+DTSTART;VALUE=DATE:20250513
+DTEND;VALUE=DATE:20250618
+SUMMARY:Right share: Sun Nepal Life Insurance Company Limited (SNLI)
+DESCRIPTION:Right share · SNLI\nPrice: Rs 100\nUnits: 10\,696\,320\nRatio:
+  1:0.27\nBook closure: 18 Apr 2025\nOpens 13 May 2025\, closes 17 Jun 2025
+ \nIssue manager: Nepal SBI Merchant Banking Limited\nhttps://www.sharesans
+ ar.com/announcementdetail/sun-nepal-life-insurance-company-limited-has-pub
+ lished-an-offer-letter-to-issue-a-1027-ratio-10696320-units-right-share-to
+ -its-shareholders-from-30th-baisakh-to-19th-jestha-2082-2025-04-25
+URL:https://www.sharesansar.com/announcementdetail/sun-nepal-life-insurance
+ -company-limited-has-published-an-offer-letter-to-issue-a-1027-ratio-10696
+ 320-units-right-share-to-its-shareholders-from-30th-baisakh-to-19th-jestha
+ -2082-2025-04-25
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Right share opens today: Sun Nepal Life Insurance Company Limit
+ ed (SNLI)
+TRIGGER;VALUE=DATE-TIME:20250513T031500Z
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:issue-right-share-628-3869775@codila125.github.io
+DTSTAMP:20250606T000000Z
+DTSTART;VALUE=DATE:20250606
+DTEND;VALUE=DATE:20250712
+SUMMARY:Right share: Chhyangdi Hydropower Company Limited (CHL)
+DESCRIPTION:Right share · CHL\nPrice: Rs 100\nUnits: 3\,869\,775\nRatio: 1
+ :1\nBook closure: 16 May 2025\nOpens 6 Jun 2025\, closes 11 Jul 2025\nIssu
+ e manager: Global Ime Capital Limited\nhttps://www.sharesansar.com/announc
+ ementdetail/chhyangdi-hydropower-company-limited-has-extended-11-ratio-386
+ 9775-units-right-share-to-its-shareholders-till-27th-ashad-2082-2025-06-26
+URL:https://www.sharesansar.com/announcementdetail/chhyangdi-hydropower-com
+ pany-limited-has-extended-11-ratio-3869775-units-right-share-to-its-shareh
+ olders-till-27th-ashad-2082-2025-06-26
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Right share opens today: Chhyangdi Hydropower Company Limited (
+ CHL)
+TRIGGER;VALUE=DATE-TIME:20250606T031500Z
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:issue-right-share-721-6127938@codila125.github.io
+DTSTAMP:20250615T000000Z
+DTSTART;VALUE=DATE:20250615
+DTEND;VALUE=DATE:20250709
+SUMMARY:Right share: Rapti Hydro & General Construction Limited (RHGCL)
+DESCRIPTION:Right share · RHGCL\nPrice: Rs 100\nUnits: 6\,127\,938\nRatio:
+  1:1\nBook closure: 20 May 2025\nOpens 15 Jun 2025\, closes 8 Jul 2025\nIs
+ sue manager: Muktinath Capital Limited\nhttps://www.sharesansar.com/announ
+ cementdetail/rapti-hydro-general-construction-limited-has-extended-11-rati
+ o-6127938-units-right-share-to-its-shareholders-till-24th-ashad-2082-2025-
+ 07-06
+URL:https://www.sharesansar.com/announcementdetail/rapti-hydro-general-cons
+ truction-limited-has-extended-11-ratio-6127938-units-right-share-to-its-sh
+ areholders-till-24th-ashad-2082-2025-07-06
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Right share opens today: Rapti Hydro & General Construction Lim
+ ited (RHGCL)
+TRIGGER;VALUE=DATE-TIME:20250615T031500Z
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:issue-right-share-968-4000000@codila125.github.io
+DTSTAMP:20250630T000000Z
+DTSTART;VALUE=DATE:20250630
+DTEND;VALUE=DATE:20250728
+SUMMARY:Right share: Terhathum Power Company Limited (TPC)
+DESCRIPTION:Right share · TPC\nPrice: Rs 100\nUnits: 4\,000\,000\nRatio: 1
+ :1\nBook closure: 19 May 2025\nOpens 30 Jun 2025\, closes 27 Jul 2025\nIss
+ ue manager: Nabil Investment Banking Limited\nhttps://www.sharesansar.com/
+ announcementdetail/terhathum-power-company-limited-has-extended-11-ratio-4
+ 000000-units-right-share-to-its-shareholders-till-11th-shrawan-2082-2025-0
+ 7-20
+URL:https://www.sharesansar.com/announcementdetail/terhathum-power-company-
+ limited-has-extended-11-ratio-4000000-units-right-share-to-its-shareholder
+ s-till-11th-shrawan-2082-2025-07-20
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Right share opens today: Terhathum Power Company Limited (TPC)
+TRIGGER;VALUE=DATE-TIME:20250630T031500Z
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:issue-right-share-973-3163000@codila125.github.io
+DTSTAMP:20250706T000000Z
+DTSTART;VALUE=DATE:20250706
+DTEND;VALUE=DATE:20250812
+SUMMARY:Right share: People's Power Limited (PPL)
+DESCRIPTION:Right share · PPL\nPrice: Rs 100\nUnits: 3\,163\,000\nRatio: 1
+ :0.5\nBook closure: 16 Jun 2025\nOpens 6 Jul 2025\, closes 11 Aug 2025\nIs
+ sue manager: Prabhu Capital Limited\nhttps://www.sharesansar.com/announcem
+ entdetail/peoples-power-limited-has-extended-1050-ratio-3163000-units-righ
+ t-share-to-its-shareholders-till-26th-shrawan-2082-2025-07-27
+URL:https://www.sharesansar.com/announcementdetail/peoples-power-limited-ha
+ s-extended-1050-ratio-3163000-units-right-share-to-its-shareholders-till-2
+ 6th-shrawan-2082-2025-07-27
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Right share opens today: People's Power Limited (PPL)
+TRIGGER;VALUE=DATE-TIME:20250706T031500Z
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:issue-right-share-143-14279312.48@codila125.github.io
+DTSTAMP:20250709T000000Z
+DTSTART;VALUE=DATE:20250709
+DTEND;VALUE=DATE:20250806
+SUMMARY:Right share: Asian Life Insurance Company Limited (ALICL)
+DESCRIPTION:Right share · ALICL\nPrice: Rs 100\nUnits: 14\,279\,312.48\nRa
+ tio: 1:0.42\nBook closure: 30 May 2025\nOpens 9 Jul 2025\, closes 5 Aug 20
+ 25\nIssue manager: Muktinath Capital Limited\nhttps://www.sharesansar.com/
+ announcementdetail/asian-life-insurance-company-limited-has-extended-1042-
+ ratio-1427931248-units-right-share-to-its-shareholders-till-20th-shrawan-2
+ 082-2025-07-29
+URL:https://www.sharesansar.com/announcementdetail/asian-life-insurance-com
+ pany-limited-has-extended-1042-ratio-1427931248-units-right-share-to-its-s
+ hareholders-till-20th-shrawan-2082-2025-07-29
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Right share opens today: Asian Life Insurance Company Limited (
+ ALICL)
+TRIGGER;VALUE=DATE-TIME:20250709T031500Z
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:issue-right-share-493-5358150@codila125.github.io
+DTSTAMP:20250715T000000Z
+DTSTART;VALUE=DATE:20250715
+DTEND;VALUE=DATE:20250820
+SUMMARY:Right share: Barun Hydropower Company Limited (BARUN)
+DESCRIPTION:Right share · BARUN\nPrice: Rs 100\nUnits: 5\,358\,150\nRatio:
+  1:1\nBook closure: 5 Jun 2025\nOpens 15 Jul 2025\, closes 19 Aug 2025\nIs
+ sue manager: RBB Merchant Banking Limited\nhttps://www.sharesansar.com/ann
+ ouncementdetail/barun-hydropower-company-limited-has-extended-11-ratio-535
+ 8150-units-right-share-to-its-shareholders-till-3rd-bhadra-2082-2025-08-04
+URL:https://www.sharesansar.com/announcementdetail/barun-hydropower-company
+ -limited-has-extended-11-ratio-5358150-units-right-share-to-its-shareholde
+ rs-till-3rd-bhadra-2082-2025-08-04
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Right share opens today: Barun Hydropower Company Limited (BARU
+ N)
+TRIGGER;VALUE=DATE-TIME:20250715T031500Z
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:issue-right-share-126-6576967.76@codila125.github.io
+DTSTAMP:20250722T000000Z
+DTSTART;VALUE=DATE:20250722
+DTEND;VALUE=DATE:20250819
+SUMMARY:Right share: Nepal Insurance Company Limited (NICL)
+DESCRIPTION:Right share · NICL\nPrice: Rs 100\nUnits: 6\,576\,967.76\nRati
+ o: 10:3.4783\nBook closure: 13 Jun 2025\nOpens 22 Jul 2025\, closes 18 Aug
+  2025\nIssue manager: NIMB Ace Capital Limited\nhttps://www.sharesansar.co
+ m/announcementdetail/nepal-insurance-company-limited-has-extended-1034783-
+ ratio-657696776-units-right-share-to-its-shareholders-till-2nd-bhadra-2082
+ -2025-08-11
+URL:https://www.sharesansar.com/announcementdetail/nepal-insurance-company-
+ limited-has-extended-1034783-ratio-657696776-units-right-share-to-its-shar
+ eholders-till-2nd-bhadra-2082-2025-08-11
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Right share opens today: Nepal Insurance Company Limited (NICL)
+TRIGGER;VALUE=DATE-TIME:20250722T031500Z
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:issue-right-share-665-2414100@codila125.github.io
+DTSTAMP:20250731T000000Z
+DTSTART;VALUE=DATE:20250731
+DTEND;VALUE=DATE:20250905
+SUMMARY:Right share: Joshi Hydropower Development Company Limited (JOSHI)
+DESCRIPTION:Right share · JOSHI\nPrice: Rs 100\nUnits: 2\,414\,100\nRatio:
+  1:0.65\nBook closure: 22 Jun 2025\nOpens 31 Jul 2025\, closes 4 Sep 2025\
+ nIssue manager: LS Capital Limited\nhttps://www.sharesansar.com/announceme
+ ntdetail/joshi-hydropower-development-company-limited-has-extended-1065-ra
+ tio-2414100-units-right-share-to-its-shareholders-till-19th-bhadra-2082-20
+ 25-08-20
+URL:https://www.sharesansar.com/announcementdetail/joshi-hydropower-develop
+ ment-company-limited-has-extended-1065-ratio-2414100-units-right-share-to-
+ its-shareholders-till-19th-bhadra-2082-2025-08-20
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Right share opens today: Joshi Hydropower Development Company L
+ imited (JOSHI)
+TRIGGER;VALUE=DATE-TIME:20250731T031500Z
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:issue-right-share-578-4657143@codila125.github.io
+DTSTAMP:20250819T000000Z
+DTSTART;VALUE=DATE:20250819
+DTEND;VALUE=DATE:20250922
+SUMMARY:Right share: Khani Khola Hydropower Company Limited (KKHC)
+DESCRIPTION:Right share · KKHC\nPrice: Rs 100\nUnits: 4\,657\,143\nRatio: 
+ 1:1\nBook closure: 11 Jul 2025\nOpens 19 Aug 2025\, closes 21 Sep 2025\nIs
+ sue manager: Citizens Capital Limited\nhttps://www.sharesansar.com/announc
+ ementdetail/khani-khola-hydropower-company-limited-has-extended-11-ratio-4
+ 657143-units-right-share-to-its-shareholders-till-5th-ashwin-2082-2025-09-
+ 16
+URL:https://www.sharesansar.com/announcementdetail/khani-khola-hydropower-c
+ ompany-limited-has-extended-11-ratio-4657143-units-right-share-to-its-shar
+ eholders-till-5th-ashwin-2082-2025-09-16
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Right share opens today: Khani Khola Hydropower Company Limited
+  (KKHC)
+TRIGGER;VALUE=DATE-TIME:20250819T031500Z
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:issue-right-share-740-14764000@codila125.github.io
+DTSTAMP:20250904T000000Z
+DTSTART;VALUE=DATE:20250904
+DTEND;VALUE=DATE:20251010
+SUMMARY:Right share: Shiva Shree Hydropower Limited (SSHL)
+DESCRIPTION:Right share · SSHL\nPrice: Rs 100\nUnits: 14\,764\,000\nRatio:
+  1:1\nBook closure: 1 Aug 2025\nOpens 4 Sep 2025\, closes 9 Oct 2025\nIssu
+ e manager: Citizens Capital Limited\nhttps://www.sharesansar.com/announcem
+ entdetail/shiva-shree-hydropower-limited-has-extended-11-ratio-14764000-un
+ its-right-share-to-its-shareholders-till-23rd-ashwin-2082-2025-09-24
+URL:https://www.sharesansar.com/announcementdetail/shiva-shree-hydropower-l
+ imited-has-extended-11-ratio-14764000-units-right-share-to-its-shareholder
+ s-till-23rd-ashwin-2082-2025-09-24
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Right share opens today: Shiva Shree Hydropower Limited (SSHL)
+TRIGGER;VALUE=DATE-TIME:20250904T031500Z
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:issue-right-share-1166-13392000@codila125.github.io
+DTSTAMP:20250908T000000Z
+DTSTART;VALUE=DATE:20250908
+DTEND;VALUE=DATE:20251013
+SUMMARY:Right share: City Hotel Limited (CITY)
+DESCRIPTION:Right share · CITY\nPrice: Rs 100\nUnits: 13\,392\,000\nRatio:
+  1:0.80\nBook closure: 12 Aug 2025\nOpens 8 Sep 2025\, closes 12 Oct 2025\
+ nIssue manager: Prabhu Capital Limited\nhttps://www.sharesansar.com/announ
+ cementdetail/city-hotel-limited-has-extended-its-1080-ratio-13392000-units
+ -right-share-to-its-shareholders-till-26th-ashwin-2082-2025-09-28
+URL:https://www.sharesansar.com/announcementdetail/city-hotel-limited-has-e
+ xtended-its-1080-ratio-13392000-units-right-share-to-its-shareholders-till
+ -26th-ashwin-2082-2025-09-28
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Right share opens today: City Hotel Limited (CITY)
+TRIGGER;VALUE=DATE-TIME:20250908T031500Z
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:issue-right-share-770-7000000@codila125.github.io
+DTSTAMP:20250908T000000Z
+DTSTART;VALUE=DATE:20250908
+DTEND;VALUE=DATE:20251013
+SUMMARY:Right share: River Falls Power Limited (RFPL)
+DESCRIPTION:Right share · RFPL\nPrice: Rs 100\nUnits: 7\,000\,000\nRatio: 
+ 1:1\nBook closure: 11 Aug 2025\nOpens 8 Sep 2025\, closes 12 Oct 2025\nIss
+ ue manager: Prabhu Capital Limited\nhttps://www.sharesansar.com/announceme
+ ntdetail/river-falls-power-limited-has-extended-its-11-ratio-7000000-units
+ -right-share-to-its-shareholders-till-26th-ashwin-2082-2025-09-28
+URL:https://www.sharesansar.com/announcementdetail/river-falls-power-limite
+ d-has-extended-its-11-ratio-7000000-units-right-share-to-its-shareholders-
+ till-26th-ashwin-2082-2025-09-28
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Right share opens today: River Falls Power Limited (RFPL)
+TRIGGER;VALUE=DATE-TIME:20250908T031500Z
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:issue-right-share-167-2624676@codila125.github.io
+DTSTAMP:20250918T000000Z
+DTSTART;VALUE=DATE:20250918
+DTEND;VALUE=DATE:20251027
+SUMMARY:Right share: Narayani Development Bank Limited (NABBC)
+DESCRIPTION:Right share · NABBC\nPrice: Rs 100\nUnits: 2\,624\,676\nRatio:
+  1: 1\nBook closure: 25 Aug 2025\nOpens 18 Sep 2025\, closes 26 Oct 2025\n
+ Issue manager: Global IME Capital ltd.\nhttps://www.sharesansar.com/announ
+ cementdetail/narayani-development-bank-limited-has-extended-its-11-ratio-2
+ 624676-units-right-share-to-its-shareholders-till-9th-kartik-2082-2025-10-
+ 08
+URL:https://www.sharesansar.com/announcementdetail/narayani-development-ban
+ k-limited-has-extended-its-11-ratio-2624676-units-right-share-to-its-share
+ holders-till-9th-kartik-2082-2025-10-08
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Right share opens today: Narayani Development Bank Limited (NAB
+ BC)
+TRIGGER;VALUE=DATE-TIME:20250918T031500Z
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:issue-right-share-782-4000000@codila125.github.io
+DTSTAMP:20260405T000000Z
+DTSTART;VALUE=DATE:20260405
+DTEND;VALUE=DATE:20260512
+SUMMARY:Right share: Buddha Bhumi Nepal Hydropower Company Limited (BNHC)
+DESCRIPTION:Right share · BNHC\nPrice: Rs 100\nUnits: 4\,000\,000\nRatio: 
+ 1:1\nBook closure: 13 Feb 2026\nOpens 5 Apr 2026\, closes 11 May 2026\nIss
+ ue manager: NIC Asia Capital\nhttps://www.sharesansar.com/announcementdeta
+ il/buddha-bhumi-nepal-hydropower-company-limited-has-extended-its-11-ratio
+ -4000000-units-right-share-to-its-shareholders-till-28th-baisakh-2083-2026
+ -04-24
+URL:https://www.sharesansar.com/announcementdetail/buddha-bhumi-nepal-hydro
+ power-company-limited-has-extended-its-11-ratio-4000000-units-right-share-
+ to-its-shareholders-till-28th-baisakh-2083-2026-04-24
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Right share opens today: Buddha Bhumi Nepal Hydropower Company 
+ Limited (BNHC)
+TRIGGER;VALUE=DATE-TIME:20260405T031500Z
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:issue-right-share-1281-2310000@codila125.github.io
+DTSTAMP:20260409T000000Z
+DTSTART;VALUE=DATE:20260409
+DTEND;VALUE=DATE:20260515
+SUMMARY:Right share: United Ajod Insurance Limited (UAIL)
+DESCRIPTION:Right share · UAIL\nPrice: Rs 100\nUnits: 2\,310\,000\nRatio: 
+ 100:10\nBook closure: 1 Mar 2026\nOpens 9 Apr 2026\, closes 14 May 2026\nI
+ ssue manager: Laxmi Sunrise Capital Limited\nhttps://www.sharesansar.com/a
+ nnouncementdetail/united-ajod-insurance-limited-has-extended-its-10010-rat
+ io-2310000-units-right-share-to-its-shareholders-till-31st-baisakh-2083-20
+ 26-04-29
+URL:https://www.sharesansar.com/announcementdetail/united-ajod-insurance-li
+ mited-has-extended-its-10010-ratio-2310000-units-right-share-to-its-shareh
+ olders-till-31st-baisakh-2083-2026-04-29
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Right share opens today: United Ajod Insurance Limited (UAIL)
+TRIGGER;VALUE=DATE-TIME:20260409T031500Z
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:issue-right-share-618-5327085@codila125.github.io
+DTSTAMP:20260430T000000Z
+DTSTART;VALUE=DATE:20260430
+DTEND;VALUE=DATE:20260521
+SUMMARY:Right share: Himalayan Power Partner Limited (HPPL)
+DESCRIPTION:Right share · HPPL\nPrice: Rs 100\nUnits: 5\,327\,085\nRatio: 
+ 1:0.5\nBook closure: 24 Mar 2026\nOpens 30 Apr 2026\, closes 20 May 2026\n
+ Issue manager: Global IME Capital Limited\nhttps://www.sharesansar.com/ann
+ ouncementdetail/himalayan-power-partner-limited-has-published-an-offer-let
+ ter-to-issue-a-105-ratio-5327085-units-right-share-to-its-shareholders-fro
+ m-17th-baisakh-2083-to-6th-jestha-2083-2026-04-13
+URL:https://www.sharesansar.com/announcementdetail/himalayan-power-partner-
+ limited-has-published-an-offer-letter-to-issue-a-105-ratio-5327085-units-r
+ ight-share-to-its-shareholders-from-17th-baisakh-2083-to-6th-jestha-2083-2
+ 026-04-13
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Right share opens today: Himalayan Power Partner Limited (HPPL)
+TRIGGER;VALUE=DATE-TIME:20260430T031500Z
+END:VALARM
+END:VEVENT
+END:VCALENDAR

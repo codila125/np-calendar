@@ -173,3 +173,11 @@ def test_no_result_text_match_is_valid(raw_2026):
     m1["winnerTeamId"] = None
     m1["winnerLabel"] = None
     assert validate(raw_2026, season) == []
+
+
+def test_v4_rejects_team_slugs_that_collide_with_issue_feeds(raw_2026):
+    for slug in ("issues", "ipo", "right-share"):
+        raw = copy.deepcopy(raw_2026)
+        season = normalize(raw)
+        raw.teams[0]["slug"] = slug
+        assert_rule(validate(raw, season), "V4")

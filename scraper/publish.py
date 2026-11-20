@@ -3,6 +3,7 @@
 import json
 import os
 import tempfile
+from collections.abc import Iterable
 from pathlib import Path
 
 CALENDAR_DIR = "calendar"
@@ -27,11 +28,18 @@ def _atomic_write(path: Path, data: bytes) -> None:
         raise
 
 
-def write_outputs(site_dir: Path, outputs: dict[str, bytes], dry_run: bool = False) -> list[str]:
+def write_outputs(
+    site_dir: Path,
+    outputs: dict[str, bytes],
+    dry_run: bool = False,
+    prune: bool = True,
+    keep: Iterable[str] = (),
+) -> list[str]:
     """Write each `relpath -> bytes` under `site_dir` only if the bytes differ.
 
-    Also deletes `calendar/*.ics` files that are no longer produced. Returns the changed
-    relpaths (written, created or deleted); with `dry_run` nothing is touched.
+    Also deletes `calendar/*.ics` files that are no longer produced, unless `prune` is false
+    or the relpath is in `keep`. Returns the changed relpaths (written, created or deleted);
+    with `dry_run` nothing is touched.
     """
     site_dir = Path(site_dir)
     changed = []
@@ -42,11 +50,12 @@ def write_outputs(site_dir: Path, outputs: dict[str, bytes], dry_run: bool = Fal
         changed.append(relpath)
         if not dry_run:
             _atomic_write(path, data)
+    keep = set(keep)
     calendar = site_dir / CALENDAR_DIR
-    if calendar.is_dir():
+    if prune and calendar.is_dir():
         for path in sorted(calendar.glob("*.ics")):
             relpath = f"{CALENDAR_DIR}/{path.name}"
-            if relpath not in outputs:
+            if relpath not in outputs and relpath not in keep:
                 changed.append(relpath)
                 if not dry_run:
                     path.unlink()

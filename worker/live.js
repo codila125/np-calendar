@@ -10,7 +10,7 @@
 const UPSTREAM = "https://nplt20league.com/api/v1/matches?season=2026";
 const SCORECARD_BASE = "https://nplt20league.com/api/v1/matches/";
 const MATCH_ID = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/;
-const USER_AGENT = "npl-calendar-bot/1.0 (+https://github.com/codila125/npl)";
+const USER_AGENT = "np-calendar-bot/1.0 (+https://github.com/codila125/np-calendar)";
 const ALLOWED_ORIGINS = ["https://codila125.github.io", "http://localhost:8000"];
 const TTL_MS = 30 * 1000;
 

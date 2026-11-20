@@ -106,6 +106,8 @@ def _v4_teams(raw: RawSource) -> list[Violation]:
             out.append(Violation("V4", f"team slug {slug!r} does not match ^[a-z0-9-]+$"))
         elif slug == "npl":
             out.append(Violation("V4", "team slug must not be 'npl'"))
+        elif slug in config.ISSUE_FEEDS:
+            out.append(Violation("V4", f"team slug must not be the issue feed name {slug!r}"))
         if not t.get("name") or not str(t["name"]).strip():
             out.append(Violation("V4", f"team {slug!r} has an empty name"))
         if not t.get("shortCode") or not str(t["shortCode"]).strip():
@@ -384,13 +386,13 @@ def _v15_regression(season: dict, previous: dict | None, allow_regression: bool)
     return []
 
 
-def _check_text(value, where: str, out: list[Violation]) -> None:
+def _check_text(value, where: str, out: list[Violation], rule_id: str = "V16") -> None:
     if value is None:
         return
     if CONTROL_RE.search(str(value)):
-        out.append(Violation("V16", f"{where} contains a control character"))
+        out.append(Violation(rule_id, f"{where} contains a control character"))
     if len(str(value)) > MAX_TEXT_LEN:
-        out.append(Violation("V16", f"{where} is longer than {MAX_TEXT_LEN} characters"))
+        out.append(Violation(rule_id, f"{where} is longer than {MAX_TEXT_LEN} characters"))
 
 
 def _v16_strings(season: dict) -> list[Violation]:

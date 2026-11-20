@@ -5,7 +5,9 @@ from pathlib import Path
 
 from icalendar import Calendar
 
+from scraper import config
 from scraper.ics import build_calendars, escape_text, fold
+from scraper.issues_ics import build_issue_calendars, format_amount
 
 ALL_UID = "npl-2026-m01@codila125.github.io"
 FINAL_UID = "npl-2026-m32@codila125.github.io"
@@ -172,7 +174,7 @@ def test_description_before_result_day_match(season_2026):
     assert desc == (
         "NPL 2026 · Match 7\n"
         "Kick-off 12:30 PM NPT\n"
-        "https://codila125.github.io/npl/"
+        + config.SITE_URL
     )
 
 
@@ -182,7 +184,7 @@ def test_description_before_result_evening_match(season_2026):
     assert desc == (
         "NPL 2026 · Final\n"
         "Kick-off 5:00 PM NPT\n"
-        "https://codila125.github.io/npl/"
+        + config.SITE_URL
     )
 
 
@@ -193,7 +195,7 @@ def test_description_completed_with_result_and_scores(season_2026):
         "Result: Lumbini Lions won by 7 wickets\n"
         "Lumbini Lions 88/3 (9.5 ov)\n"
         "Sudurpaschim Royals 87/10 (17.2 ov)\n"
-        "https://codila125.github.io/npl/"
+        + config.SITE_URL
     )
 
 
@@ -209,7 +211,7 @@ def test_description_blank_result_with_winner_names_the_winner(season_2026):
         "Result: Lumbini Lions won\n"
         "Lumbini Lions 88/3 (9.5 ov)\n"
         "Sudurpaschim Royals 87/10 (17.2 ov)\n"
-        "https://codila125.github.io/npl/"
+        + config.SITE_URL
     )
 
 
@@ -224,7 +226,7 @@ def test_description_blank_result_without_winner_omits_result_line(season_2026):
     assert desc == (
         "Lumbini Lions 88/3 (9.5 ov)\n"
         "Sudurpaschim Royals 87/10 (17.2 ov)\n"
-        "https://codila125.github.io/npl/"
+        + config.SITE_URL
     )
 
 
@@ -240,7 +242,7 @@ def test_description_no_result_with_text_and_scores(season_2026):
         "Result: Match abandoned due to rain\n"
         "Lumbini Lions 88/3 (9.5 ov)\n"
         "Sudurpaschim Royals 87/10 (17.2 ov)\n"
-        "https://codila125.github.io/npl/"
+        + config.SITE_URL
     )
 
 
@@ -255,7 +257,7 @@ def test_description_no_result_blank_and_missing_scores(season_2026):
         side["overs"] = None
     cal = Calendar.from_ical(build_calendars(season)["calendar/npl.ics"])
     desc = str(find_event(cal, ALL_UID)["DESCRIPTION"])
-    assert desc == "Result: No result\nhttps://codila125.github.io/npl/"
+    assert desc == f"Result: No result\n{config.SITE_URL}"
 
 
 def test_completed_match_omits_score_line_when_score_missing(season_2026):
@@ -268,7 +270,7 @@ def test_completed_match_omits_score_line_when_score_missing(season_2026):
     assert desc == (
         "Result: Lumbini Lions won by 7 wickets\n"
         "Lumbini Lions 88/3 (9.5 ov)\n"
-        "https://codila125.github.io/npl/"
+        + config.SITE_URL
     )
 
 
@@ -282,7 +284,7 @@ def test_completed_match_score_without_overs_omits_the_overs(season_2026):
         "Result: Lumbini Lions won by 7 wickets\n"
         "Lumbini Lions 88/3\n"
         "Sudurpaschim Royals 87/10 (17.2 ov)\n"
-        "https://codila125.github.io/npl/"
+        + config.SITE_URL
     )
 
 
@@ -327,7 +329,7 @@ def test_header_order(season_2026):
     assert text.startswith(
         "BEGIN:VCALENDAR\r\n"
         "VERSION:2.0\r\n"
-        "PRODID:-//codila125//NPL calendar feed//EN\r\n"
+        f"PRODID:{config.PRODID}\r\n"
         "CALSCALE:GREGORIAN\r\n"
         "METHOD:PUBLISH\r\n"
     )
@@ -336,7 +338,126 @@ def test_header_order(season_2026):
 
 
 def test_ics_module_reads_no_wall_clock(season_2026):
-    src = Path(__file__).parent.parent / "scraper" / "ics.py"
-    text = src.read_text()
-    for forbidden in ("datetime.now", "datetime.utcnow", "utcnow", "time.time"):
-        assert forbidden not in text, forbidden
+    for name in ("ics.py", "issues.py", "issues_ics.py"):
+        text = (Path(__file__).parent.parent / "scraper" / name).read_text()
+        for forbidden in ("datetime.now", "datetime.utcnow", "utcnow", "time.time"):
+            assert forbidden not in text, (name, forbidden)
+
+
+# --- issue feeds ---------------------------------------------------------------------
+
+
+def _issue(**kw):
+    base = {
+        "id": "ipo-local-1363-600000", "category": "ipo-local",
+        "company": "Aashutosh Energy Limited", "symbol": "AELTD",
+        "units": "600000.00", "price": "100.00", "ratio": None,
+        "issue_manager": "NMB Capital Limited",
+        "opening_date": "2026-11-30", "closing_date": "2026-12-14",
+        "last_closing_date": "2026-12-29", "book_closure_date": None,
+        "dates_announced": True,
+        "url": "https://www.sharesansar.com/announcementdetail/a",
+        "company_url": "https://www.sharesansar.com/company/aeltd",
+    }  # fmt: skip
+    base.update(kw)
+    return base
+
+
+def _issues_data(*issues):
+    return {
+        "schema_version": 1,
+        "categories": [
+            {"slug": c.slug, "type": c.type_id, "label": c.label, "short": c.short}
+            for c in config.ISSUE_CATEGORIES
+        ],
+        "issues": list(issues),
+    }
+
+
+def test_issue_event_property_order_and_formats():
+    text = build_issue_calendars(_issues_data(_issue()))["calendar/ipo-local.ics"].decode()
+    lines = logical_lines(text)
+    assert lines[:9] == [
+        "BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//codila125//np-calendar//EN",
+        "CALSCALE:GREGORIAN", "METHOD:PUBLISH",
+        "X-WR-CALNAME:np-calendar — IPO for locals",
+        "X-WR-CALDESC:Opening and closing dates of share issues in Nepal "
+        "(source: ShareSansar).",
+        "REFRESH-INTERVAL;VALUE=DURATION:PT1H", "X-PUBLISHED-TTL:PT1H",
+    ]  # fmt: skip
+    start = lines.index("BEGIN:VEVENT")
+    event = lines[start : lines.index("END:VEVENT") + 1]
+    assert [ln.split(":")[0] for ln in event] == [
+        "BEGIN", "UID", "DTSTAMP", "DTSTART;VALUE=DATE", "DTEND;VALUE=DATE", "SUMMARY",
+        "DESCRIPTION", "URL", "STATUS", "TRANSP", "BEGIN", "ACTION",
+        "DESCRIPTION", "TRIGGER;VALUE=DATE-TIME", "END", "END",
+    ]  # fmt: skip
+    assert "UID:issue-ipo-local-1363-600000@codila125.github.io" in event
+    assert "DTSTAMP:20261130T000000Z" in event
+    assert "DTSTART;VALUE=DATE:20261130" in event
+    assert "DTEND;VALUE=DATE:20261215" in event
+    assert "SUMMARY:IPO for locals: Aashutosh Energy Limited (AELTD)" in event
+    assert "TRIGGER;VALUE=DATE-TIME:20261130T031500Z" in event
+    assert "DESCRIPTION:IPO for locals opens today: Aashutosh Energy Limited (AELTD)" in event
+    desc = next(ln for ln in event if ln.startswith("DESCRIPTION:IPO for locals ·"))
+    assert desc.split("\\n") == [
+        "DESCRIPTION:IPO for locals · AELTD", "Price: Rs 100", "Units: 600\\,000",
+        "Opens 30 Nov 2026\\, closes 14 Dec 2026", "May stay open until 29 Dec 2026",
+        "Issue manager: NMB Capital Limited", "https://www.sharesansar.com/announcementdetail/a",
+    ]  # fmt: skip
+
+
+def test_right_share_description_has_ratio_and_book_closure_not_extension():
+    issue = _issue(
+        id="right-share-446-74587835", category="right-share", ratio="1:0.50",
+        book_closure_date="2026-11-27", last_closing_date="2026-12-29",
+    )  # fmt: skip
+    text = build_issue_calendars(_issues_data(issue))["calendar/right-share.ics"].decode()
+    desc = "".join(logical_lines(text.split("DESCRIPTION:Right share ·")[1].split("URL:")[0]))
+    assert "Ratio: 1:0.50" in desc and "Book closure: 27 Nov 2026" in desc
+    assert "May stay open" not in desc
+
+
+def test_empty_category_feed_is_a_valid_calendar():
+    cals = build_issue_calendars(_issues_data(_issue()))
+    assert sorted(cals) == sorted(f"calendar/{n}.ics" for n in config.ISSUE_FEEDS)
+    cal = Calendar.from_ical(cals["calendar/fpo.ics"])
+    assert list(cal.walk("VEVENT")) == []
+    assert cal["X-WR-CALNAME"] == "np-calendar — FPO"
+    assert Calendar.from_ical(cals["calendar/issues.ics"])["X-WR-CALNAME"].endswith(
+        "All share issues"
+    )
+
+
+def test_undated_issues_are_left_out_and_events_are_ordered():
+    late = _issue(id="ipo-local-2-1", opening_date="2026-12-05", closing_date="2026-12-06")
+    undated = _issue(
+        id="ipo-local-3-1", opening_date=None, closing_date=None, dates_announced=False
+    )
+    early = _issue(id="ipo-local-4-1", opening_date="2026-11-01", closing_date="2026-11-02")
+    cal = Calendar.from_ical(
+        build_issue_calendars(_issues_data(late, undated, early))["calendar/issues.ics"]
+    )
+    uids = [str(e["UID"]) for e in cal.walk("VEVENT")]
+    assert uids == [
+        "issue-ipo-local-4-1@codila125.github.io",
+        "issue-ipo-local-2-1@codila125.github.io",
+    ]
+
+
+def test_issue_feed_lines_fit_75_octets_and_build_is_deterministic():
+    long = _issue(company="Very Long Company Name " * 8, issue_manager="Ünïcödé Capital " * 6)
+    first = build_issue_calendars(_issues_data(long))
+    assert first == build_issue_calendars(_issues_data(long))
+    for data in first.values():
+        text = data.decode("utf-8")
+        assert text.endswith("\r\n") and not re.search(r"(?<!\r)\n", text)
+        for line in text.split("\r\n"):
+            assert len(line.encode("utf-8")) <= 75, line
+
+
+def test_amounts_get_thousands_separators_and_lose_trailing_zeros():
+    assert format_amount("600000.00") == "600,000"
+    assert format_amount("24851236.18") == "24,851,236.18"
+    assert format_amount("100.00") == "100"
+    assert format_amount("18512792.20") == "18,512,792.2"

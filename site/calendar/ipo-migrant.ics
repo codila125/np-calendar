@@ -1,0 +1,1263 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//codila125//np-calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:np-calendar — IPO for migrant workers
+X-WR-CALDESC:Opening and closing dates of share issues in Nepal (source: Sh
+ areSansar).
+REFRESH-INTERVAL;VALUE=DURATION:PT1H
+X-PUBLISHED-TTL:PT1H
+BEGIN:VEVENT
+UID:issue-ipo-migrant-1229-80000@codila125.github.io
+DTSTAMP:20230813T000000Z
+DTSTART;VALUE=DATE:20230813
+DTEND;VALUE=DATE:20230828
+SUMMARY:IPO for migrant workers: Chirkhwa Hydro Power Limited (CKHL)
+DESCRIPTION:IPO for migrant workers · CKHL\nPrice: Rs 100\nUnits: 80\,000\
+ nOpens 13 Aug 2023\, closes 27 Aug 2023\nIssue manager: RBB Merchant Banki
+ ng Limited\nhttps://www.sharesansar.com/announcementdetail/chirkhwa-hydro-
+ power-limited-has-published-an-offer-letter-to-issue-400000-units-ipo-shar
+ es-to-the-project-affected-locals-of-bhojpur-district-and-80000-units-ipo-
+ shares-to-foreign-nepalese-immigrants-from-28th-shrawan-to-10th-bhadra-208
+ 0-2023-08-06
+URL:https://www.sharesansar.com/announcementdetail/chirkhwa-hydro-power-lim
+ ited-has-published-an-offer-letter-to-issue-400000-units-ipo-shares-to-the
+ -project-affected-locals-of-bhojpur-district-and-80000-units-ipo-shares-to
+ -foreign-nepalese-immigrants-from-28th-shrawan-to-10th-bhadra-2080-2023-08
+ -06
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:IPO for migrant workers opens today: Chirkhwa Hydro Power Limit
+ ed (CKHL)
+TRIGGER;VALUE=DATE-TIME:20230813T031500Z
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:issue-ipo-migrant-1193-1076268@codila125.github.io
+DTSTAMP:20230814T000000Z
+DTSTART;VALUE=DATE:20230814
+DTEND;VALUE=DATE:20230829
+SUMMARY:IPO for migrant workers: Sonapur Minerals and Oil Limited (SONA)
+DESCRIPTION:IPO for migrant workers · SONA\nPrice: Rs 237.58\nUnits: 1\,07
+ 6\,268\nOpens 14 Aug 2023\, closes 28 Aug 2023\nIssue manager: NIMB Ace Ca
+ pital Limited\nhttps://www.sharesansar.com/announcementdetail/sonapur-mine
+ rals-and-oil-limited-has-published-an-offer-letter-to-issue-1537525-units-
+ ipo-shares-to-the-project-affected-locals-of-dang-and-rolpa-district-and-1
+ 076268-units-ipo-shares-to-foreign-nepalese-immigrants-from-29th-shrawan-t
+ o-11th-bhadra-2080-2023-08-06
+URL:https://www.sharesansar.com/announcementdetail/sonapur-minerals-and-oil
+ -limited-has-published-an-offer-letter-to-issue-1537525-units-ipo-shares-t
+ o-the-project-affected-locals-of-dang-and-rolpa-district-and-1076268-units
+ -ipo-shares-to-foreign-nepalese-immigrants-from-29th-shrawan-to-11th-bhadr
+ a-2080-2023-08-06
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:IPO for migrant workers opens today: Sonapur Minerals and Oil L
+ imited (SONA)
+TRIGGER;VALUE=DATE-TIME:20230814T031500Z
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:issue-ipo-migrant-1260-191250@codila125.github.io
+DTSTAMP:20230905T000000Z
+DTSTART;VALUE=DATE:20230905
+DTEND;VALUE=DATE:20230920
+SUMMARY:IPO for migrant workers: Vision Lumbini Urja Company Limited (VLUCL
+ )
+DESCRIPTION:IPO for migrant workers · VLUCL\nPrice: Rs 100\nUnits: 191\,25
+ 0\nOpens 5 Sep 2023\, closes 19 Sep 2023\nIssue manager: Muktinath Capital
+  Limited\nhttps://www.sharesansar.com/announcementdetail/vision-lumbini-ur
+ ja-company-limited-has-published-an-offer-letter-to-issue-1912500-units-ip
+ o-shares-to-the-project-affected-locals-of-kaski-district-and-191250-units
+ -ipo-shares-to-foreign-nepalese-immigrants-from-19th-bhadra-to-2nd-ashwin-
+ 2080-2023-08-27
+URL:https://www.sharesansar.com/announcementdetail/vision-lumbini-urja-comp
+ any-limited-has-published-an-offer-letter-to-issue-1912500-units-ipo-share
+ s-to-the-project-affected-locals-of-kaski-district-and-191250-units-ipo-sh
+ ares-to-foreign-nepalese-immigrants-from-19th-bhadra-to-2nd-ashwin-2080-20
+ 23-08-27
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:IPO for migrant workers opens today: Vision Lumbini Urja Compan
+ y Limited (VLUCL)
+TRIGGER;VALUE=DATE-TIME:20230905T031500Z
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:issue-ipo-migrant-1152-140000@codila125.github.io
+DTSTAMP:20231027T000000Z
+DTSTART;VALUE=DATE:20231027
+DTEND;VALUE=DATE:20231111
+SUMMARY:IPO for migrant workers: Muktinath Krishi Company Limited (MKCL)
+DESCRIPTION:IPO for migrant workers · MKCL\nPrice: Rs 100\nUnits: 140\,000
+ \nOpens 27 Oct 2023\, closes 10 Nov 2023\nIssue manager: NIMB Ace Capital 
+ Limited\nhttps://www.sharesansar.com/announcementdetail/muktinath-krishi-c
+ ompany-limited-has-published-an-offer-letter-to-issue-140000-units-ipo-sha
+ res-to-foreign-nepalese-employees-from-10th-kartik-to-24th-kartik-2080-202
+ 3-10-05
+URL:https://www.sharesansar.com/announcementdetail/muktinath-krishi-company
+ -limited-has-published-an-offer-letter-to-issue-140000-units-ipo-shares-to
+ -foreign-nepalese-employees-from-10th-kartik-to-24th-kartik-2080-2023-10-0
+ 5
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:IPO for migrant workers opens today: Muktinath Krishi Company L
+ imited (MKCL)
+TRIGGER;VALUE=DATE-TIME:20231027T031500Z
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:issue-ipo-migrant-1211-137500@codila125.github.io
+DTSTAMP:20231027T000000Z
+DTSTART;VALUE=DATE:20231027
+DTEND;VALUE=DATE:20231111
+SUMMARY:IPO for migrant workers: Nepal Warehousing Company Limited (NWCL)
+DESCRIPTION:IPO for migrant workers · NWCL\nPrice: Rs 100\nUnits: 137\,500
+ \nOpens 27 Oct 2023\, closes 10 Nov 2023\nIssue manager: Himalayan Capital
+  Limited\nhttps://www.sharesansar.com/announcementdetail/nepal-warehousing
+ -company-limited-has-published-an-offer-letter-to-issue-137500-units-ipo-s
+ hares-to-foreign-nepalese-employees-from-10th-kartik-to-24th-kartik-2080-2
+ 023-10-06
+URL:https://www.sharesansar.com/announcementdetail/nepal-warehousing-compan
+ y-limited-has-published-an-offer-letter-to-issue-137500-units-ipo-shares-t
+ o-foreign-nepalese-employees-from-10th-kartik-to-24th-kartik-2080-2023-10-
+ 06
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:IPO for migrant workers opens today: Nepal Warehousing Company 
+ Limited (NWCL)
+TRIGGER;VALUE=DATE-TIME:20231027T031500Z
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:issue-ipo-migrant-1119-3000000@codila125.github.io
+DTSTAMP:20231120T000000Z
+DTSTART;VALUE=DATE:20231120
+DTEND;VALUE=DATE:20231205
+SUMMARY:IPO for migrant workers: Himalayan Reinsurance Limited (HRL)
+DESCRIPTION:IPO for migrant workers · HRL\nPrice: Rs 100\nUnits: 3\,000\,0
+ 00\nOpens 20 Nov 2023\, closes 4 Dec 2023\nIssue manager: NMB Capital Limi
+ ted\nhttps://www.sharesansar.com/announcementdetail/himalayan-reinsurance-
+ limited-has-published-an-offer-letter-to-issue-3000000-units-ipo-shares-to
+ -foreign-nepalese-employees-from-21st-kartik-to-5th-mangsir-2080-2023-10-2
+ 0
+URL:https://www.sharesansar.com/announcementdetail/himalayan-reinsurance-li
+ mited-has-published-an-offer-letter-to-issue-3000000-units-ipo-shares-to-f
+ oreign-nepalese-employees-from-21st-kartik-to-5th-mangsir-2080-2023-10-20
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:IPO for migrant workers opens today: Himalayan Reinsurance Limi
+ ted (HRL)
+TRIGGER;VALUE=DATE-TIME:20231120T031500Z
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:issue-ipo-migrant-1071-267000@codila125.github.io
+DTSTAMP:20240110T000000Z
+DTSTART;VALUE=DATE:20240110
+DTEND;VALUE=DATE:20240125
+SUMMARY:IPO for migrant workers: Sarbottam Cement Limited (SARBTM)
+DESCRIPTION:IPO for migrant workers · SARBTM\nPrice: Rs 360.9\nUnits: 267\
+ ,000\nOpens 10 Jan 2024\, closes 24 Jan 2024\nIssue manager: Global IME Ca
+ pital Ltd\nhttps://www.sharesansar.com/announcementdetail/sarbottam-cement
+ -limited-has-published-an-offer-letter-to-issue-930000-units-ipo-shares-to
+ -the-industry-affected-locals-of-nawalparasi-districtmine-excavation-affec
+ ted-locals-of-palpa-district-and-267000-units-ipo-shares-to-foreign-nepale
+ se-immigrants-from-25th-poush-to-10th-magh-2080-2024-01-02
+URL:https://www.sharesansar.com/announcementdetail/sarbottam-cement-limited
+ -has-published-an-offer-letter-to-issue-930000-units-ipo-shares-to-the-ind
+ ustry-affected-locals-of-nawalparasi-districtmine-excavation-affected-loca
+ ls-of-palpa-district-and-267000-units-ipo-shares-to-foreign-nepalese-immig
+ rants-from-25th-poush-to-10th-magh-2080-2024-01-02
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:IPO for migrant workers opens today: Sarbottam Cement Limited (
+ SARBTM)
+TRIGGER;VALUE=DATE-TIME:20240110T031500Z
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:issue-ipo-migrant-1323-225000@codila125.github.io
+DTSTAMP:20241204T000000Z
+DTSTART;VALUE=DATE:20241204
+DTEND;VALUE=DATE:20241219
+SUMMARY:IPO for migrant workers: Guardian Micro Life Insurance Limited (GML
+ I)
+DESCRIPTION:IPO for migrant workers · GMLI\nPrice: Rs 100\nUnits: 225\,000
+ \nOpens 4 Dec 2024\, closes 18 Dec 2024\nIssue manager: Kumari Capital Lim
+ ited\nhttps://www.sharesansar.com/announcementdetail/guardian-micro-life-i
+ nsurance-limited-has-published-an-offer-letter-to-issue-1845000-units-ipo-
+ shares-to-the-foreign-nepalese-immigrants-from-19th-mangsir-to-3rd-poush-2
+ 081-2024-11-26
+URL:https://www.sharesansar.com/announcementdetail/guardian-micro-life-insu
+ rance-limited-has-published-an-offer-letter-to-issue-1845000-units-ipo-sha
+ res-to-the-foreign-nepalese-immigrants-from-19th-mangsir-to-3rd-poush-2081
+ -2024-11-26
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:IPO for migrant workers opens today: Guardian Micro Life Insura
+ nce Limited (GMLI)
+TRIGGER;VALUE=DATE-TIME:20241204T031500Z
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:issue-ipo-migrant-1324-225000@codila125.github.io
+DTSTAMP:20250121T000000Z
+DTSTART;VALUE=DATE:20250121
+DTEND;VALUE=DATE:20250205
+SUMMARY:IPO for migrant workers: Nepal Micro Insurance Company Limited (NMI
+ C)
+DESCRIPTION:IPO for migrant workers · NMIC\nPrice: Rs 100\nUnits: 225\,000
+ \nOpens 21 Jan 2025\, closes 4 Feb 2025\nIssue manager: NIMB Ace Capital L
+ td\nhttps://www.sharesansar.com/announcementdetail/nepal-micro-insurance-c
+ ompany-limited-has-published-an-offer-letter-to-issue-225000-units-ipo-sha
+ res-to-the-foreign-nepalese-immigrants-from-8th-magh-to-22nd-magh-2081-202
+ 5-01-12
+URL:https://www.sharesansar.com/announcementdetail/nepal-micro-insurance-co
+ mpany-limited-has-published-an-offer-letter-to-issue-225000-units-ipo-shar
+ es-to-the-foreign-nepalese-immigrants-from-8th-magh-to-22nd-magh-2081-2025
+ -01-12
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:IPO for migrant workers opens today: Nepal Micro Insurance Comp
+ any Limited (NMIC)
+TRIGGER;VALUE=DATE-TIME:20250121T031500Z
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:issue-ipo-migrant-1316-225000@codila125.github.io
+DTSTAMP:20250128T000000Z
+DTSTART;VALUE=DATE:20250128
+DTEND;VALUE=DATE:20250212
+SUMMARY:IPO for migrant workers: Crest Micro Life Insurance Limited (CREST)
+DESCRIPTION:IPO for migrant workers · CREST\nPrice: Rs 100\nUnits: 225\,00
+ 0\nOpens 28 Jan 2025\, closes 11 Feb 2025\nIssue manager: NIMB Ace Capital
+  Ltd.\nhttps://www.sharesansar.com/announcementdetail/crest-micro-life-ins
+ urance-limited-has-published-an-offer-letter-to-issue-225000-units-ipo-sha
+ res-to-the-foreign-nepalese-immigrants-from-15th-magh-to-29th-magh-2081-20
+ 25-01-20
+URL:https://www.sharesansar.com/announcementdetail/crest-micro-life-insuran
+ ce-limited-has-published-an-offer-letter-to-issue-225000-units-ipo-shares-
+ to-the-foreign-nepalese-immigrants-from-15th-magh-to-29th-magh-2081-2025-0
+ 1-20
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:IPO for migrant workers opens today: Crest Micro Life Insurance
+  Limited (CREST)
+TRIGGER;VALUE=DATE-TIME:20250128T031500Z
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:issue-ipo-migrant-1206-180000@codila125.github.io
+DTSTAMP:20250203T000000Z
+DTSTART;VALUE=DATE:20250203
+DTEND;VALUE=DATE:20250218
+SUMMARY:IPO for migrant workers: Om Megashree Pharmaceuticals Limited (OMPL
+ )
+DESCRIPTION:IPO for migrant workers · OMPL\nPrice: Rs 100\nUnits: 180\,000
+ \nOpens 3 Feb 2025\, closes 17 Feb 2025\nIssue manager: Prabhu Capital Lim
+ ited\nhttps://www.sharesansar.com/announcementdetail/om-megashree-pharmace
+ uticals-limited-has-published-an-offer-letter-to-issue-180000-units-ipo-sh
+ ares-to-the-foreign-nepalese-immigrants-from-21st-magh-to-5th-falgun-2081-
+ 2025-01-23
+URL:https://www.sharesansar.com/announcementdetail/om-megashree-pharmaceuti
+ cals-limited-has-published-an-offer-letter-to-issue-180000-units-ipo-share
+ s-to-the-foreign-nepalese-immigrants-from-21st-magh-to-5th-falgun-2081-202
+ 5-01-23
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:IPO for migrant workers opens today: Om Megashree Pharmaceutica
+ ls Limited (OMPL)
+TRIGGER;VALUE=DATE-TIME:20250203T031500Z
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:issue-ipo-migrant-1300-144000@codila125.github.io
+DTSTAMP:20250304T000000Z
+DTSTART;VALUE=DATE:20250304
+DTEND;VALUE=DATE:20250319
+SUMMARY:IPO for migrant workers: Pure Energy Limited (PURE)
+DESCRIPTION:IPO for migrant workers · PURE\nPrice: Rs 100\nUnits: 144\,000
+ \nOpens 4 Mar 2025\, closes 18 Mar 2025\nIssue manager: Nabil Investment B
+ anking Limited\nhttps://www.sharesansar.com/announcementdetail/pure-energy
+ -limited-has-published-an-offer-letter-to-issue-160000-units-ipo-shares-to
+ -the-project-affected-locals-of-banke-district-and-144000-units-ipo-shares
+ -to-foreign-nepalese-immigrants-from-20th-falgun-to-5th-chaitra-2081-2025-
+ 02-23
+URL:https://www.sharesansar.com/announcementdetail/pure-energy-limited-has-
+ published-an-offer-letter-to-issue-160000-units-ipo-shares-to-the-project-
+ affected-locals-of-banke-district-and-144000-units-ipo-shares-to-foreign-n
+ epalese-immigrants-from-20th-falgun-to-5th-chaitra-2081-2025-02-23
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:IPO for migrant workers opens today: Pure Energy Limited (PURE)
+TRIGGER;VALUE=DATE-TIME:20250304T031500Z
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:issue-ipo-migrant-1338-291000@codila125.github.io
+DTSTAMP:20250418T000000Z
+DTSTART;VALUE=DATE:20250418
+DTEND;VALUE=DATE:20250503
+SUMMARY:IPO for migrant workers: Sanvi Energy Limited (SANVI)
+DESCRIPTION:IPO for migrant workers · SANVI\nPrice: Rs 100\nUnits: 291\,00
+ 0\nOpens 18 Apr 2025\, closes 2 May 2025\nIssue manager: Nepal SBI Merchan
+ t Banking Limited\nhttps://www.sharesansar.com/announcementdetail/sanvi-en
+ ergy-limited-has-published-an-offer-letter-to-issue-880000-units-ipo-share
+ s-to-the-project-affected-locals-of-illam-district-and-291000-units-ipo-sh
+ ares-to-foreign-nepalese-immigrants-from-5th-baisakh-to-19th-baisakh-2082-
+ 2025-04-09
+URL:https://www.sharesansar.com/announcementdetail/sanvi-energy-limited-has
+ -published-an-offer-letter-to-issue-880000-units-ipo-shares-to-the-project
+ -affected-locals-of-illam-district-and-291000-units-ipo-shares-to-foreign-
+ nepalese-immigrants-from-5th-baisakh-to-19th-baisakh-2082-2025-04-09
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:IPO for migrant workers opens today: Sanvi Energy Limited (SANV
+ I)
+TRIGGER;VALUE=DATE-TIME:20250418T031500Z
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:issue-ipo-migrant-1145-397169.3@codila125.github.io
+DTSTAMP:20250421T000000Z
+DTSTART;VALUE=DATE:20250421
+DTEND;VALUE=DATE:20250506
+SUMMARY:IPO for migrant workers: Trade Tower Limited (TTL)
+DESCRIPTION:IPO for migrant workers · TTL\nPrice: Rs 100\nUnits: 397\,169.
+ 3\nOpens 21 Apr 2025\, closes 5 May 2025\nIssue manager: LS Capital Limite
+ d\nhttps://www.sharesansar.com/announcementdetail/trade-tower-limited-has-
+ published-an-offer-letter-to-issue-39716930-units-ipo-shares-to-the-foreig
+ n-nepalese-immigrants-from-8th-baisakh-to-22nd-baisakh-2082-2025-04-13
+URL:https://www.sharesansar.com/announcementdetail/trade-tower-limited-has-
+ published-an-offer-letter-to-issue-39716930-units-ipo-shares-to-the-foreig
+ n-nepalese-immigrants-from-8th-baisakh-to-22nd-baisakh-2082-2025-04-13
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:IPO for migrant workers opens today: Trade Tower Limited (TTL)
+TRIGGER;VALUE=DATE-TIME:20250421T031500Z
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:issue-ipo-migrant-1397-354550@codila125.github.io
+DTSTAMP:20250520T000000Z
+DTSTART;VALUE=DATE:20250520
+DTEND;VALUE=DATE:20250604
+SUMMARY:IPO for migrant workers: Bikash Hydropower Company Limited (BHCL)
+DESCRIPTION:IPO for migrant workers · BHCL\nPrice: Rs 100\nUnits: 354\,550
+ \nOpens 20 May 2025\, closes 3 Jun 2025\nIssue manager: Prabhu Capital Ltd
+ .\nhttps://www.sharesansar.com/announcementdetail/bikash-hydropower-compan
+ y-limited-has-published-an-offer-letter-to-issue-909101-units-ipo-shares-t
+ o-the-project-affected-locals-of-gorkha-district-and-354550-units-ipo-shar
+ es-to-foreign-nepalese-immigrants-from-6th-jestha-to-20th-jestha-2082-2025
+ -05-10
+URL:https://www.sharesansar.com/announcementdetail/bikash-hydropower-compan
+ y-limited-has-published-an-offer-letter-to-issue-909101-units-ipo-shares-t
+ o-the-project-affected-locals-of-gorkha-district-and-354550-units-ipo-shar
+ es-to-foreign-nepalese-immigrants-from-6th-jestha-to-20th-jestha-2082-2025
+ -05-10
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:IPO for migrant workers opens today: Bikash Hydropower Company 
+ Limited (BHCL)
+TRIGGER;VALUE=DATE-TIME:20250520T031500Z
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:issue-ipo-migrant-1298-93250@codila125.github.io
+DTSTAMP:20250613T000000Z
+DTSTART;VALUE=DATE:20250613
+DTEND;VALUE=DATE:20250628
+SUMMARY:IPO for migrant workers: Him Star Urja Company Limited (HIMSTAR)
+DESCRIPTION:IPO for migrant workers · HIMSTAR\nPrice: Rs 100\nUnits: 93\,2
+ 50\nOpens 13 Jun 2025\, closes 27 Jun 2025\nIssue manager: NIC Asia Capita
+ l Limited\nhttps://www.sharesansar.com/announcementdetail/him-star-urja-co
+ mpany-limited-has-published-an-offer-letter-to-issue-186500-units-ipo-shar
+ es-to-the-project-affected-locals-of-okhaldhunga-and-solukhumbhu-district-
+ and-93250-units-ipo-shares-to-foreign-nepalese-immigrants-from-30th-jestha
+ -to-13th-ashad-2082-2025-06-06
+URL:https://www.sharesansar.com/announcementdetail/him-star-urja-company-li
+ mited-has-published-an-offer-letter-to-issue-186500-units-ipo-shares-to-th
+ e-project-affected-locals-of-okhaldhunga-and-solukhumbhu-district-and-9325
+ 0-units-ipo-shares-to-foreign-nepalese-immigrants-from-30th-jestha-to-13th
+ -ashad-2082-2025-06-06
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:IPO for migrant workers opens today: Him Star Urja Company Limi
+ ted (HIMSTAR)
+TRIGGER;VALUE=DATE-TIME:20250613T031500Z
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:issue-ipo-migrant-1125-291950@codila125.github.io
+DTSTAMP:20250623T000000Z
+DTSTART;VALUE=DATE:20250623
+DTEND;VALUE=DATE:20250708
+SUMMARY:IPO for migrant workers: Daramkhola Hydro Energy Limited (DHEL)
+DESCRIPTION:IPO for migrant workers · DHEL\nPrice: Rs 100\nUnits: 291\,950
+ \nOpens 23 Jun 2025\, closes 7 Jul 2025\nIssue manager: Laxmi Sunrise Capi
+ tal Limited\nhttps://www.sharesansar.com/announcementdetail/daramkhola-hyd
+ ro-energy-limited-has-published-an-offer-letter-to-issue-1030500-units-ipo
+ -shares-to-the-project-affected-locals-of-gulmi-and-baglung-district-and-2
+ 91950-units-ipo-shares-to-foreign-nepalese-immigrants-from-9th-ashad-to-23
+ rd-ashad-2082-2025-06-15
+URL:https://www.sharesansar.com/announcementdetail/daramkhola-hydro-energy-
+ limited-has-published-an-offer-letter-to-issue-1030500-units-ipo-shares-to
+ -the-project-affected-locals-of-gulmi-and-baglung-district-and-291950-unit
+ s-ipo-shares-to-foreign-nepalese-immigrants-from-9th-ashad-to-23rd-ashad-2
+ 082-2025-06-15
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:IPO for migrant workers opens today: Daramkhola Hydro Energy Li
+ mited (DHEL)
+TRIGGER;VALUE=DATE-TIME:20250623T031500Z
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:issue-ipo-migrant-1317-150471@codila125.github.io
+DTSTAMP:20250706T000000Z
+DTSTART;VALUE=DATE:20250706
+DTEND;VALUE=DATE:20250721
+SUMMARY:IPO for migrant workers: Mabilung Energy Limited (MABEL)
+DESCRIPTION:IPO for migrant workers · MABEL\nPrice: Rs 100\nUnits: 150\,47
+ 1\nOpens 6 Jul 2025\, closes 20 Jul 2025\nIssue manager: LS Capital Limite
+ d\nhttps://www.sharesansar.com/announcementdetail/mabilung-energy-limited-
+ has-published-an-offer-letter-to-issue-385824-units-ipo-shares-to-the-proj
+ ect-affected-locals-of-sankhuwasabha-district-and-150471-units-ipo-shares-
+ to-foreign-nepalese-immigrants-from-22nd-ashad-to-4th-shrawan-2082-2025-06
+ -29
+URL:https://www.sharesansar.com/announcementdetail/mabilung-energy-limited-
+ has-published-an-offer-letter-to-issue-385824-units-ipo-shares-to-the-proj
+ ect-affected-locals-of-sankhuwasabha-district-and-150471-units-ipo-shares-
+ to-foreign-nepalese-immigrants-from-22nd-ashad-to-4th-shrawan-2082-2025-06
+ -29
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:IPO for migrant workers opens today: Mabilung Energy Limited (M
+ ABEL)
+TRIGGER;VALUE=DATE-TIME:20250706T031500Z
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:issue-ipo-migrant-915-23100@codila125.github.io
+DTSTAMP:20250711T000000Z
+DTSTART;VALUE=DATE:20250711
+DTEND;VALUE=DATE:20250726
+SUMMARY:IPO for migrant workers: Swastik Laghubitta Bittiya Sanstha Limited
+  (SWASTIK)
+DESCRIPTION:IPO for migrant workers · SWASTIK\nPrice: Rs 100\nUnits: 23\,1
+ 00\nOpens 11 Jul 2025\, closes 25 Jul 2025\nIssue manager: Nabil Investmen
+ t Banking Limited\nhttps://www.sharesansar.com/announcementdetail/swastik-
+ laghubitta-bittiya-sanstha-limited-has-published-an-offer-letter-to-issue-
+ 23100-units-ipo-shares-to-the-foreign-nepalese-immigrants-from-27th-ashad-
+ to-9th-shrawan-2082-2025-07-03
+URL:https://www.sharesansar.com/announcementdetail/swastik-laghubitta-bitti
+ ya-sanstha-limited-has-published-an-offer-letter-to-issue-23100-units-ipo-
+ shares-to-the-foreign-nepalese-immigrants-from-27th-ashad-to-9th-shrawan-2
+ 082-2025-07-03
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:IPO for migrant workers opens today: Swastik Laghubitta Bittiya
+  Sanstha Limited (SWASTIK)
+TRIGGER;VALUE=DATE-TIME:20250711T031500Z
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:issue-ipo-migrant-1179-207500@codila125.github.io
+DTSTAMP:20250713T000000Z
+DTSTART;VALUE=DATE:20250713
+DTEND;VALUE=DATE:20250728
+SUMMARY:IPO for migrant workers: Bungal Hydro Limited (BUNGAL)
+DESCRIPTION:IPO for migrant workers · BUNGAL\nPrice: Rs 100\nUnits: 207\,5
+ 00\nOpens 13 Jul 2025\, closes 27 Jul 2025\nIssue manager: Himalayan Capit
+ al Limited\nhttps://www.sharesansar.com/announcementdetail/bungal-hydro-li
+ mited-has-published-an-offer-letter-to-issue-830000-units-ipo-shares-to-th
+ e-project-affected-locals-of-bajhang-district-and-207500-units-ipo-shares-
+ to-foreign-nepalese-employees-from-29th-ashad-to-11th-shrawan-2082-2025-07
+ -06
+URL:https://www.sharesansar.com/announcementdetail/bungal-hydro-limited-has
+ -published-an-offer-letter-to-issue-830000-units-ipo-shares-to-the-project
+ -affected-locals-of-bajhang-district-and-207500-units-ipo-shares-to-foreig
+ n-nepalese-employees-from-29th-ashad-to-11th-shrawan-2082-2025-07-06
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:IPO for migrant workers opens today: Bungal Hydro Limited (BUNG
+ AL)
+TRIGGER;VALUE=DATE-TIME:20250713T031500Z
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:issue-ipo-migrant-1387-529400@codila125.github.io
+DTSTAMP:20250722T000000Z
+DTSTART;VALUE=DATE:20250722
+DTEND;VALUE=DATE:20250726
+SUMMARY:IPO for migrant workers: Bandipur Cable Car and Tourism Limited (BA
+ NDIPUR)
+DESCRIPTION:IPO for migrant workers · BANDIPUR\nPrice: Rs 100\nUnits: 529\
+ ,400\nOpens 22 Jul 2025\, closes 25 Jul 2025\nMay stay open until 5 Sep 20
+ 25\nIssue manager: Nepal SBI Merchant Banking Limited\nhttps://www.sharesa
+ nsar.com/announcementdetail/bandipur-cable-car-and-tourism-limited-has-pub
+ lished-an-offer-letter-to-issue-529400-units-ipo-shares-to-foreign-nepales
+ e-employees-from-6th-shrawan-to-9th-shrawan-2082-2025-07-14
+URL:https://www.sharesansar.com/announcementdetail/bandipur-cable-car-and-t
+ ourism-limited-has-published-an-offer-letter-to-issue-529400-units-ipo-sha
+ res-to-foreign-nepalese-employees-from-6th-shrawan-to-9th-shrawan-2082-202
+ 5-07-14
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:IPO for migrant workers opens today: Bandipur Cable Car and Tou
+ rism Limited (BANDIPUR)
+TRIGGER;VALUE=DATE-TIME:20250722T031500Z
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:issue-ipo-migrant-1445-57029@codila125.github.io
+DTSTAMP:20250730T000000Z
+DTSTART;VALUE=DATE:20250730
+DTEND;VALUE=DATE:20250804
+SUMMARY:IPO for migrant workers: Jhapa Energy Limited (JHAPA)
+DESCRIPTION:IPO for migrant workers · JHAPA\nPrice: Rs 100\nUnits: 57\,029
+ \nOpens 30 Jul 2025\, closes 3 Aug 2025\nMay stay open until 13 Aug 2025\n
+ Issue manager: Himalayan Capital Limited\nhttps://www.sharesansar.com/anno
+ uncementdetail/jhapa-energy-limited-has-published-an-offer-letter-to-issue
+ -57029-units-ipo-shares-to-foreign-nepalese-employees-from-14th-shrawan-to
+ -18th-shrawan-2082-2025-07-23
+URL:https://www.sharesansar.com/announcementdetail/jhapa-energy-limited-has
+ -published-an-offer-letter-to-issue-57029-units-ipo-shares-to-foreign-nepa
+ lese-employees-from-14th-shrawan-to-18th-shrawan-2082-2025-07-23
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:IPO for migrant workers opens today: Jhapa Energy Limited (JHAP
+ A)
+TRIGGER;VALUE=DATE-TIME:20250730T031500Z
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:issue-ipo-migrant-1369-145200@codila125.github.io
+DTSTAMP:20250813T000000Z
+DTSTART;VALUE=DATE:20250813
+DTEND;VALUE=DATE:20250818
+SUMMARY:IPO for migrant workers: Sagar Distillery Limited (SAGAR)
+DESCRIPTION:IPO for migrant workers · SAGAR\nPrice: Rs 100\nUnits: 145\,20
+ 0\nOpens 13 Aug 2025\, closes 17 Aug 2025\nMay stay open until 27 Aug 2025
+ \nIssue manager: Muktinath Capital Limited\nhttps://www.sharesansar.com/an
+ nouncementdetail/sagar-distillery-limited-has-published-an-offer-letter-to
+ -issue-145200-units-ipo-shares-to-foreign-nepalese-employees-from-28th-shr
+ awan-to-1st-bhadra-2082-2025-08-05
+URL:https://www.sharesansar.com/announcementdetail/sagar-distillery-limited
+ -has-published-an-offer-letter-to-issue-145200-units-ipo-shares-to-foreign
+ -nepalese-employees-from-28th-shrawan-to-1st-bhadra-2082-2025-08-05
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:IPO for migrant workers opens today: Sagar Distillery Limited (
+ SAGAR)
+TRIGGER;VALUE=DATE-TIME:20250813T031500Z
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:issue-ipo-migrant-1455-309938@codila125.github.io
+DTSTAMP:20250827T000000Z
+DTSTART;VALUE=DATE:20250827
+DTEND;VALUE=DATE:20250901
+SUMMARY:IPO for migrant workers: Shreenagar Agritech Industries Limited (SA
+ IL)
+DESCRIPTION:IPO for migrant workers · SAIL\nPrice: Rs 100\nUnits: 309\,938
+ \nOpens 27 Aug 2025\, closes 31 Aug 2025\nMay stay open until 10 Sep 2025\
+ nIssue manager: Nabil Investment Banking Limited\nhttps://www.sharesansar.
+ com/announcementdetail/shreenagar-agritech-industries-limited-has-publishe
+ d-an-offer-letter-to-issue-309938-units-ipo-shares-to-foreign-nepalese-emp
+ loyees-from-11th-bhadra-to-15th-bhadra-2082-2025-08-19
+URL:https://www.sharesansar.com/announcementdetail/shreenagar-agritech-indu
+ stries-limited-has-published-an-offer-letter-to-issue-309938-units-ipo-sha
+ res-to-foreign-nepalese-employees-from-11th-bhadra-to-15th-bhadra-2082-202
+ 5-08-19
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:IPO for migrant workers opens today: Shreenagar Agritech Indust
+ ries Limited (SAIL)
+TRIGGER;VALUE=DATE-TIME:20250827T031500Z
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:issue-ipo-migrant-1355-497092@codila125.github.io
+DTSTAMP:20250923T000000Z
+DTSTART;VALUE=DATE:20250923
+DTEND;VALUE=DATE:20250927
+SUMMARY:IPO for migrant workers: SY Panel Nepal Limited (SYPNL)
+DESCRIPTION:IPO for migrant workers · SYPNL\nPrice: Rs 100\nUnits: 497\,09
+ 2\nOpens 23 Sep 2025\, closes 26 Sep 2025\nMay stay open until 7 Oct 2025\
+ nIssue manager: Prabhu Capital Limited\nhttps://www.sharesansar.com/announ
+ cementdetail/sy-panel-nepal-limited-is-opening-its-261627-units-ipo-shares
+ -to-the-project-affected-locals-of-chitwan-district-and-497092-units-ipo-s
+ hares-to-foreign-nepalese-employees-from-today-7th-ashwin-2082-2025-09-23
+URL:https://www.sharesansar.com/announcementdetail/sy-panel-nepal-limited-i
+ s-opening-its-261627-units-ipo-shares-to-the-project-affected-locals-of-ch
+ itwan-district-and-497092-units-ipo-shares-to-foreign-nepalese-employees-f
+ rom-today-7th-ashwin-2082-2025-09-23
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:IPO for migrant workers opens today: SY Panel Nepal Limited (SY
+ PNL)
+TRIGGER;VALUE=DATE-TIME:20250923T031500Z
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:issue-ipo-migrant-1362-1000000@codila125.github.io
+DTSTAMP:20251123T000000Z
+DTSTART;VALUE=DATE:20251123
+DTEND;VALUE=DATE:20251127
+SUMMARY:IPO for migrant workers: Solu Hydropower Limited (SOHL)
+DESCRIPTION:IPO for migrant workers · SOHL\nPrice: Rs 100\nUnits: 1\,000\,
+ 000\nOpens 23 Nov 2025\, closes 26 Nov 2025\nMay stay open until 7 Dec 202
+ 5\nIssue manager: Nabil Investment Banking Limited\nhttps://www.sharesansa
+ r.com/announcementdetail/solu-hydropower-limited-has-published-an-offer-le
+ tter-to-issue-1000000-units-ipo-shares-to-foreign-nepalese-employees-from-
+ 7th-mangsir-to-10th-mangsir-2082-2025-11-14
+URL:https://www.sharesansar.com/announcementdetail/solu-hydropower-limited-
+ has-published-an-offer-letter-to-issue-1000000-units-ipo-shares-to-foreign
+ -nepalese-employees-from-7th-mangsir-to-10th-mangsir-2082-2025-11-14
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:IPO for migrant workers opens today: Solu Hydropower Limited (S
+ OHL)
+TRIGGER;VALUE=DATE-TIME:20251123T031500Z
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:issue-ipo-migrant-1090-115596@codila125.github.io
+DTSTAMP:20251208T000000Z
+DTSTART;VALUE=DATE:20251208
+DTEND;VALUE=DATE:20251212
+SUMMARY:IPO for migrant workers: Reliance Spinning Mills Limited (RSML)
+DESCRIPTION:IPO for migrant workers · RSML\nPrice: Rs 820.8\nUnits: 115\,5
+ 96\nOpens 8 Dec 2025\, closes 11 Dec 2025\nMay stay open until 22 Dec 2025
+ \nIssue manager: Global IME Capital Ltd\nhttps://www.sharesansar.com/annou
+ ncementdetail/reliance-spinning-mills-has-published-an-offer-letter-to-iss
+ ue-115596-ipo-shares-to-foreign-nepalese-employees-from-22nd-mangsir-to-25
+ th-mangsir-2082-2025-12-07
+URL:https://www.sharesansar.com/announcementdetail/reliance-spinning-mills-
+ has-published-an-offer-letter-to-issue-115596-ipo-shares-to-foreign-nepale
+ se-employees-from-22nd-mangsir-to-25th-mangsir-2082-2025-12-07
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:IPO for migrant workers opens today: Reliance Spinning Mills Li
+ mited (RSML)
+TRIGGER;VALUE=DATE-TIME:20251208T031500Z
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:issue-ipo-migrant-447-172388@codila125.github.io
+DTSTAMP:20251211T000000Z
+DTSTART;VALUE=DATE:20251211
+DTEND;VALUE=DATE:20251216
+SUMMARY:IPO for migrant workers: Salapa Bikas Bank Limited (SABBL)
+DESCRIPTION:IPO for migrant workers · SABBL\nPrice: Rs 100\nUnits: 172\,38
+ 8\nOpens 11 Dec 2025\, closes 15 Dec 2025\nMay stay open until 25 Dec 2025
+ \nIssue manager: Muktinath Capital Limited\nhttps://www.sharesansar.com/an
+ nouncementdetail/salapa-bikas-bank-limited-has-published-an-offer-letter-t
+ o-issue-172388-units-ipo-shares-to-foreign-nepalese-employees-from-25th-ma
+ ngsir-to-29th-mangsir-2082-2025-12-02
+URL:https://www.sharesansar.com/announcementdetail/salapa-bikas-bank-limite
+ d-has-published-an-offer-letter-to-issue-172388-units-ipo-shares-to-foreig
+ n-nepalese-employees-from-25th-mangsir-to-29th-mangsir-2082-2025-12-02
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:IPO for migrant workers opens today: Salapa Bikas Bank Limited 
+ (SABBL)
+TRIGGER;VALUE=DATE-TIME:20251211T031500Z
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:issue-ipo-migrant-1222-100000@codila125.github.io
+DTSTAMP:20251218T000000Z
+DTSTART;VALUE=DATE:20251218
+DTEND;VALUE=DATE:20251223
+SUMMARY:IPO for migrant workers: Bhujung Hydropower Limited (BJHL)
+DESCRIPTION:IPO for migrant workers · BJHL\nPrice: Rs 100\nUnits: 100\,000
+ \nOpens 18 Dec 2025\, closes 22 Dec 2025\nMay stay open until 1 Jan 2026\n
+ Issue manager: Kumari Capital Limited\nhttps://www.sharesansar.com/announc
+ ementdetail/bhujung-hydropower-limited-has-published-an-offer-letter-to-is
+ sue-100000-units-ipo-shares-to-foreign-nepalese-employees-from-3rd-poush-t
+ o-7th-poush-2082-2025-12-09
+URL:https://www.sharesansar.com/announcementdetail/bhujung-hydropower-limit
+ ed-has-published-an-offer-letter-to-issue-100000-units-ipo-shares-to-forei
+ gn-nepalese-employees-from-3rd-poush-to-7th-poush-2082-2025-12-09
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:IPO for migrant workers opens today: Bhujung Hydropower Limited
+  (BJHL)
+TRIGGER;VALUE=DATE-TIME:20251218T031500Z
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:issue-ipo-migrant-1459-68967@codila125.github.io
+DTSTAMP:20251224T000000Z
+DTSTART;VALUE=DATE:20251224
+DTEND;VALUE=DATE:20251230
+SUMMARY:IPO for migrant workers: Suryakunda Hydro Electric Limited (SKHEL)
+DESCRIPTION:IPO for migrant workers · SKHEL\nPrice: Rs 100\nUnits: 68\,967
+ \nOpens 24 Dec 2025\, closes 29 Dec 2025\nMay stay open until 7 Jan 2026\n
+ Issue manager: Kumari Capital Limited\nhttps://www.sharesansar.com/announc
+ ementdetail/suryakunda-hydro-electric-limited-has-published-an-offer-lette
+ r-to-issue-68967-units-ipo-shares-to-foreign-nepalese-employees-from-9th-p
+ oush-to-14th-poush-2082-2025-12-16
+URL:https://www.sharesansar.com/announcementdetail/suryakunda-hydro-electri
+ c-limited-has-published-an-offer-letter-to-issue-68967-units-ipo-shares-to
+ -foreign-nepalese-employees-from-9th-poush-to-14th-poush-2082-2025-12-16
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:IPO for migrant workers opens today: Suryakunda Hydro Electric 
+ Limited (SKHEL)
+TRIGGER;VALUE=DATE-TIME:20251224T031500Z
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:issue-ipo-migrant-1446-142200@codila125.github.io
+DTSTAMP:20251228T000000Z
+DTSTART;VALUE=DATE:20251228
+DTEND;VALUE=DATE:20260102
+SUMMARY:IPO for migrant workers: Ridge Line Energy Limited (RLEL)
+DESCRIPTION:IPO for migrant workers · RLEL\nPrice: Rs 100\nUnits: 142\,200
+ \nOpens 28 Dec 2025\, closes 1 Jan 2026\nMay stay open until 12 Jan 2026\n
+ Issue manager: Prabhu Capital Limited\nhttps://www.sharesansar.com/announc
+ ementdetail/ridge-line-energy-limited-has-published-an-offer-letter-to-iss
+ ue-142200-units-ipo-shares-to-foreign-nepalese-employees-from-13th-poush-t
+ o-17th-poush-2082-2025-12-18
+URL:https://www.sharesansar.com/announcementdetail/ridge-line-energy-limite
+ d-has-published-an-offer-letter-to-issue-142200-units-ipo-shares-to-foreig
+ n-nepalese-employees-from-13th-poush-to-17th-poush-2082-2025-12-18
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:IPO for migrant workers opens today: Ridge Line Energy Limited 
+ (RLEL)
+TRIGGER;VALUE=DATE-TIME:20251228T031500Z
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:issue-ipo-migrant-1399-155000@codila125.github.io
+DTSTAMP:20260106T000000Z
+DTSTART;VALUE=DATE:20260106
+DTEND;VALUE=DATE:20260110
+SUMMARY:IPO for migrant workers: Super Khudi Hydropower Limited (SKHL)
+DESCRIPTION:IPO for migrant workers · SKHL\nPrice: Rs 100\nUnits: 155\,000
+ \nOpens 6 Jan 2026\, closes 9 Jan 2026\nMay stay open until 20 Jan 2026\nI
+ ssue manager: Global IME Capital Ltd\nhttps://www.sharesansar.com/announce
+ mentdetail/super-khudi-hydropower-limited-has-published-an-offer-letter-to
+ -issue-155000-units-ipo-shares-to-foreign-nepalese-employees-from-22nd-pou
+ sh-to-25th-poush-2082-2025-12-28
+URL:https://www.sharesansar.com/announcementdetail/super-khudi-hydropower-l
+ imited-has-published-an-offer-letter-to-issue-155000-units-ipo-shares-to-f
+ oreign-nepalese-employees-from-22nd-poush-to-25th-poush-2082-2025-12-28
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:IPO for migrant workers opens today: Super Khudi Hydropower Lim
+ ited (SKHL)
+TRIGGER;VALUE=DATE-TIME:20260106T031500Z
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:issue-ipo-migrant-932-562500@codila125.github.io
+DTSTAMP:20260109T000000Z
+DTSTART;VALUE=DATE:20260109
+DTEND;VALUE=DATE:20260115
+SUMMARY:IPO for migrant workers: Palpa Cements Industries Limited (PCIL)
+DESCRIPTION:IPO for migrant workers · PCIL\nPrice: Rs 100\nUnits: 562\,500
+ \nOpens 9 Jan 2026\, closes 14 Jan 2026\nMay stay open until 23 Jan 2026\n
+ Issue manager: Nabil Investment Banking Ltd.\nhttps://www.sharesansar.com/
+ announcementdetail/palpa-cements-industries-limited-has-published-an-offer
+ -letter-to-issue-562500-units-ipo-shares-to-foreign-nepalese-employees-fro
+ m-25th-poush-to-30th-poush-2082-2026-01-01
+URL:https://www.sharesansar.com/announcementdetail/palpa-cements-industries
+ -limited-has-published-an-offer-letter-to-issue-562500-units-ipo-shares-to
+ -foreign-nepalese-employees-from-25th-poush-to-30th-poush-2082-2026-01-01
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:IPO for migrant workers opens today: Palpa Cements Industries L
+ imited (PCIL)
+TRIGGER;VALUE=DATE-TIME:20260109T031500Z
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:issue-ipo-migrant-1357-400000@codila125.github.io
+DTSTAMP:20260118T000000Z
+DTSTART;VALUE=DATE:20260118
+DTEND;VALUE=DATE:20260123
+SUMMARY:IPO for migrant workers: Hotel Forest Inn Limited (HFIN)
+DESCRIPTION:IPO for migrant workers · HFIN\nPrice: Rs 100\nUnits: 400\,000
+ \nOpens 18 Jan 2026\, closes 22 Jan 2026\nMay stay open until 1 Feb 2026\n
+ Issue manager: NIC Asia Capital Limited\nhttps://www.sharesansar.com/annou
+ ncementdetail/hotel-forest-inn-limited-has-published-an-offer-letter-to-is
+ sue-400000-units-ipo-shares-to-foreign-nepalese-employees-from-4th-magh-to
+ -8th-magh-2082-2026-01-08
+URL:https://www.sharesansar.com/announcementdetail/hotel-forest-inn-limited
+ -has-published-an-offer-letter-to-issue-400000-units-ipo-shares-to-foreign
+ -nepalese-employees-from-4th-magh-to-8th-magh-2082-2026-01-08
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:IPO for migrant workers opens today: Hotel Forest Inn Limited (
+ HFIN)
+TRIGGER;VALUE=DATE-TIME:20260118T031500Z
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:issue-ipo-migrant-1239-222000@codila125.github.io
+DTSTAMP:20260120T000000Z
+DTSTART;VALUE=DATE:20260120
+DTEND;VALUE=DATE:20260124
+SUMMARY:IPO for migrant workers: Shikhar Power Development Limited (SIPD)
+DESCRIPTION:IPO for migrant workers · SIPD\nPrice: Rs 100\nUnits: 222\,000
+ \nOpens 20 Jan 2026\, closes 23 Jan 2026\nMay stay open until 3 Feb 2026\n
+ Issue manager: Global IME Capital Ltd\nhttps://www.sharesansar.com/announc
+ ementdetail/shikhar-power-development-limited-has-published-an-offer-lette
+ r-to-issue-222000-units-ipo-shares-to-foreign-nepalese-employees-from-6th-
+ magh-2082-to-9th-magh-2082-2026-01-07
+URL:https://www.sharesansar.com/announcementdetail/shikhar-power-developmen
+ t-limited-has-published-an-offer-letter-to-issue-222000-units-ipo-shares-t
+ o-foreign-nepalese-employees-from-6th-magh-2082-to-9th-magh-2082-2026-01-0
+ 7
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:IPO for migrant workers opens today: Shikhar Power Development 
+ Limited (SIPD)
+TRIGGER;VALUE=DATE-TIME:20260120T031500Z
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:issue-ipo-migrant-1548-94000@codila125.github.io
+DTSTAMP:20260223T000000Z
+DTSTART;VALUE=DATE:20260223
+DTEND;VALUE=DATE:20260227
+SUMMARY:IPO for migrant workers: Appolo Hydropower Limited (APHL)
+DESCRIPTION:IPO for migrant workers · APHL\nPrice: Rs 100\nUnits: 94\,000\
+ nOpens 23 Feb 2026\, closes 26 Feb 2026\nMay stay open until 9 Mar 2026\nI
+ ssue manager: Himalayan Capital Limited\nhttps://www.sharesansar.com/annou
+ ncementdetail/appolo-hydropwer-limited-has-published-an-offer-letter-to-is
+ sue-94000-units-ipo-shares-to-foreign-nepalese-employees-from-11th-falgun-
+ to-14th-falgun-2082-2026-02-11
+URL:https://www.sharesansar.com/announcementdetail/appolo-hydropwer-limited
+ -has-published-an-offer-letter-to-issue-94000-units-ipo-shares-to-foreign-
+ nepalese-employees-from-11th-falgun-to-14th-falgun-2082-2026-02-11
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:IPO for migrant workers opens today: Appolo Hydropower Limited 
+ (APHL)
+TRIGGER;VALUE=DATE-TIME:20260223T031500Z
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:issue-ipo-migrant-1376-82500@codila125.github.io
+DTSTAMP:20260225T000000Z
+DTSTART;VALUE=DATE:20260225
+DTEND;VALUE=DATE:20260302
+SUMMARY:IPO for migrant workers: Kalinchowk Hydropower Limited (KHPL)
+DESCRIPTION:IPO for migrant workers · KHPL\nPrice: Rs 100\nUnits: 82\,500\
+ nOpens 25 Feb 2026\, closes 1 Mar 2026\nMay stay open until 11 Mar 2026\nI
+ ssue manager: RBB Merchant Banking Ltd\nhttps://www.sharesansar.com/announ
+ cementdetail/kalinchowk-hydropower-limited-has-published-an-offer-letter-t
+ o-issue-82500-units-ipo-shares-to-foreign-nepalese-employees-from-13th-fal
+ gun-to-17th-falgun-2082-2026-02-25
+URL:https://www.sharesansar.com/announcementdetail/kalinchowk-hydropower-li
+ mited-has-published-an-offer-letter-to-issue-82500-units-ipo-shares-to-for
+ eign-nepalese-employees-from-13th-falgun-to-17th-falgun-2082-2026-02-25
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:IPO for migrant workers opens today: Kalinchowk Hydropower Limi
+ ted (KHPL)
+TRIGGER;VALUE=DATE-TIME:20260225T031500Z
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:issue-ipo-migrant-887-303067@codila125.github.io
+DTSTAMP:20260311T000000Z
+DTSTART;VALUE=DATE:20260311
+DTEND;VALUE=DATE:20260316
+SUMMARY:IPO for migrant workers: Taksar Pikhuwa Khola Hydropower Limited (T
+ PKHL)
+DESCRIPTION:IPO for migrant workers · TPKHL\nPrice: Rs 100\nUnits: 303\,06
+ 7\nOpens 11 Mar 2026\, closes 15 Mar 2026\nMay stay open until 25 Mar 2026
+ \nIssue manager: Prabhu Capital Limited\nhttps://www.sharesansar.com/annou
+ ncementdetail/taksar-pikhuwa-khola-hydropower-limited-has-published-an-off
+ er-letter-to-issue-303067-units-ipo-shares-to-foreign-nepalese-employees-f
+ rom-27th-falgun-to-1st-chaitra-2082-2026-02-25
+URL:https://www.sharesansar.com/announcementdetail/taksar-pikhuwa-khola-hyd
+ ropower-limited-has-published-an-offer-letter-to-issue-303067-units-ipo-sh
+ ares-to-foreign-nepalese-employees-from-27th-falgun-to-1st-chaitra-2082-20
+ 26-02-25
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:IPO for migrant workers opens today: Taksar Pikhuwa Khola Hydro
+ power Limited (TPKHL)
+TRIGGER;VALUE=DATE-TIME:20260311T031500Z
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:issue-ipo-migrant-1352-104000@codila125.github.io
+DTSTAMP:20260315T000000Z
+DTSTART;VALUE=DATE:20260315
+DTEND;VALUE=DATE:20260320
+SUMMARY:IPO for migrant workers: Beni Hydropower Project Limited (BENH)
+DESCRIPTION:IPO for migrant workers · BENH\nPrice: Rs 100\nUnits: 104\,000
+ \nOpens 15 Mar 2026\, closes 19 Mar 2026\nMay stay open until 29 Mar 2026\
+ nIssue manager: NMB Capital Limited\nhttps://www.sharesansar.com/announcem
+ entdetail/beni-hydropower-project-limited-has-published-an-offer-letter-to
+ -issue-104000-units-ipo-shares-to-foreign-nepalese-employees-from-1st-chai
+ tra-to-5th-chaitra-2082-2026-02-27
+URL:https://www.sharesansar.com/announcementdetail/beni-hydropower-project-
+ limited-has-published-an-offer-letter-to-issue-104000-units-ipo-shares-to-
+ foreign-nepalese-employees-from-1st-chaitra-to-5th-chaitra-2082-2026-02-27
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:IPO for migrant workers opens today: Beni Hydropower Project Li
+ mited (BENH)
+TRIGGER;VALUE=DATE-TIME:20260315T031500Z
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:issue-ipo-migrant-1180-570000@codila125.github.io
+DTSTAMP:20260322T000000Z
+DTSTART;VALUE=DATE:20260322
+DTEND;VALUE=DATE:20260326
+SUMMARY:IPO for migrant workers: Sanigad Hydro Limited (SGHL)
+DESCRIPTION:IPO for migrant workers · SGHL\nPrice: Rs 100\nUnits: 570\,000
+ \nOpens 22 Mar 2026\, closes 25 Mar 2026\nMay stay open until 5 Apr 2026\n
+ Issue manager: LS Capital Limited\nhttps://www.sharesansar.com/announcemen
+ tdetail/sanigad-hydro-limited-has-published-an-offer-letter-to-issue-57000
+ 0-units-ipo-shares-to-foreign-nepalese-employees-from-8th-chaitra-to-11th-
+ chaitra-2082-2026-03-15
+URL:https://www.sharesansar.com/announcementdetail/sanigad-hydro-limited-ha
+ s-published-an-offer-letter-to-issue-570000-units-ipo-shares-to-foreign-ne
+ palese-employees-from-8th-chaitra-to-11th-chaitra-2082-2026-03-15
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:IPO for migrant workers opens today: Sanigad Hydro Limited (SGH
+ L)
+TRIGGER;VALUE=DATE-TIME:20260322T031500Z
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:issue-ipo-migrant-1320-210000@codila125.github.io
+DTSTAMP:20260322T000000Z
+DTSTART;VALUE=DATE:20260322
+DTEND;VALUE=DATE:20260326
+SUMMARY:IPO for migrant workers: Yambaling Hydropower Limited (YMHL)
+DESCRIPTION:IPO for migrant workers · YMHL\nPrice: Rs 100\nUnits: 210\,000
+ \nOpens 22 Mar 2026\, closes 25 Mar 2026\nMay stay open until 5 Apr 2026\n
+ Issue manager: Muktinath Capital Limited\nhttps://www.sharesansar.com/anno
+ uncementdetail/yambaling-hydropower-limited-has-published-an-offer-letter-
+ to-issue-210000-units-ipo-shares-to-foreign-nepalese-employees-from-8th-ch
+ aitra-to-11th-chaitra-2082-2026-03-12
+URL:https://www.sharesansar.com/announcementdetail/yambaling-hydropower-lim
+ ited-has-published-an-offer-letter-to-issue-210000-units-ipo-shares-to-for
+ eign-nepalese-employees-from-8th-chaitra-to-11th-chaitra-2082-2026-03-12
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:IPO for migrant workers opens today: Yambaling Hydropower Limit
+ ed (YMHL)
+TRIGGER;VALUE=DATE-TIME:20260322T031500Z
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:issue-ipo-migrant-1216-429000@codila125.github.io
+DTSTAMP:20260323T000000Z
+DTSTART;VALUE=DATE:20260323
+DTEND;VALUE=DATE:20260327
+SUMMARY:IPO for migrant workers: Sopan Pharmaceuticals Limited (SOPL)
+DESCRIPTION:IPO for migrant workers · SOPL\nPrice: Rs 100\nUnits: 429\,000
+ \nOpens 23 Mar 2026\, closes 26 Mar 2026\nMay stay open until 6 Apr 2026\n
+ Issue manager: NMB Capital Limited\nhttps://www.sharesansar.com/announceme
+ ntdetail/sopan-pharmaceuticals-limited-has-published-an-offer-letter-to-is
+ sue-429000-units-ipo-shares-to-foreign-nepalese-employees-from-9th-chaitra
+ -to-12th-chaitra-2082-2026-03-13
+URL:https://www.sharesansar.com/announcementdetail/sopan-pharmaceuticals-li
+ mited-has-published-an-offer-letter-to-issue-429000-units-ipo-shares-to-fo
+ reign-nepalese-employees-from-9th-chaitra-to-12th-chaitra-2082-2026-03-13
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:IPO for migrant workers opens today: Sopan Pharmaceuticals Limi
+ ted (SOPL)
+TRIGGER;VALUE=DATE-TIME:20260323T031500Z
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:issue-ipo-migrant-1327-93750@codila125.github.io
+DTSTAMP:20260323T000000Z
+DTSTART;VALUE=DATE:20260323
+DTEND;VALUE=DATE:20260327
+SUMMARY:IPO for migrant workers: Snow Rivers Limited (SNORL)
+DESCRIPTION:IPO for migrant workers · SNORL\nPrice: Rs 100\nUnits: 93\,750
+ \nOpens 23 Mar 2026\, closes 26 Mar 2026\nMay stay open until 6 Apr 2026\n
+ Issue manager: Sanima Capital Limited\nhttps://www.sharesansar.com/announc
+ ementdetail/snow-rivers-limited-has-published-an-offer-letter-to-issue-937
+ 50-units-ipo-shares-to-foreign-nepalese-employees-from-9th-chaitra-to-12th
+ -chaitra-2082-2026-03-12
+URL:https://www.sharesansar.com/announcementdetail/snow-rivers-limited-has-
+ published-an-offer-letter-to-issue-93750-units-ipo-shares-to-foreign-nepal
+ ese-employees-from-9th-chaitra-to-12th-chaitra-2082-2026-03-12
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:IPO for migrant workers opens today: Snow Rivers Limited (SNORL
+ )
+TRIGGER;VALUE=DATE-TIME:20260323T031500Z
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:issue-ipo-migrant-1181-350000@codila125.github.io
+DTSTAMP:20260324T000000Z
+DTSTART;VALUE=DATE:20260324
+DTEND;VALUE=DATE:20260330
+SUMMARY:IPO for migrant workers: Kalanga Hydro Limited (KAHL)
+DESCRIPTION:IPO for migrant workers · KAHL\nPrice: Rs 100\nUnits: 350\,000
+ \nOpens 24 Mar 2026\, closes 29 Mar 2026\nMay stay open until 7 Apr 2026\n
+ Issue manager: Sanima Capital Limited\nhttps://www.sharesansar.com/announc
+ ementdetail/kalanga-hydro-limited-has-published-an-offer-letter-to-issue-3
+ 50000-units-ipo-shares-to-foreign-nepalese-employees-from-10th-chaitra-to-
+ 15th-chaitra-2082-2026-03-16
+URL:https://www.sharesansar.com/announcementdetail/kalanga-hydro-limited-ha
+ s-published-an-offer-letter-to-issue-350000-units-ipo-shares-to-foreign-ne
+ palese-employees-from-10th-chaitra-to-15th-chaitra-2082-2026-03-16
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:IPO for migrant workers opens today: Kalanga Hydro Limited (KAH
+ L)
+TRIGGER;VALUE=DATE-TIME:20260324T031500Z
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:issue-ipo-migrant-1540-79000@codila125.github.io
+DTSTAMP:20260429T000000Z
+DTSTART;VALUE=DATE:20260429
+DTEND;VALUE=DATE:20260506
+SUMMARY:IPO for migrant workers: Everest Colour Limited (ECL)
+DESCRIPTION:IPO for migrant workers · ECL\nPrice: Rs 100\nUnits: 79\,000\n
+ Opens 29 Apr 2026\, closes 5 May 2026\nMay stay open until 13 May 2026\nIs
+ sue manager: Muktinath Capital Limited\nhttps://www.sharesansar.com/announ
+ cementdetail/everest-colour-limited-has-published-an-offer-letter-to-issue
+ -79000-units-ipo-shares-to-foreign-nepalese-employees-from-16th-baisakh-to
+ -22nd-baisakh-2083-2026-04-19
+URL:https://www.sharesansar.com/announcementdetail/everest-colour-limited-h
+ as-published-an-offer-letter-to-issue-79000-units-ipo-shares-to-foreign-ne
+ palese-employees-from-16th-baisakh-to-22nd-baisakh-2083-2026-04-19
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:IPO for migrant workers opens today: Everest Colour Limited (EC
+ L)
+TRIGGER;VALUE=DATE-TIME:20260429T031500Z
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:issue-ipo-migrant-1549-172000@codila125.github.io
+DTSTAMP:20260430T000000Z
+DTSTART;VALUE=DATE:20260430
+DTEND;VALUE=DATE:20260507
+SUMMARY:IPO for migrant workers: Mount Everest Power Development Limited (M
+ EPDL)
+DESCRIPTION:IPO for migrant workers · MEPDL\nPrice: Rs 100\nUnits: 172\,00
+ 0\nOpens 30 Apr 2026\, closes 6 May 2026\nMay stay open until 14 May 2026\
+ nIssue manager: NIMB Ace Capital Limited\nhttps://www.sharesansar.com/anno
+ uncementdetail/mount-everest-power-development-limited-has-published-an-of
+ fer-letter-to-issue-172000-units-ipo-shares-to-foreign-nepalese-employees-
+ from-17th-baisakh-to-23rd-baisakh-2083-2026-04-21
+URL:https://www.sharesansar.com/announcementdetail/mount-everest-power-deve
+ lopment-limited-has-published-an-offer-letter-to-issue-172000-units-ipo-sh
+ ares-to-foreign-nepalese-employees-from-17th-baisakh-to-23rd-baisakh-2083-
+ 2026-04-21
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:IPO for migrant workers opens today: Mount Everest Power Develo
+ pment Limited (MEPDL)
+TRIGGER;VALUE=DATE-TIME:20260430T031500Z
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:issue-ipo-migrant-1593-85000@codila125.github.io
+DTSTAMP:20260504T000000Z
+DTSTART;VALUE=DATE:20260504
+DTEND;VALUE=DATE:20260508
+SUMMARY:IPO for migrant workers: Sarvottam Paints Industries Limited (SAPIL
+ )
+DESCRIPTION:IPO for migrant workers · SAPIL\nPrice: Rs 100\nUnits: 85\,000
+ \nOpens 4 May 2026\, closes 7 May 2026\nMay stay open until 18 May 2026\nI
+ ssue manager: Global IME Capital Ltd\nhttps://www.sharesansar.com/announce
+ mentdetail/sarvottam-paints-industries-limited-has-published-an-offer-lett
+ er-to-issue-85000-units-ipo-shares-to-foreign-migrant-workers-from-21st-ba
+ isakh-to-24th-baisakh-2083-2026-04-22
+URL:https://www.sharesansar.com/announcementdetail/sarvottam-paints-industr
+ ies-limited-has-published-an-offer-letter-to-issue-85000-units-ipo-shares-
+ to-foreign-migrant-workers-from-21st-baisakh-to-24th-baisakh-2083-2026-04-
+ 22
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:IPO for migrant workers opens today: Sarvottam Paints Industrie
+ s Limited (SAPIL)
+TRIGGER;VALUE=DATE-TIME:20260504T031500Z
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:issue-ipo-migrant-1171-422500@codila125.github.io
+DTSTAMP:20261028T000000Z
+DTSTART;VALUE=DATE:20261028
+DTEND;VALUE=DATE:20261103
+SUMMARY:IPO for migrant workers: Him Parbat Hydropower Limited (HPHL)
+DESCRIPTION:IPO for migrant workers · HPHL\nPrice: Rs 100\nUnits: 422\,500
+ \nOpens 28 Oct 2026\, closes 2 Nov 2026\nMay stay open until 11 Nov 2026\n
+ Issue manager: Citizens Capital Limited\nhttps://www.sharesansar.com/annou
+ ncementdetail/him-parbat-hydropower-limited-has-published-an-offer-letter-
+ to-issue-422500-units-ipo-shares-to-foreign-nepalese-employees-from-11th-k
+ artik-to-16th-kartik-2083-2026-10-12
+URL:https://www.sharesansar.com/announcementdetail/him-parbat-hydropower-li
+ mited-has-published-an-offer-letter-to-issue-422500-units-ipo-shares-to-fo
+ reign-nepalese-employees-from-11th-kartik-to-16th-kartik-2083-2026-10-12
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:IPO for migrant workers opens today: Him Parbat Hydropower Limi
+ ted (HPHL)
+TRIGGER;VALUE=DATE-TIME:20261028T031500Z
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:issue-ipo-migrant-1553-90000@codila125.github.io
+DTSTAMP:20261126T000000Z
+DTSTART;VALUE=DATE:20261126
+DTEND;VALUE=DATE:20261202
+SUMMARY:IPO for migrant workers: Kantipur Pharmaceuticals Lab Limited (KPL)
+DESCRIPTION:IPO for migrant workers · KPL\nPrice: Rs 100\nUnits: 90\,000\n
+ Opens 26 Nov 2026\, closes 1 Dec 2026\nMay stay open until 10 Dec 2026\nIs
+ sue manager: Muktinath Capital Limited\nhttps://www.sharesansar.com/announ
+ cementdetail/kantipur-pharmaceuticals-lab-limited-has-published-an-offer-l
+ etter-to-issue-90000-units-ipo-shares-to-foreign-nepalese-employees-from-1
+ 0th-mangsir-to-15th-mangsir-2083-2026-11-16
+URL:https://www.sharesansar.com/announcementdetail/kantipur-pharmaceuticals
+ -lab-limited-has-published-an-offer-letter-to-issue-90000-units-ipo-shares
+ -to-foreign-nepalese-employees-from-10th-mangsir-to-15th-mangsir-2083-2026
+ -11-16
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:IPO for migrant workers opens today: Kantipur Pharmaceuticals L
+ ab Limited (KPL)
+TRIGGER;VALUE=DATE-TIME:20261126T031500Z
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:issue-ipo-migrant-1363-60000@codila125.github.io
+DTSTAMP:20261130T000000Z
+DTSTART;VALUE=DATE:20261130
+DTEND;VALUE=DATE:20261204
+SUMMARY:IPO for migrant workers: Aashutosh Energy Limited (AELTD)
+DESCRIPTION:IPO for migrant workers · AELTD\nPrice: Rs 100\nUnits: 60\,000
+ \nOpens 30 Nov 2026\, closes 3 Dec 2026\nMay stay open until 14 Dec 2026\n
+ Issue manager: NMB Capital Limited\nhttps://www.sharesansar.com/announceme
+ ntdetail/aashutosh-energy-limited-has-published-an-offer-letter-to-issue-6
+ 0000-units-ipo-shares-to-foreign-nepalese-employees-from-14th-mangsir-to-1
+ 7th-mangsir-2083-2026-11-19
+URL:https://www.sharesansar.com/announcementdetail/aashutosh-energy-limited
+ -has-published-an-offer-letter-to-issue-60000-units-ipo-shares-to-foreign-
+ nepalese-employees-from-14th-mangsir-to-17th-mangsir-2083-2026-11-19
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:IPO for migrant workers opens today: Aashutosh Energy Limited (
+ AELTD)
+TRIGGER;VALUE=DATE-TIME:20261130T031500Z
+END:VALARM
+END:VEVENT
+END:VCALENDAR

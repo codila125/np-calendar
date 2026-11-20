@@ -16,66 +16,154 @@
   <meta name="color-scheme" content="light dark">
   <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
-  <title>Nepal Premier League 2026</title>
+  <title>np-calendar — Nepal share issues and NPL</title>
   <link rel="icon" href="data:,">
   <link rel="stylesheet" href="style.css">
   <script src="app.js" defer></script>
+  <script src="issues.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <header>
-    <h1>Nepal Premier League 2026</h1>
+    <h1>np-calendar</h1>
     <button id="theme-toggle" type="button" aria-pressed="false">Dark mode</button>
   </header>
-  <nav aria-label="Sections">
-    <ul>
-      <li><a href="#standings">Standings</a></li>
-      <li><a href="#stats">Stats</a></li>
-      <li><a href="#schedule">Schedule</a></li>
-      <li><a href="#calendar">Calendar</a></li>
-    </ul>
-  </nav>
-  <main id="main" aria-busy="true">
-    <div id="live-region" class="visually-hidden" aria-live="polite"></div>
-    <div id="refresh-note" class="refresh-note" hidden></div>
+  <main id="main">
+    <div role="tablist" aria-label="Site sections" class="tabs">
+      <button type="button" role="tab" id="tab-issues" aria-selected="true" aria-controls="panel-issues">Share issues</button>
+      <button type="button" role="tab" id="tab-npl" aria-selected="false" tabindex="-1" aria-controls="panel-npl">NPL</button>
+    </div>
 
-    <aside id="live" class="live-panel" aria-labelledby="live-heading" hidden>
-      <h2 id="live-heading">Match centre</h2>
-      <div id="live-content"></div>
-    </aside>
-
-    <section id="standings" aria-labelledby="standings-heading">
-      <h2 id="standings-heading">Standings</h2>
-      <div id="standings-content"><p>Loading…</p></div>
+    <section role="tabpanel" id="panel-issues" aria-labelledby="tab-issues" tabindex="0">
+      <h2>Share issues</h2>
+      <p class="section-intro">IPOs, FPOs, right shares and IPOs for locals and migrant workers in Nepal, from ShareSansar. Subscribe to a feed to get opening dates in your calendar.</p>
+      <p id="issues-status" role="status">Loading share issues…</p>
+      <div id="issues-month"></div>
+      <ul id="issues-legend" class="issues-legend"></ul>
+      <div id="issues-list"></div>
+      <section id="issues-feeds" aria-labelledby="issues-feeds-heading">
+        <h3 id="issues-feeds-heading">Subscribe</h3>
+        <ul id="issues-feed-list">
+          <li class="calendar-row issue-feed-row">
+            <span class="calendar-name">All share issues</span>
+            <span class="calendar-actions">
+              <a class="btn subscribe" aria-label="Subscribe to All share issues calendar"
+                 href="webcal://codila125.github.io/np-calendar/calendar/issues.ics">Subscribe</a>
+              <a class="btn google" target="_blank" rel="noopener" aria-label="Add All share issues to Google Calendar"
+                 href="https://calendar.google.com/calendar/r?cid=webcal%3A%2F%2Fcodila125.github.io%2Fnp-calendar%2Fcalendar%2Fissues.ics">Google Calendar</a>
+              <button type="button" class="copy" aria-label="Copy All share issues calendar URL"
+                      data-url="https://codila125.github.io/np-calendar/calendar/issues.ics">Copy URL</button>
+            </span>
+          </li>
+          <li class="calendar-row issue-feed-row">
+            <span class="calendar-name">IPO</span>
+            <span class="calendar-actions">
+              <a class="btn subscribe" aria-label="Subscribe to IPO calendar"
+                 href="webcal://codila125.github.io/np-calendar/calendar/ipo.ics">Subscribe</a>
+              <a class="btn google" target="_blank" rel="noopener" aria-label="Add IPO to Google Calendar"
+                 href="https://calendar.google.com/calendar/r?cid=webcal%3A%2F%2Fcodila125.github.io%2Fnp-calendar%2Fcalendar%2Fipo.ics">Google Calendar</a>
+              <button type="button" class="copy" aria-label="Copy IPO calendar URL"
+                      data-url="https://codila125.github.io/np-calendar/calendar/ipo.ics">Copy URL</button>
+            </span>
+          </li>
+          <li class="calendar-row issue-feed-row">
+            <span class="calendar-name">FPO</span>
+            <span class="calendar-actions">
+              <a class="btn subscribe" aria-label="Subscribe to FPO calendar"
+                 href="webcal://codila125.github.io/np-calendar/calendar/fpo.ics">Subscribe</a>
+              <a class="btn google" target="_blank" rel="noopener" aria-label="Add FPO to Google Calendar"
+                 href="https://calendar.google.com/calendar/r?cid=webcal%3A%2F%2Fcodila125.github.io%2Fnp-calendar%2Fcalendar%2Ffpo.ics">Google Calendar</a>
+              <button type="button" class="copy" aria-label="Copy FPO calendar URL"
+                      data-url="https://codila125.github.io/np-calendar/calendar/fpo.ics">Copy URL</button>
+            </span>
+          </li>
+          <li class="calendar-row issue-feed-row">
+            <span class="calendar-name">Right shares</span>
+            <span class="calendar-actions">
+              <a class="btn subscribe" aria-label="Subscribe to Right shares calendar"
+                 href="webcal://codila125.github.io/np-calendar/calendar/right-share.ics">Subscribe</a>
+              <a class="btn google" target="_blank" rel="noopener" aria-label="Add Right shares to Google Calendar"
+                 href="https://calendar.google.com/calendar/r?cid=webcal%3A%2F%2Fcodila125.github.io%2Fnp-calendar%2Fcalendar%2Fright-share.ics">Google Calendar</a>
+              <button type="button" class="copy" aria-label="Copy Right shares calendar URL"
+                      data-url="https://codila125.github.io/np-calendar/calendar/right-share.ics">Copy URL</button>
+            </span>
+          </li>
+          <li class="calendar-row issue-feed-row">
+            <span class="calendar-name">IPO for locals</span>
+            <span class="calendar-actions">
+              <a class="btn subscribe" aria-label="Subscribe to IPO for locals calendar"
+                 href="webcal://codila125.github.io/np-calendar/calendar/ipo-local.ics">Subscribe</a>
+              <a class="btn google" target="_blank" rel="noopener" aria-label="Add IPO for locals to Google Calendar"
+                 href="https://calendar.google.com/calendar/r?cid=webcal%3A%2F%2Fcodila125.github.io%2Fnp-calendar%2Fcalendar%2Fipo-local.ics">Google Calendar</a>
+              <button type="button" class="copy" aria-label="Copy IPO for locals calendar URL"
+                      data-url="https://codila125.github.io/np-calendar/calendar/ipo-local.ics">Copy URL</button>
+            </span>
+          </li>
+          <li class="calendar-row issue-feed-row">
+            <span class="calendar-name">IPO for migrant workers</span>
+            <span class="calendar-actions">
+              <a class="btn subscribe" aria-label="Subscribe to IPO for migrant workers calendar"
+                 href="webcal://codila125.github.io/np-calendar/calendar/ipo-migrant.ics">Subscribe</a>
+              <a class="btn google" target="_blank" rel="noopener" aria-label="Add IPO for migrant workers to Google Calendar"
+                 href="https://calendar.google.com/calendar/r?cid=webcal%3A%2F%2Fcodila125.github.io%2Fnp-calendar%2Fcalendar%2Fipo-migrant.ics">Google Calendar</a>
+              <button type="button" class="copy" aria-label="Copy IPO for migrant workers calendar URL"
+                      data-url="https://codila125.github.io/np-calendar/calendar/ipo-migrant.ics">Copy URL</button>
+            </span>
+          </li>
+        </ul>
+      </section>
     </section>
 
-    <section id="stats" aria-labelledby="stats-heading">
-      <h2 id="stats-heading">Stats</h2>
-      <div id="stats-content"><p>Loading…</p></div>
-    </section>
-
-    <section id="schedule" aria-labelledby="schedule-heading">
-      <h2 id="schedule-heading">Schedule</h2>
-      <div id="schedule-content"><p>Loading…</p></div>
-    </section>
-
-    <section id="calendar" aria-labelledby="calendar-heading">
-      <h2 id="calendar-heading">Calendar</h2>
-      <p class="section-intro">Subscribe in one tap, or copy a feed URL into Apple, Google or Outlook Calendar. Fixtures and results update automatically.</p>
-      <p id="calendar-status">Loading teams…</p>
-      <ul id="calendar-list">
-        <li class="calendar-row" id="all-matches-row">
-          <span class="calendar-name">All matches</span>
-          <span class="calendar-actions">
-            <a class="btn subscribe" aria-label="Subscribe to All matches calendar"
-               href="webcal://codila125.github.io/npl/calendar/npl.ics">Subscribe</a>
-            <a class="btn google" target="_blank" rel="noopener" aria-label="Add All matches to Google Calendar"
-               href="https://calendar.google.com/calendar/r?cid=webcal%3A%2F%2Fcodila125.github.io%2Fnpl%2Fcalendar%2Fnpl.ics">Google Calendar</a>
-            <button type="button" class="copy" aria-label="Copy All matches calendar URL"
-                    data-url="https://codila125.github.io/npl/calendar/npl.ics">Copy URL</button>
-          </span>
-        </li>
+    <section role="tabpanel" id="panel-npl" aria-labelledby="tab-npl" tabindex="0" aria-busy="true" hidden>
+    <nav aria-label="Sections">
+      <ul>
+        <li><a href="#standings">Standings</a></li>
+        <li><a href="#stats">Stats</a></li>
+        <li><a href="#schedule">Schedule</a></li>
+        <li><a href="#calendar">Calendar</a></li>
       </ul>
+    </nav>
+      <div id="live-region" class="visually-hidden" aria-live="polite"></div>
+      <div id="refresh-note" class="refresh-note" hidden></div>
+
+      <aside id="live" class="live-panel" aria-labelledby="live-heading" hidden>
+        <h2 id="live-heading">Match centre</h2>
+        <div id="live-content"></div>
+      </aside>
+
+      <section id="standings" aria-labelledby="standings-heading">
+        <h2 id="standings-heading">Standings</h2>
+        <div id="standings-content"><p>Loading…</p></div>
+      </section>
+
+      <section id="stats" aria-labelledby="stats-heading">
+        <h2 id="stats-heading">Stats</h2>
+        <div id="stats-content"><p>Loading…</p></div>
+      </section>
+
+      <section id="schedule" aria-labelledby="schedule-heading">
+        <h2 id="schedule-heading">Schedule</h2>
+        <div id="schedule-content"><p>Loading…</p></div>
+      </section>
+
+      <section id="calendar" aria-labelledby="calendar-heading">
+        <h2 id="calendar-heading">Calendar</h2>
+        <p class="section-intro">Subscribe in one tap, or copy a feed URL into Apple, Google or Outlook Calendar. Fixtures and results update automatically.</p>
+        <p id="calendar-status">Loading teams…</p>
+        <ul id="calendar-list">
+          <li class="calendar-row" id="all-matches-row">
+            <span class="calendar-name">All matches</span>
+            <span class="calendar-actions">
+              <a class="btn subscribe" aria-label="Subscribe to All matches calendar"
+                 href="webcal://codila125.github.io/np-calendar/calendar/npl.ics">Subscribe</a>
+              <a class="btn google" target="_blank" rel="noopener" aria-label="Add All matches to Google Calendar"
+                 href="https://calendar.google.com/calendar/r?cid=webcal%3A%2F%2Fcodila125.github.io%2Fnp-calendar%2Fcalendar%2Fnpl.ics">Google Calendar</a>
+              <button type="button" class="copy" aria-label="Copy All matches calendar URL"
+                      data-url="https://codila125.github.io/np-calendar/calendar/npl.ics">Copy URL</button>
+            </span>
+          </li>
+        </ul>
+      </section>
     </section>
   </main>
 </body>
