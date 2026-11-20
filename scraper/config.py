@@ -39,5 +39,7 @@ ISSUE_CATEGORIES = (
     IssueCategory("right-share", 3, "Right share", "Right"),
     IssueCategory("ipo-local", 5, "IPO for locals", "Local"),
     IssueCategory("ipo-migrant", 8, "IPO for migrant workers", "Migrant"),
+    IssueCategory("mutual-fund", 4, "Mutual funds", "MF"),
+    IssueCategory("debenture", 7, "Debentures", "Debenture"),
 )
 ISSUE_FEEDS = ("issues", *(c.slug for c in ISSUE_CATEGORIES))  # calendar/<name>.ics

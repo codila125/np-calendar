@@ -21,7 +21,7 @@ ROBOTS = FakeResponse(200, "User-agent: *\nAllow: /\n")
 KEYS = {
     "id", "category", "company", "symbol", "units", "price", "ratio", "issue_manager",
     "opening_date", "closing_date", "last_closing_date", "book_closure_date",
-    "dates_announced", "url", "company_url",
+    "dates_announced", "url", "company_url", "listing_date",
 }  # fmt: skip
 
 
@@ -59,7 +59,7 @@ def _from_dir_src(tmp_path):
     return src
 
 
-def test_remote_run_publishes_five_categories_html_stripped(tmp_path):
+def test_remote_run_publishes_seven_categories_html_stripped(tmp_path):
     site = tmp_path / "site"
     session = FakeSession({**_npl_routes(), **_issue_routes()})
 
@@ -67,7 +67,7 @@ def test_remote_run_publishes_five_categories_html_stripped(tmp_path):
 
     data = json.loads((site / "data" / "issues.json").read_text())
     assert data["schema_version"] == 1
-    assert len(data["issues"]) == 223
+    assert len(data["issues"]) == 323
     counts = {}
     for item in data["issues"]:
         counts[item["category"]] = counts.get(item["category"], 0) + 1
@@ -76,13 +76,38 @@ def test_remote_run_publishes_five_categories_html_stripped(tmp_path):
         assert ">" not in item["company"] + item["symbol"]
     assert counts == {
         "ipo": 50, "fpo": 23, "right-share": 50, "ipo-local": 50, "ipo-migrant": 50,
+        "mutual-fund": 50, "debenture": 50,
     }  # fmt: skip
+    assert [c["slug"] for c in data["categories"]][-2:] == ["mutual-fund", "debenture"]
     assert "Rapti Hydro & General Construction Limited" in {i["company"] for i in data["issues"]}
 
     issue_calls = [c for c in session.calls if "existing-issues" in c["url"]]
     types = {parse_qs(urlparse(c["url"]).query)["type"][0] for c in issue_calls}
-    assert types == {"1", "2", "3", "5", "8"}
+    assert types == {"1", "2", "3", "4", "5", "7", "8"}  # QII (9) stays excluded
     assert all(c["headers"]["X-Requested-With"] == "XMLHttpRequest" for c in issue_calls)
+
+    by_id = {i["id"]: i for i in data["issues"]}
+    expected = (("mutual-fund", "Mutual funds:", 50), ("debenture", "Debentures:", 43))
+    for slug, prefix, count in expected:
+        events = _events(site / "calendar" / f"{slug}.ics")
+        assert len(events) == count
+        assert all(str(e["SUMMARY"]).startswith(prefix) for e in events)
+        in_all = {str(e["UID"]) for e in _events(site / "calendar" / "issues.ics")}
+        assert {str(e["UID"]) for e in events} <= in_all
+    raw = json.loads((ISSUE_FIXTURES / "debenture.json").read_text())["data"]
+    sentinel_symbols = {
+        re.sub(r"<[^>]+>", "", r["company"]["symbol"])
+        for r in raw
+        if r["opening_date"] == "-0001-11-30"
+    }
+    assert len(sentinel_symbols) == 6
+    sentinel = [i for i in data["issues"] if i["symbol"] in sentinel_symbols]
+    assert len(sentinel) == 6
+    for item in sentinel:
+        assert item["dates_announced"] is False
+        assert item["opening_date"] is None and item["listing_date"] is None
+    csb = by_id["debenture-1254-na"]
+    assert csb["symbol"] == "CSB2084" and csb["units"] is None
 
 
 def test_from_dir_without_issues_skips_the_source(tmp_path, capsys):
@@ -95,7 +120,7 @@ def test_from_dir_without_issues_skips_the_source(tmp_path, capsys):
 def test_from_dir_with_issues_writes_issues_json(tmp_path, capsys):
     site = tmp_path / "site"
     assert cli.main(["--from-dir", str(_from_dir_src(tmp_path)), "--site-dir", str(site)]) == 0
-    assert "fetched issues=223 dated=218" in capsys.readouterr().out
+    assert "fetched issues=323 dated=311" in capsys.readouterr().out
     assert (site / "data" / "issues.json").read_text().endswith("}\n")
 
 
@@ -107,7 +132,7 @@ def test_undated_listed_not_in_feeds_and_reversed_dates_write_nothing(tmp_path, 
     assert cli.main(["--from-dir", str(src), "--site-dir", str(site)]) == 0
     data = json.loads((site / "data" / "issues.json").read_text())
     undated = [i for i in data["issues"] if not i["dates_announced"]]
-    assert len(undated) == 5
+    assert len(undated) == 12
     assert sum(1 for i in undated if i["category"] == "ipo") == 3
     assert sum(1 for i in undated if i["category"] == "right-share") == 2
     for name in config.ISSUE_FEEDS:
@@ -212,7 +237,7 @@ def test_control_char_and_long_text_are_i6():
 
 # --- issue feeds (AC-2) ----------------------------------------------------------------
 
-UID_RE = re.compile(r"^issue-[a-z-]+-\d+-[\d.]+(-\d{8})?@codila125\.github\.io$")
+UID_RE = re.compile(r"^issue-[a-z-]+-\d+-([\d.]+|na)(-\d{8}|-tba)?@codila125\.github\.io$")
 
 
 def _feeds(site):
@@ -239,9 +264,9 @@ def test_issue_feeds_are_all_day_alarmed_stable_and_reproducible(tmp_path, capsy
     data = json.loads((site / "data" / "issues.json").read_text())
     by_uid = {f"issue-{i['id']}@codila125.github.io": i for i in data["issues"]}
     events = _events(feeds["issues"])
-    assert len(events) == 218
+    assert len(events) == 311
     counts = [len(_events(feeds[c.slug])) for c in config.ISSUE_CATEGORIES]
-    assert counts == [47, 23, 48, 50, 50]
+    assert counts == [47, 23, 48, 50, 50, 50, 43]
     for slug in (c.slug for c in config.ISSUE_CATEGORIES):
         assert {str(e["UID"]) for e in _events(feeds[slug])} <= {str(e["UID"]) for e in events}
 
@@ -255,7 +280,8 @@ def test_issue_feeds_are_all_day_alarmed_stable_and_reproducible(tmp_path, capsy
         assert type(start) is date and type(end) is date
         assert start == opening and end == closing + timedelta(days=1)
         desc = str(event["DESCRIPTION"])
-        assert "Price: Rs" in desc and "Units:" in desc
+        assert ("Price: Rs" in desc) == bool(issue["price"])
+        assert ("Units:" in desc) == (issue["units"] is not None)
         assert "sharesansar" not in desc.lower() and "URL" not in event
         if issue["issue_manager"]:
             assert "Issue manager:" in desc
@@ -265,7 +291,7 @@ def test_issue_feeds_are_all_day_alarmed_stable_and_reproducible(tmp_path, capsy
         trigger = alarms[0]["TRIGGER"].dt
         assert trigger == datetime(opening.year, opening.month, opening.day, 3, 15, tzinfo=UTC)
     undated = [u for u, i in by_uid.items() if not i["dates_announced"]]
-    assert len(undated) == 5
+    assert len(undated) == 12
     assert not {str(e["UID"]) for e in events} & set(undated)
 
     before = _snapshot(site)

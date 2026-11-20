@@ -246,11 +246,13 @@ def test_issues_retry_on_5xx_then_succeed():
     assert [c["url"] for c in session.calls].count(url) == 2
 
 
-def test_issues_requests_send_xhr_header_and_only_the_five_types():
+def test_issues_requests_send_xhr_header_and_only_the_seven_types():
     session = FakeSession(_issue_routes())
     fetch.load_issues_remote(session)
     data_calls = [c for c in session.calls if "existing-issues" in c["url"]]
-    assert [c["url"] for c in data_calls] == [_issue_url(t) for t in (1, 2, 3, 5, 8)]
+    assert sorted(c["url"] for c in data_calls) == sorted(
+        _issue_url(t) for t in (1, 2, 3, 4, 5, 7, 8)
+    )  # QII (9) is never requested
     for call in data_calls:
         assert call["headers"]["X-Requested-With"] == "XMLHttpRequest"
         assert call["headers"]["User-Agent"] == config.USER_AGENT
@@ -278,4 +280,5 @@ def test_load_issues_from_dir_reads_every_category():
     raw = fetch.load_issues_from_dir(FIXTURES)
     assert {k: len(v) for k, v in raw.items()} == {
         "ipo": 50, "fpo": 23, "right-share": 50, "ipo-local": 50, "ipo-migrant": 50,
+        "mutual-fund": 50, "debenture": 50,
     }  # fmt: skip

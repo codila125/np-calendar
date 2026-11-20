@@ -19,6 +19,8 @@ DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 COMPANY_URL_RE = re.compile(r"^https://www\.sharesansar\.com/company/[a-z0-9-]+$")
 ANNOUNCEMENT_URL_RE = re.compile(r"^https://www\.sharesansar\.com/\S+$")
 FALLBACK_URL = f"{config.ISSUES_BASE}/existing-issues"
+ZERO_DATE = "-0001-11-30"  # PHP rendering of MySQL 0000-00-00: "no date"
+_DATE_FIELDS = ("opening_date", "closing_date", "final_date", "listing_date")
 _SLUGS = tuple(c.slug for c in config.ISSUE_CATEGORIES)
 
 
@@ -70,12 +72,20 @@ def _optional_date_problem(row: dict, field: str) -> str | None:
     return f"{field} {value!r} is not a YYYY-MM-DD date in range"
 
 
+def _unsentinel(row):
+    """Copy of ``row`` with the zero-date sentinel read as "not announced"; never mutates."""
+    if not isinstance(row, dict) or ZERO_DATE not in (row.get(f) for f in _DATE_FIELDS):
+        return row
+    return {k: ("" if k in _DATE_FIELDS and v == ZERO_DATE else v) for k, v in row.items()}
+
+
 def validate_issue_rows(raw: dict[str, list]) -> list[Violation]:
     """I3 (row shape) and I4 (closing before opening) on the raw source rows."""
     out: list[Violation] = []
     for slug in _SLUGS:
         for index, row in enumerate(raw.get(slug, [])):
             where = f"{slug} row {index}"
+            row = _unsentinel(row)
             problem = _row_problem(row)
             if problem:
                 out.append(Violation("I3", f"{where}: {problem}"))
@@ -105,20 +115,24 @@ def _row_problem(row) -> str | None:
     if row.get("companyid") is None:
         return "missing `companyid`"
     units = row.get("total_units")
-    if not isinstance(units, str) or not NUMBER_RE.match(units):
+    if units is not None and units != "" and (
+        not isinstance(units, str) or not NUMBER_RE.match(units)
+    ):
         return f"`total_units` {units!r} is not a plain number string"
     price = row.get("issue_price")
     if price not in (None, "") and (not isinstance(price, str) or not NUMBER_RE.match(price)):
         return f"`issue_price` {price!r} is not a plain number string"
-    for field in ("opening_date", "closing_date", "final_date"):
+    for field in _DATE_FIELDS:
         problem = _optional_date_problem(row, field)
         if problem:
             return problem
     return None
 
 
-def _units_key(units: str) -> str:
-    units = units.strip()
+def _units_key(units: str | None) -> str:
+    units = (units or "").strip()
+    if not units:
+        return "na"
     if "." in units:
         units = units.rstrip("0").rstrip(".")
     return units
@@ -132,6 +146,7 @@ def _blank_to_none(value) -> str | None:
 
 
 def _normalize_row(slug: str, row: dict) -> dict:
+    row = _unsentinel(row)
     name_html = row["company"]["companyname"]
     symbol_html = row["company"]["symbol"]
     href = _first_href(name_html) or _first_href(symbol_html)
@@ -144,6 +159,9 @@ def _normalize_row(slug: str, row: dict) -> dict:
     opening = row.get("opening_date") or None
     closing = row.get("closing_date") or None
     final = row.get("final_date") or None
+    listing = row.get("listing_date") or None
+    if listing and (not opening or listing < opening):
+        listing = None  # no known opening, or listed before it opened: source inconsistency
     is_right = slug == "right-share"
     price = row.get("issue_price")
     return {
@@ -151,7 +169,7 @@ def _normalize_row(slug: str, row: dict) -> dict:
         "category": slug,
         "company": strip_html(name_html),
         "symbol": strip_html(symbol_html),
-        "units": row["total_units"],
+        "units": row["total_units"] or None,
         "price": price if price else None,
         "ratio": _blank_to_none(row.get("ratio_value")),
         "issue_manager": _blank_to_none(row.get("issue_manager")),
@@ -159,6 +177,7 @@ def _normalize_row(slug: str, row: dict) -> dict:
         "closing_date": closing,
         "last_closing_date": None if is_right else final,
         "book_closure_date": final if is_right else None,
+        "listing_date": listing,
         "dates_announced": bool(opening and closing),
         "url": url,
         "company_url": company_url,
