@@ -1,9 +1,15 @@
 """Static proof for the share-issues tab shell (AC-5): markup, script and tokens."""
 
+import json
 import re
+import shutil
+import subprocess
 from html.parser import HTMLParser
 from pathlib import Path
 
+import pytest
+
+from scraper.issues import normalize_issues
 from tests.test_site_contrast import _contrast
 
 SITE = Path(__file__).resolve().parent.parent / "site"
@@ -137,3 +143,56 @@ def test_tabs_markup_panels_feeds_and_states():
         assert _contrast(light[c].group(1), bg_light) >= 4.5, c
         assert _contrast(dark[c].group(1), bg_dark) >= 4.5, c
         assert pdark[c].group(1) == dark[c].group(1), c
+
+
+NODE_SCRIPT = """
+const h = require(process.argv[1]);
+const data = JSON.parse(require("fs").readFileSync(process.argv[2], "utf8"));
+const ids = (list) => list.map((i) => i.category + ":" + i.symbol).sort();
+const g = h.groupIssues(data, "2026-11-20");
+const mid = h.groupIssues(data, "2026-11-27");
+console.log(JSON.stringify({
+  hash: [h.parseHash("#npl"), h.parseHash("#standings"), h.parseHash(""), h.parseHash("#x")],
+  weeks: h.monthWeeks(2026, 10),
+  nov30: ids(h.issuesOn(data, "2026-11-30")),
+  nov25: ids(h.issuesOn(data, "2026-11-25")),
+  dec3: ids(h.issuesOn(data, "2026-12-03")),
+  dec4: ids(h.issuesOn(data, "2026-12-04")),
+  open20: ids(g.open), upcoming20: ids(g.upcoming), undated20: ids(g.undated),
+  open27: ids(mid.open), upcoming27: ids(mid.upcoming),
+}));
+"""
+
+
+@pytest.mark.skipif(shutil.which("node") is None, reason="node is not installed")
+def test_issue_logic_in_node(tmp_path):
+    fixtures = Path(__file__).parent / "fixtures" / "issues"
+    names = {"ipo": "ipo", "fpo": "fpo", "right-share": "right-share",
+             "ipo-local": "ipo-local", "ipo-migrant": "ipo-migrant"}
+    raw = {slug: json.loads((fixtures / f"{name}.json").read_text())["data"]
+           for slug, name in names.items()}
+    data_file = tmp_path / "issues.json"
+    data_file.write_text(json.dumps(normalize_issues(raw)))
+    result = subprocess.run(
+        [shutil.which("node"), "-e", NODE_SCRIPT, str(SITE / "issues.js"), str(data_file)],
+        capture_output=True, text=True, check=True)
+    out = json.loads(result.stdout)
+
+    assert out["hash"] == ["npl", "npl", "issues", "issues"]
+    weeks = out["weeks"]
+    assert len(weeks) == 5 and all(len(w) == 7 for w in weeks)
+    assert weeks[0][0] == "2026-11-01"  # November 2026 starts on a Sunday
+    assert weeks[4][:2] == ["2026-11-29", "2026-11-30"] and weeks[4][2:] == [None] * 5
+
+    assert out["nov30"] == ["ipo-local:AELTD", "ipo-local:KPL", "ipo-migrant:AELTD",
+                            "ipo-migrant:KPL"]
+    assert out["nov25"] == []
+    # the closing day is inclusive: migrant AELTD closes on Dec 3
+    assert out["dec3"] == ["ipo-local:AELTD", "ipo-local:KPL", "ipo-migrant:AELTD"]
+    assert out["dec4"] == ["ipo-local:AELTD", "ipo-local:KPL"]
+    assert out["open20"] == []
+    assert out["upcoming20"] == ["ipo-local:AELTD", "ipo-local:KPL", "ipo-migrant:AELTD",
+                                 "ipo-migrant:KPL"]
+    assert len(out["undated20"]) == 5
+    assert out["open27"] == ["ipo-local:KPL", "ipo-migrant:KPL"]
+    assert out["upcoming27"] == ["ipo-local:AELTD", "ipo-migrant:AELTD"]

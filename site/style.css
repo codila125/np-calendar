@@ -1153,3 +1153,113 @@ tr.next-match td:first-child {
   margin: 0;
   padding: 0;
 }
+
+/* Issues calendar */
+.issues-nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  margin-block: 1rem 0.5rem;
+}
+
+.issues-month-label {
+  font-weight: 700;
+}
+
+.issues-legend {
+  list-style: none;
+  margin: 0.5rem 0 1rem;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.25rem;
+}
+
+.legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.swatch {
+  display: inline-block;
+  width: 0.9rem;
+  height: 0.9rem;
+  border: 3px solid currentColor;
+}
+
+.chip {
+  display: block;
+  margin-top: 0.25rem;
+  padding: 0.1rem 0.35rem;
+  border: 2px solid currentColor;
+  font-size: 0.8125rem;
+  white-space: nowrap;
+  color: var(--fg);
+}
+
+.chip-tag {
+  font-weight: 700;
+}
+
+.cat-ipo { color: var(--cat-ipo); }
+.cat-fpo { color: var(--cat-fpo); }
+.cat-right-share { color: var(--cat-right-share); }
+.cat-ipo-local { color: var(--cat-ipo-local); }
+.cat-ipo-migrant { color: var(--cat-ipo-migrant); }
+
+.chip.cat-ipo,
+.chip.cat-fpo,
+.chip.cat-right-share,
+.chip.cat-ipo-local,
+.chip.cat-ipo-migrant {
+  color: var(--fg);
+}
+
+.chip.cat-ipo { border-color: var(--cat-ipo); }
+.chip.cat-fpo { border-color: var(--cat-fpo); }
+.chip.cat-right-share { border-color: var(--cat-right-share); }
+.chip.cat-ipo-local { border-color: var(--cat-ipo-local); }
+.chip.cat-ipo-migrant { border-color: var(--cat-ipo-migrant); }
+
+.chip .chip-tag {
+  color: inherit;
+}
+
+.chip.cat-ipo .chip-tag { color: var(--cat-ipo); }
+.chip.cat-fpo .chip-tag { color: var(--cat-fpo); }
+.chip.cat-right-share .chip-tag { color: var(--cat-right-share); }
+.chip.cat-ipo-local .chip-tag { color: var(--cat-ipo-local); }
+.chip.cat-ipo-migrant .chip-tag { color: var(--cat-ipo-migrant); }
+
+#issues-grid td.day {
+  min-width: 6.5rem;
+  white-space: nowrap;
+  border: 1px solid var(--rule);
+}
+
+#issues-grid td.today {
+  outline: 3px solid var(--accent);
+  outline-offset: -3px;
+}
+
+.day-num {
+  display: block;
+  font-weight: 700;
+}
+
+.issue-list {
+  list-style: none;
+  margin: 0 0 1rem;
+  padding: 0;
+}
+
+.issue-item {
+  padding-block: 0.6rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.issue-meta {
+  color: var(--muted);
+}
