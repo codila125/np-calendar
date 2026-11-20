@@ -31,6 +31,7 @@ jobs:
     outputs:
       changed: ${{ steps.commit.outputs.changed }}
       sha: ${{ steps.commit.outputs.sha }}
+      partial: ${{ steps.scrape.outputs.partial }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -39,8 +40,15 @@ jobs:
           cache: pip
           cache-dependency-path: requirements.txt
       - run: pip install -r requirements.txt
-      - name: Scrape (fails the run on bad data; writes nothing in that case)
-        run: python -m scraper ${{ inputs.allow_regression && '--allow-regression' || '' }}
+      - name: Scrape (exit 3 = one source failed, the other was written; 1 = nothing written)
+        id: scrape
+        run: |
+          set +e
+          python -m scraper ${{ inputs.allow_regression && '--allow-regression' || '' }}
+          code=$?
+          set -e
+          if [ "$code" -eq 3 ]; then echo "partial=true" >> "$GITHUB_OUTPUT"; else echo "partial=false" >> "$GITHUB_OUTPUT"; fi
+          if [ "$code" -ne 0 ] && [ "$code" -ne 3 ]; then exit "$code"; fi
       - name: Commit data if changed
         id: commit
         run: |
@@ -50,13 +58,25 @@ jobs:
             git config user.name  "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
             git add -A site
-            git commit -m "chore(data): refresh NPL data"
+            git commit -m "chore(data): refresh data"
             git pull --rebase origin main
             git push origin HEAD:main
             changed=true
           fi
           echo "changed=$changed" >> "$GITHUB_OUTPUT"
           echo "sha=$(git rev-parse HEAD)"  >> "$GITHUB_OUTPUT"
+
+  report:
+    needs: scrape
+    if: ${{ needs.scrape.outputs.partial == 'true' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: read
+    steps:
+      - run: |
+          echo "::error::A source failed (see the scrape step log); the other source was refreshed and deployed."
+          exit 1
 
   deploy:
     needs: scrape
