@@ -196,3 +196,239 @@ def test_issue_logic_in_node(tmp_path):
     assert len(out["undated20"]) == 5
     assert out["open27"] == ["ipo-local:KPL", "ipo-migrant:KPL"]
     assert out["upcoming27"] == ["ipo-local:AELTD", "ipo-migrant:AELTD"]
+
+
+DOM_SCRIPT = r"""
+const path = require("path");
+const target = path.resolve(process.argv[2]);
+const sampleData = JSON.parse(require("fs").readFileSync(process.argv[3], "utf8"));
+const flush = () => new Promise((r) => setImmediate(r));
+
+class El {
+  constructor(tag) {
+    this.tag = tag; this.children = []; this.attrs = {}; this.listeners = {};
+    this.dataset = {}; this.className = ""; this.hidden = false; this.tabIndex = 0;
+    this.id = ""; this.title = ""; this.href = ""; this._text = "";
+  }
+  get firstChild() { return this.children[0] || null; }
+  appendChild(c) { this.children.push(c); return c; }
+  removeChild(c) { this.children.splice(this.children.indexOf(c), 1); return c; }
+  setAttribute(k, v) { this.attrs[k] = String(v); }
+  getAttribute(k) { return this.attrs[k]; }
+  addEventListener(t, f) { (this.listeners[t] = this.listeners[t] || []).push(f); }
+  fire(t, ev) {
+    ev = ev || {};
+    ev.prevented = false;
+    ev.preventDefault = () => { ev.prevented = true; };
+    (this.listeners[t] || []).forEach((f) => f(ev));
+    return ev;
+  }
+  focus() { global.document.activeElement = this; }
+  scrollIntoView() { global.document.scrolled = this.id; }
+  get textContent() { return this._text + this.children.map((c) => c.textContent).join(""); }
+  set textContent(v) { this._text = String(v); this.children = []; }
+  walk() { return [this].concat(...this.children.map((c) => c.walk())); }
+  querySelectorAll(sel) {
+    return sel === "[id]" ? this.walk().slice(1).filter((e) => e.id) : [];
+  }
+}
+
+function boot(hash, fetchImpl) {
+  const mk = (tag, id) => { const e = new El(tag); e.id = id || ""; return e; };
+  const tabs = [mk("button", "tab-issues"), mk("button", "tab-npl")];
+  tabs[0].setAttribute("aria-selected", "true");
+  tabs[1].setAttribute("aria-selected", "false");
+  tabs[1].tabIndex = -1;
+  const els = {};
+  ["panel-issues", "panel-npl", "issues-status", "issues-month", "issues-legend",
+   "issues-list"].forEach((id) => { els[id] = mk("div", id); });
+  els["panel-npl"].hidden = true;
+  ["standings", "schedule"].forEach((id) => els["panel-npl"].appendChild(mk("section", id)));
+  const win = new El("window");
+  const doc = new El("document");
+  Object.assign(doc, {
+    baseURI: "https://example.test/np-calendar/", visibilityState: "visible",
+    activeElement: null, scrolled: null,
+    querySelectorAll: (sel) => (sel === '[role="tab"]' ? tabs : []),
+    getElementById: (id) => els[id] || els["panel-npl"].walk().find((e) => e.id === id) || null,
+    createElement: (tag) => new El(tag),
+    createTextNode: (t) => { const e = new El("#text"); e._text = t; return e; },
+  });
+  const loc = { hash: hash };
+  global.document = doc; global.window = win; global.location = loc;
+  global.history = { writes: [], replaceState(_s, _t, h) { loc.hash = h; this.writes.push(h); } };
+  global.fetch = fetchImpl;
+  Date.now = () => Date.UTC(2026, 10, 20, 6, 0, 0);
+  delete require.cache[target];
+  require(target);
+  const state = () => ({
+    selected: tabs.map((t) => t.getAttribute("aria-selected")),
+    tabindex: tabs.map((t) => t.tabIndex),
+    hidden: [els["panel-issues"].hidden, els["panel-npl"].hidden],
+    focused: doc.activeElement && doc.activeElement.id,
+    hash: loc.hash, writes: global.history.writes.slice(),
+  });
+  return { tabs, els, win, doc, loc, state };
+}
+
+const okFetch = (data) => () => Promise.resolve({ ok: true, json: () => Promise.resolve(data) });
+const out = {};
+
+(async () => {
+  // keyboard pattern + state sync + hash written on activation
+  let p = boot("", okFetch(sampleData));
+  await flush();
+  out.initial = p.state();
+  const press = (i, key) => { const ev = p.tabs[i].fire("keydown", { key }); return ev.prevented; };
+  out.right = (press(0, "ArrowRight"), p.state());
+  out.rightWrap = (press(1, "ArrowRight"), p.state());
+  out.leftWrap = (press(0, "ArrowLeft"), p.state());
+  out.left = (press(1, "ArrowLeft"), p.state());
+  out.end = (press(0, "End"), p.state());
+  out.home = (press(1, "Home"), p.state());
+  out.otherKeyPrevented = press(0, "a");
+  out.afterOther = p.state();
+  p.tabs[1].fire("click");
+  out.click = p.state();
+
+  // hash restore on load
+  out.loadNpl = boot("#npl", okFetch(sampleData)).state();
+  p = boot("#standings", okFetch(sampleData));
+  out.loadStandings = p.state();
+  out.standingsScrolled = p.doc.scrolled;
+  out.loadEmpty = boot("", okFetch(sampleData)).state();
+  p = boot("", okFetch(sampleData));
+  p.loc.hash = "#npl"; p.win.fire("hashchange");
+  out.hashchange = p.state();
+  p.loc.hash = ""; p.win.fire("hashchange");
+  out.hashchangeBack = p.state();
+
+  // loading -> loaded
+  p = boot("", okFetch(sampleData));
+  out.loading = p.els["issues-status"].textContent;
+  out.busyWhileLoading = p.els["panel-issues"].getAttribute("aria-busy");
+  await flush();
+  out.loaded = p.els["issues-status"].textContent;
+  out.busyAfter = p.els["panel-issues"].getAttribute("aria-busy");
+  out.listText = p.els["issues-list"].textContent;
+
+  // error with retry wired to refetch
+  let calls = 0, fail = true;
+  p = boot("", () => {
+    calls += 1;
+    return fail ? Promise.reject(new Error("down")) : okFetch(sampleData)();
+  });
+  await flush();
+  const retryBtn = () => p.els["issues-status"].children.find((c) => c.tag === "button");
+  out.error = p.els["issues-status"].textContent;
+  out.errorHasRetry = !!retryBtn() && retryBtn().textContent === "Retry";
+  out.callsBeforeRetry = calls;
+  fail = false;
+  retryBtn().fire("click");
+  await flush();
+  out.callsAfterRetry = calls;
+  out.afterRetry = p.els["issues-status"].textContent;
+  out.retryGone = !retryBtn();
+
+  // HTTP error state and bad schema state
+  p = boot("", () => Promise.resolve({ ok: false, status: 500 }));
+  await flush();
+  out.http500 = p.els["issues-status"].textContent;
+  p = boot("", okFetch({ schema_version: 9 }));
+  await flush();
+  out.badSchema = p.els["issues-status"].textContent;
+
+  // empty state
+  p = boot("", okFetch({ schema_version: 1, issues: [], categories: [] }));
+  await flush();
+  out.empty = p.els["issues-status"].textContent;
+
+  // month navigation
+  p = boot("", okFetch(sampleData));
+  await flush();
+  const month = () => p.els["issues-month"].walk();
+  const label = () => month().find((e) => e.id === "issues-month-label").textContent;
+  const nav = (t) => month().find((e) => e.tag === "button" && e.textContent === t);
+  out.nav = [label()];
+  nav("Next").fire("click"); out.nav.push(label());
+  nav("Next").fire("click"); out.nav.push(label());
+  nav("Previous").fire("click"); nav("Previous").fire("click"); nav("Previous").fire("click");
+  out.nav.push(label());
+  nav("Today").fire("click"); out.nav.push(label());
+  out.chipsNov = p.els["issues-month"].walk().filter((e) => /chip /.test(e.className)).length;
+  nav("Next").fire("click");
+  out.chipsDec = p.els["issues-month"].walk().filter((e) => /chip /.test(e.className)).length;
+  console.log(JSON.stringify(out));
+})();
+"""
+
+
+@pytest.fixture(scope="module")
+def dom(tmp_path_factory):
+    if shutil.which("node") is None:
+        pytest.skip("node is not installed")
+    tmp = tmp_path_factory.mktemp("dom")
+    fixtures = Path(__file__).parent / "fixtures" / "issues"
+    raw = {s: json.loads((fixtures / f"{s}.json").read_text())["data"] for s in CATS}
+    (tmp / "issues.json").write_text(json.dumps(normalize_issues(raw)))
+    (tmp / "dom.js").write_text(DOM_SCRIPT)
+    result = subprocess.run(
+        [shutil.which("node"), str(tmp / "dom.js"), str(SITE / "issues.js"),
+         str(tmp / "issues.json")],
+        capture_output=True, text=True, check=True)
+    return json.loads(result.stdout)
+
+
+def _tab(state, selected, focused=None, hash_=None):
+    assert state["selected"] == ["true" if selected == 0 else "false",
+                                 "true" if selected == 1 else "false"]
+    assert state["tabindex"] == [0 if selected == 0 else -1, 0 if selected == 1 else -1]
+    assert state["hidden"] == [selected != 0, selected != 1]
+    if focused:
+        assert state["focused"] == focused
+    if hash_:
+        assert state["hash"] == hash_
+
+
+def test_tab_keyboard_pattern_and_state_sync(dom):
+    _tab(dom["initial"], 0)
+    assert dom["initial"]["writes"] == []
+    _tab(dom["right"], 1, "tab-npl", "#npl")
+    _tab(dom["rightWrap"], 0, "tab-issues", "#issues")
+    _tab(dom["leftWrap"], 1, "tab-npl", "#npl")
+    _tab(dom["left"], 0, "tab-issues", "#issues")
+    _tab(dom["end"], 1, "tab-npl", "#npl")
+    _tab(dom["home"], 0, "tab-issues", "#issues")
+    assert dom["otherKeyPrevented"] is False
+    assert dom["afterOther"]["writes"] == dom["home"]["writes"]
+    _tab(dom["click"], 1, hash_="#npl")
+
+
+def test_hash_restored_on_load_and_hashchange(dom):
+    _tab(dom["loadNpl"], 1)
+    _tab(dom["loadStandings"], 1)
+    assert dom["standingsScrolled"] == "standings"
+    _tab(dom["loadEmpty"], 0)
+    assert dom["loadEmpty"]["writes"] == []
+    _tab(dom["hashchange"], 1)
+    _tab(dom["hashchangeBack"], 0)
+
+
+def test_loading_error_retry_and_empty_states(dom):
+    assert dom["loading"] == "Loading share issues…"
+    assert dom["busyWhileLoading"] == "true" and dom["busyAfter"] == "false"
+    assert dom["loaded"].startswith("223 share issues listed")
+    assert "Upcoming" in dom["listText"] and "Dates not announced yet" in dom["listText"]
+    assert dom["error"].startswith("Couldn't load share issues.")
+    assert dom["errorHasRetry"] is True
+    assert dom["callsAfterRetry"] == dom["callsBeforeRetry"] + 1
+    assert dom["afterRetry"].startswith("223 share issues listed") and dom["retryGone"]
+    assert dom["http500"].startswith("Couldn't load share issues.")
+    assert dom["badSchema"].startswith("Couldn't load share issues.")
+    assert dom["empty"] == "No share issues published yet."
+
+
+def test_month_navigation_prev_next_today(dom):
+    assert dom["nav"] == ["November 2026", "December 2026", "January 2027",
+                          "October 2026", "November 2026"]
+    assert dom["chipsNov"] > 0 and dom["chipsDec"] > 0
