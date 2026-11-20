@@ -1,11 +1,11 @@
 # np-calendar
 
-Month calendar and `.ics` feeds for Nepali **share issues** (IPO, FPO, right share, IPO for
+Month calendar and `.ics` feeds for Nepali **stock issues** (IPO, FPO, right share, IPO for
 locals, IPO for migrant workers), plus standings, match schedule and feeds for the **Nepal Premier
 League 2026 (Season 3)**, 26 Oct – 21 Nov 2026 at TU Ground, Kirtipur.
 
-- Site: <https://codila125.github.io/np-calendar/> (tabs: "Share issues" by default, and "NPL")
-- All share issues feed: <https://codila125.github.io/np-calendar/calendar/issues.ics>
+- Site: <https://codila125.github.io/np-calendar/> (tabs: "Stocks" by default, and "NPL")
+- All stock issues feed: <https://codila125.github.io/np-calendar/calendar/issues.ics>
 - Per-category issue feeds: `https://codila125.github.io/np-calendar/calendar/<name>.ics` with
   `<name>` one of `ipo`, `fpo`, `right-share`, `ipo-local`, `ipo-migrant`
 - NPL all matches feed: <https://codila125.github.io/np-calendar/calendar/npl.ics>
@@ -21,8 +21,7 @@ A scheduled GitHub Action scrapes both sources every 30 minutes, rebuilds `site/
 `site/data/issues.json` and the `.ics` feeds, commits them only when they changed, and deploys the
 `site/` folder to GitHub Pages. Nobody has to run anything.
 
-Unofficial fan project. Data from [nplt20league.com](https://nplt20league.com/) and
-[ShareSansar](https://www.sharesansar.com/).
+Unofficial fan project. NPL data from [nplt20league.com](https://nplt20league.com/).
 
 ## How it works
 
@@ -32,7 +31,7 @@ scraper/            Python 3.12 scraper + generator (stdlib + requests)
   normalize.py      raw source dicts -> normalized Season dict (pure)
   validate.py       V1..V16 rules; any violation fails the run (pure)
   ics.py            Season dict -> calendar/npl.ics + one feed per team (pure, no clock)
-  issues.py         ShareSansar existing-issues JSON -> normalized issues dict (pure)
+  issues.py         raw stock-issue rows -> normalized issues dict (pure)
   issues_ics.py     issues dict -> issues.ics + one feed per category (pure, no clock)
   publish.py        render JSON, write-only-if-changed, orphan cleanup
   cli.py            `python -m scraper` orchestration, exit codes
@@ -59,8 +58,8 @@ python3 -m venv .venv && .venv/bin/pip install -r requirements-dev.txt
 .venv/bin/python -m scraper
 
 # rebuild from saved source files instead of the network (dev / tests / seed);
-# DIR holds teams/matches/points JSON and, optionally, DIR/issues/ with the ShareSansar
-# responses (ipo.json, fpo.json, right-share.json, ipo-local.json, ipo-migrant.json, robots.txt)
+# DIR holds teams/matches/points JSON and, optionally, DIR/issues/ with the saved
+# stock-issue responses (ipo.json, fpo.json, right-share.json, ipo-local.json, ipo-migrant.json, robots.txt)
 .venv/bin/python -m scraper --from-dir tests/fixtures/season2026
 
 # see what would change without writing anything
@@ -90,9 +89,9 @@ snapshots under `tests/fixtures/`.
 
 ## Data source
 
-### Share issues
+### Stock issues
 
-ShareSansar's `existing-issues` JSON for types IPO (1), FPO (2), right share (3), IPO for locals
+The source's `existing-issues` JSON for types IPO (1), FPO (2), right share (3), IPO for locals
 (5) and IPO for migrant workers (8), newest 50 per category, paged, with its `robots.txt` checked
 first. Mutual funds, debentures and IPOs for QIIs are not covered. Issues without an opening or
 closing date are kept in `issues.json` as dates-not-announced and left out of the feeds; an issue
@@ -176,5 +175,5 @@ redeploy.
 
 ## License
 
-Data © Nepal Premier League and ShareSansar / their providers. This repository's code is provided as-is for the fan
+Data © Nepal Premier League and the respective data providers. This repository's code is provided as-is for the fan
 site above.

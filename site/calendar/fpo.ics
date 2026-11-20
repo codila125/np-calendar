@@ -4,8 +4,7 @@ PRODID:-//codila125//np-calendar//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:np-calendar — FPO
-X-WR-CALDESC:Opening and closing dates of share issues in Nepal (source: Sh
- areSansar).
+X-WR-CALDESC:Opening and closing dates of stock issues in Nepal.
 REFRESH-INTERVAL;VALUE=DURATION:PT1H
 X-PUBLISHED-TTL:PT1H
 BEGIN:VEVENT
@@ -16,8 +15,7 @@ DTEND;VALUE=DATE:20151207
 SUMMARY:FPO: Shikhar Insurance Company Limited (SICL)
 DESCRIPTION:FPO · SICL\nPrice: Rs 650\nUnits: 510\,988\nOpens 2 Dec 2015\,
   closes 6 Dec 2015\nMay stay open until 17 Dec 2015\nIssue manager: NIBL C
- apital Markets Ltd.\nhttps://www.sharesansar.com/company/sicl
-URL:https://www.sharesansar.com/company/sicl
+ apital Markets Ltd.
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -34,8 +32,7 @@ DTEND;VALUE=DATE:20151223
 SUMMARY:FPO: Reliance Finance Limited (RLFL)
 DESCRIPTION:FPO · RLFL\nPrice: Rs 100\nUnits: 514\,286\nOpens 19 Dec 2015\
  , closes 22 Dec 2015\nMay stay open until 3 Jan 2016\nIssue manager: NCM M
- erchant Banking Ltd.\nhttps://www.sharesansar.com/company/rlfl
-URL:https://www.sharesansar.com/company/rlfl
+ erchant Banking Ltd.
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -52,8 +49,7 @@ DTEND;VALUE=DATE:20160226
 SUMMARY:FPO: Nepal Investment Bank Limited (NIB)
 DESCRIPTION:FPO · NIB\nPrice: Rs 601\nUnits: 9\,069\,388\nOpens 22 Feb 201
  6\, closes 25 Feb 2016\nMay stay open until 10 Mar 2016\nIssue manager: Ci
- tizen Investment Trust Ltd.\nhttps://www.sharesansar.com/company/nib
-URL:https://www.sharesansar.com/company/nib
+ tizen Investment Trust Ltd.
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -70,8 +66,7 @@ DTEND;VALUE=DATE:20161229
 SUMMARY:FPO: Nepal SBI Bank Limited (SBI)
 DESCRIPTION:FPO · SBI\nPrice: Rs 971\nUnits: 67\,768\nOpens 25 Dec 2016\, 
  closes 28 Dec 2016\nMay stay open until 8 Jan 2017\nIssue manager: NMB Cap
- ital Limited\nhttps://www.sharesansar.com/company/sbi
-URL:https://www.sharesansar.com/company/sbi
+ ital Limited
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -88,8 +83,7 @@ DTEND;VALUE=DATE:20170115
 SUMMARY:FPO: Nepal Life Insurance Company Limited (NLIC)
 DESCRIPTION:FPO · NLIC\nPrice: Rs 1\,425\nUnits: 3\,096\,429\nOpens 10 Jan
   2017\, closes 14 Jan 2017\nMay stay open until 25 Jan 2017\nIssue manager
- : Siddhartha Capital Limited\nhttps://www.sharesansar.com/company/nlic
-URL:https://www.sharesansar.com/company/nlic
+ : Siddhartha Capital Limited
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -106,8 +100,7 @@ DTEND;VALUE=DATE:20170317
 SUMMARY:FPO: Standard Chartered Bank Nepal Limited (SCB)
 DESCRIPTION:FPO · SCB\nPrice: Rs 1\,290\nUnits: 2\,558\,140\nOpens 13 Mar 
  2017\, closes 16 Mar 2017\nMay stay open until 28 Mar 2017\nIssue manager:
-  NMB Capital Limited\nhttps://www.sharesansar.com/company/scb
-URL:https://www.sharesansar.com/company/scb
+  NMB Capital Limited
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -124,8 +117,7 @@ DTEND;VALUE=DATE:20170817
 SUMMARY:FPO: Pokhara Finance Limited (PFL)
 DESCRIPTION:FPO · PFL\nPrice: Rs 220\nUnits: 983\,682\nOpens 12 Aug 2017\,
   closes 16 Aug 2017\nMay stay open until 27 Aug 2017\nIssue manager: NIBL 
- Capital Market Ltd.\nhttps://www.sharesansar.com/company/pfl
-URL:https://www.sharesansar.com/company/pfl
+ Capital Market Ltd.
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -142,8 +134,7 @@ DTEND;VALUE=DATE:20170915
 SUMMARY:FPO: Grameen Bikas Laghubitta Bittiya Sanstha Limited (GBLBS)
 DESCRIPTION:FPO · GBLBS\nPrice: Rs 100\nUnits: 975\,000\nOpens 11 Sep 2017
  \, closes 14 Sep 2017\nMay stay open until 26 Sep 2017\nIssue manager: Pra
- bhu Capital Ltd\nhttps://www.sharesansar.com/company/gblbs
-URL:https://www.sharesansar.com/company/gblbs
+ bhu Capital Ltd
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -161,8 +152,7 @@ DTEND;VALUE=DATE:20180103
 SUMMARY:FPO: Premier Insurance Company (Nepal) Limited (PIC)
 DESCRIPTION:FPO · PIC\nPrice: Rs 799\nUnits: 659\,565\nOpens 30 Dec 2017\,
   closes 2 Jan 2018\nMay stay open until 29 Jan 2018\nIssue manager: NMB Ca
- pital Limited\nhttps://www.sharesansar.com/company/pic
-URL:https://www.sharesansar.com/company/pic
+ pital Limited
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -180,8 +170,7 @@ DTEND;VALUE=DATE:20180227
 SUMMARY:FPO: Butwal Power Company Limited (BPCL)
 DESCRIPTION:FPO · BPCL\nPrice: Rs 501\nUnits: 4\,081\,000\nOpens 28 Jan 20
  18\, closes 26 Feb 2018\nMay stay open until 27 Feb 2018\nIssue manager: N
- MB Capital Limited\nhttps://www.sharesansar.com/company/bpcl
-URL:https://www.sharesansar.com/company/bpcl
+ MB Capital Limited
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -197,9 +186,7 @@ DTSTART;VALUE=DATE:20180613
 DTEND;VALUE=DATE:20180713
 SUMMARY:FPO: NMB Bank Limited (NMB)
 DESCRIPTION:FPO · NMB\nPrice: Rs 333\nUnits: 11\,415\,163\nOpens 13 Jun 20
- 18\, closes 12 Jul 2018\nIssue manager: Citizen Investment Trust\nhttps://
- www.sharesansar.com/company/nmb
-URL:https://www.sharesansar.com/company/nmb
+ 18\, closes 12 Jul 2018\nIssue manager: Citizen Investment Trust
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -215,9 +202,7 @@ DTSTART;VALUE=DATE:20180629
 DTEND;VALUE=DATE:20180730
 SUMMARY:FPO: Nepal Bank Limited (NBL)
 DESCRIPTION:FPO · NBL\nPrice: Rs 280\nUnits: 17\,684\,858\nOpens 29 Jun 20
- 18\, closes 29 Jul 2018\nIssue manager: Siddhartha Capital Ltd.\nhttps://w
- ww.sharesansar.com/company/nbl
-URL:https://www.sharesansar.com/company/nbl
+ 18\, closes 29 Jul 2018\nIssue manager: Siddhartha Capital Ltd.
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -234,8 +219,7 @@ DTEND;VALUE=DATE:20180804
 SUMMARY:FPO: Citizens Bank International Limited (CZBIL)
 DESCRIPTION:FPO · CZBIL\nPrice: Rs 200\nUnits: 463\,826\nOpens 30 Jul 2018
  \, closes 3 Aug 2018\nMay stay open until 30 Aug 2018\nIssue manager: Glob
- al IME Capital Ltd.\nhttps://www.sharesansar.com/company/czbil
-URL:https://www.sharesansar.com/company/czbil
+ al IME Capital Ltd.
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -252,14 +236,7 @@ DTEND;VALUE=DATE:20230601
 SUMMARY:FPO: Unique Nepal Laghubitta Bittiya Sanstha Limited (UNLB)
 DESCRIPTION:FPO · UNLB\nPrice: Rs 100\nUnits: 379\,425\nOpens 25 May 2023\
  , closes 31 May 2023\nMay stay open until 8 Jun 2023\nIssue manager: Mukti
- nath Capital Ltd.\nhttps://www.sharesansar.com/announcementdetail/unique-n
- epal-laghubitta-bittiya-sanstha-limited-has-published-an-offer-letter-to-i
- ssue-379425-units-fpo-shares-to-the-general-public-from-11th-jestha-to-16t
- h-jestha-2080-2023-05-16
-URL:https://www.sharesansar.com/announcementdetail/unique-nepal-laghubitta-
- bittiya-sanstha-limited-has-published-an-offer-letter-to-issue-379425-unit
- s-fpo-shares-to-the-general-public-from-11th-jestha-to-16th-jestha-2080-20
- 23-05-16
+ nath Capital Ltd.
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -277,14 +254,7 @@ DTEND;VALUE=DATE:20231018
 SUMMARY:FPO: Mirmire Laghubitta Bittiya Sanstha Limited (MMFDB)
 DESCRIPTION:FPO · MMFDB\nPrice: Rs 100\nUnits: 123\,816.45\nOpens 12 Oct 2
  023\, closes 17 Oct 2023\nMay stay open until 26 Oct 2023\nIssue manager: 
- Nepal SBI Merchant Banking Ltd.\nhttps://www.sharesansar.com/announcementd
- etail/mirmire-laghubitta-bittiya-sanstha-limited-has-published-an-offer-le
- tter-to-issue-12381645-units-fpo-shares-to-the-general-public-from-25th-as
- hwin-to-30th-ashwin-2080-2023-10-04
-URL:https://www.sharesansar.com/announcementdetail/mirmire-laghubitta-bitti
- ya-sanstha-limited-has-published-an-offer-letter-to-issue-12381645-units-f
- po-shares-to-the-general-public-from-25th-ashwin-to-30th-ashwin-2080-2023-
- 10-04
+ Nepal SBI Merchant Banking Ltd.
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -302,14 +272,7 @@ DTEND;VALUE=DATE:20231111
 SUMMARY:FPO: Unnati Sahakarya Laghubitta Bittiya Sanstha Limited (USLB)
 DESCRIPTION:FPO · USLB\nPrice: Rs 100\nUnits: 178\,451.18\nOpens 7 Nov 202
  3\, closes 10 Nov 2023\nMay stay open until 21 Nov 2023\nIssue manager: Si
- ddhartha Capital Ltd.\nhttps://www.sharesansar.com/announcementdetail/unna
- ti-sahakarya-laghubitta-bittiya-sanstha-limited-has-published-an-offer-let
- ter-to-issue-17845118-units-fpo-shares-to-the-general-public-from-21st-kar
- tik-to-24th-kartik-2080-2023-10-29
-URL:https://www.sharesansar.com/announcementdetail/unnati-sahakarya-laghubi
- tta-bittiya-sanstha-limited-has-published-an-offer-letter-to-issue-1784511
- 8-units-fpo-shares-to-the-general-public-from-21st-kartik-to-24th-kartik-2
- 080-2023-10-29
+ ddhartha Capital Ltd.
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -327,14 +290,7 @@ DTEND;VALUE=DATE:20240724
 SUMMARY:FPO: Suryodaya Womi Laghubitta Bittiya Sanstha Limited (SWMF)
 DESCRIPTION:FPO · SWMF\nPrice: Rs 100\nUnits: 46\,729.55\nOpens 19 Jul 202
  4\, closes 23 Jul 2024\nMay stay open until 2 Aug 2024\nIssue manager: Kum
- ari Capital Limited\nhttps://www.sharesansar.com/announcementdetail/suryod
- aya-womi-laghubitta-bittiya-sanstha-limited-has-published-an-offer-letter-
- to-issue-467295450-units-fpo-shares-to-the-general-public-from-4th-shrawan
- -to-8th-shrawan-2081-2024-07-11
-URL:https://www.sharesansar.com/announcementdetail/suryodaya-womi-laghubitt
- a-bittiya-sanstha-limited-has-published-an-offer-letter-to-issue-467295450
- -units-fpo-shares-to-the-general-public-from-4th-shrawan-to-8th-shrawan-20
- 81-2024-07-11
+ ari Capital Limited
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -352,14 +308,7 @@ DTEND;VALUE=DATE:20241106
 SUMMARY:FPO: Samata Gharelu Laghubitta Bittiya Sanstha Limited (SMATA)
 DESCRIPTION:FPO · SMATA\nPrice: Rs 100\nUnits: 350\,904.25\nOpens 28 Oct 2
  024\, closes 5 Nov 2024\nMay stay open until 11 Nov 2024\nIssue manager: M
- uktinath Capital Limited\nhttps://www.sharesansar.com/announcementdetail/s
- amata-gharelu-laghubitta-bittiya-sanstha-limited-has-published-an-offer-le
- tter-to-issue-35090425-units-fpo-shares-to-the-general-public-from-12th-ka
- rtik-to-20th-kartik-2081-2024-10-20
-URL:https://www.sharesansar.com/announcementdetail/samata-gharelu-laghubitt
- a-bittiya-sanstha-limited-has-published-an-offer-letter-to-issue-35090425-
- units-fpo-shares-to-the-general-public-from-12th-kartik-to-20th-kartik-208
- 1-2024-10-20
+ uktinath Capital Limited
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -377,13 +326,7 @@ DTEND;VALUE=DATE:20241225
 SUMMARY:FPO: Mahuli Laghubitta Bittiya Sanstha Limited (MSLB)
 DESCRIPTION:FPO · MSLB\nPrice: Rs 100\nUnits: 475\,449.15\nOpens 20 Dec 20
  24\, closes 24 Dec 2024\nMay stay open until 3 Jan 2025\nIssue manager: La
- xmi Sunrise Capital Limited\nhttps://www.sharesansar.com/announcementdetai
- l/mahuli-laghubitta-bittiya-sanstha-limited-has-published-an-offer-letter-
- to-issue-47544915-units-fpo-shares-to-the-general-public-from-5th-poush-to
- -9th-poush-2081-2024-12-11
-URL:https://www.sharesansar.com/announcementdetail/mahuli-laghubitta-bittiy
- a-sanstha-limited-has-published-an-offer-letter-to-issue-47544915-units-fp
- o-shares-to-the-general-public-from-5th-poush-to-9th-poush-2081-2024-12-11
+ xmi Sunrise Capital Limited
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -401,14 +344,7 @@ DTEND;VALUE=DATE:20250306
 SUMMARY:FPO: Swarojgar Laghubitta Bittiya Sanstha Limited (SLBBL)
 DESCRIPTION:FPO · SLBBL\nPrice: Rs 100\nUnits: 195\,773\nOpens 2 Mar 2025\
  , closes 5 Mar 2025\nMay stay open until 16 Mar 2025\nIssue manager: NMB C
- apital Limited\nhttps://www.sharesansar.com/announcementdetail/swarojgar-l
- aghubitta-bittiya-sanstha-limited-has-published-an-offer-letter-to-issue-1
- 95773-units-fpo-shares-to-the-general-public-from-18th-falgun-to-21st-falg
- un-2081-2025-02-18
-URL:https://www.sharesansar.com/announcementdetail/swarojgar-laghubitta-bit
- tiya-sanstha-limited-has-published-an-offer-letter-to-issue-195773-units-f
- po-shares-to-the-general-public-from-18th-falgun-to-21st-falgun-2081-2025-
- 02-18
+ apital Limited
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -426,14 +362,7 @@ DTEND;VALUE=DATE:20250409
 SUMMARY:FPO: Wean Nepal Laghubitta Bittiya Sanstha Limited (WNLB)
 DESCRIPTION:FPO · WNLB\nPrice: Rs 100\nUnits: 51\,292.5\nOpens 3 Apr 2025\
  , closes 8 Apr 2025\nMay stay open until 17 Apr 2025\nIssue manager: Nepal
-  SBI Merchant Banking Limited\nhttps://www.sharesansar.com/announcementdet
- ail/wean-nepal-laghubitta-bittiya-sanstha-limited-has-published-an-offer-l
- etter-to-issue-512925-units-fpo-shares-to-the-general-public-from-21st-cha
- itra-to-26th-chaitra-2081-2025-03-26
-URL:https://www.sharesansar.com/announcementdetail/wean-nepal-laghubitta-bi
- ttiya-sanstha-limited-has-published-an-offer-letter-to-issue-512925-units-
- fpo-shares-to-the-general-public-from-21st-chaitra-to-26th-chaitra-2081-20
- 25-03-26
+  SBI Merchant Banking Limited
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -451,13 +380,7 @@ DTEND;VALUE=DATE:20250721
 SUMMARY:FPO: Himalayan Bank Limited (HBL)
 DESCRIPTION:FPO · HBL\nPrice: Rs 157\nUnits: 9\,250\,469\nOpens 16 Jul 202
  5\, closes 20 Jul 2025\nMay stay open until 30 Jul 2025\nIssue manager: Ci
- tizens Capital Limited\nhttps://www.sharesansar.com/announcementdetail/him
- alayan-bank-limited-has-published-an-offer-letter-to-issue-9250469-units-f
- po-shares-to-the-general-public-from-32nd-ashad-to-4th-shrawan-2082-2025-0
- 7-08
-URL:https://www.sharesansar.com/announcementdetail/himalayan-bank-limited-h
- as-published-an-offer-letter-to-issue-9250469-units-fpo-shares-to-the-gene
- ral-public-from-32nd-ashad-to-4th-shrawan-2082-2025-07-08
+ tizens Capital Limited
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
@@ -474,13 +397,7 @@ DTEND;VALUE=DATE:20260109
 SUMMARY:FPO: Vijaya Laghubitta Bittiya Sanstha Limited (VLBS)
 DESCRIPTION:FPO · VLBS\nPrice: Rs 100\nUnits: 466\,817\nOpens 5 Jan 2026\,
   closes 8 Jan 2026\nMay stay open until 19 Jan 2026\nIssue manager: NMB Ca
- pital Limited\nhttps://www.sharesansar.com/announcementdetail/vijaya-laghu
- bitta-bittiya-sanstha-limited-has-published-an-offer-letter-to-issue-46681
- 7-units-fpo-shares-to-the-general-public-from-21st-poush-to-24th-poush-208
- 2-2025-12-24
-URL:https://www.sharesansar.com/announcementdetail/vijaya-laghubitta-bittiy
- a-sanstha-limited-has-published-an-offer-letter-to-issue-466817-units-fpo-
- shares-to-the-general-public-from-21st-poush-to-24th-poush-2082-2025-12-24
+ pital Limited
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM

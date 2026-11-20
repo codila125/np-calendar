@@ -13,7 +13,7 @@
       "-" + String(d.getUTCDate()).padStart(2, "0");
   }
 
-  // "npl" for #npl and for any anchor inside the NPL panel; everything else is issues.
+  // "npl" for #npl and for any anchor inside the NPL panel; everything else is stocks.
   function parseHash(hash, nplIds) {
     var id = String(hash || "").replace(/^#/, "");
     if (id === "npl") {
@@ -26,7 +26,7 @@
         id === "live") {
       return "npl";
     }
-    return "issues";
+    return "stocks";
   }
 
   var MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August",
@@ -109,7 +109,7 @@
 
   var tabs = Array.prototype.slice.call(document.querySelectorAll('[role="tab"]'));
   var panels = {
-    issues: document.getElementById("panel-issues"),
+    stocks: document.getElementById("panel-stocks"),
     npl: document.getElementById("panel-npl")
   };
   var status = document.getElementById("issues-status");
@@ -142,7 +142,7 @@
         tab.focus();
       }
     });
-    panels.issues.hidden = name !== "issues";
+    panels.stocks.hidden = name !== "stocks";
     panels.npl.hidden = name !== "npl";
   }
 
@@ -300,7 +300,7 @@
     var data = currentData || { issues: [] };
     var today = nptToday();
     var table = make("table");
-    table.appendChild(make("caption", null, "Share issues in " + title));
+    table.appendChild(make("caption", null, "Stock issues in " + title));
     var head = make("tr");
     DAYS.forEach(function (day) {
       var th = make("th", null, day.slice(0, 3));
@@ -334,7 +334,7 @@
     gridEl.appendChild(table);
     if (!any && currentData) {
       gridEl.appendChild(make("p", "issues-empty",
-        "No share issues open in " + title + "."));
+        "No stock issues open in " + title + "."));
     }
   }
 
@@ -355,11 +355,6 @@
     }
     bits.push("Units " + issue.units);
     li.appendChild(make("div", "issue-meta", bits.join(" · ")));
-    var link = make("a", null, "Details on ShareSansar");
-    link.href = issue.url;
-    link.target = "_blank";
-    link.rel = "noopener";
-    li.appendChild(link);
     return li;
   }
 
@@ -368,7 +363,7 @@
     var groups = groupIssues(data, nptToday());
     if (!groups.open.length && !groups.upcoming.length) {
       listEl.appendChild(make("p", "issues-empty",
-        "No share issues are open or coming up right now."));
+        "No stock issues are open or coming up right now."));
     }
     [["Open now", groups.open], ["Upcoming", groups.upcoming],
       ["Dates not announced yet", groups.undated]].forEach(function (spec) {
@@ -385,21 +380,21 @@
   }
 
   function render(data) {
-    panels.issues.setAttribute("aria-busy", "false");
+    panels.stocks.setAttribute("aria-busy", "false");
     renderGrid();
     if (!data.issues.length) {
       clear(listEl);
-      setStatus("No share issues published yet.");
+      setStatus("No stock issues published yet.");
       return;
     }
     renderList(data);
-    setStatus(data.issues.length + " share issues listed. Source: ShareSansar.");
+    setStatus(data.issues.length + " stock issues listed.");
   }
 
   function load() {
-    panels.issues.setAttribute("aria-busy", "true");
+    panels.stocks.setAttribute("aria-busy", "true");
     if (!currentData) {
-      setStatus("Loading share issues…");
+      setStatus("Loading stock issues…");
     }
     fetch(DATA_URL, { cache: "no-cache" }).then(function (response) {
       if (!response.ok) {
@@ -416,8 +411,8 @@
       currentData = null;
       clear(listEl);
       renderGrid();
-      panels.issues.setAttribute("aria-busy", "false");
-      setStatus("Couldn't load share issues.", true);
+      panels.stocks.setAttribute("aria-busy", "false");
+      setStatus("Couldn't load stock issues.", true);
     });
   }
 

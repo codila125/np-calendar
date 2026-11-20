@@ -256,7 +256,7 @@ def test_issue_feeds_are_all_day_alarmed_stable_and_reproducible(tmp_path, capsy
         assert start == opening and end == closing + timedelta(days=1)
         desc = str(event["DESCRIPTION"])
         assert "Price: Rs" in desc and "Units:" in desc
-        assert "https://www.sharesansar.com/" in desc
+        assert "sharesansar" not in desc.lower() and "URL" not in event
         if issue["issue_manager"]:
             assert "Issue manager:" in desc
         alarms = [c for c in event.subcomponents if c.name == "VALARM"]

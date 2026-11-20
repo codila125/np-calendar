@@ -12,8 +12,8 @@ from decimal import Decimal
 from . import config
 from .ics import escape_text, fold
 
-ALL_NAME = "All share issues"
-CALDESC = "Opening and closing dates of share issues in Nepal (source: ShareSansar)."
+ALL_NAME = "All stock issues"
+CALDESC = "Opening and closing dates of stock issues in Nepal."
 
 
 def format_amount(value: str) -> str:
@@ -52,7 +52,6 @@ def _description(issue: dict, label: str) -> str:
         lines.append(f"May stay open until {_human(last)}")
     if issue.get("issue_manager"):
         lines.append(f"Issue manager: {issue['issue_manager']}")
-    lines.append(issue["url"])
     return "\n".join(lines)
 
 
@@ -68,7 +67,6 @@ def _vevent(issue: dict, label: str) -> str:
         f"DTEND;VALUE=DATE:{end.strftime('%Y%m%d')}",
         f"SUMMARY:{escape_text(f'{label}: {who}')}",
         f"DESCRIPTION:{escape_text(_description(issue, label))}",
-        f"URL:{issue['url']}",
         "STATUS:CONFIRMED",
         "TRANSP:TRANSPARENT",
         "BEGIN:VALARM",
