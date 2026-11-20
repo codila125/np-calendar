@@ -15,6 +15,13 @@ def _job(name):
 def test_partial_exit_commits_then_fails_the_run():
     scrape = _job("scrape")
     assert "id: scrape" in scrape
+    run = scrape[scrape.index("run: |") :]
+    assert "set +e" in run
+    assert run.index("set +e") < run.index("python -m scraper")
+    lines = [line.strip() for line in run.splitlines()]
+    assert lines[lines.index(next(x for x in lines if x.startswith("python -m scraper"))) + 1] == (
+        "code=$?"
+    )
     assert "partial: ${{ steps.scrape.outputs.partial }}" in scrape
     assert '"$code" -eq 3' in scrape
     assert "partial=true" in scrape

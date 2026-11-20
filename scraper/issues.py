@@ -13,6 +13,8 @@ from . import config
 from .errors import Violation
 from .validate import _check_text
 
+NUMBER_RE = re.compile(r"^\d+(\.\d+)?$")
+MIN_YEAR, MAX_YEAR = 2000, 2100
 DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 COMPANY_URL_RE = re.compile(r"^https://www\.sharesansar\.com/company/[a-z0-9-]+$")
 ANNOUNCEMENT_URL_RE = re.compile(r"^https://www\.sharesansar\.com/\S+$")
@@ -55,17 +57,17 @@ def _is_date(value) -> bool:
     if not isinstance(value, str) or not DATE_RE.match(value):
         return False
     try:
-        date.fromisoformat(value)
+        parsed = date.fromisoformat(value)
     except ValueError:
         return False
-    return True
+    return MIN_YEAR <= parsed.year <= MAX_YEAR
 
 
 def _optional_date_problem(row: dict, field: str) -> str | None:
     value = row.get(field)
     if value in ("", None) or _is_date(value):
         return None
-    return f"{field} {value!r} is not a YYYY-MM-DD date"
+    return f"{field} {value!r} is not a YYYY-MM-DD date in range"
 
 
 def validate_issue_rows(raw: dict[str, list]) -> list[Violation]:
@@ -102,8 +104,12 @@ def _row_problem(row) -> str | None:
             return f"company.{field} is missing or blank after stripping HTML"
     if row.get("companyid") is None:
         return "missing `companyid`"
-    if not isinstance(row.get("total_units"), str) or not row["total_units"].strip():
-        return "missing `total_units`"
+    units = row.get("total_units")
+    if not isinstance(units, str) or not NUMBER_RE.match(units):
+        return f"`total_units` {units!r} is not a plain number string"
+    price = row.get("issue_price")
+    if price not in (None, "") and (not isinstance(price, str) or not NUMBER_RE.match(price)):
+        return f"`issue_price` {price!r} is not a plain number string"
     for field in ("opening_date", "closing_date", "final_date"):
         problem = _optional_date_problem(row, field)
         if problem:

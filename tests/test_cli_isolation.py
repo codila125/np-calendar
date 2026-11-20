@@ -90,6 +90,48 @@ def test_each_source_failure_keeps_its_files_and_the_other_source_refreshes(
     assert "error: issues source failed; kept the published issues data and feeds" in err
 
 
+def _malform(routes, field, value):
+    url = _issue_url(1)
+    body = json.loads(routes[url].text)
+    row = body["data"][0]
+    if field == "symbol":
+        row["company"]["symbol"] = value
+    elif field == "closing_date":
+        row["opening_date"], row["closing_date"] = "2026-01-01", value
+    else:
+        row[field] = value
+    routes[url] = FakeResponse(200, json.dumps(body))
+
+
+@pytest.mark.parametrize(
+    ("field", "value"),
+    [
+        ("total_units", "N/A"),
+        ("total_units", "1,000"),
+        ("issue_price", "N/A"),
+        ("issue_price", "Rs 100"),
+        ("issue_price", 100),
+        ("closing_date", "9999-12-31"),
+        ("symbol", ""),
+    ],
+)
+def test_malformed_issue_row_fails_issues_alone(tmp_path, capsys, field, value):
+    site = _seed(tmp_path, stale="npl")
+    before = _snapshot(site)
+    routes = {**_npl_routes(), **_issue_routes()}
+    _malform(routes, field, value)
+    capsys.readouterr()
+
+    assert cli.main(["--site-dir", str(site)], session=FakeSession(routes)) == 3
+
+    after = _snapshot(site)
+    assert _issue_part(after) == _issue_part(before)
+    assert _npl_part(after) != _npl_part(before)
+    err = capsys.readouterr().err
+    assert "[I3]" in err
+    assert "error: issues source failed; kept the published issues data and feeds" in err
+
+
 def test_npl_failure_keeps_npl_files_and_issues_refresh(tmp_path, capsys):
     site = _seed(tmp_path, stale="issues")
     before = _snapshot(site)
