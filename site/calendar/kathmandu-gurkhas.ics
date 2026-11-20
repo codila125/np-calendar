@@ -1,6 +1,6 @@
 BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//codila125//NPL calendar feed//EN
+PRODID:-//codila125//np-calendar//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:NPL 2026 — Kathmandu Gurkhas
@@ -18,8 +18,8 @@ SUMMARY:Janakpur Bolts vs Kathmandu Gurkhas (NPL Match 5)
 LOCATION:Tribhuvan University Cricket Ground\, Kirtipur
 DESCRIPTION:Result: Janakpur Bolts won by 8 wickets\nJanakpur Bolts 116/2 (
  17.2 ov)\nKathmandu Gurkhas 115/10 (19.3 ov)\nhttps://codila125.github.io/
- npl/
-URL:https://codila125.github.io/npl/
+ np-calendar/
+URL:https://codila125.github.io/np-calendar/
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 END:VEVENT
@@ -33,8 +33,8 @@ SUMMARY:Kathmandu Gurkhas vs Karnali Yaks (NPL Match 10)
 LOCATION:Tribhuvan University Cricket Ground\, Kirtipur
 DESCRIPTION:Result: Kathmandu Gorkhas won by 4 wickets\nKathmandu Gurkhas 1
  83/6 (19.5 ov)\nKarnali Yaks 180/6 (20.0 ov)\nhttps://codila125.github.io/
- npl/
-URL:https://codila125.github.io/npl/
+ np-calendar/
+URL:https://codila125.github.io/np-calendar/
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 END:VEVENT
@@ -48,8 +48,8 @@ SUMMARY:Kathmandu Gurkhas vs Biratnagar Kings (NPL Match 15)
 LOCATION:Tribhuvan University Cricket Ground\, Kirtipur
 DESCRIPTION:Result: Kathmandu Gorkhas won by 9 wickets\nKathmandu Gurkhas 8
  6/1 (9.4 ov)\nBiratnagar Kings 83/10 (18.3 ov)\nhttps://codila125.github.i
- o/npl/
-URL:https://codila125.github.io/npl/
+ o/np-calendar/
+URL:https://codila125.github.io/np-calendar/
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 END:VEVENT
@@ -63,8 +63,8 @@ SUMMARY:Kathmandu Gurkhas vs Lumbini Lions (NPL Match 18)
 LOCATION:Tribhuvan University Cricket Ground\, Kirtipur
 DESCRIPTION:Result: Kathmandu Gorkhas won by 36 runs\nKathmandu Gurkhas 160
  /8 (20.0 ov)\nLumbini Lions 124/10 (19.3 ov)\nhttps://codila125.github.io/
- npl/
-URL:https://codila125.github.io/npl/
+ np-calendar/
+URL:https://codila125.github.io/np-calendar/
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 END:VEVENT
@@ -78,8 +78,8 @@ SUMMARY:Chitwan Rhinos vs Kathmandu Gurkhas (NPL Match 20)
 LOCATION:Tribhuvan University Cricket Ground\, Kirtipur
 DESCRIPTION:Result: Kathmandu Gorkhas won by 10 runs\nChitwan Rhinos 170/7 
  (20.0 ov)\nKathmandu Gurkhas 180/8 (20.0 ov)\nhttps://codila125.github.io/
- npl/
-URL:https://codila125.github.io/npl/
+ np-calendar/
+URL:https://codila125.github.io/np-calendar/
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 END:VEVENT
@@ -93,8 +93,8 @@ SUMMARY:Kathmandu Gurkhas vs Sudurpaschim Royals (NPL Match 24)
 LOCATION:Tribhuvan University Cricket Ground\, Kirtipur
 DESCRIPTION:Result: Sudurpaschim Royals won by 7 runs\nKathmandu Gurkhas 11
  8/7 (20.0 ov)\nSudurpaschim Royals 125/6 (20.0 ov)\nhttps://codila125.gith
- ub.io/npl/
-URL:https://codila125.github.io/npl/
+ ub.io/np-calendar/
+URL:https://codila125.github.io/np-calendar/
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 END:VEVENT
@@ -108,8 +108,8 @@ SUMMARY:Pokhara Avengers vs Kathmandu Gurkhas (NPL Match 28)
 LOCATION:Tribhuvan University Cricket Ground\, Kirtipur
 DESCRIPTION:Result: Pokhara Avengers won by 55 runs\nPokhara Avengers 224/3
   (20.0 ov)\nKathmandu Gurkhas 169/10 (19.5 ov)\nhttps://codila125.github.i
- o/npl/
-URL:https://codila125.github.io/npl/
+ o/np-calendar/
+URL:https://codila125.github.io/np-calendar/
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 END:VEVENT
@@ -122,9 +122,9 @@ DTEND:20261118T144500Z
 SUMMARY:Kathmandu Gurkhas vs Chitwan Rhinos (NPL Eliminator)
 LOCATION:Tribhuvan University Cricket Ground\, Kirtipur
 DESCRIPTION:Result: Chitwan Rhinos won by 61 runs\nKathmandu Gurkhas 143/9 
- (20.0 ov)\nChitwan Rhinos 204/4 (20.0 ov)\nhttps://codila125.github.io/npl
- /
-URL:https://codila125.github.io/npl/
+ (20.0 ov)\nChitwan Rhinos 204/4 (20.0 ov)\nhttps://codila125.github.io/np-
+ calendar/
+URL:https://codila125.github.io/np-calendar/
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 END:VEVENT

@@ -1,6 +1,6 @@
 BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//codila125//NPL calendar feed//EN
+PRODID:-//codila125//np-calendar//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:NPL 2026 — Janakpur Bolts
@@ -17,8 +17,9 @@ DTEND:20261027T144500Z
 SUMMARY:Karnali Yaks vs Janakpur Bolts (NPL Match 3)
 LOCATION:Tribhuvan University Cricket Ground\, Kirtipur
 DESCRIPTION:Result: Karnali Yaks won by 19 runs\nKarnali Yaks 132/9 (20.0 o
- v)\nJanakpur Bolts 113/10 (19.3 ov)\nhttps://codila125.github.io/npl/
-URL:https://codila125.github.io/npl/
+ v)\nJanakpur Bolts 113/10 (19.3 ov)\nhttps://codila125.github.io/np-calend
+ ar/
+URL:https://codila125.github.io/np-calendar/
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 END:VEVENT
@@ -32,8 +33,8 @@ SUMMARY:Janakpur Bolts vs Kathmandu Gurkhas (NPL Match 5)
 LOCATION:Tribhuvan University Cricket Ground\, Kirtipur
 DESCRIPTION:Result: Janakpur Bolts won by 8 wickets\nJanakpur Bolts 116/2 (
  17.2 ov)\nKathmandu Gurkhas 115/10 (19.3 ov)\nhttps://codila125.github.io/
- npl/
-URL:https://codila125.github.io/npl/
+ np-calendar/
+URL:https://codila125.github.io/np-calendar/
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 END:VEVENT
@@ -46,8 +47,9 @@ DTEND:20261101T144500Z
 SUMMARY:Janakpur Bolts vs Pokhara Avengers (NPL Match 9)
 LOCATION:Tribhuvan University Cricket Ground\, Kirtipur
 DESCRIPTION:Result: Janakpur Bolts won by 9 runs\nJanakpur Bolts 147/7 (20.
- 0 ov)\nPokhara Avengers 138/9 (20.0 ov)\nhttps://codila125.github.io/npl/
-URL:https://codila125.github.io/npl/
+ 0 ov)\nPokhara Avengers 138/9 (20.0 ov)\nhttps://codila125.github.io/np-ca
+ lendar/
+URL:https://codila125.github.io/np-calendar/
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 END:VEVENT
@@ -60,9 +62,9 @@ DTEND:20261103T101500Z
 SUMMARY:Biratnagar Kings vs Janakpur Bolts (NPL Match 12)
 LOCATION:Tribhuvan University Cricket Ground\, Kirtipur
 DESCRIPTION:Result: Biratnagar Kings won by 2 runs\nBiratnagar Kings 174/3 
- (20.0 ov)\nJanakpur Bolts 172/7 (20.0 ov)\nhttps://codila125.github.io/npl
- /
-URL:https://codila125.github.io/npl/
+ (20.0 ov)\nJanakpur Bolts 172/7 (20.0 ov)\nhttps://codila125.github.io/np-
+ calendar/
+URL:https://codila125.github.io/np-calendar/
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 END:VEVENT
@@ -75,8 +77,9 @@ DTEND:20261105T101500Z
 SUMMARY:Lumbini Lions vs Janakpur Bolts (NPL Match 14)
 LOCATION:Tribhuvan University Cricket Ground\, Kirtipur
 DESCRIPTION:Result: Lumbini Lions won by 16 runs\nLumbini Lions 149/8 (20.0
-  ov)\nJanakpur Bolts 133/8 (20.0 ov)\nhttps://codila125.github.io/npl/
-URL:https://codila125.github.io/npl/
+  ov)\nJanakpur Bolts 133/8 (20.0 ov)\nhttps://codila125.github.io/np-calen
+ dar/
+URL:https://codila125.github.io/np-calendar/
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 END:VEVENT
@@ -90,8 +93,8 @@ SUMMARY:Sudurpaschim Royals vs Janakpur Bolts (NPL Match 21)
 LOCATION:Tribhuvan University Cricket Ground\, Kirtipur
 DESCRIPTION:Result: Sudurpaschim Royals won by 27 runs\nSudurpaschim Royals
   120/9 (20.0 ov)\nJanakpur Bolts 93/10 (19.5 ov)\nhttps://codila125.github
- .io/npl/
-URL:https://codila125.github.io/npl/
+ .io/np-calendar/
+URL:https://codila125.github.io/np-calendar/
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 END:VEVENT
@@ -104,8 +107,9 @@ DTEND:20261113T144500Z
 SUMMARY:Janakpur Bolts vs Chitwan Rhinos (NPL Match 25)
 LOCATION:Tribhuvan University Cricket Ground\, Kirtipur
 DESCRIPTION:Result: Chitwan Rhinos won by 4 wickets\nJanakpur Bolts 88/9 (2
- 0.0 ov)\nChitwan Rhinos 92/6 (17.2 ov)\nhttps://codila125.github.io/npl/
-URL:https://codila125.github.io/npl/
+ 0.0 ov)\nChitwan Rhinos 92/6 (17.2 ov)\nhttps://codila125.github.io/np-cal
+ endar/
+URL:https://codila125.github.io/np-calendar/
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 END:VEVENT

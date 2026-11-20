@@ -132,7 +132,7 @@ def _calendar(name: str, matches: list[dict], year: int) -> bytes:
     lines = [
         fold("BEGIN:VCALENDAR"),
         fold("VERSION:2.0"),
-        fold("PRODID:-//codila125//NPL calendar feed//EN"),
+        fold(f"PRODID:{config.PRODID}"),
         fold("CALSCALE:GREGORIAN"),
         fold("METHOD:PUBLISH"),
         fold(f"X-WR-CALNAME:{escape_text(name)}"),
