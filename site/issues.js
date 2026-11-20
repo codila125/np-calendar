@@ -98,10 +98,18 @@
       Array.isArray(data.issues) && Array.isArray(data.categories);
   }
 
+  // "600000.00" -> "600,000"; "24851236.18" -> "24,851,236.18" (same as the feeds).
+  function formatAmount(value) {
+    var parts = String(value).trim().split(".");
+    var whole = parts[0].replace(/^0+(?=\d)/, "");
+    var frac = (parts[1] || "").replace(/0+$/, "");
+    return whole.replace(/\B(?=(\d{3})+(?!\d))/g, ",") + (frac ? "." + frac : "");
+  }
+
   if (typeof module === "object" && module.exports) {
     module.exports = { parseHash: parseHash, validateIssuesData: validateIssuesData,
       nptToday: nptToday, monthWeeks: monthWeeks, issuesOn: issuesOn,
-      groupIssues: groupIssues };
+      groupIssues: groupIssues, formatAmount: formatAmount };
   }
   if (typeof document === "undefined") {
     return;
@@ -351,9 +359,9 @@
     li.appendChild(make("strong", null, " " + issue.company + " (" + issue.symbol + ")"));
     var bits = [dateText(issue)];
     if (issue.price) {
-      bits.push("Price " + issue.price);
+      bits.push("Price Rs " + formatAmount(issue.price));
     }
-    bits.push("Units " + issue.units);
+    bits.push("Units " + formatAmount(issue.units));
     li.appendChild(make("div", "issue-meta", bits.join(" · ")));
     return li;
   }
