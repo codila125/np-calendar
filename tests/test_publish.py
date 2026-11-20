@@ -101,3 +101,21 @@ def test_committed_seed_is_canonical_and_complete():
     assert data["schema_version"] == 1
     for key in ("season", "updated_at", "teams", "standings", "matches", "stats"):
         assert data[key], key
+
+
+def test_prune_false_deletes_nothing(tmp_path):
+    write_outputs(tmp_path, {"calendar/npl.ics": b"A", "calendar/old.ics": b"B"})
+    changed = write_outputs(tmp_path, {"calendar/npl.ics": b"A2"}, prune=False)
+    assert changed == ["calendar/npl.ics"]
+    assert (tmp_path / "calendar/old.ics").read_bytes() == b"B"
+
+
+def test_keep_survives_pruning_but_other_orphans_do_not(tmp_path):
+    write_outputs(
+        tmp_path,
+        {"calendar/npl.ics": b"A", "calendar/issues.ics": b"I", "calendar/old.ics": b"B"},
+    )
+    changed = write_outputs(tmp_path, {"calendar/npl.ics": b"A"}, keep={"calendar/issues.ics"})
+    assert changed == ["calendar/old.ics"]
+    assert (tmp_path / "calendar/issues.ics").read_bytes() == b"I"
+    assert not (tmp_path / "calendar/old.ics").exists()

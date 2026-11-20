@@ -1,9 +1,13 @@
 """Issues source through the CLI: ShareSansar -> site/data/issues.json (AC-1)."""
 
 import json
+import re
 import shutil
+from datetime import UTC, date, datetime, timedelta
 from pathlib import Path
 from urllib.parse import parse_qs, urlparse
+
+from icalendar import Calendar
 
 from scraper import cli, config, issues
 from tests.fakes import FakeResponse, FakeSession
@@ -184,3 +188,89 @@ def test_right_share_final_date_is_book_closure():
 def test_control_char_and_long_text_are_i6():
     data = issues.normalize_issues({"ipo": [_row(issue_manager="a\x07b")]})
     assert [v.rule_id for v in issues.validate_issues(data)] == ["I6"]
+
+
+# --- issue feeds (AC-2) ----------------------------------------------------------------
+
+UID_RE = re.compile(r"^issue-[a-z-]+-\d+-[\d.]+(-\d{8})?@codila125\.github\.io$")
+
+
+def _feeds(site):
+    cal = site / "calendar"
+    return {name: cal / f"{name}.ics" for name in config.ISSUE_FEEDS}
+
+
+def _events(path):
+    cal = Calendar.from_ical(path.read_bytes())
+    return [c for c in cal.walk() if c.name == "VEVENT"]
+
+
+def _snapshot(site):
+    return {p: (p.read_bytes(), p.stat().st_mtime_ns) for p in _feeds(site).values()}
+
+
+def test_issue_feeds_are_all_day_alarmed_stable_and_reproducible(tmp_path, capsys):
+    src = _from_dir_src(tmp_path)
+    site = tmp_path / "site"
+    assert cli.main(["--from-dir", str(src), "--site-dir", str(site)]) == 0
+    feeds = _feeds(site)
+    assert all(p.is_file() for p in feeds.values())
+
+    data = json.loads((site / "data" / "issues.json").read_text())
+    by_uid = {f"issue-{i['id']}@codila125.github.io": i for i in data["issues"]}
+    events = _events(feeds["issues"])
+    assert len(events) == 218
+    counts = [len(_events(feeds[c.slug])) for c in config.ISSUE_CATEGORIES]
+    assert counts == [47, 23, 48, 50, 50]
+    for slug in (c.slug for c in config.ISSUE_CATEGORIES):
+        assert {str(e["UID"]) for e in _events(feeds[slug])} <= {str(e["UID"]) for e in events}
+
+    for event in events:
+        uid = str(event["UID"])
+        assert UID_RE.match(uid), uid
+        issue = by_uid[uid]
+        opening = date.fromisoformat(issue["opening_date"])
+        closing = date.fromisoformat(issue["closing_date"])
+        start, end = event["DTSTART"].dt, event["DTEND"].dt
+        assert type(start) is date and type(end) is date
+        assert start == opening and end == closing + timedelta(days=1)
+        desc = str(event["DESCRIPTION"])
+        assert "Price: Rs" in desc and "Units:" in desc
+        assert "https://www.sharesansar.com/" in desc
+        if issue["issue_manager"]:
+            assert "Issue manager:" in desc
+        alarms = [c for c in event.subcomponents if c.name == "VALARM"]
+        assert len(alarms) == 1
+        assert str(alarms[0]["ACTION"]) == "DISPLAY"
+        trigger = alarms[0]["TRIGGER"].dt
+        assert trigger == datetime(opening.year, opening.month, opening.day, 3, 15, tzinfo=UTC)
+    undated = [u for u, i in by_uid.items() if not i["dates_announced"]]
+    assert len(undated) == 5
+    assert not {str(e["UID"]) for e in events} & set(undated)
+
+    before = _snapshot(site)
+    capsys.readouterr()
+    assert cli.main(["--from-dir", str(src), "--site-dir", str(site)]) == 0
+    assert "no changes" in capsys.readouterr().out
+    assert _snapshot(site) == before
+
+    path = src / "issues" / "ipo.json"
+    body = json.loads(path.read_text())
+    row = next(r for r in body["data"] if r["opening_date"] and r["closing_date"])
+    old_uid = f"issue-ipo-{row['companyid']}-"
+    row["closing_date"] = "2099-01-01"
+    path.write_text(json.dumps(body))
+    assert cli.main(["--from-dir", str(src), "--site-dir", str(site)]) == 0
+    new_uids = {str(e["UID"]) for e in _events(feeds["issues"])}
+    old_uids = {str(e["UID"]) for e in events}
+    assert new_uids == old_uids
+    assert any(u.startswith(old_uid) for u in new_uids)
+
+
+def test_issues_skipped_or_failed_run_keeps_existing_issue_feeds(tmp_path):
+    src = _from_dir_src(tmp_path)
+    site = tmp_path / "site"
+    assert cli.main(["--from-dir", str(src), "--site-dir", str(site)]) == 0
+    before = _snapshot(site)
+    assert cli.main(["--from-dir", str(SEASON_2026), "--site-dir", str(site)]) == 0
+    assert _snapshot(site) == before
