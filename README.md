@@ -1,13 +1,13 @@
 # np-calendar
 
 Month calendar and `.ics` feeds for Nepali **stock issues** (IPO, FPO, right share, IPO for
-locals, IPO for migrant workers), plus standings, match schedule and feeds for the **Nepal Premier
+locals, IPO for migrant workers, mutual funds, debentures), plus standings, match schedule and feeds for the **Nepal Premier
 League 2026 (Season 3)**, 26 Oct – 21 Nov 2026 at TU Ground, Kirtipur.
 
 - Site: <https://codila125.github.io/np-calendar/> (tabs: "Stocks" by default, and "NPL")
 - All stock issues feed: <https://codila125.github.io/np-calendar/calendar/issues.ics>
 - Per-category issue feeds: `https://codila125.github.io/np-calendar/calendar/<name>.ics` with
-  `<name>` one of `ipo`, `fpo`, `right-share`, `ipo-local`, `ipo-migrant`
+  `<name>` one of `ipo`, `fpo`, `right-share`, `ipo-local`, `ipo-migrant`, `mutual-fund`, `debenture`
 - NPL all matches feed: <https://codila125.github.io/np-calendar/calendar/npl.ics>
 - NPL per-team feeds: `https://codila125.github.io/np-calendar/calendar/<team-slug>.ics` (one per
   franchise, e.g.
@@ -15,7 +15,10 @@ League 2026 (Season 3)**, 26 Oct – 21 Nov 2026 at TU Ground, Kirtipur.
 
 Each dated issue is one all-day event from its opening to its closing date (inclusive) with a
 09:00 NPT reminder on the opening day. Issues whose dates are not announced yet appear on the page
-but are left out of the feeds.
+but are left out of the feeds. An issue with a listing date also gets a `Lists today:` event on
+that day (09:00 NPT reminder), and a right share with a book closure date gets a `Book closure:`
+event with a reminder 3 days earlier (T+2 settlement). Both go in the issue's own feed and
+`issues.ics`.
 
 A scheduled GitHub Action scrapes both sources every 30 minutes, rebuilds `site/data/npl.json`,
 `site/data/issues.json` and the `.ics` feeds, commits them only when they changed, and deploys the
@@ -40,7 +43,7 @@ site/               exactly what GitHub Pages serves (the artifact)
   issues.js         share-issues tab: month grid, open/upcoming list, feed rows
   data/npl.json     normalized NPL data the page reads (committed by the bot)
   data/issues.json  normalized share-issue data the page reads (committed by the bot)
-  calendar/*.ics    NPL + team feeds and six issue feeds (committed by the bot)
+  calendar/*.ics    NPL + team feeds and eight issue feeds (committed by the bot)
 worker/live.js      Cloudflare Worker: CORS proxy for live scores (see "Live scores")
 tests/              offline tests (fixtures copied from saved source responses)
 docs/adr/           decisions: ICS UID, determinism, git-as-last-good-store
@@ -59,7 +62,8 @@ python3 -m venv .venv && .venv/bin/pip install -r requirements-dev.txt
 
 # rebuild from saved source files instead of the network (dev / tests / seed);
 # DIR holds teams/matches/points JSON and, optionally, DIR/issues/ with the saved
-# stock-issue responses (ipo.json, fpo.json, right-share.json, ipo-local.json, ipo-migrant.json, robots.txt)
+# stock-issue responses (ipo.json, fpo.json, right-share.json, ipo-local.json, ipo-migrant.json,
+# mutual-fund.json, debenture.json, robots.txt)
 .venv/bin/python -m scraper --from-dir tests/fixtures/season2026
 
 # see what would change without writing anything
@@ -92,8 +96,8 @@ snapshots under `tests/fixtures/`.
 ### Stock issues
 
 The source's `existing-issues` JSON for types IPO (1), FPO (2), right share (3), IPO for locals
-(5) and IPO for migrant workers (8), newest 50 per category, paged, with its `robots.txt` checked
-first. Mutual funds, debentures and IPOs for QIIs are not covered. Issues without an opening or
+(5), IPO for migrant workers (8), mutual funds (4) and debentures (7), newest 50 per category, paged, with its `robots.txt` checked
+first. IPOs for QIIs (9) are not covered. Issues without an opening or
 closing date are kept in `issues.json` as dates-not-announced and left out of the feeds; an issue
 that closes before it opens fails validation and nothing is written for issues.
 

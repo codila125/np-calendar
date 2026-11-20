@@ -89,7 +89,11 @@ def test_remote_run_publishes_seven_categories_html_stripped(tmp_path):
     by_id = {i["id"]: i for i in data["issues"]}
     expected = (("mutual-fund", "Mutual funds:", 50), ("debenture", "Debentures:", 43))
     for slug, prefix, count in expected:
-        events = _events(site / "calendar" / f"{slug}.ics")
+        events = [
+            e
+            for e in _events(site / "calendar" / f"{slug}.ics")
+            if "-listing@" not in str(e["UID"])
+        ]
         assert len(events) == count
         assert all(str(e["SUMMARY"]).startswith(prefix) for e in events)
         in_all = {str(e["UID"]) for e in _events(site / "calendar" / "issues.ics")}
@@ -237,7 +241,9 @@ def test_control_char_and_long_text_are_i6():
 
 # --- issue feeds (AC-2) ----------------------------------------------------------------
 
-UID_RE = re.compile(r"^issue-[a-z-]+-\d+-([\d.]+|na)(-\d{8}|-tba)?@codila125\.github\.io$")
+UID_RE = re.compile(
+    r"^issue-[a-z-]+-\d+-([\d.]+|na)(-\d{8}|-tba)?(-listing|-bookclosure)?@codila125\.github\.io$"
+)
 
 
 def _feeds(site):
@@ -263,12 +269,25 @@ def test_issue_feeds_are_all_day_alarmed_stable_and_reproducible(tmp_path, capsy
 
     data = json.loads((site / "data" / "issues.json").read_text())
     by_uid = {f"issue-{i['id']}@codila125.github.io": i for i in data["issues"]}
-    events = _events(feeds["issues"])
+    all_events = _events(feeds["issues"])
+    assert len(all_events) == 644
+    assert all(UID_RE.match(str(e["UID"])) for e in all_events)
+    app_re = re.compile(r"^issue-.*(?<!-listing)(?<!-bookclosure)@")
+
+    def application(path):
+        return [e for e in _events(path) if app_re.match(str(e["UID"]))]
+
+    events = application(feeds["issues"])
     assert len(events) == 311
-    counts = [len(_events(feeds[c.slug])) for c in config.ISSUE_CATEGORIES]
+    counts = [len(application(feeds[c.slug])) for c in config.ISSUE_CATEGORIES]
     assert counts == [47, 23, 48, 50, 50, 50, 43]
+    assert [len(_events(feeds[c.slug])) for c in config.ISSUE_CATEGORIES] == [
+        94, 46, 141, 97, 97, 87, 82,
+    ]  # fmt: skip
     for slug in (c.slug for c in config.ISSUE_CATEGORIES):
-        assert {str(e["UID"]) for e in _events(feeds[slug])} <= {str(e["UID"]) for e in events}
+        assert {str(e["UID"]) for e in _events(feeds[slug])} <= {
+            str(e["UID"]) for e in all_events
+        }
 
     for event in events:
         uid = str(event["UID"])
@@ -307,7 +326,7 @@ def test_issue_feeds_are_all_day_alarmed_stable_and_reproducible(tmp_path, capsy
     row["closing_date"] = "2099-01-01"
     path.write_text(json.dumps(body))
     assert cli.main(["--from-dir", str(src), "--site-dir", str(site)]) == 0
-    new_uids = {str(e["UID"]) for e in _events(feeds["issues"])}
+    new_uids = {str(e["UID"]) for e in application(feeds["issues"])}
     old_uids = {str(e["UID"]) for e in events}
     assert new_uids == old_uids
     assert any(u.startswith(old_uid) for u in new_uids)
@@ -320,3 +339,114 @@ def test_issues_skipped_or_failed_run_keeps_existing_issue_feeds(tmp_path):
     before = _snapshot(site)
     assert cli.main(["--from-dir", str(SEASON_2026), "--site-dir", str(site)]) == 0
     assert _snapshot(site) == before
+
+
+# --- listing-day and book-closure events (AC-1, AC-2) ---------------------------------
+
+DOMAIN = "codila125.github.io"
+
+
+def _alarm_triggers(event):
+    alarms = [c for c in event.subcomponents if c.name == "VALARM"]
+    assert len(alarms) == 1 and str(alarms[0]["ACTION"]) == "DISPLAY"
+    return alarms[0]["TRIGGER"].dt
+
+
+def _by_uid(path):
+    return {str(e["UID"]): e for e in _events(path)}
+
+
+def test_listing_day_events_in_own_feed_and_issues_ics(tmp_path, capsys):
+    src = _from_dir_src(tmp_path)
+    path = src / "issues" / "ipo.json"
+    body = json.loads(path.read_text())
+    dated = [r for r in body["data"] if r["opening_date"] and r["listing_date"]]
+    before_opening = date.fromisoformat(dated[0]["opening_date"]) - timedelta(days=1)
+    dated[0]["listing_date"] = before_opening.isoformat()
+    dated[1]["listing_date"] = ""
+    path.write_text(json.dumps(body))
+    site = tmp_path / "site"
+
+    assert cli.main(["--from-dir", str(src), "--site-dir", str(site)]) == 0
+
+    data = json.loads((site / "data" / "issues.json").read_text())
+    feeds = _feeds(site)
+    all_events = _by_uid(feeds["issues"])
+    app_uids = {f"issue-{i['id']}@{DOMAIN}" for i in data["issues"] if i["dates_announced"]}
+    assert {u for u in all_events if "-listing@" not in u and "-bookclosure@" not in u} == app_uids
+
+    listed = [i for i in data["issues"] if i["listing_date"]]
+    for issue in listed:
+        uid = f"issue-{issue['id']}-listing@{DOMAIN}"
+        assert uid != f"issue-{issue['id']}@{DOMAIN}"
+        listing = date.fromisoformat(issue["listing_date"])
+        for name in ("issues", issue["category"]):
+            event = _by_uid(feeds[name])[uid]
+            assert str(event["SUMMARY"]) == f"Lists today: {issue['company']} ({issue['symbol']})"
+            assert type(event["DTSTART"].dt) is date and event["DTSTART"].dt == listing
+            assert event["DTEND"].dt == listing + timedelta(days=1)
+            assert _alarm_triggers(event) == datetime(
+                listing.year, listing.month, listing.day, 3, 15, tzinfo=UTC
+            )
+        for name, path_ in feeds.items():
+            if name not in ("issues", issue["category"]):
+                assert uid not in _by_uid(path_)
+    # the two mutated rows publish no listing event anywhere and no `listing_date`
+    mutated = [dated[0]["companyid"], dated[1]["companyid"]]
+    for cid in mutated:
+        ids = [i for i in data["issues"] if i["id"].startswith(f"ipo-{cid}-")]
+        assert ids and all(i["listing_date"] is None for i in ids)
+        assert not any(f"issue-ipo-{cid}-" in u and "-listing@" in u for u in all_events)
+    counts = [
+        sum(1 for u in _by_uid(feeds[c.slug]) if u.endswith(f"-listing@{DOMAIN}"))
+        for c in config.ISSUE_CATEGORIES
+    ]
+    assert counts == [47 - 2, 23, 45, 47, 47, 37, 39]
+
+    snapshot = _snapshot(site)
+    capsys.readouterr()
+    assert cli.main(["--from-dir", str(src), "--site-dir", str(site)]) == 0
+    assert "no changes" in capsys.readouterr().out
+    assert _snapshot(site) == snapshot
+
+
+def test_right_share_book_closure_event_with_three_day_alarm(tmp_path):
+    site = tmp_path / "site"
+    assert cli.main(["--from-dir", str(_from_dir_src(tmp_path)), "--site-dir", str(site)]) == 0
+    data = json.loads((site / "data" / "issues.json").read_text())
+    feeds = _feeds(site)
+    right = [i for i in data["issues"] if i["category"] == "right-share"]
+    closing = [i for i in right if i["book_closure_date"]]
+    assert len(closing) == 48
+
+    for issue in closing:
+        uid = f"issue-{issue['id']}-bookclosure@{DOMAIN}"
+        bc = date.fromisoformat(issue["book_closure_date"])
+        for name in ("issues", "right-share"):
+            event = _by_uid(feeds[name])[uid]
+            assert str(event["SUMMARY"]) == f"Book closure: {issue['company']} ({issue['symbol']})"
+            assert event["DTSTART"].dt == bc and event["DTEND"].dt == bc + timedelta(days=1)
+            desc = str(event["DESCRIPTION"])
+            assert "must hold" in desc and "T+2" in desc and "3 trading days" in desc
+            assert (f"Ratio: {issue['ratio']}" in desc) == bool(issue["ratio"])
+            if not issue["ratio"]:
+                assert "Ratio:" not in desc
+            first = bc - timedelta(days=3)
+            assert _alarm_triggers(event) == datetime(
+                first.year, first.month, first.day, 3, 15, tzinfo=UTC
+            )
+        for name, path in feeds.items():
+            if name not in ("issues", "right-share"):
+                assert uid not in _by_uid(path)
+    assert sum("-bookclosure@" in u for u in _by_uid(feeds["issues"])) == 48
+    assert sum("-bookclosure@" in u for u in _by_uid(feeds["right-share"])) == 48
+
+    nica = next(i for i in right if i["symbol"] == "NICA")
+    assert nica["opening_date"] is None
+    event = _by_uid(feeds["right-share"])[f"issue-{nica['id']}-bookclosure@{DOMAIN}"]
+    assert event["DTSTART"].dt == date(2026, 11, 27)
+    assert _alarm_triggers(event) == datetime(2026, 11, 24, 3, 15, tzinfo=UTC)
+    without = [i for i in right if not i["book_closure_date"]]
+    assert len(without) == 2
+    for issue in without:
+        assert not any(issue["id"] in u and "-bookclosure@" in u for u in _by_uid(feeds["issues"]))
