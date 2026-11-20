@@ -1,4 +1,4 @@
-/* Nepal Premier League 2026 — static site behaviour. */
+/* np-calendar — NPL tab behaviour (standings, schedule, team feeds). */
 "use strict";
 
 (function () {
@@ -13,7 +13,7 @@
   var MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
   var DAYS = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
-  var main = document.getElementById("main");
+  var main = document.getElementById("panel-npl");
   var liveRegion = document.getElementById("live-region");
   var refreshNote = document.getElementById("refresh-note");
   var standingsContent = document.getElementById("standings-content");
@@ -1203,9 +1203,9 @@
     }
   }
 
-  calendarList.addEventListener("click", function (event) {
-    var button = event.target.closest(".copy");
-    if (!button || !calendarList.contains(button)) {
+  document.addEventListener("click", function (event) {
+    var button = event.target.closest(".copy[data-url]");
+    if (!button) {
       return;
     }
     copyUrl(button.dataset.url, button);
