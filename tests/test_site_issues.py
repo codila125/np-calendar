@@ -14,8 +14,8 @@ from scraper.issues_ics import format_amount
 from tests.test_site_contrast import _contrast
 
 SITE = Path(__file__).resolve().parent.parent / "site"
-FEEDS = ["issues", "ipo", "fpo", "right-share", "ipo-local", "ipo-migrant"]
-CATS = ["ipo", "fpo", "right-share", "ipo-local", "ipo-migrant"]
+CATS = ["ipo", "fpo", "right-share", "ipo-local", "ipo-migrant", "mutual-fund", "debenture"]
+FEEDS = ["issues", *CATS]
 
 
 class Node:
@@ -125,7 +125,7 @@ def test_tabs_markup_panels_feeds_and_states():
 
     rows = [n for n in by_id["panel-stocks"].walk()
             if n.tag == "li" and "calendar-row" in n.attrs.get("class", "")]
-    assert len(rows) == 6
+    assert len(rows) == 8
     for row, feed in zip(rows, FEEDS, strict=True):
         url = f"https://codila125.github.io/np-calendar/calendar/{feed}.ics"
         hrefs = [n.attrs.get("href", "") for n in row.walk()]
@@ -202,10 +202,8 @@ console.log(JSON.stringify({
 @pytest.mark.skipif(shutil.which("node") is None, reason="node is not installed")
 def test_issue_logic_in_node(tmp_path):
     fixtures = Path(__file__).parent / "fixtures" / "issues"
-    names = {"ipo": "ipo", "fpo": "fpo", "right-share": "right-share",
-             "ipo-local": "ipo-local", "ipo-migrant": "ipo-migrant"}
-    raw = {slug: json.loads((fixtures / f"{name}.json").read_text())["data"]
-           for slug, name in names.items()}
+    raw = {slug: json.loads((fixtures / f"{slug}.json").read_text())["data"]
+           for slug in CATS}
     data_file = tmp_path / "issues.json"
     data_file.write_text(json.dumps(normalize_issues(raw)))
     result = subprocess.run(
@@ -225,10 +223,10 @@ def test_issue_logic_in_node(tmp_path):
     # the closing day is inclusive: migrant AELTD closes on Dec 3
     assert out["dec3"] == ["ipo-local:AELTD", "ipo-local:KPL", "ipo-migrant:AELTD"]
     assert out["dec4"] == ["ipo-local:AELTD", "ipo-local:KPL"]
-    assert out["open20"] == []
+    assert out["open20"] == ["mutual-fund:C50MF"]
     assert out["upcoming20"] == ["ipo-local:AELTD", "ipo-local:KPL", "ipo-migrant:AELTD",
                                  "ipo-migrant:KPL"]
-    assert len(out["undated20"]) == 5
+    assert len(out["undated20"]) == 12
     assert out["open27"] == ["ipo-local:KPL", "ipo-migrant:KPL"]
     assert out["upcoming27"] == ["ipo-local:AELTD", "ipo-migrant:AELTD"]
 
@@ -435,6 +433,31 @@ const out = {};
   nav("Next").fire("click");
   out.chipsDec = p.els["issues-month"].walk().filter((e) => /chip /.test(e.className)).length;
 
+  // event chips, legend and list bits (November 2026)
+  p = boot("", okFetch(sampleData));
+  await flush();
+  const cell = (n) => p.els["issues-month"].walk().find(
+    (e) => e.tag === "td" && e.children[0] && e.children[0].textContent === String(n));
+  const eventChips = (td) => td.walk().filter((e) => /chip-event/.test(e.className));
+  out.ev = {};
+  [17, 27].forEach((n) => {
+    out.ev[n] = eventChips(cell(n)).map((c) => ({ cls: c.className, text: c.textContent,
+      title: c.title, tags: c.children.filter((k) => k.className === "chip-tag").map(
+        (k) => k.textContent) }));
+  });
+  out.allEvents = p.els["issues-month"].walk().filter((e) => /chip-event/.test(e.className))
+    .map((c) => c.children.filter((k) => k.className === "chip-tag").map((k) => k.textContent));
+  out.legend = p.els["issues-legend"].children.map((li) => li.textContent);
+  out.rowNov = p.els["issues-list"].textContent;
+  out.emptyMsg = p.els["issues-month"].walk().filter((e) => e.className === "issues-empty")
+    .map((e) => e.textContent);
+  const withListing = JSON.parse(JSON.stringify(sampleData));
+  withListing.issues.find((i) => i.symbol === "C50MF").listing_date = "2026-12-30";
+  withListing.issues.find((i) => i.symbol === "C50MF").units = null;
+  p = boot("", okFetch(withListing));
+  await flush();
+  out.rowListing = p.els["issues-list"].textContent;
+
   // scrollspy
   p = boot("", okFetch(sampleData));
   await flush();
@@ -523,13 +546,14 @@ def test_hash_restored_on_load_and_hashchange(dom):
 def test_loading_error_retry_and_empty_states(dom):
     assert dom["loading"] == "Loading stock issues…"
     assert dom["busyWhileLoading"] == "true" and dom["busyAfter"] == "false"
-    assert dom["loaded"].startswith("223 stock issues listed")
+    assert dom["loaded"].startswith("323 stock issues listed")
     assert "Upcoming" in dom["listText"] and "Dates not announced yet" in dom["listText"]
     assert "Price Rs 100 · Units 90,000" in dom["listText"]
+    assert "Units null" not in dom["listText"]
     assert dom["error"].startswith("Couldn't load stock issues.")
     assert dom["errorHasRetry"] is True
     assert dom["callsAfterRetry"] == dom["callsBeforeRetry"] + 1
-    assert dom["afterRetry"].startswith("223 stock issues listed") and dom["retryGone"]
+    assert dom["afterRetry"].startswith("323 stock issues listed") and dom["retryGone"]
     assert dom["http500"].startswith("Couldn't load stock issues.")
     assert dom["badSchema"].startswith("Couldn't load stock issues.")
     assert dom["empty"] == "No stock issues published yet."
@@ -598,3 +622,29 @@ def test_scrollspy_marks_the_section_in_view(dom):
     assert spy["allFalse"] == ["#stocks-calendar"]
     assert spy["npl"] == ["#schedule"] and spy["stocksKept"] == ["#stocks-calendar"]
     assert spy["noIO"][0].endswith("stock issues listed.") and spy["noIO"][1] == 0
+
+
+def test_stocks_tab_event_chips_list_dates_and_feed_rows(dom):
+    mf, bc = dom["ev"]["17"], dom["ev"]["27"]
+    assert [(c["text"], c["tags"]) for c in mf if "mutual-fund" in c["cls"]] \
+        == [("Lists MNMF2", ["Lists"])]
+    assert all(c["cls"].startswith("chip chip-event cat-") for c in mf + bc)
+    assert [c["text"] for c in bc if "right-share" in c["cls"]] == ["Book closure NICA"]
+    assert any(c["title"].endswith("— book closure") for c in bc)
+    assert any(c["title"].endswith("— lists today") for c in mf)
+    assert dom["allEvents"]
+    assert all(tags in (["Lists"], ["Book closure"]) for tags in dom["allEvents"])
+    assert "Book closure 2026-11-27" in dom["rowNov"]
+    assert "Lists 2026-12-30" in dom["rowListing"]
+    assert "Units" not in dom["rowListing"].split("C50MF")[1].split("Upcoming")[0]
+    assert "Lists 2026" not in dom["rowNov"]
+    assert dom["legend"] == ["IPO", "FPO", "Right share", "IPO for locals",
+                             "IPO for migrant workers", "Mutual funds", "Debentures"]
+    css = (SITE / "style.css").read_text()
+    assert re.search(r"\.chip-event\s*\{[^}]*border-style:\s*dashed", css)
+    for slug in ("mutual-fund", "debenture"):
+        assert f".chip.cat-{slug} .chip-tag" in css and f"\n.cat-{slug} " in css
+    html = (SITE / "index.html").read_text()
+    assert "Mutual funds and debentures are included" in html
+    labels = re.findall(r'class="calendar-name">([^<]*)<', html)
+    assert labels[6:8] == ["Mutual funds", "Debentures"]

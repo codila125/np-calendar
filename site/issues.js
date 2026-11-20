@@ -5,7 +5,8 @@
   var NPT_OFFSET_MS = (5 * 60 + 45) * 60 * 1000;
   var DATA_URL = "data/issues.json";
   var STALE_MS = 5 * 60 * 1000;
-  var FEED_SLUGS = ["issues", "ipo", "fpo", "right-share", "ipo-local", "ipo-migrant"];
+  var FEED_SLUGS = ["issues", "ipo", "fpo", "right-share", "ipo-local", "ipo-migrant",
+    "mutual-fund", "debenture"];
 
   function nptToday(nowMs) {
     var d = new Date((nowMs === undefined ? Date.now() : nowMs) + NPT_OFFSET_MS);
@@ -37,7 +38,9 @@
     { slug: "fpo", label: "FPO", short: "FPO" },
     { slug: "right-share", label: "Right share", short: "Right" },
     { slug: "ipo-local", label: "IPO for locals", short: "Local" },
-    { slug: "ipo-migrant", label: "IPO for migrant workers", short: "Migrant" }
+    { slug: "ipo-migrant", label: "IPO for migrant workers", short: "Migrant" },
+    { slug: "mutual-fund", label: "Mutual funds", short: "MF" },
+    { slug: "debenture", label: "Debentures", short: "Debenture" }
   ];
 
   function pad(n) {
@@ -72,6 +75,20 @@
       return !!issue.opening_date && !!issue.closing_date &&
         issue.opening_date <= iso && iso <= issue.closing_date;
     });
+  }
+
+  // Listing-day and right-share book-closure events on an ISO date, in data order.
+  function eventsOn(data, iso) {
+    var events = [];
+    data.issues.forEach(function (issue) {
+      if (issue.category === "right-share" && issue.book_closure_date === iso) {
+        events.push({ kind: "bookclosure", issue: issue });
+      }
+      if (issue.listing_date === iso) {
+        events.push({ kind: "listing", issue: issue });
+      }
+    });
+    return events;
   }
 
   function groupIssues(data, today) {
@@ -119,6 +136,7 @@
   if (typeof module === "object" && module.exports) {
     module.exports = { parseHash: parseHash, validateIssuesData: validateIssuesData,
       nptToday: nptToday, monthWeeks: monthWeeks, issuesOn: issuesOn,
+      eventsOn: eventsOn,
       groupIssues: groupIssues, formatAmount: formatAmount, currentSection: currentSection };
   }
   if (typeof document === "undefined") {
@@ -342,6 +360,18 @@
     return el;
   }
 
+  function eventChip(event) {
+    var issue = event.issue;
+    var cat = categoryOf(issue.category);
+    var listing = event.kind === "listing";
+    var el = make("span", "chip chip-event cat-" + cat.slug);
+    el.appendChild(make("span", "chip-tag", listing ? "Lists" : "Book closure"));
+    el.appendChild(document.createTextNode(" " + issue.symbol));
+    el.title = issue.company + " (" + cat.label + ") — " +
+      (listing ? "lists today" : "book closure");
+    return el;
+  }
+
   function renderGrid() {
     var title = monthName(viewYear, viewMonth);
     labelEl.textContent = title;
@@ -374,6 +404,10 @@
             any = true;
             td.appendChild(chip(issue));
           });
+          eventsOn(data, iso).forEach(function (event) {
+            any = true;
+            td.appendChild(eventChip(event));
+          });
         }
         tr.appendChild(td);
       });
@@ -402,7 +436,15 @@
     if (issue.price) {
       bits.push("Price Rs " + formatAmount(issue.price));
     }
-    bits.push("Units " + formatAmount(issue.units));
+    if (issue.units !== null && issue.units !== undefined) {
+      bits.push("Units " + formatAmount(issue.units));
+    }
+    if (issue.listing_date) {
+      bits.push("Lists " + issue.listing_date);
+    }
+    if (issue.category === "right-share" && issue.book_closure_date) {
+      bits.push("Book closure " + issue.book_closure_date);
+    }
     li.appendChild(make("div", "issue-meta", bits.join(" · ")));
     return li;
   }

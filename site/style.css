@@ -15,6 +15,8 @@
   --cat-right-share: #0a7a3d;
   --cat-ipo-local: #8e24aa;
   --cat-ipo-migrant: #b3261e;
+  --cat-mutual-fund: #00696f;
+  --cat-debenture: #a8326e;
 }
 
 /* tokens:dark */
@@ -30,6 +32,8 @@
   --cat-right-share: #4cc47f;
   --cat-ipo-local: #d68ae6;
   --cat-ipo-migrant: #ff8a80;
+  --cat-mutual-fund: #4dd0d6;
+  --cat-debenture: #f48fb1;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -45,6 +49,8 @@
     --cat-right-share: #4cc47f;
     --cat-ipo-local: #d68ae6;
     --cat-ipo-migrant: #ff8a80;
+    --cat-mutual-fund: #4dd0d6;
+    --cat-debenture: #f48fb1;
   }
 }
 
@@ -1265,12 +1271,16 @@ tr.next-match td:first-child {
 .cat-right-share { color: var(--cat-right-share); }
 .cat-ipo-local { color: var(--cat-ipo-local); }
 .cat-ipo-migrant { color: var(--cat-ipo-migrant); }
+.cat-mutual-fund { color: var(--cat-mutual-fund); }
+.cat-debenture { color: var(--cat-debenture); }
 
 .chip.cat-ipo,
 .chip.cat-fpo,
 .chip.cat-right-share,
 .chip.cat-ipo-local,
-.chip.cat-ipo-migrant {
+.chip.cat-ipo-migrant,
+.chip.cat-mutual-fund,
+.chip.cat-debenture {
   color: var(--fg);
 }
 
@@ -1279,6 +1289,8 @@ tr.next-match td:first-child {
 .chip.cat-right-share { border-color: var(--cat-right-share); }
 .chip.cat-ipo-local { border-color: var(--cat-ipo-local); }
 .chip.cat-ipo-migrant { border-color: var(--cat-ipo-migrant); }
+.chip.cat-mutual-fund { border-color: var(--cat-mutual-fund); }
+.chip.cat-debenture { border-color: var(--cat-debenture); }
 
 .chip .chip-tag {
   color: inherit;
@@ -1289,6 +1301,12 @@ tr.next-match td:first-child {
 .chip.cat-right-share .chip-tag { color: var(--cat-right-share); }
 .chip.cat-ipo-local .chip-tag { color: var(--cat-ipo-local); }
 .chip.cat-ipo-migrant .chip-tag { color: var(--cat-ipo-migrant); }
+.chip.cat-mutual-fund .chip-tag { color: var(--cat-mutual-fund); }
+.chip.cat-debenture .chip-tag { color: var(--cat-debenture); }
+
+.chip-event {
+  border-style: dashed;
+}
 
 #issues-grid td.day {
   min-width: 6.5rem;
