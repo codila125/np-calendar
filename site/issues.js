@@ -106,10 +106,20 @@
     return whole.replace(/\B(?=(\d{3})+(?!\d))/g, ",") + (frac ? "." + frac : "");
   }
 
+  // First id in nav order that is currently intersecting, else null.
+  function currentSection(order, visible) {
+    for (var i = 0; i < order.length; i++) {
+      if (visible[order[i]]) {
+        return order[i];
+      }
+    }
+    return null;
+  }
+
   if (typeof module === "object" && module.exports) {
     module.exports = { parseHash: parseHash, validateIssuesData: validateIssuesData,
       nptToday: nptToday, monthWeeks: monthWeeks, issuesOn: issuesOn,
-      groupIssues: groupIssues, formatAmount: formatAmount };
+      groupIssues: groupIssues, formatAmount: formatAmount, currentSection: currentSection };
   }
   if (typeof document === "undefined") {
     return;
@@ -196,6 +206,37 @@
     });
   });
   window.addEventListener("hashchange", applyHash);
+
+  // Marks the nav link of the section in view with aria-current="true".
+  function watchSections(panel) {
+    var links = Array.prototype.slice.call(panel.querySelectorAll("nav a"));
+    var order = links.map(function (a) { return a.getAttribute("href").slice(1); });
+    var visible = {};
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { visible[e.target.id] = e.isIntersecting; });
+      var id = currentSection(order, visible);
+      if (id === null) {
+        return;
+      }
+      links.forEach(function (a, i) {
+        if (order[i] === id) {
+          a.setAttribute("aria-current", "true");
+        } else {
+          a.removeAttribute("aria-current");
+        }
+      });
+    });
+    order.forEach(function (id) {
+      var target = document.getElementById(id);
+      if (target) {
+        observer.observe(target);
+      }
+    });
+  }
+  if (typeof IntersectionObserver === "function") {
+    watchSections(panels.stocks);
+    watchSections(panels.npl);
+  }
 
   function webcalUrl(url) {
     var parsed = new URL(url);

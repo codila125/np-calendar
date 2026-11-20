@@ -52,6 +52,7 @@
   --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
   --label-col: 12rem;
   --gutter: 2rem;
+  --toc-col: 10rem;
   --hover: color-mix(in srgb, var(--fg) 5%, transparent);
 }
 
@@ -234,6 +235,11 @@ nav a::before {
 nav a:hover {
   color: var(--fg);
   background-size: 100% 2px;
+}
+
+nav a[aria-current="true"] {
+  color: var(--accent);
+  background-size: 100% 2px; /* accent underline: the non-colour cue */
 }
 
 :focus-visible {
@@ -1156,6 +1162,47 @@ tr.next-match td:first-child {
 
 [role="tabpanel"][hidden] {
   display: none;
+}
+
+/* Wide screens: each panel's section nav becomes a sticky table of contents
+   in a left column; sections keep their own label column to its right. */
+@media (min-width: 64rem) {
+  body {
+    max-width: 92rem;
+  }
+
+  [role="tabpanel"] {
+    display: grid;
+    grid-template-columns: var(--toc-col) minmax(0, 1fr);
+    column-gap: var(--gutter);
+    align-items: start;
+  }
+
+  [role="tabpanel"] > nav {
+    grid-column: 1;
+    grid-row: 1 / span 12;
+    align-self: start;
+    top: 1rem;
+    max-height: calc(100vh - 2rem);
+    overflow-y: auto;
+    margin-top: 4rem;
+    padding-top: 1rem;
+    border-top: 2px solid var(--fg);
+    border-bottom: 0;
+  }
+
+  [role="tabpanel"] > nav ul {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  [role="tabpanel"] > :not(nav) {
+    grid-column: 2;
+  }
+
+  section {
+    scroll-margin-top: 1rem;
+  }
 }
 
 #issues-feed-list {
