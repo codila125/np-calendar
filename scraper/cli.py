@@ -77,6 +77,19 @@ def _issues_source(from_dir, session) -> dict | None:
 
 
 def _build_issues(raw_issues: dict) -> tuple[dict | None, list[Violation]]:
+    """``(data, violations)``; ``data`` carries the rendered ``outputs`` too."""
+    try:
+        data, violations = _validate_issues(raw_issues)
+        if data is None:
+            return None, violations
+        outputs = {ISSUES_RELPATH: publish.render_json(data)}
+        outputs.update(issues_ics.build_issue_calendars(data))
+    except Exception as exc:  # noqa: BLE001 - any build failure fails only this source
+        return None, [Violation("I3", f"issue data could not be built: {exc!r}")]
+    return {"data": data, "outputs": outputs}, []
+
+
+def _validate_issues(raw_issues: dict) -> tuple[dict | None, list[Violation]]:
     violations = issues.validate_issue_rows(raw_issues)
     if violations:
         return None, violations
@@ -113,7 +126,12 @@ def _build_npl(args, session, site_dir: Path):
         for violation in stats_violations:
             print(f"warning: stats skipped: {violation}", file=sys.stderr)
         season["stats"] = (previous or {}).get("stats")
-    return season, []
+    try:
+        outputs = {DATA_RELPATH: publish.render_json(season)}
+        outputs.update(ics.build_calendars(season))
+    except Exception as exc:  # noqa: BLE001 - any build failure fails only this source
+        return None, [Violation("V2", f"NPL output could not be built: {exc!r}")]
+    return {"season": season, "outputs": outputs}, []
 
 
 def _fetch_issues(args, session):
@@ -133,10 +151,10 @@ def main(argv: list[str] | None = None, session=None) -> int:
     args = _parser().parse_args(argv)
     site_dir = Path(args.site_dir)
 
-    season, npl_violations = _build_npl(args, session, site_dir)
-    issues_data, issue_violations, issues_skipped = _fetch_issues(args, session)
+    npl_built, npl_violations = _build_npl(args, session, site_dir)
+    issues_built, issue_violations, issues_skipped = _fetch_issues(args, session)
 
-    npl_ok = season is not None
+    npl_ok = npl_built is not None
     issues_ok = not issue_violations  # skipped counts as ok
     _report(npl_violations)
     if not npl_ok:
@@ -154,15 +172,15 @@ def main(argv: list[str] | None = None, session=None) -> int:
 
     outputs: dict[str, bytes] = {}
     if npl_ok:
-        outputs[DATA_RELPATH] = publish.render_json(season)
-        outputs.update(ics.build_calendars(season))
+        season = npl_built["season"]
+        outputs.update(npl_built["outputs"])
         print(
             f"fetched teams={len(season['teams'])} matches={len(season['matches'])} "
             f"standings={len(season['standings'])}"
         )
-    if issues_data is not None:
-        outputs[ISSUES_RELPATH] = publish.render_json(issues_data)
-        outputs.update(issues_ics.build_issue_calendars(issues_data))
+    if issues_built is not None:
+        issues_data = issues_built["data"]
+        outputs.update(issues_built["outputs"])
         dated = sum(1 for i in issues_data["issues"] if i["dates_announced"])
         print(f"fetched issues={len(issues_data['issues'])} dated={dated}")
     keep = {f"calendar/{name}.ics" for name in config.ISSUE_FEEDS}
