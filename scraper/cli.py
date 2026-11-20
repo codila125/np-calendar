@@ -12,7 +12,7 @@ import os
 import sys
 from pathlib import Path
 
-from . import config, ics, issues, publish
+from . import config, ics, issues, issues_ics, publish
 from .errors import ScrapeError, Violation
 from .fetch import load_from_dir, load_issues_from_dir, load_issues_remote, load_remote
 from .normalize import normalize, normalize_stats
@@ -140,9 +140,11 @@ def main(argv: list[str] | None = None, session=None) -> int:
     )
     if issues_data is not None:
         outputs[ISSUES_RELPATH] = publish.render_json(issues_data)
+        outputs.update(issues_ics.build_issue_calendars(issues_data))
         dated = sum(1 for i in issues_data["issues"] if i["dates_announced"])
         print(f"fetched issues={len(issues_data['issues'])} dated={dated}")
-    changed = publish.write_outputs(site_dir, outputs, dry_run=args.dry_run)
+    keep = {f"calendar/{name}.ics" for name in config.ISSUE_FEEDS}
+    changed = publish.write_outputs(site_dir, outputs, dry_run=args.dry_run, keep=keep)
     prefix = "would change" if args.dry_run else "changed"
     for relpath in changed:
         print(f"{prefix}: {relpath}")
