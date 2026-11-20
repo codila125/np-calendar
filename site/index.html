@@ -35,15 +35,30 @@
     </div>
 
     <div role="tabpanel" id="panel-stocks" aria-labelledby="tab-stocks" tabindex="0">
-    <section id="stocks" aria-labelledby="stocks-heading">
-      <h2 id="stocks-heading">Stocks</h2>
+    <nav aria-label="Stocks sections">
+      <ul>
+        <li><a href="#stocks-calendar">Calendar</a></li>
+        <li><a href="#stocks-issues">Issues</a></li>
+        <li><a href="#stocks-subscribe">Subscribe</a></li>
+      </ul>
+    </nav>
+
+    <section id="stocks-calendar" aria-labelledby="stocks-calendar-heading">
+      <h2 id="stocks-calendar-heading">Calendar</h2>
       <p class="section-intro">IPOs, FPOs, right shares and IPOs for locals and migrant workers in Nepal. Subscribe to a feed to get opening dates in your calendar.</p>
       <p id="issues-status" role="status">Loading stock issues…</p>
       <div id="issues-month"></div>
       <ul id="issues-legend" class="issues-legend"></ul>
+    </section>
+
+    <section id="stocks-issues" aria-labelledby="stocks-issues-heading">
+      <h2 id="stocks-issues-heading">Issues</h2>
       <div id="issues-list"></div>
-      <div id="issues-feeds" role="region" aria-labelledby="issues-feeds-heading">
-        <h3 id="issues-feeds-heading">Subscribe</h3>
+    </section>
+
+    <section id="stocks-subscribe" aria-labelledby="stocks-subscribe-heading">
+      <h2 id="stocks-subscribe-heading">Subscribe</h2>
+      <div id="issues-feeds">
         <ul id="issues-feed-list">
           <li class="calendar-row issue-feed-row">
             <span class="calendar-name">All stock issues</span>
