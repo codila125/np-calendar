@@ -43,6 +43,11 @@ def _parser() -> argparse.ArgumentParser:
         action="store_true",
         help="permit fewer completed matches than the committed data (rule V15)",
     )
+    parser.add_argument(
+        "--skip-npl",
+        action="store_true",
+        help="leave the NPL source alone (no fetch, published NPL files kept); issues only",
+    )
     return parser
 
 
@@ -151,10 +156,15 @@ def main(argv: list[str] | None = None, session=None) -> int:
     args = _parser().parse_args(argv)
     site_dir = Path(args.site_dir)
 
-    npl_built, npl_violations = _build_npl(args, session, site_dir)
+    if args.skip_npl:
+        print("note: npl skipped (--skip-npl); kept the published NPL data and feeds",
+              file=sys.stderr)
+        npl_built, npl_violations = None, []
+    else:
+        npl_built, npl_violations = _build_npl(args, session, site_dir)
     issues_built, issue_violations, issues_skipped = _fetch_issues(args, session)
 
-    npl_ok = npl_built is not None
+    npl_ok = npl_built is not None or args.skip_npl
     issues_ok = not issue_violations  # skipped counts as ok
     _report(npl_violations)
     if not npl_ok:
@@ -171,7 +181,7 @@ def main(argv: list[str] | None = None, session=None) -> int:
         return 1
 
     outputs: dict[str, bytes] = {}
-    if npl_ok:
+    if npl_built is not None:
         season = npl_built["season"]
         outputs.update(npl_built["outputs"])
         print(
@@ -185,7 +195,7 @@ def main(argv: list[str] | None = None, session=None) -> int:
         print(f"fetched issues={len(issues_data['issues'])} dated={dated}")
     keep = {f"calendar/{name}.ics" for name in config.ISSUE_FEEDS}
     changed = publish.write_outputs(
-        site_dir, outputs, dry_run=args.dry_run, prune=npl_ok, keep=keep
+        site_dir, outputs, dry_run=args.dry_run, prune=npl_built is not None, keep=keep
     )
     prefix = "would change" if args.dry_run else "changed"
     for relpath in changed:

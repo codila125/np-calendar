@@ -25,6 +25,10 @@
   var livePanel = document.getElementById("live");
   var liveContent = document.getElementById("live-content");
 
+  // NPL switched off (tab hidden in index.html): load no NPL data or live scores.
+  var nplTab = document.getElementById("tab-npl");
+  var nplOff = !!(nplTab && nplTab.hidden);
+
   var currentData = null;
   var schemaMismatch = false;
   var lastHiddenAt = null;
@@ -1212,6 +1216,9 @@
   });
 
   document.addEventListener("visibilitychange", function () {
+    if (nplOff) {
+      return;
+    }
     if (document.visibilityState === "hidden") {
       lastHiddenAt = Date.now();
     } else if (document.visibilityState === "visible") {
@@ -1224,6 +1231,9 @@
   });
 
   initTheme();
+  if (nplOff) {
+    return;
+  }
   updateStaticAllMatchesRow();
   loadData(false);
 })();
