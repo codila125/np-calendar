@@ -6,7 +6,7 @@
     "timezone": "Asia/Kathmandu",
     "utc_offset": "+05:45"
   },
-  "updated_at": "2026-11-19T15:16:26Z",
+  "updated_at": "2026-11-21T11:39:01Z",
   "source": {
     "name": "nplt20league.com",
     "url": "https://nplt20league.com/"
@@ -1143,16 +1143,16 @@
       "id": "a97f9321-b9d1-4d84-858f-bfce001c35fe",
       "start_utc": "2026-11-21T11:15:00Z",
       "venue": "Tribhuvan University Cricket Ground, Kirtipur",
-      "status": "scheduled",
-      "status_raw": "start_in",
+      "status": "other",
+      "status_raw": "live",
       "teams": [
         {
           "slug": "lumbini-lions",
           "name": "Lumbini Lions",
           "short": "LUL",
           "placeholder": false,
-          "score": null,
-          "overs": null
+          "score": "20/1",
+          "overs": "4.0"
         },
         {
           "slug": "sudurpaschim-royals",
@@ -1166,7 +1166,7 @@
       "result": null,
       "outcome": null,
       "winner": null,
-      "updated_at": "2026-11-19T15:04:06Z"
+      "updated_at": "2026-11-21T11:39:01Z"
     }
   ],
   "stats": {
