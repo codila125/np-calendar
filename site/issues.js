@@ -143,7 +143,10 @@
     return;
   }
 
-  var tabs = Array.prototype.slice.call(document.querySelectorAll('[role="tab"]'));
+  // A tab with the `hidden` attribute (NPL while it is switched off) is left out entirely.
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('[role="tab"]'))
+    .filter(function (tab) { return !tab.hidden; });
+  var nplOff = !tabs.some(function (tab) { return tab.id === "tab-npl"; });
   var panels = {
     stocks: document.getElementById("panel-stocks"),
     npl: document.getElementById("panel-npl")
@@ -170,6 +173,9 @@
   }
 
   function activate(name, focus) {
+    if (nplOff) {
+      name = "stocks";
+    }
     tabs.forEach(function (tab) {
       var on = tab.id === "tab-" + name;
       tab.setAttribute("aria-selected", on ? "true" : "false");

@@ -31,7 +31,8 @@
   <main id="main">
     <div role="tablist" aria-label="Site sections" class="tabs">
       <button type="button" role="tab" id="tab-stocks" aria-selected="true" aria-controls="panel-stocks">Stocks</button>
-      <button type="button" role="tab" id="tab-npl" aria-selected="false" tabindex="-1" aria-controls="panel-npl">NPL</button>
+      <!-- NPL is switched off for now: remove `hidden` below to bring the tab back. -->
+      <button type="button" role="tab" id="tab-npl" aria-selected="false" tabindex="-1" aria-controls="panel-npl" hidden>NPL</button>
     </div>
 
     <div role="tabpanel" id="panel-stocks" aria-labelledby="tab-stocks" tabindex="0">

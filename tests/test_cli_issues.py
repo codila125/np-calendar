@@ -473,3 +473,26 @@ def test_right_share_book_closure_event_with_three_day_alarm(tmp_path):
     assert len(without) == 2
     for issue in without:
         assert not any(issue["id"] in u and "-bookclosure@" in u for u in _by_uid(feeds["issues"]))
+
+
+def test_skip_npl_fetches_only_issues_and_keeps_npl_files(tmp_path, capsys):
+    site = tmp_path / "site"
+    assert cli.main(["--from-dir", str(_from_dir_src(tmp_path)), "--site-dir", str(site)]) == 0
+    npl_files = {
+        p.relative_to(site): p.read_bytes()
+        for p in site.rglob("*")
+        if p.is_file() and "issues" not in p.name and p.stem not in config.ISSUE_FEEDS
+    }
+    assert Path("data/npl.json") in npl_files and Path("calendar/npl.ics") in npl_files
+    (site / "data" / "issues.json").unlink()
+    capsys.readouterr()
+
+    # No NPL routes: any NPL request would fail the run, so this proves NPL is not fetched.
+    session = FakeSession(_issue_routes())
+    assert cli.main(["--site-dir", str(site), "--skip-npl"], session=session) == 0
+    captured = capsys.readouterr()
+    assert "npl skipped" in captured.err
+    assert "fetched issues=" in captured.out
+    assert (site / "data" / "issues.json").exists()
+    for relpath, content in npl_files.items():
+        assert (site / relpath).read_bytes() == content, relpath

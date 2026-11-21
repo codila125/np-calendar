@@ -44,7 +44,8 @@ jobs:
         id: scrape
         run: |
           set +e
-          python -m scraper ${{ inputs.allow_regression && '--allow-regression' || '' }}
+          # --skip-npl: NPL is switched off for now; delete it to scrape NPL again.
+          python -m scraper --skip-npl ${{ inputs.allow_regression && '--allow-regression' || '' }}
           code=$?
           set -e
           if [ "$code" -eq 3 ]; then echo "partial=true" >> "$GITHUB_OUTPUT"; else echo "partial=false" >> "$GITHUB_OUTPUT"; fi
