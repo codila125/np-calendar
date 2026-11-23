@@ -10738,11 +10738,10 @@ BEGIN:VEVENT
 UID:issue-mutual-fund-1695-100000000@codila125.github.io
 DTSTAMP:20261118T000000Z
 DTSTART;VALUE=DATE:20261118
-DTEND;VALUE=DATE:20261124
+DTEND;VALUE=DATE:20261203
 SUMMARY:Mutual funds: Citizens Super 50 (C50MF)
 DESCRIPTION:Mutual funds · C50MF\nPrice: Rs 10\nUnits: 100\,000\,000\nOpen
- s 18 Nov 2026\, closes 23 Nov 2026\nMay stay open until 2 Dec 2026\nIssue 
- manager: Citizens Capital Limited
+ s 18 Nov 2026\, closes 2 Dec 2026\nIssue manager: Citizens Capital Limited
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 BEGIN:VALARM
