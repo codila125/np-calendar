@@ -338,24 +338,6 @@
       "company_url": "https://www.sharesansar.com/company/nicsf"
     },
     {
-      "id": "mutual-fund-1089-100000000",
-      "category": "mutual-fund",
-      "company": "RBB Mutual Fund 1",
-      "symbol": "RMF1",
-      "units": "100000000.00",
-      "price": "10.00",
-      "ratio": null,
-      "issue_manager": "RBB Merchant Bank Ltd",
-      "opening_date": "2021-07-07",
-      "closing_date": "2021-07-11",
-      "last_closing_date": "2021-07-21",
-      "book_closure_date": null,
-      "listing_date": "2021-08-29",
-      "dates_announced": true,
-      "url": "https://www.sharesansar.com/announcementdetail/rastriya-banijya-bank-limited-has-published-an-offer-letter-to-issue-100-million-units-of-rs-10-face-value-each-rbb-mutual-fund-1-to-the-general-public-from-23rd-ashar-to-27th-ashar-2078-2021-06-28",
-      "company_url": "https://www.sharesansar.com/company/rmf1"
-    },
-    {
       "id": "debenture-1107-2000000",
       "category": "debenture",
       "company": "8.5% Laxmi Bank Debenture",
@@ -5576,6 +5558,24 @@
       "company_url": "https://www.sharesansar.com/company/c50mf"
     },
     {
+      "id": "mutual-fund-1622-100000000",
+      "category": "mutual-fund",
+      "company": "Nabil Growth Fund",
+      "symbol": "NGF",
+      "units": "100000000.00",
+      "price": "10.00",
+      "ratio": null,
+      "issue_manager": "Nabil Investment Banking Limited",
+      "opening_date": "2026-11-25",
+      "closing_date": "2026-11-30",
+      "last_closing_date": "2026-12-09",
+      "book_closure_date": null,
+      "listing_date": null,
+      "dates_announced": true,
+      "url": "https://www.sharesansar.com/announcementdetail/nabil-investment-banking-limited-has-published-an-offer-letter-to-issue-100-million-units-of-rs-10-face-value-each-mutual-fund-scheme-nabil-growth-fund-to-the-general-public-from-9th-mangsir-to-14th-mangsir-2083-2026-11-13",
+      "company_url": "https://www.sharesansar.com/company/ngf"
+    },
+    {
       "id": "ipo-migrant-1553-90000",
       "category": "ipo-migrant",
       "company": "Kantipur Pharmaceuticals Lab Limited",
@@ -5648,11 +5648,11 @@
       "company_url": "https://www.sharesansar.com/company/aeltd"
     },
     {
-      "id": "ipo-1171-5915000",
+      "id": "ipo-1171-3464500",
       "category": "ipo",
       "company": "Him Parbat Hydropower Limited",
       "symbol": "HPHL",
-      "units": "5915000.00",
+      "units": "3464500.00",
       "price": "100.00",
       "ratio": null,
       "issue_manager": "Citizens Capital Limited",
@@ -5662,7 +5662,7 @@
       "book_closure_date": null,
       "listing_date": null,
       "dates_announced": false,
-      "url": "https://www.sharesansar.com/company/hphl",
+      "url": "https://www.sharesansar.com/announcementdetail/him-parbat-hydropower-limited-has-published-an-offer-letter-to-issue-3464500-units-ipo-shares-to-the-general-public-from-18th-mangsir-to-23rd-mangsir-2083-2026-11-25",
       "company_url": "https://www.sharesansar.com/company/hphl"
     },
     {
